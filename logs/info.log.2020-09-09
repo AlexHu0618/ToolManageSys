@@ -1,0 +1,66 @@
+2020-09-09 10:18:00,772 - root - INFO - Start PullServer
+2020-09-09 10:18:00,778 - root - INFO - Success conn, 192.168.8.127:23---192.168.8.127:26
+2020-09-09 10:40:35,945 - root - INFO - Start PullServer
+2020-09-09 10:40:35,948 - root - INFO - Success conn, 192.168.8.127:23---192.168.8.127:26
+2020-09-09 10:41:09,156 - root - INFO - Start PullServer
+2020-09-09 10:41:09,158 - root - INFO - Success conn, 192.168.8.127:23---192.168.8.127:26
+2020-09-09 12:08:33,839 - root - INFO - Start PullServer
+2020-09-09 12:08:44,069 - root - INFO - Start PullServer
+2020-09-09 12:10:48,996 - root - INFO - Start PullServer
+2020-09-09 12:11:20,058 - root - INFO - Start PullServer
+2020-09-09 12:13:40,984 - root - INFO - Start PullServer
+2020-09-09 12:13:41,989 - root - ERROR - Fail conn to: ('192.168.8.127', 26)
+2020-09-09 12:14:00,792 - root - INFO - Start PullServer
+2020-09-09 12:14:01,796 - root - ERROR - Fail conn to: ('192.168.8.127', 26)
+2020-09-09 16:24:33,179 - root - INFO - Start PullServer
+2020-09-09 16:24:34,184 - root - ERROR - Fail conn to: ('192.168.8.127', 26)
+2020-09-09 16:26:15,919 - root - INFO - Start PullServer
+2020-09-09 16:27:26,461 - root - INFO - Start PullServer
+2020-09-09 16:28:50,767 - root - INFO - Start PullServer
+2020-09-09 16:29:28,011 - root - INFO - Start PullServer
+2020-09-09 16:30:02,027 - root - INFO - Start PullServer
+2020-09-09 16:30:54,481 - root - INFO - Start PullServer
+2020-09-09 16:39:44,174 - root - INFO - Start PullServer
+2020-09-09 16:40:08,544 - root - INFO - Start PullServer
+2020-09-09 16:40:28,381 - root - INFO - Start PullServer
+2020-09-09 16:41:00,217 - root - INFO - Start PullServer
+2020-09-09 16:41:59,151 - root - INFO - Start PullServer
+2020-09-09 16:42:25,529 - root - INFO - Start PullServer
+2020-09-09 16:42:41,395 - root - INFO - Start PullServer
+2020-09-09 16:44:15,071 - root - INFO - Start PullServer
+2020-09-09 16:44:19,722 - root - INFO - Start PullServer
+2020-09-09 16:45:17,826 - root - INFO - Start PullServer
+2020-09-09 16:48:42,581 - root - INFO - Start PullServer
+2020-09-09 16:49:14,235 - root - INFO - Start PullServer
+2020-09-09 16:51:07,661 - root - INFO - Start PullServer
+2020-09-09 16:53:00,002 - root - INFO - Start PullServer
+2020-09-09 16:54:34,309 - root - INFO - Start PullServer
+2020-09-09 16:55:51,013 - root - INFO - Start PullServer
+2020-09-09 16:58:29,838 - root - INFO - Start PullServer
+2020-09-09 17:00:29,824 - root - INFO - Start PullServer
+2020-09-09 17:01:38,453 - root - INFO - Start PullServer
+2020-09-09 17:02:59,449 - root - INFO - Start PullServer
+2020-09-09 17:03:44,518 - root - INFO - Start PullServer
+2020-09-09 17:05:20,687 - root - INFO - Start PullServer
+2020-09-09 17:05:23,876 - root - INFO - Start PullServer
+2020-09-09 17:05:35,822 - root - INFO - Start PullServer
+2020-09-09 17:06:23,293 - root - INFO - Start PullServer
+2020-09-09 17:07:52,779 - root - INFO - Start PullServer
+2020-09-09 17:10:15,617 - root - INFO - Start PullServer
+2020-09-09 17:13:09,373 - root - INFO - Start PullServer
+2020-09-09 17:15:15,594 - root - INFO - Start PullServer
+2020-09-09 17:17:16,939 - root - INFO - Start PullServer
+2020-09-09 17:17:57,736 - root - INFO - Start PullServer
+2020-09-09 17:21:37,601 - root - INFO - Start PullServer
+2020-09-09 17:24:43,228 - root - INFO - Start PullServer
+2020-09-09 17:27:58,173 - root - INFO - Start PullServer
+2020-09-09 20:04:51,982 - root - INFO - Start PullServer
+2020-09-09 20:05:54,887 - root - INFO - Start PullServer
+2020-09-09 20:06:59,054 - root - INFO - Start PullServer
+2020-09-09 20:08:58,571 - root - INFO - Start PullServer
+2020-09-09 20:09:05,972 - root - INFO - Start PullServer
+2020-09-09 20:47:41,654 - root - INFO - Start PullServer
+2020-09-09 20:53:08,778 - root - INFO - Start PullServer
+2020-09-09 20:53:39,869 - root - INFO - Start PullServer
+2020-09-09 20:53:56,513 - root - INFO - Start PullServer
+2020-09-09 21:01:33,421 - root - INFO - Start PullServer
