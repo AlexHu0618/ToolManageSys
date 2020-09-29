@@ -2,6 +2,7 @@ import threading
 
 # queueoperation = {'type': 'GravityShelf', 'addr': ('192.168.0.220', 23), 'operation': 'read', 'thread': < >}
 
+
 class ProtocolParser(threading.Thread):
     def __init__(self, name: str, queueoperation, queuesend, queuerecv):
         self.name = name

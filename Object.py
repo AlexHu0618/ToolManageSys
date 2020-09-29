@@ -14,27 +14,25 @@ class GravityShelf(object):
                  '8': 0.05, '9': 0.1, 'a': 0.2, 'b': 0.5, 'c': 1, 'd': 2, 'e': 5, 'A': 0.2, 'B': 0.5, 'C': 1,
                  'D': 2, 'E': 5}
 
-    def __init__(self, queuesend):
+    def __init__(self, tcp_socket):
         self.BUFFSIZE = 1024
         self.all_id = ()
-        self.queuesend = queuesend
-        # self.tcp_socket = tcp_socket
+        self.tcp_socket = tcp_socket
         self.addr_serial = {}
 
     def readWeight(self, addr: str):
         cmd_f = bytes.fromhex(addr + '05 02 05')
         lcr = sum(cmd_f) % 256
         cmd = cmd_f + lcr.to_bytes(length=1, byteorder='big', signed=False)
-        return cmd
-        # data = self.getData(cmd)
-        # print('cmd back:', data)
-        # if data[:3] == bytes.fromhex(addr + '0602'):
-        #     interval = self.intervals[hex(data[4])[-1]]
-        #     print(interval)
-        #     scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
-        #     print(scale)
-        #     value = scale * interval
-        #     return value
+        data = self.getData(cmd)
+        print('cmd back:', data)
+        if data[:3] == bytes.fromhex(addr + '0602'):
+            interval = self.intervals[hex(data[4])[-1]]
+            print(interval)
+            scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
+            print(scale)
+            value = scale * interval
+            return value
 
     def getData(self, cmd):
         self.tcp_socket.send(cmd)
@@ -61,11 +59,14 @@ class GravityShelf(object):
         cmd = b'\x00\x05\x02\x05\x0C'
         data = self.getData(cmd)
         print('info back:', data)
-        for i in range(1, 64):
-            if data[1:2] == bytes.fromhex('06 05'):
-                id = data[7:10]
-                self.all_id += id
-        return self.all_id
+        if data:
+            for i in range(1, 64):
+                if data[1:2] == bytes.fromhex('06 05'):
+                    id = data[7:10]
+                    self.all_id += id
+            return self.all_id
+        else:
+            return 'timeout'
 
     def setAddr(self, addr_old, addr_new):
         self.getAllSerials()

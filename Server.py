@@ -8,15 +8,16 @@
 # @version : 0.1.0
 
 import socketserver
+import threading
 
-EQUIPMENTS = {}
+CLIENTS = dict()
 
 
 class MyTCPHandler(socketserver.BaseRequestHandler):
     """
 
     """
-    clients = {}
+    def __init__(self):
 
     def handle(self):
         self.request.settimeout(5)
@@ -41,7 +42,8 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 
     def setup(self):
         print('new conn: ', self.client_address)
-        EQUIPMENTS[self.client_address] = self.request
+        self.
+        CLIENTS[self.client_address] = threading.current_thread()
 
     def finish(self):
         print("finish run  after handle", self.client_address)
