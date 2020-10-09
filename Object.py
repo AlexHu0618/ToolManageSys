@@ -106,7 +106,7 @@ class RfidR2000(object):
     def __init__(self, tcp_socket):
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
-        self.addr = '00'
+        self.addr = '01'
         self.ant_count = 8
 
     def check(self, cmd_f):

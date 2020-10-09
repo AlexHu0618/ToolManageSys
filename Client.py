@@ -41,7 +41,7 @@ def start_tcp_client(ip, port):
             # print(rsl)
             # rsl = lcd.showNum(256)
             # print(rsl)
-            # rsl = lcd.onBacklight(False)
+            # rsl = lcd.onBacklight(True)
             # print(rsl)
             # text = ['控制', '电子标签地址: 88', '7e 01 02 01 01 83', 'oooo!']
             # rsl = lcd.showText(text)
@@ -49,15 +49,15 @@ def start_tcp_client(ip, port):
             # break
             rsl = r2000.getWorkAntenna()
             print(rsl)
-            # rsl = r2000.getOutputPower()
-            # print(rsl)
+            rsl = r2000.getOutputPower()
+            print(rsl)
             # rsl = r2000.setOutputPower('00', 25)
             # print(rsl)
             # r2000.reset_inv_buf()
             rsl = r2000.inventory()
             print(rsl)
-            rsl = r2000.getAndResetBuf()
-            print(rsl)
+            # rsl = r2000.getAndResetBuf()
+            # print(rsl)
             break
         break
 
@@ -65,4 +65,4 @@ def start_tcp_client(ip, port):
 
 
 if __name__ == '__main__':
-    start_tcp_client('192.168.8.221', 8809)
+    start_tcp_client('192.168.0.117', 26)

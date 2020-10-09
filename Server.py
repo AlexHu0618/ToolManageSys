@@ -9,28 +9,24 @@
 
 import socketserver
 import threading
+from Object import Lcd
 
-CLIENTS = dict()
+EQUIPMENTS = dict()
 
 
 class MyTCPHandler(socketserver.BaseRequestHandler):
-    """
-
-    """
-    def __init__(self):
 
     def handle(self):
         self.request.settimeout(5)
+        lcd = Lcd(tcp_socket=self.request)
+        lcd.onBacklight(False)
         while True:
             try:
-                self.request.send(b'hello')
                 data = self.request.recv(1024)
                 if data != b'':
                     print(self.client_address, 'said: ', data)
                     if data == b'exit':
                         break
-                    else:
-                        self.request.send(data)
                 else:
                     break
             except Exception as e:
@@ -42,8 +38,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 
     def setup(self):
         print('new conn: ', self.client_address)
-        self.
-        CLIENTS[self.client_address] = threading.current_thread()
+        EQUIPMENTS[self.client_address] = threading.current_thread()
 
     def finish(self):
         print("finish run  after handle", self.client_address)
