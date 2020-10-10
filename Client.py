@@ -1,6 +1,6 @@
 import socket
 import sys
-from Object import RfidR2000, Lcd
+from Object import RfidR2000, Lcd, GravityShelf
 
 receive_count: int = 0
 
@@ -26,6 +26,7 @@ def start_tcp_client(ip, port):
         print("connect success")
         r2000 = RfidR2000(tcp_socket=s)
         lcd = Lcd(tcp_socket=s)
+        gra = GravityShelf(tcp_socket=s)
 
         # get the socket send buffer size and receive buffer size
         s_send_buffer_size = s.getsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF)
@@ -47,16 +48,18 @@ def start_tcp_client(ip, port):
             # rsl = lcd.showText(text)
             # print(rsl)
             # break
-            rsl = r2000.getWorkAntenna()
-            print(rsl)
-            rsl = r2000.getOutputPower()
-            print(rsl)
+            # rsl = r2000.getWorkAntenna()
+            # print(rsl)
+            # rsl = r2000.getOutputPower()
+            # print(rsl)
             # rsl = r2000.setOutputPower('00', 25)
             # print(rsl)
             # r2000.reset_inv_buf()
-            rsl = r2000.inventory()
+            # rsl = r2000.inventory()
+            # print(rsl)
+            rsl = r2000.getAndResetBuf()
             print(rsl)
-            # rsl = r2000.getAndResetBuf()
+            # rsl = gra.readWeight('01')
             # print(rsl)
             break
         break
