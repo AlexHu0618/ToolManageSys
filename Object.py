@@ -124,13 +124,15 @@ class RfidR2000(object):
         self.tcp_socket.settimeout(timeout)
 
         try:
-            while True:
-                data = self.tcp_socket.recv(self.BUFFSIZE)
-                if not data:
-                    break
-                else:
-                    print(data)
-                    total_data.append(data)
+            data = self.tcp_socket.recv(self.BUFFSIZE)
+            total_data.append(data)
+            # while True:
+            #     data = self.tcp_socket.recv(self.BUFFSIZE)
+            #     if not data:
+            #         break
+            #     else:
+            #         print(data)
+            #         total_data.append(data)
         except Exception as e:
             print(e)
         if len(total_data) == 1:
@@ -209,7 +211,8 @@ class RfidR2000(object):
             return False
 
     def inventory(self, ant_id='00'):
-        rsl = self.setWorkAntenna(ant_id)
+        # rsl = self.setWorkAntenna(ant_id)
+        rsl = True
         if rsl:
             cmd_repeat = '05'
             cmd_f = 'A0 04' + self.addr + '80' + cmd_repeat

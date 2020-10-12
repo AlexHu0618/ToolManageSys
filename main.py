@@ -1,35 +1,31 @@
-from GatewayEpoll import GatewayEpoll
-from Object import GravityShelf
+from myDB import MyDB
 from myLogger import mylogger
-import queue
-import threading
-import time
-
-QUEUE_SEND = queue.Queue(1000)
-QUEUE_RECV = queue.Queue(1000)
-ALL_ADDRS = list()
+from gateway_server import GatewayServer
 
 
-def senddata():
-    g = GravityShelf(QUEUE_SEND)
-    while True:
-        print('All address: ', ALL_ADDRS)
-        time.sleep(10)
-        data = g.readWeight('01')
-        print('put data: ', data)
-        QUEUE_SEND.put({'addr': ('192.168.0.97', 26), 'data': data})
+def main():
+    mydb = MyDB()
+    myserver = None
+    try:
+        rsl = mydb.getAllServers()
+        server_registered = rsl if rsl else None
+        print('server_registered: ', server_registered)
+        rsl2 = mydb.getAllClients()
+        client_registered = rsl2 if rsl2 else None
+        print('client_registered: ', client_registered)
+        myserver = GatewayServer(8809, server_registered, client_registered)
+        myserver.daemon = True
+        myserver.start()
+    except KeyboardInterrupt:
+        mydb.close()
+        myserver.stop()
+        print('stop')
+    finally:
+        mydb.close()
+        myserver.stop()
+        print('stop')
 
 
 if __name__ == '__main__':
-    shelfs = [{'addr': ('192.168.0.97', 26), 'type': 'GravityShelf'}, ]
-    serverthread = GatewayEpoll('MyEpoll', ('0.0.0.0', 8809), 5, QUEUE_SEND, QUEUE_RECV, ALL_ADDRS)
-    try:
-        serverthread.start()
-        threadB = threading.Thread(target=senddata)
-        threadB.start()
-        mylogger.info('Start PullServer')
-        threadB.join()
-        serverthread.join()
-    except KeyboardInterrupt:
-        serverthread.stop()
-        mylogger.info('Stop PullServer')
+    mylogger.info('START SERVER')
+    main()

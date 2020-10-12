@@ -3,3 +3,622 @@
 2020-09-09 16:24:34,184 - root - ERROR - Fail conn to: ('192.168.8.127', 26)
 2020-09-10 11:22:24,263 - root - ERROR - Fail conn to: ('192.168.8.127', 23)
 2020-09-10 11:22:25,269 - root - ERROR - Fail conn to: ('192.168.8.127', 26)
+2020-10-10 17:36:59,136 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 17:52:01,825 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 18:14:15,971 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 18:46:49,542 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:04:04,778 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:22:50,615 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:22:53,384 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:22:55,564 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:22:57,630 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:00,344 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:03,308 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:05,311 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:07,439 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:09,567 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:12,215 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:15,183 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:18,143 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:20,552 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:22,643 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:25,999 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:29,533 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:31,661 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:34,042 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:36,895 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:39,587 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:42,302 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:45,801 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:48,872 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:51,512 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:53,799 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:23:57,690 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:23:59,694 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:03,634 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:07,599 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:10,598 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:13,457 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:15,671 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:19,001 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:21,356 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:24,435 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:26,912 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:29,197 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:31,273 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:35,126 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:39,088 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:42,060 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:45,039 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:47,415 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:50,031 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:52,060 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:24:54,063 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:56,066 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:24:58,084 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:00,760 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:02,871 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:05,832 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:08,788 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:11,305 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:13,745 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:15,748 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:19,619 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:21,633 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:23,652 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:26,784 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:29,604 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:32,572 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:34,600 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:37,079 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:39,514 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:42,283 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:44,471 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:47,607 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:50,391 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:52,416 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:25:55,336 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:25:58,283 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:01,191 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:03,703 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:06,261 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:09,082 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:11,895 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:14,061 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:17,153 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:19,968 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:22,615 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:24,873 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:26,899 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:29,002 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:31,068 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:33,800 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:37,749 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:41,698 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:44,843 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:47,187 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:49,618 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:51,620 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:53,694 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:26:56,536 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:26:59,508 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:01,510 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:27:03,513 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:05,516 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:27:07,519 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:09,574 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:12,024 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:27:14,295 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:17,287 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:19,488 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:22,415 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:25,213 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:27,334 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:31,156 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:33,159 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:35,510 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:37,924 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:40,232 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:44,036 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:47,053 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:49,270 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:51,948 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:54,209 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:56,899 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:27:59,268 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:01,271 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:03,512 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:05,789 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:07,938 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:09,955 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:12,706 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:15,680 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:18,664 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:21,608 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:23,611 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:25,615 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:27,678 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:30,452 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:32,487 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:35,461 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:38,417 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:41,385 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:44,355 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:47,336 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:50,009 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:52,064 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:54,200 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:56,204 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:28:58,718 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:01,654 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:04,267 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:06,530 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:08,559 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:11,499 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:13,680 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:15,924 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:18,716 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:21,397 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:24,127 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:26,208 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:28,525 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:31,347 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:33,874 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:36,334 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:38,736 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:41,310 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:43,812 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:46,292 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:49,440 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:52,004 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:54,259 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:56,311 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:29:59,399 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:02,239 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:04,295 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:06,409 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:09,193 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:11,196 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:13,514 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:17,160 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:19,263 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:21,641 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:23,767 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:26,272 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:29,100 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:31,622 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:34,240 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:37,071 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:39,638 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:42,210 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:45,040 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:47,656 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:49,658 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:51,660 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:53,817 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:55,899 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:57,984 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:30:59,987 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:02,966 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:05,952 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:08,455 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:10,941 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:12,956 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:15,916 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:18,048 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:20,899 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:23,509 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:25,568 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:27,571 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:31,307 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:34,287 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:38,101 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:41,065 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:44,054 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:46,058 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:48,211 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:51,028 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:53,186 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:56,004 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:31:58,990 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:00,993 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:03,973 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:06,952 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:09,944 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:11,949 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:14,922 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:18,903 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:20,925 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:23,407 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:25,654 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:27,703 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:29,862 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:32,844 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:34,847 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:36,850 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:38,854 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:41,589 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:43,634 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:45,900 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:47,903 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:50,010 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:52,095 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:54,541 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:56,598 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:32:58,915 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:01,824 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:03,835 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:05,839 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:07,904 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:10,511 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:12,553 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:15,407 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:17,586 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:19,912 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:22,284 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:24,290 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:27,107 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:30,043 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:34,011 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:36,996 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:39,001 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:41,204 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:44,092 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:47,889 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:51,818 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:54,289 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:33:56,772 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:00,700 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:02,884 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:05,775 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:09,572 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:13,478 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:17,440 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:21,420 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:25,408 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:27,410 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:30,538 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:34,295 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:37,298 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:40,267 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:42,270 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:45,202 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:47,367 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:50,327 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:53,122 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:55,126 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:34:58,069 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:00,079 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:03,032 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:05,190 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:07,981 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:10,940 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:12,943 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:15,861 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:19,004 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:21,175 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:23,802 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:25,900 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:29,716 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:31,910 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:34,647 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:37,618 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:39,703 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:43,558 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:46,284 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:48,779 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:51,449 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:54,039 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:56,405 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:35:59,039 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:02,307 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:04,309 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:06,312 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:09,001 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:11,238 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:14,283 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:17,951 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:21,899 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:24,882 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:26,884 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:28,941 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:31,377 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:33,941 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:35,976 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:38,714 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:41,587 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:44,374 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:46,695 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:49,363 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:52,461 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:54,464 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:56,594 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:36:59,383 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:01,387 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:03,394 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:07,286 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:10,012 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:12,230 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:15,204 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:18,005 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:20,167 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:22,615 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:25,281 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:27,286 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:30,073 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:33,043 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:35,175 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:38,997 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:41,093 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:43,986 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:46,652 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:48,656 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:50,908 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:52,924 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:54,927 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:57,187 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:37:59,543 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:01,547 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:04,433 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:06,596 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:09,081 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:11,932 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:15,130 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:17,141 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:20,277 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:23,263 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:38:24,267 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:03,516 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 19:49:05,973 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:08,235 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:10,246 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:12,504 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:14,637 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:16,769 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:18,773 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:20,954 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:22,959 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:25,243 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:27,372 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:29,516 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:31,612 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:33,811 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:35,949 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:38,093 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:40,228 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:42,372 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:44,375 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:46,378 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:48,381 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:50,899 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:52,902 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:55,174 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:57,387 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:49:59,472 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:01,475 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:03,654 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:05,933 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:08,081 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:10,084 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:12,359 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:14,427 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:16,639 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:18,786 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:20,931 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:23,006 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:25,010 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:27,359 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:29,491 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:31,615 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:33,753 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:35,901 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:37,973 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:40,186 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:42,312 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:44,317 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:46,322 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:48,739 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:50,810 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:52,813 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:54,816 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:57,287 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:50:59,426 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:01,556 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:03,688 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:05,836 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:07,964 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:10,029 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:12,034 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:14,230 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:17,201 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:19,374 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:22,136 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:25,100 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:27,510 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:30,209 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:32,997 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:35,868 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:38,166 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:41,895 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:43,903 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:46,290 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:49,001 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:51,771 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:54,754 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:57,541 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:51:59,977 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:02,678 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:05,631 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:08,544 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:10,568 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:13,524 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:15,526 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:18,452 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:20,609 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:23,378 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:26,508 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:29,316 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:31,559 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:35,245 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:37,249 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:39,362 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:42,163 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:44,334 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:46,468 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:48,751 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:50,754 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:53,053 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:55,247 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:52:58,137 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:00,276 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:02,924 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:04,929 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:07,851 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:11,811 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:13,977 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:15,981 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:18,917 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:21,512 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:23,526 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:25,670 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:27,994 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:30,282 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:32,606 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:36,547 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:39,504 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:42,471 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:45,447 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:48,407 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:51,390 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:54,359 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:57,319 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:53:59,478 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:54:02,268 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:54:05,235 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:54:07,404 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:54:11,177 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:54:13,313 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:54:16,014 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:54:19,915 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 19:54:21,355 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:12:56,309 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 21:14:11,835 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:13,841 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:15,846 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:17,852 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:19,856 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:21,859 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:23,864 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:25,869 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:27,874 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:29,880 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:31,927 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:33,929 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:35,932 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:37,935 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:39,940 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:41,945 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:43,949 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:45,954 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:47,959 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:49,963 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:51,969 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:53,974 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:55,979 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:57,983 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:14:59,988 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:01,994 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:03,999 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:06,005 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:08,009 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:10,013 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:12,017 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:14,022 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:16,028 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:18,033 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:20,037 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:22,043 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:24,048 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:26,053 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:28,057 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:30,060 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:32,065 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:34,070 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:36,074 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:38,080 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:40,086 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:42,091 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:44,097 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:46,101 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:48,105 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:50,109 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:52,115 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:54,120 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:56,124 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:15:58,128 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:00,133 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:02,136 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:04,140 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:06,145 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:08,149 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:10,152 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:12,158 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:14,163 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:16,168 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:18,172 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:20,177 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:22,181 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:24,184 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:26,188 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:28,193 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:30,197 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:32,201 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:34,206 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:36,212 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:38,216 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:16:39,587 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 21:51:02,642 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:03:06,937 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:08,941 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:10,945 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:12,950 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:03:14,955 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:16,960 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:03:18,965 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:20,970 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:03:22,974 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:24,979 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:26,984 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:03:28,988 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:30,992 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:03:32,997 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:35,002 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:37,006 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:03:39,010 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:41,014 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:03:43,018 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:45,023 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:47,027 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:03:53,487 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:55,491 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:57,497 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:03:59,502 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:04:01,507 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:04:03,513 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:04:05,516 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:04:07,519 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:04:09,522 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:04:11,525 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:04:13,530 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:04:15,532 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:04:17,032 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:06:02,350 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:06:03,991 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-10 22:19:35,794 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:29:26,062 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-10 22:35:34,642 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-12 14:45:11,164 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-12 14:53:12,520 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-12 14:55:48,419 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-12 15:33:08,567 - root - ERROR - 'NoneType' object is not subscriptable
+2020-10-12 15:37:08,974 - root - ERROR - 'NoneType' object is not subscriptable

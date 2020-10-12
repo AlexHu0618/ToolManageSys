@@ -39,6 +39,16 @@ logconfigs = {
             ]
         },
 
+        "warning_file_handler": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "WARN",
+            "formatter": "simple",
+            "filename": "./logs/warnings.log",
+            "maxBytes": 1024*1024*10,      # 日志大小10M
+            "backupCount": 20,             # 最多保存20份日志，写完时轮转
+            "encoding": "utf8"
+        },
+
         "error_file_handler": {
             "class": "logging.handlers.RotatingFileHandler",
             "level": "ERROR",
@@ -62,7 +72,8 @@ logconfigs = {
             "level": "INFO",
             "handlers": [
                 "info_file_handler",
-                "error_file_handler"
+                "warning_file_handler",
+                "error_file_handler",
             ],
             "propagate": "no"
         }
@@ -73,6 +84,7 @@ logconfigs = {
             "handlers": [
                 # "console",
                 "info_file_handler",
+                "warning_file_handler",
                 "error_file_handler"
             ]
         }

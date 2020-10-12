@@ -38,7 +38,7 @@ def start_tcp_client(ip, port):
         while True:
             # rsl = lcd.checkBtn()
             # print(rsl)
-            # rsl = lcd.ledOn(False, 'down')
+            # rsl = lcd.onLed(False, 'down')
             # print(rsl)
             # rsl = lcd.showNum(256)
             # print(rsl)
@@ -54,7 +54,7 @@ def start_tcp_client(ip, port):
             # print(rsl)
             # rsl = r2000.setOutputPower('00', 25)
             # print(rsl)
-            # r2000.reset_inv_buf()
+            r2000.reset_inv_buf()
             # rsl = r2000.inventory()
             # print(rsl)
             rsl = r2000.getAndResetBuf()
@@ -68,4 +68,4 @@ def start_tcp_client(ip, port):
 
 
 if __name__ == '__main__':
-    start_tcp_client('192.168.0.117', 26)
+    start_tcp_client('192.168.0.118', 23)

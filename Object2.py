@@ -3,6 +3,7 @@ from operator import methodcaller
 import socket
 from ctypes import *
 import time
+from myLogger import mylogger
 
 
 class GravityShelf(threading.Thread):
@@ -35,7 +36,16 @@ class GravityShelf(threading.Thread):
                     if rsl is not None:
                         self.queuersl.put(rsl)
                 else:
-                    pass
+                    rsl = self.readAllInfo()
+                    allg = {}
+                    if rsl is not None:
+                        for i in rsl:
+                            g = self.readWeight(i)
+                            allg[i] = g
+                    print('G--getAllInfo: ', allg)
+            except Exception as e:
+                print(e)
+                mylogger.error(e)
             finally:
                 self.lock.release()
 
@@ -167,7 +177,8 @@ class RfidR2000(threading.Thread):
                     if rsl is not None:
                         self.queuersl.put(rsl)
                 else:
-                    pass
+                    rsl = self.inventory('00')
+                    print('R--inventory: ', rsl)
             finally:
                 self.lock.release()
 
@@ -291,12 +302,12 @@ class RfidR2000(threading.Thread):
             cmd_f = 'A0 04' + self.addr + '80' + cmd_repeat
             check = self.check(cmd_f)
             cmd = bytes.fromhex(cmd_f) + check
-            data = self.getData(cmd, True)
-            print('cmd back:', data)
-            print('data[0:5]: ', data[0:5])
+            data = self.getData(cmd, False)
+            # print('cmd back:', data)
+            # print('data[0:5]: ', data[0:5])
             if data[0:5] == bytes.fromhex('A0 0C' + self.addr + '80' + ant_id):
                 tag_count = int.from_bytes(data[5:7], byteorder='big', signed=False)
-                print('tag_count: ', tag_count)
+                # print('tag_count: ', tag_count)
                 return tag_count
         else:
             print('Fail to inventory')
@@ -436,17 +447,20 @@ class Lcd(threading.Thread):
         self.lock = threading.RLock()
 
     def run(self):
+        num = 0
         while self.isrunning:
             self.lock.acquire()
             try:
                 time.sleep(1)
+                num = num + 1 if num < 1000 else 0
                 if not self.queuetask.empty():
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
                         self.queuersl.put(rsl)
                 else:
-                    pass
+                    rsl = self.showNum(num)
+                    print('L--showNum: ', num)
             finally:
                 self.lock.release()
 
@@ -520,9 +534,8 @@ class Lcd(threading.Thread):
         cmd_f = '7E' + self.addr + '02 02' + cmd_num
         check = self.check(cmd_f)
         cmd = cmd_f + check + '68'
-        print(cmd)
         data = self.getData(bytes.fromhex(cmd))
-        print('cmd back:', data)
+        # print('cmd back:', data)
         if data[0:4] == bytes.fromhex('7E' + self.addr + '02 01'):
             return True if data[4] == 0 else False
         else:
@@ -601,3 +614,6 @@ class EntranceGuard(threading.Thread):
             return buff.value
         else:
             return rsl
+
+    def __del__(self):
+        self.lib.Disconnect(self.handle)
