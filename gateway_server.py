@@ -5,10 +5,12 @@ from myLogger import mylogger
 import threading
 import time
 from operator import methodcaller
+from multiprocessing import Process
 
 
-class GatewayServer(object):
+class GatewayServer(Process):
     def __init__(self, port: int, server_registered: dict, client_registered: dict, queue_task, queue_rsl):
+        super().__init__()
         # {(ip, port): (thread, queuetask, queuersl, status), }
         self.terminal_active = dict()
         self.addr = ('', port)
@@ -19,7 +21,7 @@ class GatewayServer(object):
         self.queue_task = queue_task
         self.queue_rsl = queue_rsl
 
-    def start(self):
+    def run(self):
         try:
             # connect all servers
             if self.servers is not None:

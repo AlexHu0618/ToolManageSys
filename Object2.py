@@ -55,13 +55,14 @@ class GravityShelf(threading.Thread):
         cmd = cmd_f + lcr.to_bytes(length=1, byteorder='big', signed=False)
         data = self.getData(cmd)
         # print('cmd back:', data)
-        if data[:3] == bytes.fromhex(addr + '0602'):
-            interval = self.intervals[hex(data[4])[-1]]
-            # print(interval)
-            scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
-            # print(scale)
-            value = scale * interval
-            return value
+        if data is not None:
+            if data[:3] == bytes.fromhex(addr + '0602'):
+                interval = self.intervals[hex(data[4])[-1]]
+                scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
+                value = scale * interval
+                return value
+        else:
+            return None
 
     def getData(self, cmd, multiframe=False):
         self.tcp_socket.settimeout(1)
@@ -104,7 +105,7 @@ class GravityShelf(threading.Thread):
         datas = self.getData(cmd, True)
         # print('info back:', datas)
         all_id = ()
-        if datas:
+        if datas is not None:
             newdatas = []
             # 防止tcp的粘包问题
             for data in datas:
@@ -118,7 +119,7 @@ class GravityShelf(threading.Thread):
             self.all_id = all_id
             return self.all_id
         else:
-            return 'timeout'
+            return None
 
     def setAddr(self, addr_old, addr_new):
         self.getAllSerials()
@@ -602,7 +603,8 @@ class EntranceGuard(threading.Thread):
                     if rsl is not None:
                         self.queuersl.put(rsl)
                 else:
-                    pass
+                    rsl = self.getNewEvent()
+                    print('gate--getNewEvent: ', rsl)
             finally:
                 self.lock.release()
 
@@ -614,6 +616,23 @@ class EntranceGuard(threading.Thread):
             return buff.value
         else:
             return rsl
+
+    def getNewEvent(self):
+        count = self.lib.GetDeviceDataCount(self.handle, bytes('transaction'.encode('utf-8')))
+        if count > 0:
+            size = count * 2000
+            buff = create_string_buffer("q".encode('utf-8'), size)
+            filter1 = b'Index=' + bytes(str(count), encoding='utf8')
+            rsl = self.lib.GetDeviceData(self.handle, byref(buff), size, bytes('transaction'.encode('utf-8')), b'*', filter1, b'')
+            if rsl > 0:
+                # print(buff.value)
+                # print(str(buff.value, encoding='gb18030'))
+                return str(buff.value, encoding='gb18030')
+            else:
+                print('Fail')
+                return rsl
+        else:
+            pass
 
     def __del__(self):
         self.lib.Disconnect(self.handle)
