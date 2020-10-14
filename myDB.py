@@ -20,7 +20,7 @@ class MyDB(object):
             return None
 
     def getAllServers(self):
-        sql = "select * from %s where isserver=1 and ip='%s'" % ('equipments_registered_info', '192.168.8.128')
+        sql = "select * from %s where isserver=1" % ('equipments_registered_info')
 
         try:
             self.__cursor.execute(sql)

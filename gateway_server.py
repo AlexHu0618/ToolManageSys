@@ -43,7 +43,6 @@ class GatewayServer(Process):
                 self.lock.release()
                 if status:
                     self._handle_cmd()
-                    time.sleep(5)
                 else:
                     break
         except Exception as e:
@@ -144,10 +143,27 @@ class GatewayServer(Process):
     def _handle_cmd(self):
         try:
             if not self.queue_task.empty():
-                task, args = self.queue_task.get()
-                rsl = methodcaller(task, *args)(self)
-                if rsl is not None:
-                    self.queue_rsl.put(rsl)
+                # task, args = self.queue_task.get()
+                tp = self.queue_task.get()
+                target = tp.target
+                task = tp.data['func']
+                args = tp.data['args']
+                print('\033[1;33m', task, ' ', args, '\033[0m')
+                if target is not None:
+                    qt = self.terminal_active[target][1]
+                    qr = self.terminal_active[target][2]
+                    qt.put((task, args))
+                    time.sleep(0.1)
+                    if not qr.empty():
+                        data = qr.get()
+                        self.queue_rsl.put(data)
+                        print(target, ' back data: ', data)
+                    else:
+                        print(target, ' qr is empty!')
+                else:
+                    rsl = methodcaller(task, *args)(self)
+                    if rsl is not None:
+                        self.queue_rsl.put(rsl)
             else:
                 pass
             # for (k, v) in self.terminal_active.items():

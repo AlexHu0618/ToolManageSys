@@ -1258,3 +1258,36 @@
 2020-10-13 11:12:43,943 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
 2020-10-13 11:12:45,946 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
 2020-10-13 11:12:47,950 - root - ERROR - non-hexadecimal number found in fromhex() arg at position 0
+2020-10-14 16:02:57,316 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 16:04:06,282 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:11,488 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:16,831 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:22,041 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:25,140 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:30,344 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:35,540 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:40,752 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:45,965 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:51,165 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:04:56,380 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:05:01,583 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:05:06,779 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:05:11,974 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:05:17,215 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:05:22,407 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:05:27,610 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:05:32,826 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:05:38,013 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:05:43,233 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 16:05:48,436 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 16:07:38,154 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:07:43,353 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:08:56,081 - root - ERROR - 'TransferPackage' object has no attribute 'values'
+2020-10-14 16:09:01,086 - root - ERROR - 'TransferPackage' object has no attribute 'values'
+2020-10-14 16:09:58,773 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:10:03,982 - root - ERROR - readWeight() takes from 1 to 2 positional arguments but 3 were given
+2020-10-14 16:30:59,993 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 16:36:13,803 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 16:36:19,014 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 16:37:48,881 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 16:37:49,882 - root - ERROR - 'GravityShelf' object has no attribute ''

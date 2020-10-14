@@ -4,6 +4,7 @@ import socket
 from ctypes import *
 import time
 from myLogger import mylogger
+from globalvar import *
 
 
 class GravityShelf(threading.Thread):
@@ -62,7 +63,7 @@ class GravityShelf(threading.Thread):
                 value = scale * interval
                 return value
         else:
-            return None
+            return EQUIPMENT_RESP_ERR
 
     def getData(self, cmd, multiframe=False):
         self.tcp_socket.settimeout(1)
@@ -80,8 +81,8 @@ class GravityShelf(threading.Thread):
             if multiframe and data_total:
                 return data_total
             else:
-                print('Warning', '等待TCP消息回应超时')
-                return None
+                print('G--Warning', '等待TCP消息回应超时')
+                return TIMEOUT
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
             self.isrunning = False
@@ -207,7 +208,7 @@ class RfidR2000(threading.Thread):
             if multiframe and data_total:
                 return data_total
             else:
-                print('Warning', '等待TCP消息回应超时')
+                print('R--Warning', '等待TCP消息回应超时')
                 return None
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
@@ -461,7 +462,8 @@ class Lcd(threading.Thread):
                         self.queuersl.put(rsl)
                 else:
                     rsl = self.showNum(num)
-                    print('L--showNum: ', num)
+                    if rsl:
+                        print('L--showNum: ', num)
             finally:
                 self.lock.release()
 
@@ -478,13 +480,10 @@ class Lcd(threading.Thread):
         self.tcp_socket.settimeout(1)
         try:
             self.tcp_socket.send(cmd)
-            # print('LCD cmd sent: ', cmd)
-            # print('waitting for cmd return')
-
             data = self.tcp_socket.recv(self.BUFFSIZE)
             # print('LCD BACK DATA: ', data)
         except socket.timeout:
-            print('Warning', '等待TCP消息回应超时')
+            print('L--Warning', '等待TCP消息回应超时')
             return None
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
@@ -537,8 +536,11 @@ class Lcd(threading.Thread):
         cmd = cmd_f + check + '68'
         data = self.getData(bytes.fromhex(cmd))
         # print('cmd back:', data)
-        if data[0:4] == bytes.fromhex('7E' + self.addr + '02 01'):
-            return True if data[4] == 0 else False
+        if data is not None:
+            if data[0:4] == bytes.fromhex('7E' + self.addr + '02 01'):
+                return True if data[4] == 0 else False
+            else:
+                return False
         else:
             return False
 

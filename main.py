@@ -5,6 +5,14 @@ import time
 # from queue import Queue
 from multiprocessing import Process, Queue
 import socket
+from globalvar import *
+
+
+class TransferPackage(object):
+    def __init__(self, target=None):
+        self.target = target
+        self.code = None
+        self.data = dict()
 
 
 def task(q_task, q_rsl):
@@ -18,14 +26,26 @@ def task(q_task, q_rsl):
         break
     while True:
         data = client_sock.recv(1024)
-        cmd = str(data, encoding='utf8')
-        print('cmd: ', cmd)
-        q_task.put((cmd, ('192,168.0.120', 23, 'G', True)))
-        if not q_rsl.empty():
-            rsl = q_rsl.get()
-            print(rsl)
+        if data == b'exit':
+            break
         else:
-            print('queue_rsl is None')
+            cmd = str(data, encoding='utf8')
+            target = ('192.168.0.97', 26)
+            tp = TransferPackage(target=target)
+            tp.data['func'] = cmd
+            tp.data['args'] = ('03',)
+            # tp.data['args'] = ('192,168.0.120', 23, 'G', True)
+            q_task.put(tp)
+            time.sleep(0.5)
+            if not q_rsl.empty():
+                rsl = q_rsl.get()
+            else:
+                rsl = QUEUE_RSL_EMPTY
+                print('queue_rsl is None')
+            print('\033[1;36m', rsl, '\033[0m')
+            resp = bytes(str(rsl), encoding='utf8')
+            client_sock.send(resp)
+    client_sock.close()
 
 
 def main():
