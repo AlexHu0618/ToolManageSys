@@ -27,23 +27,28 @@ class GravityShelf(threading.Thread):
         self.lock = threading.RLock()
 
     def run(self):
+        cursec = 0
         while self.isrunning:
             self.lock.acquire()
             try:
-                time.sleep(1)
                 if not self.queuetask.empty():
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
                         self.queuersl.put(rsl)
                 else:
-                    rsl = self.readAllInfo()
-                    allg = {}
-                    if rsl is not None:
-                        for i in rsl:
-                            g = self.readWeight(i)
-                            allg[i] = g
-                    print('G--getAllInfo: ', allg)
+                    localtime = time.localtime(time.time())
+                    if localtime.tm_sec != cursec:
+                        cursec = localtime.tm_sec
+                        rsl = self.readAllInfo()
+                        allg = {}
+                        if rsl is not None:
+                            for i in rsl:
+                                g = self.readWeight(i)
+                                allg[i] = g
+                        print('G--getAllInfo: ', allg)
+                    else:
+                        pass
             except Exception as e:
                 print(e)
                 mylogger.error(e)
@@ -82,7 +87,7 @@ class GravityShelf(threading.Thread):
                 return data_total
             else:
                 print('G--Warning', '等待TCP消息回应超时')
-                return TIMEOUT
+                return TIMEOUT_EQUIPMENT
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
             self.isrunning = False
@@ -120,7 +125,7 @@ class GravityShelf(threading.Thread):
             self.all_id = all_id
             return self.all_id
         else:
-            return None
+            return EQUIPMENT_RESP_ERR
 
     def setAddr(self, addr_old, addr_new):
         self.getAllSerials()
@@ -132,10 +137,10 @@ class GravityShelf(threading.Thread):
         print('cmd back:', data)
         if data[:4] == bytes.fromhex(addr_new + '64 11 05'):
             print('success')
-            return True
+            return SUCCESS
         else:
             print('failed')
-            return False
+            return EQUIPMENT_RESP_ERR
 
     def getAllSerials(self):
         cmd = b'\x00\x05\x05\x05\x0F'
@@ -169,18 +174,23 @@ class RfidR2000(threading.Thread):
         self.lock = threading.RLock()
 
     def run(self):
+        cursec = 0
         while self.isrunning:
             self.lock.acquire()
             try:
-                time.sleep(1)
                 if not self.queuetask.empty():
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
                         self.queuersl.put(rsl)
                 else:
-                    rsl = self.inventory('00')
-                    print('R--inventory: ', rsl)
+                    localtime = time.localtime(time.time())
+                    if localtime.tm_sec != cursec:
+                        cursec = localtime.tm_sec
+                        rsl = self.inventory('00')
+                        print('R--inventory: ', rsl)
+                    else:
+                        pass
             finally:
                 self.lock.release()
 
@@ -209,7 +219,7 @@ class RfidR2000(threading.Thread):
                 return data_total
             else:
                 print('R--Warning', '等待TCP消息回应超时')
-                return None
+                return TIMEOUT_EQUIPMENT
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
             self.isrunning = False
@@ -236,9 +246,9 @@ class RfidR2000(threading.Thread):
         data = self.getData(cmd, False)
         if data[0:5] == bytes.fromhex('A0 04' + self.addr + '73 10'):
             self.addr = addr_new
-            return True
+            return SUCCESS
         else:
-            return False
+            return ERR_EQUIPMENT_RESP
 
     def setOutputPower(self, num='00', value=30):
         powers = self.getOutputPower()
@@ -252,11 +262,11 @@ class RfidR2000(threading.Thread):
             data = self.getData(cmd, False)
             print('cmd back:', data)
             if data[0:5] == bytes.fromhex('A0 04' + self.addr + '76 10'):
-                return True
+                return SUCCESS
             else:
-                return False
+                return ERR_EQUIPMENT_RESP
         else:
-            return False
+            return ERR_EQUIPMENT_RESP
 
     def getOutputPower(self):
         cmd_f = 'A0 03 ' + self.addr + ' 97' if self.ant_count == 8 else ' 77'
@@ -270,32 +280,28 @@ class RfidR2000(threading.Thread):
         elif data[0:4] == bytes.fromhex('A0' + ('0B' if self.ant_count == 8 else '07') + self.addr + ' 97' if self.ant_count == 8 else ' 77'):
             return [data[i+4] for i in range(self.ant_count)]
         else:
-            return []
+            return ERR_EQUIPMENT_RESP
 
     def getWorkAntenna(self):
         cmd_f = 'A0 03' + self.addr + '75'
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
-        # print('RFID2000 cmd back:', data)
         if data[0:4] == bytes.fromhex(('A0 04' + self.addr + '75')):
             ant_id = data[4]
             return ant_id
         else:
-            print('Fail to getWorkAntenna')
-            return None
+            return ERR_EQUIPMENT_RESP
 
     def setWorkAntenna(self, ant_id='00'):
         cmd_f = 'A0 04' + self.addr + '74' + ant_id
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
-        # print('cmd back:', data)
         if data[0:5] == bytes.fromhex(('A0 04' + self.addr + '74 10')):
-            return True
+            return SUCCESS
         else:
-            print('Fail to setWorkAntenna')
-            return False
+            return ERR_EQUIPMENT_RESP
 
     def inventory(self, ant_id='00'):
         rsl = self.setWorkAntenna(ant_id)
@@ -312,8 +318,7 @@ class RfidR2000(threading.Thread):
                 # print('tag_count: ', tag_count)
                 return tag_count
         else:
-            print('Fail to inventory')
-            return None
+            return ERR_EQUIPMENT_RESP
 
     def getAndResetBuf(self):
         cmd_f = 'A0 03' + self.addr + '90'
@@ -323,7 +328,7 @@ class RfidR2000(threading.Thread):
         print('cmd back:', data)
         if data[0:4] == bytes.fromhex('A0 04' + self.addr + '90'):
             print('ErrorCode: ', hex(data[4]))
-            return None
+            return ERR_EQUIPMENT_RESP
         else:
             frames = []
             length = int(data[1])
@@ -442,7 +447,7 @@ class Lcd(threading.Thread):
         threading.Thread.__init__(self)
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
-        self.addr = '03'
+        self.alladdrs = ('03', '04')
         self.isrunning = True
         self.queuetask = queuetask
         self.queuersl = queuersl
@@ -450,20 +455,29 @@ class Lcd(threading.Thread):
 
     def run(self):
         num = 0
+        cursec = 0
         while self.isrunning:
             self.lock.acquire()
             try:
-                time.sleep(1)
-                num = num + 1 if num < 1000 else 0
                 if not self.queuetask.empty():
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
                         self.queuersl.put(rsl)
                 else:
-                    rsl = self.showNum(num)
-                    if rsl:
-                        print('L--showNum: ', num)
+                    localtime = time.localtime(time.time())
+                    if localtime.tm_sec != cursec:
+                        cursec = localtime.tm_sec
+                        num = num + 1 if num < 1000 else 0
+                        for i in self.alladdrs:
+                            rsl = self.showNum(num, i)
+                            activate = True if num % 2 == 0 else False
+                            self.onLed(activate=activate, pos='up', addr=i)
+                            self.onLed(activate=not activate, pos='down', addr=i)
+                            if rsl:
+                                print('L(%s)--showNum: %i' % (i, num))
+                    else:
+                        pass
             finally:
                 self.lock.release()
 
@@ -484,7 +498,7 @@ class Lcd(threading.Thread):
             # print('LCD BACK DATA: ', data)
         except socket.timeout:
             print('L--Warning', '等待TCP消息回应超时')
-            return None
+            return TIMEOUT_EQUIPMENT
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
             return None
@@ -501,62 +515,58 @@ class Lcd(threading.Thread):
             else:
                 return data
 
-    def checkBtn(self):
-        cmd_f = '7E' + self.addr + '00 00'
+    def checkBtn(self, addr='01'):
+        cmd_f = '7E' + addr + '00 00'
         check = self.check(cmd_f)
         cmd = cmd_f + check + '68'
         data = self.getData(bytes.fromhex(cmd))
-        print('cmd back:', data)
-        if data[0:4] == bytes.fromhex('7E' + self.addr + '00 01'):
-            return True if data[4] == 1 else False
+        if data[0:4] == bytes.fromhex('7E' + addr + '00 01'):
+            return SUCCESS if data[4] == 1 else ERR_EQUIPMENT_RESP
         else:
-            return False
+            return ERR_EQUIPMENT_RESP
 
-    def onLed(self, activate=True, pos='up'):
+    def onLed(self, activate=True, pos='up', addr='01'):
         cmd_acti = '01' if activate else '00'
         cmd_pos = '01' if pos == 'up' else '02'
-        cmd_f = '7E' + self.addr + '01 02' + cmd_pos + cmd_acti
+        cmd_f = '7E' + addr + '01 02' + cmd_pos + cmd_acti
         check = self.check(cmd_f)
         cmd = cmd_f + check + '68'
         data = self.getData(bytes.fromhex(cmd))
-        # print('cmd back:', data)
-        if data:
-            if data[0:4] == bytes.fromhex('7E' + self.addr + '01 01'):
-                return True if data[4] == 0 else False
+        if data is not None:
+            if data[0:4] == bytes.fromhex('7E' + addr + '01 01'):
+                return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
             else:
-                return False
+                return ERR_EQUIPMENT_RESP
         else:
-            return 'timeout'
+            return TIMEOUT_EQUIPMENT
 
-    def showNum(self, num: int):
+    def showNum(self, num: int, addr='01'):
         number = num if num < 1000 else 999
         cmd_num = str(number).zfill(4)
-        cmd_f = '7E' + self.addr + '02 02' + cmd_num
+        cmd_f = '7E' + addr + '02 02' + cmd_num
         check = self.check(cmd_f)
         cmd = cmd_f + check + '68'
         data = self.getData(bytes.fromhex(cmd))
-        # print('cmd back:', data)
         if data is not None:
-            if data[0:4] == bytes.fromhex('7E' + self.addr + '02 01'):
-                return True if data[4] == 0 else False
+            if data[0:4] == bytes.fromhex('7E' + addr + '02 01'):
+                return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
             else:
-                return False
+                return ERR_EQUIPMENT_RESP
         else:
-            return False
+            return TIMEOUT_EQUIPMENT
 
-    def onBacklight(self, activate=True):
+    def onBacklight(self, activate=True, addr='01'):
         cmd_data = '01' if activate else '00'
-        cmd_f = '7E' + self.addr + '04 01' + cmd_data
+        cmd_f = '7E' + addr + '04 01' + cmd_data
         check = self.check(cmd_f)
         cmd = cmd_f + check + '68'
         data = self.getData(bytes.fromhex(cmd))
-        print('cmd back:', data)
-        if data[0:4] == bytes.fromhex('7E' + self.addr + '04 01'):
-            return True if data[4] == 0 else False
+        if data[0:4] == bytes.fromhex('7E' + addr + '04 01'):
+            return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
         else:
-            return False
+            return ERR_EQUIPMENT_RESP
 
-    def showText(self, contents=[]):
+    def showText(self, contents=[], addr='01'):
         content = [bytes(cont, 'gb2312') if cont else b'' for cont in contents]
         cmd_l1 = b'\x01' + (len(content[0]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[0] + b'\x00'
         cmd_l2 = b'\x02' + (len(content[1]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[1] + b'\x00'
@@ -564,16 +574,16 @@ class Lcd(threading.Thread):
         cmd_l4 = b'\x04' + (len(content[3]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[3] + b'\x00'
         length = len(cmd_l1 + cmd_l2 + cmd_l3 + cmd_l4)
         cmd_len = hex(length)[-2:] if length > 15 else ('0' + hex(length)[-1:])
-        cmd_f = bytes.fromhex('7E' + self.addr + '03' + cmd_len) + cmd_l1 + cmd_l2 + cmd_l3 + cmd_l4
+        cmd_f = bytes.fromhex('7E' + addr + '03' + cmd_len) + cmd_l1 + cmd_l2 + cmd_l3 + cmd_l4
         print(cmd_f)
         check = self.check(cmd_f)
         cmd = cmd_f + bytes.fromhex(check + '68')
         data = self.getData(cmd)
         print('cmd back:', data)
-        if data[0:4] == bytes.fromhex('7E' + self.addr + '03 01'):
-            return True if data[4] == 0 else False
+        if data[0:4] == bytes.fromhex('7E' + addr + '03 01'):
+            return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
         else:
-            return False
+            return ERR_EQUIPMENT_RESP
 
 
 class EntranceGuard(threading.Thread):
@@ -595,18 +605,23 @@ class EntranceGuard(threading.Thread):
             print('Fail to Connect.')
 
     def run(self):
+        cursec = 0
         while self.isrunning:
             self.lock.acquire()
             try:
-                time.sleep(1)
                 if not self.queuetask.empty():
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
                         self.queuersl.put(rsl)
                 else:
-                    rsl = self.getNewEvent()
-                    print('gate--getNewEvent: ', rsl)
+                    localtime = time.localtime(time.time())
+                    if localtime.tm_sec != cursec:
+                        cursec = localtime.tm_sec
+                        rsl = self.getNewEvent()
+                        print('gate--getNewEvent: ', rsl)
+                    else:
+                        pass
             finally:
                 self.lock.release()
 
@@ -614,7 +629,6 @@ class EntranceGuard(threading.Thread):
         buff = create_string_buffer("b".encode('utf-8'), 1024)
         rsl = self.lib.GetDeviceParam(self.handle, byref(buff), 1024, bytes('IPAddress,ReaderCount,MThreshold'.encode('utf-8')))
         if rsl == 0:
-            # print(buff.value)
             return buff.value
         else:
             return rsl
@@ -624,14 +638,13 @@ class EntranceGuard(threading.Thread):
         if count > 0:
             size = count * 2000
             buff = create_string_buffer("q".encode('utf-8'), size)
-            filter1 = b'Index=' + bytes(str(count), encoding='utf8')
+            filter1 = b'Index=' + bytes(str(count), encoding='utf8') + b'\t' + b'EventType=0'
             rsl = self.lib.GetDeviceData(self.handle, byref(buff), size, bytes('transaction'.encode('utf-8')), b'*', filter1, b'')
             if rsl > 0:
-                # print(buff.value)
+                last_record = buff.value.split(b'\r\n')[1]
                 # print(str(buff.value, encoding='gb18030'))
-                return str(buff.value, encoding='gb18030')
+                return str(last_record, encoding='gb18030')
             else:
-                print('Fail')
                 return rsl
         else:
             pass

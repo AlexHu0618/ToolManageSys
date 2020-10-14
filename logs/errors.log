@@ -1291,3 +1291,33 @@
 2020-10-14 16:36:19,014 - root - ERROR - 'GravityShelf' object has no attribute ''
 2020-10-14 16:37:48,881 - root - ERROR - 'GravityShelf' object has no attribute ''
 2020-10-14 16:37:49,882 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 16:43:02,253 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 16:44:48,515 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 16:46:26,147 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 16:52:10,782 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 17:15:31,373 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 17:23:38,305 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 17:26:10,030 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 17:58:55,867 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 17:58:56,869 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 18:00:20,638 - root - ERROR - 'GravityShelf' object has no attribute '(192.168.0.102, 23)
+readWeight'
+2020-10-14 18:00:21,640 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 18:00:22,642 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 18:03:18,555 - root - ERROR - 'GravityShelf' object has no attribute '('192.168.0.102', 23)
+readWeight'
+2020-10-14 18:03:19,558 - root - ERROR - 'GravityShelf' object has no attribute ''
+2020-10-14 18:35:38,058 - root - ERROR - b"('192.168.0.102', 23)"
+2020-10-14 18:35:43,697 - root - ERROR - b"('192.168.0.102', 23)"
+2020-10-14 18:36:37,738 - root - ERROR - b"('192.168.0.102', 23)"
+2020-10-14 18:37:29,341 - root - ERROR - b"('192.168.0.102', 23)"
+2020-10-14 18:39:59,099 - root - ERROR - b"'192.168.0.102', 23"
+2020-10-14 18:51:13,558 - root - ERROR - ('192.168.0.102', 23)
+2020-10-14 18:52:10,183 - root - ERROR - ('192.168.0.102', 23)
+2020-10-14 18:58:52,356 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 19:05:01,658 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 19:19:17,366 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 19:20:33,503 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 19:21:22,996 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 19:46:04,607 - root - ERROR - 'int' object is not subscriptable
+2020-10-14 19:52:44,919 - root - ERROR - 'int' object is not subscriptable

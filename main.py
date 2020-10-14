@@ -29,14 +29,19 @@ def task(q_task, q_rsl):
         if data == b'exit':
             break
         else:
-            cmd = str(data, encoding='utf8')
-            target = ('192.168.0.97', 26)
+            cmds = data.split(b'\r\n')
+            target = eval(cmds[0])
             tp = TransferPackage(target=target)
-            tp.data['func'] = cmd
-            tp.data['args'] = ('03',)
+            tp.data['func'] = str(cmds[1], encoding='utf8')
+            tp.data['args'] = eval(cmds[2])
+            # cmd = str(data, encoding='utf8')
+            # target = ('192.168.0.97', 26)
+            # tp = TransferPackage(target=target)
+            # tp.data['func'] = cmd
+            # tp.data['args'] = ('03',)
             # tp.data['args'] = ('192,168.0.120', 23, 'G', True)
             q_task.put(tp)
-            time.sleep(0.5)
+            time.sleep(1)
             if not q_rsl.empty():
                 rsl = q_rsl.get()
             else:
