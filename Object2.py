@@ -635,19 +635,27 @@ class EntranceGuard(threading.Thread):
 
     def getNewEvent(self):
         count = self.lib.GetDeviceDataCount(self.handle, bytes('transaction'.encode('utf-8')))
-        if count > 0:
+        if count >= 0:
             size = count * 2000
             buff = create_string_buffer("q".encode('utf-8'), size)
-            filter1 = b'Index=' + bytes(str(count), encoding='utf8') + b'\t' + b'EventType=0'
+            filter1 = b'Index=' + bytes(str(count), encoding='utf8')
             rsl = self.lib.GetDeviceData(self.handle, byref(buff), size, bytes('transaction'.encode('utf-8')), b'*', filter1, b'')
-            if rsl > 0:
+            if rsl >= 0:
                 last_record = buff.value.split(b'\r\n')[1]
-                # print(str(buff.value, encoding='gb18030'))
-                return str(last_record, encoding='gb18030')
+                recode_list = last_record.split(b',')
+                eventtype = recode_list[3]
+                user = str(recode_list[0], encoding='gb18030')
+                if eventtype == b'0':
+                    print('\033[1;33m USER--', user, ' is authed....\033[0m')
+                    resp = 'Auth: ' + str(last_record, encoding='gb18030')
+                else:
+                    print('\033[1;33m USER--', user, ' is non-authed....\033[0m')
+                    resp = 'Non-auth: ' + str(last_record, encoding='gb18030')
+                return resp
             else:
                 return rsl
         else:
-            pass
+            return count
 
     def __del__(self):
         self.lib.Disconnect(self.handle)

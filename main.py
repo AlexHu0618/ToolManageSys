@@ -6,6 +6,7 @@ import time
 from multiprocessing import Process, Queue
 import socket
 from globalvar import *
+from task_controler import TaskControler
 
 
 class TransferPackage(object):
@@ -56,6 +57,7 @@ def task(q_task, q_rsl):
 def main():
     mydb = MyDB()
     myserver = None
+    mycontroler = None
     q_task = Queue(50)
     q_rsl = Queue(50)
     try:
@@ -69,18 +71,22 @@ def main():
         # queue_rsl = Queue(50)
         myserver = GatewayServer(8809, server_registered, client_registered, q_task, q_rsl)
         myserver.start()
-        p = Process(target=task, args=(q_task, q_rsl))
-        p.daemon = True
-        p.start()
+        mycontroler = TaskControler(queue_task=q_task, queue_rsl=q_rsl)
+        mycontroler.start()
+        # p = Process(target=task, args=(q_task, q_rsl))
+        # p.daemon = True
+        # p.start()
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
         mydb.close()
         myserver.stop()
+        mycontroler.stop()
         print('stop')
     finally:
         mydb.close()
         myserver.stop()
+        mycontroler.stop()
         print('stop')
 
 
