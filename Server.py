@@ -9,7 +9,7 @@
 
 import socketserver
 import threading
-from Object import Lcd
+from util.Object import Lcd
 
 EQUIPMENTS = dict()
 

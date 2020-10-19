@@ -7,7 +7,7 @@
 # @Blog    : http://www.gzrobot.net/aboutme
 # @version : 0.0.0
 
-import config
+from config import config
 import logging
 import logging.config
 

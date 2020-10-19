@@ -3,8 +3,8 @@ from operator import methodcaller
 import socket
 from ctypes import *
 import time
-from myLogger import mylogger
-from globalvar import *
+from app.myLogger import mylogger
+from app.globalvar import *
 
 
 class GravityShelf(threading.Thread):
@@ -15,7 +15,7 @@ class GravityShelf(threading.Thread):
                  '8': 0.05, '9': 0.1, 'a': 0.2, 'b': 0.5, 'c': 1, 'd': 2, 'e': 5, 'A': 0.2, 'B': 0.5, 'C': 1,
                  'D': 2, 'E': 5}
 
-    def __init__(self, tcp_socket, queuetask, queuersl):
+    def __init__(self, tcp_socket, queuetask, queuersl, event):
         threading.Thread.__init__(self)
         self.BUFFSIZE = 1024
         self.all_id = ()
@@ -24,18 +24,20 @@ class GravityShelf(threading.Thread):
         self.isrunning = True
         self.queuetask = queuetask
         self.queuersl = queuersl
+        self.event = event
         self.lock = threading.RLock()
 
     def run(self):
         cursec = 0
         while self.isrunning:
-            self.lock.acquire()
             try:
                 if not self.queuetask.empty():
-                    task, args = self.queuetask.get()
-                    rsl = methodcaller(task, *args)(self)
-                    if rsl is not None:
-                        self.queuersl.put(rsl)
+                    with self.lock:
+                        task, args = self.queuetask.get()
+                        rsl = methodcaller(task, *args)(self)
+                        if rsl is not None:
+                            self.queuersl.put(rsl)
+                            self.event.set()
                 else:
                     localtime = time.localtime(time.time())
                     if localtime.tm_sec != cursec:
@@ -52,15 +54,12 @@ class GravityShelf(threading.Thread):
             except Exception as e:
                 print(e)
                 mylogger.error(e)
-            finally:
-                self.lock.release()
 
     def readWeight(self, addr='01'):
         cmd_f = bytes.fromhex(addr + '05 02 05')
         lcr = sum(cmd_f) % 256
         cmd = cmd_f + lcr.to_bytes(length=1, byteorder='big', signed=False)
         data = self.getData(cmd)
-        # print('cmd back:', data)
         if data is not None:
             if data[:3] == bytes.fromhex(addr + '0602'):
                 interval = self.intervals[hex(data[4])[-1]]
@@ -68,7 +67,7 @@ class GravityShelf(threading.Thread):
                 value = scale * interval
                 return value
         else:
-            return EQUIPMENT_RESP_ERR
+            return ERR_EQUIPMENT_RESP
 
     def getData(self, cmd, multiframe=False):
         self.tcp_socket.settimeout(1)
@@ -77,16 +76,17 @@ class GravityShelf(threading.Thread):
             self.tcp_socket.send(cmd)
 
             if multiframe:
-                while True:
-                    data = self.tcp_socket.recv(self.BUFFSIZE)
-                    data_total.append(data)
+                # 等待最多64个地址返回，平均一个返回10ms
+                time.sleep(0.15)
+                data = self.tcp_socket.recv(self.BUFFSIZE)
+                data_total.append(data)
             else:
                 data = self.tcp_socket.recv(self.BUFFSIZE)
         except socket.timeout:
             if multiframe and data_total:
                 return data_total
             else:
-                print('G--Warning', '等待TCP消息回应超时')
+                # print('G--Warning', '等待TCP消息回应超时')
                 return TIMEOUT_EQUIPMENT
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
@@ -125,7 +125,7 @@ class GravityShelf(threading.Thread):
             self.all_id = all_id
             return self.all_id
         else:
-            return EQUIPMENT_RESP_ERR
+            return ERR_EQUIPMENT_RESP
 
     def setAddr(self, addr_old, addr_new):
         self.getAllSerials()
@@ -140,7 +140,7 @@ class GravityShelf(threading.Thread):
             return SUCCESS
         else:
             print('failed')
-            return EQUIPMENT_RESP_ERR
+            return ERR_EQUIPMENT_RESP
 
     def getAllSerials(self):
         cmd = b'\x00\x05\x05\x05\x0F'
@@ -162,7 +162,7 @@ class RfidR2000(threading.Thread):
     """
         1.frame: Head(0xA0) + Len + Addr + Cmd + Data + Check
     """
-    def __init__(self, tcp_socket, queuetask, queuersl):
+    def __init__(self, tcp_socket, queuetask, queuersl, event):
         threading.Thread.__init__(self)
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
@@ -171,6 +171,7 @@ class RfidR2000(threading.Thread):
         self.isrunning = True
         self.queuetask = queuetask
         self.queuersl = queuersl
+        self.event = event
         self.lock = threading.RLock()
 
     def run(self):
@@ -183,6 +184,7 @@ class RfidR2000(threading.Thread):
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
                         self.queuersl.put(rsl)
+                        self.event.set()
                 else:
                     localtime = time.localtime(time.time())
                     if localtime.tm_sec != cursec:
@@ -201,6 +203,13 @@ class RfidR2000(threading.Thread):
         check_hex = bytes.fromhex(hex(check)[-2:])
         return check_hex
 
+    def count_frame(self, data):
+        if data[0:4] == bytes.fromhex('A0 04' + self.addr + '90'):
+            return 1
+        else:
+            tag_count = int.from_bytes(data[4:6], byteorder='big', signed=False)
+            return tag_count
+
     def getData(self, cmd, multiframe=False):
         self.tcp_socket.settimeout(1)
         data_total = []
@@ -209,8 +218,18 @@ class RfidR2000(threading.Thread):
             # print('RFID2000 cmd send: ', cmd)
 
             if multiframe:
+                isfirst = True
+                num = 0
+                count = 0
                 while True:
                     data = self.tcp_socket.recv(self.BUFFSIZE)
+                    num += 1
+                    if isfirst:
+                        count = self.count_frame(data)
+                        print('count: ', count)
+                        isfirst = False
+                    if num == count:
+                        break
                     data_total.append(data)
             else:
                 data = self.tcp_socket.recv(self.BUFFSIZE)
@@ -311,8 +330,6 @@ class RfidR2000(threading.Thread):
             check = self.check(cmd_f)
             cmd = bytes.fromhex(cmd_f) + check
             data = self.getData(cmd, False)
-            # print('cmd back:', data)
-            # print('data[0:5]: ', data[0:5])
             if data[0:5] == bytes.fromhex('A0 0C' + self.addr + '80' + ant_id):
                 tag_count = int.from_bytes(data[5:7], byteorder='big', signed=False)
                 # print('tag_count: ', tag_count)
@@ -443,7 +460,7 @@ class Lcd(threading.Thread):
     """
         1.frame: Head(0x7E) + Addr + Cmd + Len + Data + Check + End(0x68)
     """
-    def __init__(self, tcp_socket, queuetask, queuersl):
+    def __init__(self, tcp_socket, queuetask, queuersl, event):
         threading.Thread.__init__(self)
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
@@ -451,6 +468,7 @@ class Lcd(threading.Thread):
         self.isrunning = True
         self.queuetask = queuetask
         self.queuersl = queuersl
+        self.event = event
         self.lock = threading.RLock()
 
     def run(self):
@@ -464,6 +482,7 @@ class Lcd(threading.Thread):
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
                         self.queuersl.put(rsl)
+                        self.event.set()
                 else:
                     localtime = time.localtime(time.time())
                     if localtime.tm_sec != cursec:
@@ -498,7 +517,7 @@ class Lcd(threading.Thread):
             # print('LCD BACK DATA: ', data)
         except socket.timeout:
             print('L--Warning', '等待TCP消息回应超时')
-            return TIMEOUT_EQUIPMENT
+            return None
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
             return None

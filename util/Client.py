@@ -1,6 +1,5 @@
 import socket
-import sys
-from Object import RfidR2000, Lcd, GravityShelf
+from util.Object import RfidR2000, Lcd, GravityShelf
 
 receive_count: int = 0
 
@@ -54,11 +53,11 @@ def start_tcp_client(ip, port):
             # print(rsl)
             # rsl = r2000.setOutputPower('00', 25)
             # print(rsl)
-            r2000.reset_inv_buf()
+            # r2000.reset_inv_buf()
             # rsl = r2000.inventory()
             # print(rsl)
-            rsl = r2000.getAndResetBuf()
-            print(rsl)
+            # rsl = r2000.getAndResetBuf()
+            # print(rsl)
             # rsl = gra.readWeight('01')
             # print(rsl)
             break
@@ -68,4 +67,4 @@ def start_tcp_client(ip, port):
 
 
 if __name__ == '__main__':
-    start_tcp_client('192.168.0.118', 23)
+    start_tcp_client('192.168.8.221', 23)

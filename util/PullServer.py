@@ -2,10 +2,9 @@ from concurrent.futures import ThreadPoolExecutor
 import time
 import threading
 import socket
-import select
-from myLogger import mylogger
+from app.myLogger import mylogger
 from queue import Queue
-from Object import *
+from util.Object import *
 
 
 class PullServer:

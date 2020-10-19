@@ -1,9 +1,8 @@
 import socket
-from Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard
+from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard
 from queue import Queue
-from myLogger import mylogger
+from app.myLogger import mylogger
 import threading
-import time
 from operator import methodcaller
 from multiprocessing import Process
 
@@ -38,9 +37,8 @@ class GatewayServer(Process):
             # thread_getcmd.daemon = True
             # thread_getcmd.start()
             while True:
-                self.lock.acquire()
-                status = self.isrunning
-                self.lock.release()
+                with self.lock:
+                    status = self.isrunning
                 if status:
                     self._handle_cmd()
                 else:
@@ -56,6 +54,7 @@ class GatewayServer(Process):
         terminal_type = ttype
         queue_task = Queue(50)
         queue_rsl = Queue(50)
+        subevent = threading.Event()
         thread = None
         while True:
             try:
@@ -64,18 +63,18 @@ class GatewayServer(Process):
                 else:
                     s.connect(addr)
                     if terminal_type == 'G':
-                        thread = GravityShelf(s, queue_task, queue_rsl)
+                        thread = GravityShelf(s, queue_task, queue_rsl, subevent)
                     elif terminal_type == 'L':
-                        thread = Lcd(s, queue_task, queue_rsl)
+                        thread = Lcd(s, queue_task, queue_rsl, subevent)
                     elif terminal_type == 'R':
-                        thread = RfidR2000(s, queue_task, queue_rsl)
+                        thread = RfidR2000(s, queue_task, queue_rsl, subevent)
                     else:
                         pass
                 if thread:
                     thread.daemon = True
                     thread.start()
                     self.lock.acquire()
-                    self.terminal_active[addr] = (thread, queue_task, queue_rsl, terminal_type)
+                    self.terminal_active[addr] = (thread, queue_task, queue_rsl, terminal_type, subevent)
                     self.lock.release()
                     print('客户端(%s)已成功连接。。' % str(addr))
                     mylogger.info('客户端(%s)已成功连接。。' % str(addr))
@@ -103,20 +102,21 @@ class GatewayServer(Process):
                 # 每循环一次就会产生一个线程
                 queue_task = Queue(50)
                 queue_rsl = Queue(50)
+                subevent = threading.Event()
                 thread = None
                 client_type = self.clients[addr] if addr in self.clients.keys() else None
                 if client_type == 'G':
-                    thread = GravityShelf(client_sock, queue_task, queue_rsl)
+                    thread = GravityShelf(client_sock, queue_task, queue_rsl, subevent)
                 elif client_type == 'L':
-                    thread = Lcd(client_sock, queue_task, queue_rsl)
+                    thread = Lcd(client_sock, queue_task, queue_rsl, subevent)
                 elif client_type == 'R':
-                    thread = RfidR2000(client_sock, queue_task, queue_rsl)
+                    thread = RfidR2000(client_sock, queue_task, queue_rsl, subevent)
                 else:
                     pass
                 if thread:
                     thread.daemon = True
                     thread.start()
-                    self.terminal_active[addr] = (thread, queue_task, queue_rsl, client_type)
+                    self.terminal_active[addr] = (thread, queue_task, queue_rsl, client_type, subevent)
                     mylogger.info('客户端(%s)已成功连接。。' % str(addr))
                     print('客户端(%s)已成功连接。。' % str(addr))
         finally:
@@ -142,55 +142,38 @@ class GatewayServer(Process):
 
     def _handle_cmd(self):
         try:
+            self.lock.acquire()
             if not self.queue_task.empty():
                 # task, args = self.queue_task.get()
                 tp = self.queue_task.get()
+                self.lock.release()
                 target = tp.target
                 task = tp.data['func']
                 args = tp.data['args']
                 print('\033[1;33m', task, ' ', args, '\033[0m')
+                # cmd for the equipment
                 if target is not None:
+                    # get the queue of equipment
                     qt = self.terminal_active[target][1]
                     qr = self.terminal_active[target][2]
+                    subevent = self.terminal_active[target][4]
+                    subevent.clear()
                     qt.put((task, args))
-                    time.sleep(0.1)
+                    subevent.wait()
                     if not qr.empty():
                         data = qr.get()
-                        self.queue_rsl.put(data)
-                        print(target, ' back data: ', data)
+                        with self.lock:
+                            self.queue_rsl.put(data)
                     else:
                         print(target, ' qr is empty!')
+                # cmd for gateway server
                 else:
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
-                        self.queue_rsl.put(rsl)
+                        with self.lock:
+                            self.queue_rsl.put(rsl)
             else:
                 pass
-            # for (k, v) in self.terminal_active.items():
-            #     qt = v[1]
-            #     qr = v[2]
-            #     if v[3] == 'G':
-            #         # qt.put('readAllInfo')
-            #         qt.put(('readWeight', ('0a',)))
-            #         print('send cmd to ', k)
-            #     elif v[3] == 'R':
-            #         qt.put(('getOutputPower', ()))
-            #         print('send cmd to ', k)
-            #     elif v[3] == 'L':
-            #         qt.put(('onLed', (True,)))
-            #         print('send cmd to ', k)
-            #     elif v[3] == 'guard':
-            #         qt.put(('getDeviceParam', ()))
-            #         print('send cmd to ', k)
-            #     else:
-            #         pass
-            #     if not qr.empty():
-            #         data = qr.get()
-            #         print(k, ' back data: ', data)
-            #         if data == 'timeout':
-            #             print(k, ' timeout')
-            #     else:
-            #         print(k, ' qr is empty!')
         except Exception as e:
             mylogger.error(e)
 
