@@ -5,6 +5,7 @@ from app.myLogger import mylogger
 import threading
 from operator import methodcaller
 from multiprocessing import Process
+from app.globalvar import *
 
 
 class GatewayServer(Process):
@@ -142,14 +143,12 @@ class GatewayServer(Process):
 
     def _handle_cmd(self):
         try:
-            self.lock.acquire()
             if not self.queue_task.empty():
-                # task, args = self.queue_task.get()
-                tp = self.queue_task.get()
-                self.lock.release()
-                target = tp.target
-                task = tp.data['func']
-                args = tp.data['args']
+                # get transfer package type 'TransferPackage' from queue
+                transfer_package = self.queue_task.get()
+                target = transfer_package.target
+                task = transfer_package.data['func']
+                args = transfer_package.data['args']
                 print('\033[1;33m', task, ' ', args, '\033[0m')
                 # cmd for the equipment
                 if target is not None:
@@ -162,16 +161,15 @@ class GatewayServer(Process):
                     subevent.wait()
                     if not qr.empty():
                         data = qr.get()
-                        with self.lock:
-                            self.queue_rsl.put(data)
+                        transfer_package.data['rsl'] = data
+                        self.queue_rsl.put(transfer_package)
                     else:
                         print(target, ' qr is empty!')
                 # cmd for gateway server
                 else:
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
-                        with self.lock:
-                            self.queue_rsl.put(rsl)
+                        self.queue_rsl.put(rsl)
             else:
                 pass
         except Exception as e:
