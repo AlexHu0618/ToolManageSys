@@ -7,13 +7,11 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 class TaskControler(Process):
-    def __init__(self, queue_task, queue_rsl, lock_qt, lock_qr):
+    def __init__(self, queue_task, queue_rsl):
         super().__init__()
         self.sock = None
         self.q_task = queue_task
         self.q_rsl = queue_rsl
-        self.lock_qt = lock_qt
-        self.lock_qr = lock_qr
         self.isrunning = True
 
     def run(self):
@@ -74,7 +72,8 @@ class TaskControler(Process):
         self.q_task.put(tp)
         time.sleep(0.5)
         if not self.q_rsl.empty():
-            rsl = self.q_rsl.get()
+            # rsl = self.q_rsl.get()
+            self._return_result()
         else:
             rsl = QUEUE_RSL_EMPTY
             print('queue_rsl is None')
@@ -91,11 +90,18 @@ class TaskControler(Process):
         self.q_task.put(tp)
 
     def _return_result(self):
-        transfer_package = self.q_rsl.get()
-        target = transfer_package.target
-        data = transfer_package.data['rsl']
-        resp = {'target': target, 'data': data}
-        self.sock.send(resp)
+        while self.isrunning:
+            try:
+                transfer_package = self.q_rsl.get()
+                target = transfer_package.target
+                data = transfer_package.data['rsl']
+                resp = 'target:' + str(target) + ', data: ' + str(data)
+                self.sock.send(bytes(resp, encoding='utf8'))
+            except (OSError, BrokenPipeError):
+                continue
+            except Exception as e:
+                print(e)
+                break
 
     def stop(self):
         self.isrunning = False

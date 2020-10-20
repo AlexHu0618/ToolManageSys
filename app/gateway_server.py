@@ -6,6 +6,7 @@ import threading
 from operator import methodcaller
 from multiprocessing import Process
 from app.globalvar import *
+import asyncio
 
 
 class GatewayServer(Process):
@@ -20,9 +21,11 @@ class GatewayServer(Process):
         self.lock = threading.RLock()
         self.queue_task = queue_task
         self.queue_rsl = queue_rsl
+        self.loop = None
 
     def run(self):
         try:
+            self.loop = asyncio.get_event_loop()
             # connect all servers
             if self.servers is not None:
                 print("Start to connect to registered servers!!!!")
@@ -43,6 +46,7 @@ class GatewayServer(Process):
                 if status:
                     self._handle_cmd()
                 else:
+                    self.loop.close()
                     break
         except Exception as e:
             print('gateway_server: ', e)
@@ -152,19 +156,7 @@ class GatewayServer(Process):
                 print('\033[1;33m', task, ' ', args, '\033[0m')
                 # cmd for the equipment
                 if target is not None:
-                    # get the queue of equipment
-                    qt = self.terminal_active[target][1]
-                    qr = self.terminal_active[target][2]
-                    subevent = self.terminal_active[target][4]
-                    subevent.clear()
-                    qt.put((task, args))
-                    subevent.wait()
-                    if not qr.empty():
-                        data = qr.get()
-                        transfer_package.data['rsl'] = data
-                        self.queue_rsl.put(transfer_package)
-                    else:
-                        print(target, ' qr is empty!')
+                    self.loop.run_until_complete(self._get_data_from_equipment(transfer_package=transfer_package))
                 # cmd for gateway server
                 else:
                     rsl = methodcaller(task, *args)(self)
@@ -174,6 +166,24 @@ class GatewayServer(Process):
                 pass
         except Exception as e:
             mylogger.error(e)
+
+    async def _get_data_from_equipment(self, transfer_package):
+        target = transfer_package.target
+        task = transfer_package.data['func']
+        args = transfer_package.data['args']
+        # get the queue of equipment
+        qt = self.terminal_active[target][1]
+        qr = self.terminal_active[target][2]
+        subevent = self.terminal_active[target][4]
+        subevent.clear()
+        qt.put((task, args))
+        subevent.wait()
+        if not qr.empty():
+            data = qr.get()
+            transfer_package.data['rsl'] = data
+            self.queue_rsl.put(transfer_package)
+        else:
+            print(target, ' qr is empty!')
 
     def stop(self):
         self.lock.acquire()

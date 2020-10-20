@@ -48,7 +48,7 @@ class GravityShelf(threading.Thread):
                             for i in rsl:
                                 g = self.readWeight(i)
                                 allg[i] = g
-                        print('G--getAllInfo: ', allg)
+                        print(time.asctime(), 'G--getAllInfo: ', allg)
                     else:
                         pass
             except Exception as e:
@@ -66,6 +66,8 @@ class GravityShelf(threading.Thread):
                 scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
                 value = scale * interval
                 return value
+            else:
+                return ERR_EQUIPMENT_RESP
         else:
             return ERR_EQUIPMENT_RESP
 

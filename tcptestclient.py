@@ -23,6 +23,8 @@ def start_tcp_client(ip, port):
         while True:
             rsl = s.recv(1024)
             print(rsl)
+            data = bytes.fromhex('01  06  02  00  01  02  03  04  78')
+            s.send(data)
     except KeyboardInterrupt:
         s.shutdown(2)
         s.close()

@@ -7,7 +7,7 @@ class MyDB(object):
         self.__cursor = self.__db.cursor()
 
     def getAllClients(self):
-        sql = 'select * from %s where isserver=0' % ('equipments_registered_info')
+        sql = 'select * from %s where isserver=0' % ('equipments_registered_info_test')
 
         try:
             self.__cursor.execute(sql)
@@ -20,7 +20,7 @@ class MyDB(object):
             return None
 
     def getAllServers(self):
-        sql = "select * from %s where isserver=1" % ('equipments_registered_info')
+        sql = "select * from %s where isserver=1" % ('equipments_registered_info_test')
 
         try:
             self.__cursor.execute(sql)
