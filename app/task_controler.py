@@ -82,11 +82,17 @@ class TaskControler(Process):
         clientsock.send(resp)
 
     def puttask(self, data):
+        # package to transferpackage and put into task queue
         cmds = data.split(b'\r\n')
-        target = eval(cmds[0])
-        tp = TransferPackage(target=target)
-        tp.data['func'] = str(cmds[1], encoding='utf8')
-        tp.data['args'] = eval(cmds[2])
+        if len(cmds) > 2:
+            target = eval(cmds[0])
+            tp = TransferPackage(target=target)
+            tp.data['func'] = str(cmds[1], encoding='utf8')
+            tp.data['args'] = eval(cmds[2])
+        else:
+            tp = TransferPackage()
+            tp.data['func'] = str(cmds[0], encoding='utf8')
+            tp.data['args'] = eval(cmds[1])
         self.q_task.put(tp)
 
     def _return_result(self):

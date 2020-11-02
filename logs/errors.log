@@ -1477,3 +1477,26 @@ readWeight'
 2020-10-20 16:45:14,001 - root - ERROR - 'int' object is not iterable
 2020-10-20 16:46:29,150 - root - ERROR - 'int' object is not iterable
 2020-10-20 16:46:30,000 - root - ERROR - 'int' object is not iterable
+2020-11-02 13:16:57,152 - root - ERROR - 'int' object is not iterable
+2020-11-02 13:16:58,000 - root - ERROR - 'int' object is not iterable
+2020-11-02 13:26:55,705 - root - ERROR - ('10.0.174.128', 23)
+2020-11-02 13:27:13,981 - root - ERROR - ('10.0.174.128', 23)
+2020-11-02 13:27:35,681 - root - ERROR - ('10.0.174.128', 23)
+2020-11-02 14:08:25,151 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:08:26,000 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:12:21,001 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:15:25,152 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:15:26,000 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:15:56,151 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:15:57,000 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:16:15,156 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:16:16,000 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:16:29,152 - root - ERROR - 'int' object is not iterable
+2020-11-02 14:16:30,001 - root - ERROR - 'int' object is not iterable
+2020-11-02 16:53:04,153 - root - ERROR - 'int' object is not iterable
+2020-11-02 16:53:05,001 - root - ERROR - 'int' object is not iterable
+2020-11-02 16:53:14,809 - root - ERROR - name 'time_thread' is not defined
+2020-11-02 17:08:53,152 - root - ERROR - 'int' object is not iterable
+2020-11-02 17:08:54,001 - root - ERROR - 'int' object is not iterable
+2020-11-02 17:45:51,245 - root - ERROR - show() takes 2 positional arguments but 3 were given
+2020-11-02 17:46:00,260 - root - ERROR - show() takes 2 positional arguments but 3 were given

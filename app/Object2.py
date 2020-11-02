@@ -26,6 +26,7 @@ class GravityShelf(threading.Thread):
         self.queuersl = queuersl
         self.event = event
         self.lock = threading.RLock()
+        self.frequency = 1  # secends
 
     def run(self):
         cursec = 0
@@ -54,6 +55,7 @@ class GravityShelf(threading.Thread):
             except Exception as e:
                 print(e)
                 mylogger.error(e)
+        print('网络断开啦，子线程%s要关闭了！' % threading.current_thread().name)
 
     def readWeight(self, addr='01'):
         cmd_f = bytes.fromhex(addr + '05 02 05')

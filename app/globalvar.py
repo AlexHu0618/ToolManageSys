@@ -9,3 +9,5 @@ class TransferPackage(object):
         self.target = target
         self.code = None
         self.data = dict()
+        self.source = None
+        self.type = None  # 0-command; 1-data; 2-nitification.

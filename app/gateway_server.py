@@ -14,6 +14,7 @@ class GatewayServer(Process):
         super().__init__()
         # {(ip, port): (thread, queuetask, queuersl, status), }
         self.terminal_active = dict()
+        self.terminal_inactive = dict()
         self.addr = ('', port)
         self.servers = server_registered
         self.clients = client_registered
@@ -24,6 +25,13 @@ class GatewayServer(Process):
         self.loop = None
 
     def run(self):
+        ########################
+        # 1、主动连接所有已注册服务端；
+        # 2、监听等待连接所有已注册客户端；
+        # 3、打开注册子线程；
+        # 4、打开创建与监测子线程；
+        # 5、打开交互接口。
+        #######################
         try:
             self.loop = asyncio.get_event_loop()
             # connect all servers
@@ -37,9 +45,11 @@ class GatewayServer(Process):
             thread_monitor = threading.Thread(target=self._monitor_access)
             thread_monitor.daemon = True
             thread_monitor.start()
-            # thread_getcmd = threading.Thread(target=self._getcmd)
-            # thread_getcmd.daemon = True
-            # thread_getcmd.start()
+            # monitor status subthread on time
+            t = threading.Timer(interval=5, function=self.time_thread)
+            t.daemon = True
+            t.start()
+            # wait for cmd
             while True:
                 with self.lock:
                     status = self.isrunning
@@ -51,6 +61,20 @@ class GatewayServer(Process):
         except Exception as e:
             print('gateway_server: ', e)
             mylogger.error(e)
+
+    def time_thread(self):
+        terminal_act = []
+        terminal_inact = []
+        for k, v in self.terminal_active.items():
+            if v[0].isAlive():
+                terminal_act.append(k)
+            else:
+                terminal_inact.append(k)
+        print('active: ', terminal_act)
+        print('inactive: ', terminal_inact)
+        t = threading.Timer(interval=5, function=self.time_thread)
+        t.daemon = True
+        t.start()
 
     def _connect_server(self, addr: tuple, ttype: str):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
