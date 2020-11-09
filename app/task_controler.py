@@ -2,8 +2,9 @@ from multiprocessing import Process
 import threading
 import socket
 import time
-from app.globalvar import *
+# from app.globalvar import *
 from concurrent.futures import ThreadPoolExecutor
+import struct
 
 
 class TaskControler(Process):
@@ -38,14 +39,19 @@ class TaskControler(Process):
                     print('new conn: ', addr)
                     break
                 while True:
-                    data = client_sock.recv(1024)
-                    if data == b'exit':
+                    # data = client_sock.recv(1024)
+                    length_data = client_sock.recv(4)
+                    if length_data == b'exit':
                         break
-                    elif len(data) == 0:
+                    elif len(length_data) == 0:
                         print('client: ', addr, ' was offline')
                         raise BrokenPipeError
                     else:
-                        self.puttask(data=data)
+                        # self.puttask(data=data)
+                        length = struct.unpack('i', length_data)[0]
+                        data = client_sock.recv(length)
+                        print(time.asctime(), 'recv: ', data)
+                        client_sock.send(b'I got the command')
                 # with ThreadPoolExecutor(max_workers=5) as tpool:
                 #     while True:
                 #         data = client_sock.recv(1024)
@@ -111,3 +117,22 @@ class TaskControler(Process):
 
     def stop(self):
         self.isrunning = False
+
+
+if __name__ == '__main__':
+    from queue import Queue
+
+    mycontroler = None
+    q_task = Queue(50)
+    q_rsl = Queue(50)
+    try:
+        mycontroler = TaskControler(queue_task=q_task, queue_rsl=q_rsl)
+        mycontroler.start()
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        mycontroler.stop()
+        print('stop')
+    finally:
+        mycontroler.stop()
+        print('stop')
