@@ -63,6 +63,7 @@ class GatewayServer(Process):
             mylogger.error(e)
 
     def time_thread(self):
+        # 定时循环执行线程
         terminal_act = []
         terminal_inact = []
         for k, v in self.terminal_active.items():
@@ -70,8 +71,8 @@ class GatewayServer(Process):
                 terminal_act.append(k)
             else:
                 terminal_inact.append(k)
-        print('active: ', terminal_act)
-        print('inactive: ', terminal_inact)
+        # print('active: ', terminal_act)
+        # print('inactive: ', terminal_inact)
         t = threading.Timer(interval=5, function=self.time_thread)
         t.daemon = True
         t.start()
@@ -135,11 +136,11 @@ class GatewayServer(Process):
                 thread = None
                 client_type = self.clients[addr] if addr in self.clients.keys() else None
                 if client_type == 'G':
-                    thread = GravityShelf(client_sock, queue_task, queue_rsl, subevent)
+                    thread = GravityShelf(client_sock, queue_task, queue_rsl, subevent, addr, self.terminal_active, self.lock)
                 elif client_type == 'L':
-                    thread = Lcd(client_sock, queue_task, queue_rsl, subevent)
+                    thread = Lcd(client_sock, queue_task, queue_rsl, subevent, addr, self.terminal_active, self.lock)
                 elif client_type == 'R':
-                    thread = RfidR2000(client_sock, queue_task, queue_rsl, subevent)
+                    thread = RfidR2000(client_sock, queue_task, queue_rsl, subevent, addr, self.terminal_active, self.lock)
                 else:
                     pass
                 if thread:
@@ -180,7 +181,9 @@ class GatewayServer(Process):
                 print('\033[1;33m', task, ' ', args, '\033[0m')
                 # cmd for the equipment
                 if target is not None:
-                    self.loop.run_until_complete(self._get_data_from_equipment(transfer_package=transfer_package))
+                    coroutine = self._get_data_from_equipment(transfer_package=transfer_package)
+                    task = asyncio.ensure_future(coroutine)
+                    self.loop.run_until_complete(task)
                 # cmd for gateway server
                 else:
                     rsl = methodcaller(task, *args)(self)
@@ -192,6 +195,7 @@ class GatewayServer(Process):
             mylogger.error(e)
 
     async def _get_data_from_equipment(self, transfer_package):
+        # 异步访问硬件
         target = transfer_package.target
         task = transfer_package.data['func']
         args = transfer_package.data['args']
@@ -201,13 +205,16 @@ class GatewayServer(Process):
         subevent = self.terminal_active[target][4]
         subevent.clear()
         qt.put((task, args))
-        subevent.wait()
+        await subevent.wait()
         if not qr.empty():
             data = qr.get()
             transfer_package.data['rsl'] = data
             self.queue_rsl.put(transfer_package)
         else:
             print(target, ' qr is empty!')
+
+    def get_all_data(self, addr_list: list):
+
 
     def stop(self):
         self.lock.acquire()

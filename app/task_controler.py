@@ -2,8 +2,7 @@ from multiprocessing import Process
 import threading
 import socket
 import time
-# from app.globalvar import *
-from concurrent.futures import ThreadPoolExecutor
+from .globalvar import *
 import struct
 
 
@@ -39,7 +38,7 @@ class TaskControler(Process):
                     print('new conn: ', addr)
                     break
                 while True:
-                    # data = client_sock.recv(1024)
+                    # length_data = client_sock.recv(1024)
                     length_data = client_sock.recv(4)
                     if length_data == b'exit':
                         break
@@ -47,21 +46,19 @@ class TaskControler(Process):
                         print('client: ', addr, ' was offline')
                         raise BrokenPipeError
                     else:
-                        # self.puttask(data=data)
+                        # self.puttask(data=length_data)
                         length = struct.unpack('i', length_data)[0]
                         data = client_sock.recv(length)
                         print(time.asctime(), 'recv: ', data)
-                        client_sock.send(b'I got the command')
-                # with ThreadPoolExecutor(max_workers=5) as tpool:
-                #     while True:
-                #         data = client_sock.recv(1024)
-                #         if data == b'exit':
-                #             break
-                #         elif len(data) == 0:
-                #             print('client: ', addr, ' was offline')
-                #             raise BrokenPipeError
-                #         else:
-                #             self.waitfor_resp(data=data, clientsock=client_sock)
+                        data_dict = eval(str(data, encoding='utf-8'))
+                        data_dict['data']['resp'] = 203
+                        # data_send = bytes('{}'.format(data_dict), encoding='utf-8')
+                        # client_sock.send(data_send)
+                        cmd = data_dict['data']['addr'].__str__() + '\r\n' + data_dict['data']['func'] + '\r\n' + \
+                              data_dict['data']['args'].__str__() + '\r\n' + data_dict['uuid']
+                        cmd_b = bytes(cmd, encoding='utf-8')
+                        print(cmd_b)
+                        self.puttask(data=cmd_b)
             except (OSError, BrokenPipeError):
                 continue
             except Exception as e:
@@ -91,14 +88,18 @@ class TaskControler(Process):
         # package to transferpackage and put into task queue
         cmds = data.split(b'\r\n')
         if len(cmds) > 2:
+            # 属于传感器的指令
             target = eval(cmds[0])
             tp = TransferPackage(target=target)
             tp.data['func'] = str(cmds[1], encoding='utf8')
             tp.data['args'] = eval(cmds[2])
+            tp.uuid = str(cmds[3], encoding='utf8')
         else:
+            # 属于网关服务器的指令
             tp = TransferPackage()
             tp.data['func'] = str(cmds[0], encoding='utf8')
             tp.data['args'] = eval(cmds[1])
+            tp.uuid = str(cmds[2], encoding='utf8')
         self.q_task.put(tp)
 
     def _return_result(self):
@@ -106,9 +107,16 @@ class TaskControler(Process):
             try:
                 transfer_package = self.q_rsl.get()
                 target = transfer_package.target
-                data = transfer_package.data['rsl']
-                resp = 'target:' + str(target) + ', data: ' + str(data)
-                self.sock.send(bytes(resp, encoding='utf8'))
+                data = transfer_package.data['rsl'] if 'rsl' in transfer_package.data.keys() else {}
+                uuid = transfer_package.uuid
+                # resp = 'target:' + str(target) + ', data: ' + str(data)
+                # print(resp)
+                # self.sock.send(bytes(resp, encoding='utf8'))
+                data_dict = {'uuid': uuid, 'data': {'data': 'test'}, 'type': transfer_package.type}
+                data_dict['data']['resp'] = 203
+                data_send = bytes('{}'.format(data_dict), encoding='utf-8')
+                if self.sock:
+                    self.sock.send(data_send)
             except (OSError, BrokenPipeError):
                 continue
             except Exception as e:

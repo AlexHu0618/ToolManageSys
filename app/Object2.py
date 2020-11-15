@@ -49,7 +49,7 @@ class GravityShelf(threading.Thread):
                             for i in rsl:
                                 g = self.readWeight(i)
                                 allg[i] = g
-                        print(time.asctime(), 'G--getAllInfo: ', allg)
+                        # print(time.asctime(), 'G--getAllInfo: ', allg)
                     else:
                         pass
             except Exception as e:

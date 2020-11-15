@@ -1,72 +1,133 @@
-2020-11-02 12:52:57,610 - root - INFO - START SERVER
-2020-11-02 12:52:57,636 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:05:58,496 - root - INFO - START SERVER
-2020-11-02 13:05:58,511 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:09:26,224 - root - INFO - START SERVER
-2020-11-02 13:09:26,235 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:09:36,216 - root - INFO - 客户端(('10.0.174.128', 23))已成功连接。。
-2020-11-02 13:16:57,152 - root - ERROR - 'int' object is not iterable
-2020-11-02 13:16:58,000 - root - ERROR - 'int' object is not iterable
-2020-11-02 13:17:38,281 - root - INFO - START SERVER
-2020-11-02 13:17:38,295 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:18:21,816 - root - INFO - START SERVER
-2020-11-02 13:18:21,829 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:18:41,709 - root - INFO - START SERVER
-2020-11-02 13:18:41,721 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:20:14,164 - root - INFO - START SERVER
-2020-11-02 13:20:14,176 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:22:59,458 - root - INFO - START SERVER
-2020-11-02 13:22:59,468 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:26:12,276 - root - INFO - START SERVER
-2020-11-02 13:26:12,287 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:26:51,943 - root - INFO - START SERVER
-2020-11-02 13:26:51,955 - root - INFO - There is None registered server for connecting!
-2020-11-02 13:26:55,705 - root - ERROR - ('10.0.174.128', 23)
-2020-11-02 13:27:13,981 - root - ERROR - ('10.0.174.128', 23)
-2020-11-02 13:27:35,681 - root - ERROR - ('10.0.174.128', 23)
-2020-11-02 13:28:29,981 - root - INFO - 客户端(('10.0.174.128', 23))已成功连接。。
-2020-11-02 14:08:25,151 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:08:26,000 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:12:06,347 - root - INFO - START SERVER
-2020-11-02 14:12:06,361 - root - INFO - There is None registered server for connecting!
-2020-11-02 14:12:12,293 - root - INFO - 客户端(('10.0.174.128', 23))已成功连接。。
-2020-11-02 14:12:21,001 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:12:42,809 - root - INFO - 客户端(('10.0.174.128', 23))已成功连接。。
-2020-11-02 14:15:25,152 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:15:26,000 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:15:34,213 - root - INFO - START SERVER
-2020-11-02 14:15:34,225 - root - INFO - There is None registered server for connecting!
-2020-11-02 14:15:46,262 - root - INFO - 客户端(('10.0.174.128', 23))已成功连接。。
-2020-11-02 14:15:56,151 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:15:57,000 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:16:12,593 - root - INFO - 客户端(('10.0.174.128', 23))已成功连接。。
-2020-11-02 14:16:15,156 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:16:16,000 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:16:22,106 - root - INFO - 客户端(('10.0.174.128', 23))已成功连接。。
-2020-11-02 14:16:29,152 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:16:30,001 - root - ERROR - 'int' object is not iterable
-2020-11-02 14:16:39,554 - root - INFO - 客户端(('10.0.174.128', 23))已成功连接。。
-2020-11-02 16:53:04,153 - root - ERROR - 'int' object is not iterable
-2020-11-02 16:53:05,001 - root - ERROR - 'int' object is not iterable
-2020-11-02 16:53:14,787 - root - INFO - START SERVER
-2020-11-02 16:53:14,807 - root - INFO - There is None registered server for connecting!
-2020-11-02 16:53:14,809 - root - ERROR - name 'time_thread' is not defined
-2020-11-02 16:53:47,727 - root - INFO - START SERVER
-2020-11-02 16:53:47,741 - root - INFO - There is None registered server for connecting!
-2020-11-02 16:55:46,209 - root - INFO - START SERVER
-2020-11-02 16:55:46,222 - root - INFO - There is None registered server for connecting!
-2020-11-02 16:56:47,597 - root - INFO - START SERVER
-2020-11-02 16:56:47,610 - root - INFO - There is None registered server for connecting!
-2020-11-02 17:01:33,426 - root - INFO - START SERVER
-2020-11-02 17:01:33,441 - root - INFO - There is None registered server for connecting!
-2020-11-02 17:08:31,452 - root - INFO - START SERVER
-2020-11-02 17:08:31,467 - root - INFO - There is None registered server for connecting!
-2020-11-02 17:08:40,625 - root - INFO - 客户端(('10.0.174.128', 23))已成功连接。。
-2020-11-02 17:08:53,152 - root - ERROR - 'int' object is not iterable
-2020-11-02 17:08:54,001 - root - ERROR - 'int' object is not iterable
-2020-11-02 17:42:20,592 - root - INFO - START SERVER
-2020-11-02 17:42:20,605 - root - INFO - There is None registered server for connecting!
-2020-11-02 17:45:04,101 - root - INFO - START SERVER
-2020-11-02 17:45:04,114 - root - INFO - There is None registered server for connecting!
-2020-11-02 17:45:51,245 - root - ERROR - show() takes 2 positional arguments but 3 were given
-2020-11-02 17:46:00,260 - root - ERROR - show() takes 2 positional arguments but 3 were given
+2020-11-15 10:19:33,022 - root - INFO - START SERVER
+2020-11-15 10:19:33,121 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:21:23,444 - root - INFO - START SERVER
+2020-11-15 10:21:23,460 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:21:28,103 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 10:26:24,152 - root - ERROR - 'int' object is not iterable
+2020-11-15 10:26:25,009 - root - ERROR - 'int' object is not iterable
+2020-11-15 10:27:47,587 - root - INFO - START SERVER
+2020-11-15 10:27:47,603 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:28:24,001 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 10:29:09,164 - root - ERROR - 'int' object is not iterable
+2020-11-15 10:29:10,001 - root - ERROR - 'int' object is not iterable
+2020-11-15 10:30:25,624 - root - INFO - START SERVER
+2020-11-15 10:30:25,648 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:31:31,169 - root - INFO - START SERVER
+2020-11-15 10:31:31,185 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:34:01,544 - root - INFO - START SERVER
+2020-11-15 10:34:01,562 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:37:55,405 - root - INFO - START SERVER
+2020-11-15 10:37:55,434 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:43:22,015 - root - INFO - START SERVER
+2020-11-15 10:43:22,043 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:43:39,926 - root - ERROR - ('192.168.8.221', 23)
+2020-11-15 10:43:49,169 - root - ERROR - ('192.168.8.221', 23)
+2020-11-15 10:43:56,823 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 10:47:17,000 - root - ERROR - 'int' object is not iterable
+2020-11-15 10:49:39,020 - root - INFO - START SERVER
+2020-11-15 10:49:39,032 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:49:50,241 - root - ERROR - ('192.168.8.221', 23)
+2020-11-15 10:56:04,987 - root - INFO - START SERVER
+2020-11-15 10:56:05,008 - root - INFO - There is None registered server for connecting!
+2020-11-15 10:56:19,687 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 10:59:58,295 - root - INFO - START SERVER
+2020-11-15 10:59:58,310 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:02:11,255 - root - INFO - START SERVER
+2020-11-15 11:02:11,293 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:05:18,469 - root - INFO - START SERVER
+2020-11-15 11:05:18,484 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:09:07,380 - root - INFO - START SERVER
+2020-11-15 11:09:07,394 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:14:42,370 - root - INFO - START SERVER
+2020-11-15 11:14:42,386 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:15:31,713 - root - INFO - START SERVER
+2020-11-15 11:15:31,748 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:17:18,432 - root - INFO - START SERVER
+2020-11-15 11:17:18,445 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:21:02,567 - root - INFO - START SERVER
+2020-11-15 11:21:02,589 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:21:14,551 - root - INFO - START SERVER
+2020-11-15 11:21:14,563 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:22:47,455 - root - INFO - START SERVER
+2020-11-15 11:22:47,473 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:23:02,303 - root - ERROR - ('192.168.8.221', 23)
+2020-11-15 11:23:26,784 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 11:40:27,885 - root - INFO - START SERVER
+2020-11-15 11:40:27,936 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:40:31,957 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 11:41:02,150 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:41:03,000 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:42:43,421 - root - INFO - START SERVER
+2020-11-15 11:42:43,435 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:42:47,110 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 11:44:30,153 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:44:31,000 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:52:03,770 - root - INFO - START SERVER
+2020-11-15 11:52:03,788 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:52:07,641 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 11:53:42,160 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:53:43,001 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:53:46,239 - root - INFO - START SERVER
+2020-11-15 11:53:46,254 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:53:48,962 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 11:56:24,153 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:56:25,008 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:56:33,223 - root - INFO - START SERVER
+2020-11-15 11:56:33,238 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:56:36,181 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 11:57:51,005 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:57:58,872 - root - INFO - START SERVER
+2020-11-15 11:57:58,905 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:58:01,420 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 11:58:53,150 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:58:54,010 - root - ERROR - 'int' object is not iterable
+2020-11-15 11:59:00,725 - root - INFO - START SERVER
+2020-11-15 11:59:00,738 - root - INFO - There is None registered server for connecting!
+2020-11-15 11:59:02,906 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 12:00:45,158 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:00:46,008 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:00:55,330 - root - INFO - START SERVER
+2020-11-15 12:00:55,367 - root - INFO - There is None registered server for connecting!
+2020-11-15 12:00:58,103 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 12:04:34,185 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:04:35,008 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:04:42,834 - root - INFO - START SERVER
+2020-11-15 12:04:42,849 - root - INFO - There is None registered server for connecting!
+2020-11-15 12:04:46,258 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 12:06:27,163 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:06:28,001 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:06:35,439 - root - INFO - START SERVER
+2020-11-15 12:06:35,455 - root - INFO - There is None registered server for connecting!
+2020-11-15 12:06:39,025 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 12:08:05,165 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:08:06,016 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:08:18,434 - root - INFO - START SERVER
+2020-11-15 12:08:18,446 - root - INFO - There is None registered server for connecting!
+2020-11-15 12:08:21,040 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 12:09:49,161 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:09:50,004 - root - ERROR - 'int' object is not iterable
+2020-11-15 12:10:00,065 - root - INFO - START SERVER
+2020-11-15 12:10:00,079 - root - INFO - There is None registered server for connecting!
+2020-11-15 12:10:04,703 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 13:39:39,151 - root - ERROR - 'int' object is not iterable
+2020-11-15 13:39:40,001 - root - ERROR - 'int' object is not iterable
+2020-11-15 13:39:43,808 - root - INFO - START SERVER
+2020-11-15 13:39:43,826 - root - INFO - There is None registered server for connecting!
+2020-11-15 13:39:49,022 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 14:01:28,637 - root - INFO - START SERVER
+2020-11-15 14:01:28,658 - root - INFO - There is None registered server for connecting!
+2020-11-15 14:01:31,802 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-15 14:03:04,155 - root - ERROR - 'int' object is not iterable
+2020-11-15 14:03:05,011 - root - ERROR - 'int' object is not iterable
+2020-11-15 14:03:09,707 - root - INFO - START SERVER
+2020-11-15 14:03:09,724 - root - INFO - There is None registered server for connecting!
+2020-11-15 14:04:19,828 - root - INFO - START SERVER
+2020-11-15 14:04:19,842 - root - INFO - There is None registered server for connecting!
+2020-11-15 14:13:55,231 - root - INFO - START SERVER
+2020-11-15 14:13:55,252 - root - INFO - There is None registered server for connecting!
+2020-11-15 14:23:58,082 - root - INFO - START SERVER
+2020-11-15 14:23:58,101 - root - INFO - There is None registered server for connecting!
+2020-11-15 14:25:08,110 - root - INFO - START SERVER
+2020-11-15 14:25:08,125 - root - INFO - There is None registered server for connecting!
+2020-11-15 14:29:16,269 - root - INFO - START SERVER
+2020-11-15 14:29:16,285 - root - INFO - There is None registered server for connecting!

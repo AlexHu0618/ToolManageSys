@@ -6,6 +6,7 @@ QUEUE_RSL_EMPTY = 203
 
 class TransferPackage(object):
     def __init__(self, target=None):
+        self.uuid = None
         self.target = target
         self.code = None
         self.data = dict()
