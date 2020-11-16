@@ -15,7 +15,7 @@ class GravityShelf(threading.Thread):
                  '8': 0.05, '9': 0.1, 'a': 0.2, 'b': 0.5, 'c': 1, 'd': 2, 'e': 5, 'A': 0.2, 'B': 0.5, 'C': 1,
                  'D': 2, 'E': 5}
 
-    def __init__(self, tcp_socket, queuetask, queuersl, event):
+    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data, lock_q_push):
         threading.Thread.__init__(self)
         self.BUFFSIZE = 1024
         self.all_id = ()
@@ -25,20 +25,22 @@ class GravityShelf(threading.Thread):
         self.queuetask = queuetask
         self.queuersl = queuersl
         self.event = event
-        self.lock = threading.RLock()
+        self.queue_push_data = queue_push_data
+        self.lock_q_push = lock_q_push
+        self.addr = addr
         self.frequency = 1  # secends
 
     def run(self):
         cursec = 0
+        current_data = {}
         while self.isrunning:
             try:
                 if not self.queuetask.empty():
-                    with self.lock:
-                        task, args = self.queuetask.get()
-                        rsl = methodcaller(task, *args)(self)
-                        if rsl is not None:
-                            self.queuersl.put(rsl)
-                            self.event.set()
+                    task, args = self.queuetask.get()
+                    rsl = methodcaller(task, *args)(self)
+                    if rsl is not None:
+                        self.queuersl.put(rsl)
+                        self.event.set()
                 else:
                     localtime = time.localtime(time.time())
                     if localtime.tm_sec != cursec:
@@ -49,6 +51,10 @@ class GravityShelf(threading.Thread):
                             for i in rsl:
                                 g = self.readWeight(i)
                                 allg[i] = g
+                            if allg != current_data:
+                                current_data.update(allg)
+                                with self.lock_q_push:
+                                    self.queue_push_data.put({'addr': self.addr, 'data': allg})
                         # print(time.asctime(), 'G--getAllInfo: ', allg)
                     else:
                         pass
@@ -166,20 +172,24 @@ class RfidR2000(threading.Thread):
     """
         1.frame: Head(0xA0) + Len + Addr + Cmd + Data + Check
     """
-    def __init__(self, tcp_socket, queuetask, queuersl, event):
+    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data, lock_q_push):
         threading.Thread.__init__(self)
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
-        self.addr = '01'
+        self.addr_num = '01'
         self.ant_count = 8
         self.isrunning = True
         self.queuetask = queuetask
         self.queuersl = queuersl
         self.event = event
+        self.addr = addr
+        self.queue_push_data = queue_push_data
+        self.lock_q_push = lock_q_push
         self.lock = threading.RLock()
 
     def run(self):
         cursec = 0
+        current_data = 0
         while self.isrunning:
             self.lock.acquire()
             try:
@@ -194,6 +204,10 @@ class RfidR2000(threading.Thread):
                     if localtime.tm_sec != cursec:
                         cursec = localtime.tm_sec
                         rsl = self.inventory('00')
+                        if rsl != current_data:
+                            current_data = rsl
+                            with self.lock_q_push:
+                                self.queue_push_data.put({'addr': self.addr, 'data': rsl})
                         print('R--inventory: ', rsl)
                     else:
                         pass
@@ -208,7 +222,7 @@ class RfidR2000(threading.Thread):
         return check_hex
 
     def count_frame(self, data):
-        if data[0:4] == bytes.fromhex('A0 04' + self.addr + '90'):
+        if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
             return 1
         else:
             tag_count = int.from_bytes(data[4:6], byteorder='big', signed=False)
@@ -262,13 +276,13 @@ class RfidR2000(threading.Thread):
                 return data if not multiframe else data_total
 
     def setReaderAddr(self, addr_new):
-        cmd_f = 'A0 04' + self.addr + '73' + addr_new
+        cmd_f = 'A0 04' + self.addr_num + '73' + addr_new
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         print(cmd)
         data = self.getData(cmd, False)
-        if data[0:5] == bytes.fromhex('A0 04' + self.addr + '73 10'):
-            self.addr = addr_new
+        if data[0:5] == bytes.fromhex('A0 04' + self.addr_num + '73 10'):
+            self.addr_num = addr_new
             return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
@@ -278,13 +292,13 @@ class RfidR2000(threading.Thread):
         if powers:
             powers[int(num)] = value
             cmd_len = '0B' if self.ant_count == 8 else '07'
-            cmd_f = 'A0 ' + cmd_len + self.addr + '76 ' + ' '.join(hex(p)[-2:] if p > 16 else ('0' + hex(p)[-1:]) for p in powers)
+            cmd_f = 'A0 ' + cmd_len + self.addr_num + '76 ' + ' '.join(hex(p)[-2:] if p > 16 else ('0' + hex(p)[-1:]) for p in powers)
             print(cmd_f)
             check = self.check(cmd_f)
             cmd = bytes.fromhex(cmd_f) + check
             data = self.getData(cmd, False)
             print('cmd back:', data)
-            if data[0:5] == bytes.fromhex('A0 04' + self.addr + '76 10'):
+            if data[0:5] == bytes.fromhex('A0 04' + self.addr_num + '76 10'):
                 return SUCCESS
             else:
                 return ERR_EQUIPMENT_RESP
@@ -292,36 +306,36 @@ class RfidR2000(threading.Thread):
             return ERR_EQUIPMENT_RESP
 
     def getOutputPower(self):
-        cmd_f = 'A0 03 ' + self.addr + ' 97' if self.ant_count == 8 else ' 77'
+        cmd_f = 'A0 03 ' + self.addr_num + ' 97' if self.ant_count == 8 else ' 77'
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
         # print('cmd back:', data)
-        if data[0:4] == bytes.fromhex('A0 04' + self.addr + ' 97' if self.ant_count == 8 else ' 77'):
+        if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + ' 97' if self.ant_count == 8 else ' 77'):
             power = data[4]
             return [power for i in range(self.ant_count)]
-        elif data[0:4] == bytes.fromhex('A0' + ('0B' if self.ant_count == 8 else '07') + self.addr + ' 97' if self.ant_count == 8 else ' 77'):
+        elif data[0:4] == bytes.fromhex('A0' + ('0B' if self.ant_count == 8 else '07') + self.addr_num + ' 97' if self.ant_count == 8 else ' 77'):
             return [data[i+4] for i in range(self.ant_count)]
         else:
             return ERR_EQUIPMENT_RESP
 
     def getWorkAntenna(self):
-        cmd_f = 'A0 03' + self.addr + '75'
+        cmd_f = 'A0 03' + self.addr_num + '75'
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
-        if data[0:4] == bytes.fromhex(('A0 04' + self.addr + '75')):
+        if data[0:4] == bytes.fromhex(('A0 04' + self.addr_num + '75')):
             ant_id = data[4]
             return ant_id
         else:
             return ERR_EQUIPMENT_RESP
 
     def setWorkAntenna(self, ant_id='00'):
-        cmd_f = 'A0 04' + self.addr + '74' + ant_id
+        cmd_f = 'A0 04' + self.addr_num + '74' + ant_id
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
-        if data[0:5] == bytes.fromhex(('A0 04' + self.addr + '74 10')):
+        if data[0:5] == bytes.fromhex(('A0 04' + self.addr_num + '74 10')):
             return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
@@ -330,11 +344,11 @@ class RfidR2000(threading.Thread):
         rsl = self.setWorkAntenna(ant_id)
         if rsl:
             cmd_repeat = '05'
-            cmd_f = 'A0 04' + self.addr + '80' + cmd_repeat
+            cmd_f = 'A0 04' + self.addr_num + '80' + cmd_repeat
             check = self.check(cmd_f)
             cmd = bytes.fromhex(cmd_f) + check
             data = self.getData(cmd, False)
-            if data[0:5] == bytes.fromhex('A0 0C' + self.addr + '80' + ant_id):
+            if data[0:5] == bytes.fromhex('A0 0C' + self.addr_num + '80' + ant_id):
                 tag_count = int.from_bytes(data[5:7], byteorder='big', signed=False)
                 # print('tag_count: ', tag_count)
                 return tag_count
@@ -342,12 +356,12 @@ class RfidR2000(threading.Thread):
             return ERR_EQUIPMENT_RESP
 
     def getAndResetBuf(self):
-        cmd_f = 'A0 03' + self.addr + '90'
+        cmd_f = 'A0 03' + self.addr_num + '90'
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, True)
         print('cmd back:', data)
-        if data[0:4] == bytes.fromhex('A0 04' + self.addr + '90'):
+        if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
             print('ErrorCode: ', hex(data[4]))
             return ERR_EQUIPMENT_RESP
         else:
@@ -371,7 +385,7 @@ class RfidR2000(threading.Thread):
             return epcs
 
     def reset_inv_buf(self):
-        cmd_f = 'A0 03 ' + self.addr + '93'
+        cmd_f = 'A0 03 ' + self.addr_num + '93'
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
@@ -612,13 +626,15 @@ class Lcd(threading.Thread):
 class EntranceGuard(threading.Thread):
     lib = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
 
-    def __init__(self, addr: tuple, queuetask, queuersl):
+    def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data, lock_q_push):
         threading.Thread.__init__(self)
         self.ip = addr[0]
         self.port = addr[1]
         self.isrunning = True
         self.queuetask = queuetask
         self.queuersl = queuersl
+        self.queue_push_data = queue_push_data
+        self.lock_q_push = lock_q_push
         self.lock = threading.RLock()
         self.lib = EntranceGuard.lib
         self.handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
@@ -629,6 +645,7 @@ class EntranceGuard(threading.Thread):
 
     def run(self):
         cursec = 0
+        current_data = None
         while self.isrunning:
             self.lock.acquire()
             try:
@@ -643,6 +660,10 @@ class EntranceGuard(threading.Thread):
                         cursec = localtime.tm_sec
                         rsl = self.getNewEvent()
                         print('gate--getNewEvent: ', rsl)
+                        if rsl != current_data:
+                            current_data = rsl
+                            with self.lock_q_push:
+                                self.queue_push_data.put({'addr': self.addr, 'data': rsl})
                     else:
                         pass
             finally:
