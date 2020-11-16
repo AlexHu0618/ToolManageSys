@@ -51,7 +51,6 @@ class TaskControler(Process):
                         data = client_sock.recv(length)
                         print(time.asctime(), 'recv: ', data)
                         data_dict = eval(str(data, encoding='utf-8'))
-                        data_dict['data']['resp'] = 203
                         # data_send = bytes('{}'.format(data_dict), encoding='utf-8')
                         # client_sock.send(data_send)
                         cmd = data_dict['data']['addr'].__str__() + '\r\n' + data_dict['data']['func'] + '\r\n' + \
@@ -61,10 +60,12 @@ class TaskControler(Process):
                         self.puttask(data=cmd_b)
             except (OSError, BrokenPipeError):
                 continue
-            except Exception as e:
-                print(e)
+            except KeyboardInterrupt:
                 break
-        server_sock.close()
+            finally:
+                server_sock.shutdown()
+                server_sock.close()
+                print('ok')
 
     def waitfor_resp(self, data, clientsock):
         cmds = data.split(b'\r\n')
@@ -106,14 +107,10 @@ class TaskControler(Process):
         while self.isrunning:
             try:
                 transfer_package = self.q_rsl.get()
-                target = transfer_package.target
-                data = transfer_package.data['rsl'] if 'rsl' in transfer_package.data.keys() else {}
-                uuid = transfer_package.uuid
                 # resp = 'target:' + str(target) + ', data: ' + str(data)
                 # print(resp)
                 # self.sock.send(bytes(resp, encoding='utf8'))
-                data_dict = {'uuid': uuid, 'data': {'data': 'test'}, 'type': transfer_package.type}
-                data_dict['data']['resp'] = 203
+                data_dict = transfer_package.get_all()
                 data_send = bytes('{}'.format(data_dict), encoding='utf-8')
                 if self.sock:
                     self.sock.send(data_send)
