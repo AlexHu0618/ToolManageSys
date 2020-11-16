@@ -6,13 +6,12 @@ import threading
 from operator import methodcaller
 from multiprocessing import Process
 from app.globalvar import *
-import asyncio
 
 
 class GatewayServer(Process):
     def __init__(self, port: int, server_registered: dict, client_registered: dict, queue_task, queue_rsl):
         super().__init__()
-        # {(ip, port): (thread, queuetask, queuersl, status), }
+        # {(ip, port): {'thread': thread, 'type': str, 'queuetask': queue, 'queuersl': queue, 'status': True, 'subeven': even, 'data': {}), }
         self.terminal_active = dict()
         self.terminal_inactive = dict()
         self.addr = ('', port)
@@ -22,6 +21,8 @@ class GatewayServer(Process):
         self.lock = threading.RLock()
         self.queue_task = queue_task
         self.queue_rsl = queue_rsl
+        self.queue_equipment_push = Queue(100)
+        self.lock_q_equipment_push = threading.RLock()
         self.loop = None
 
     def run(self):
@@ -33,7 +34,6 @@ class GatewayServer(Process):
         # 5、打开交互接口。
         #######################
         try:
-            self.loop = asyncio.get_event_loop()
             # connect all servers
             if self.servers is not None:
                 print("Start to connect to registered servers!!!!")
@@ -64,18 +64,34 @@ class GatewayServer(Process):
 
     def time_thread(self):
         # 定时循环执行线程
-        terminal_act = []
-        terminal_inact = []
-        for k, v in self.terminal_active.items():
-            if v[0].isAlive():
-                terminal_act.append(k)
-            else:
-                terminal_inact.append(k)
-        # print('active: ', terminal_act)
-        # print('inactive: ', terminal_inact)
+        msg = self.check_push_from_equipments()
+        if msg:
+            pkg = TransferPackage(source=msg['addr'], msg_type=2, data=msg['data'], code=206, eq_type=1)
+            self.queue_rsl.put(pkg)
+        self.check_equipments_status()
         t = threading.Timer(interval=5, function=self.time_thread)
         t.daemon = True
         t.start()
+
+    def check_equipments_status(self):
+        t_status = {}
+        with self.lock:
+            for k, v in self.terminal_active.items():
+                if v['thread'].isAlive():
+                    print(k, 'is online')
+                else:
+                    self.terminal_active[k]['status'] = False
+                    print(k, 'is offline')
+
+    def check_push_from_equipments(self):
+        if not self.queue_equipment_push.empty():
+            with self.lock_q_equipment_push:
+                data = self.queue_equipment_push.get()
+                print(data)
+        else:
+            print('no equipment push data update')
+            data = None
+        return data
 
     def _connect_server(self, addr: tuple, ttype: str):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -89,22 +105,23 @@ class GatewayServer(Process):
         while True:
             try:
                 if terminal_type == 'guard':
-                    thread = EntranceGuard(addr, queue_task, queue_rsl)
+                    thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push, self.lock_q_equipment_push)
                 else:
                     s.connect(addr)
                     if terminal_type == 'G':
-                        thread = GravityShelf(s, queue_task, queue_rsl, subevent)
+                        thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, self.lock_q_equipment_push)
                     elif terminal_type == 'L':
-                        thread = Lcd(s, queue_task, queue_rsl, subevent)
+                        thread = Lcd(addr, s, queue_task, queue_rsl, subevent)
                     elif terminal_type == 'R':
-                        thread = RfidR2000(s, queue_task, queue_rsl, subevent)
+                        thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, self.lock_q_equipment_push)
                     else:
                         pass
                 if thread:
                     thread.daemon = True
                     thread.start()
                     self.lock.acquire()
-                    self.terminal_active[addr] = (thread, queue_task, queue_rsl, terminal_type, subevent)
+                    self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
+                                                  'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
                     self.lock.release()
                     print('客户端(%s)已成功连接。。' % str(addr))
                     mylogger.info('客户端(%s)已成功连接。。' % str(addr))
@@ -136,17 +153,20 @@ class GatewayServer(Process):
                 thread = None
                 client_type = self.clients[addr] if addr in self.clients.keys() else None
                 if client_type == 'G':
-                    thread = GravityShelf(client_sock, queue_task, queue_rsl, subevent, addr, self.terminal_active, self.lock)
+                    thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, self.lock_q_equipment_push)
                 elif client_type == 'L':
-                    thread = Lcd(client_sock, queue_task, queue_rsl, subevent, addr, self.terminal_active, self.lock)
+                    thread = Lcd(addr, client_sock, queue_task, queue_rsl, subevent)
                 elif client_type == 'R':
-                    thread = RfidR2000(client_sock, queue_task, queue_rsl, subevent, addr, self.terminal_active, self.lock)
+                    thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, self.lock_q_equipment_push)
                 else:
                     pass
                 if thread:
                     thread.daemon = True
                     thread.start()
-                    self.terminal_active[addr] = (thread, queue_task, queue_rsl, client_type, subevent)
+                    self.lock.acquire()
+                    self.terminal_active[addr] = {'thread': thread, 'type': client_type, 'queuetask': queue_task,
+                                                  'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
+                    self.lock.release()
                     mylogger.info('客户端(%s)已成功连接。。' % str(addr))
                     print('客户端(%s)已成功连接。。' % str(addr))
         finally:
@@ -179,11 +199,11 @@ class GatewayServer(Process):
                 task = transfer_package.data['func']
                 args = transfer_package.data['args']
                 print('\033[1;33m', task, ' ', args, '\033[0m')
-                # cmd for the equipment
+                # cmd for the equipment running async
                 if target is not None:
-                    coroutine = self._get_data_from_equipment(transfer_package=transfer_package)
-                    task = asyncio.ensure_future(coroutine)
-                    self.loop.run_until_complete(task)
+                    thd = threading.Thread(target=self._get_data_from_equipment, args=(transfer_package,))
+                    thd.setDaemon(True)
+                    thd.start()
                 # cmd for gateway server
                 else:
                     rsl = methodcaller(task, *args)(self)
@@ -194,27 +214,29 @@ class GatewayServer(Process):
         except Exception as e:
             mylogger.error(e)
 
-    async def _get_data_from_equipment(self, transfer_package):
+    def _get_data_from_equipment(self, transfer_package):
         # 异步访问硬件
         target = transfer_package.target
         task = transfer_package.data['func']
         args = transfer_package.data['args']
         # get the queue of equipment
-        qt = self.terminal_active[target][1]
-        qr = self.terminal_active[target][2]
-        subevent = self.terminal_active[target][4]
+        self.lock.acquire()
+        qt = self.terminal_active[target]['queuetask']
+        qr = self.terminal_active[target]['queuersl']
+        subevent = self.terminal_active[target]['subevent']
+        self.lock.release()
         subevent.clear()
         qt.put((task, args))
-        await subevent.wait()
+        subevent.wait()
         if not qr.empty():
             data = qr.get()
             transfer_package.data['rsl'] = data
+            transfer_package.code = 200
             self.queue_rsl.put(transfer_package)
         else:
+            transfer_package.code = 202
+            self.queue_rsl.put(transfer_package)
             print(target, ' qr is empty!')
-
-    def get_all_data(self, addr_list: list):
-
 
     def stop(self):
         self.lock.acquire()

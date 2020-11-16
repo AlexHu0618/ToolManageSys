@@ -62,10 +62,8 @@ class TaskControler(Process):
                 continue
             except KeyboardInterrupt:
                 break
-            finally:
-                server_sock.shutdown()
-                server_sock.close()
-                print('ok')
+        server_sock.shutdown()
+        server_sock.close()
 
     def waitfor_resp(self, data, clientsock):
         cmds = data.split(b'\r\n')

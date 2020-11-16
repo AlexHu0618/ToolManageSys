@@ -1534,3 +1534,86 @@ readWeight'
 2020-11-15 13:39:40,001 - root - ERROR - 'int' object is not iterable
 2020-11-15 14:03:04,155 - root - ERROR - 'int' object is not iterable
 2020-11-15 14:03:05,011 - root - ERROR - 'int' object is not iterable
+2020-11-16 15:34:49,150 - root - ERROR - 'int' object is not iterable
+2020-11-16 15:34:50,008 - root - ERROR - 'int' object is not iterable
+2020-11-16 16:06:05,152 - root - ERROR - 'int' object is not iterable
+2020-11-16 16:06:06,001 - root - ERROR - 'int' object is not iterable
+2020-11-16 16:06:42,152 - root - ERROR - 'int' object is not iterable
+2020-11-16 16:06:43,002 - root - ERROR - 'int' object is not iterable
+2020-11-16 16:09:47,151 - root - ERROR - 'int' object is not iterable
+2020-11-16 16:09:48,009 - root - ERROR - 'int' object is not iterable
+2020-11-16 16:10:13,150 - root - ERROR - 'int' object is not iterable
+2020-11-16 16:10:14,005 - root - ERROR - 'int' object is not iterable
+2020-11-16 17:26:00,152 - root - ERROR - 'int' object is not iterable
+2020-11-16 17:26:01,006 - root - ERROR - 'int' object is not iterable
+2020-11-16 18:25:23,390 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 18:26:09,490 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 18:27:28,150 - root - ERROR - 'int' object is not iterable
+2020-11-16 18:27:29,002 - root - ERROR - 'int' object is not iterable
+2020-11-16 18:38:44,151 - root - ERROR - 'int' object is not iterable
+2020-11-16 18:38:45,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 18:48:10,158 - root - ERROR - 'int' object is not iterable
+2020-11-16 18:48:11,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 18:59:09,152 - root - ERROR - 'int' object is not iterable
+2020-11-16 18:59:10,017 - root - ERROR - 'int' object is not iterable
+2020-11-16 19:45:16,152 - root - ERROR - 'int' object is not iterable
+2020-11-16 19:45:17,003 - root - ERROR - 'int' object is not iterable
+2020-11-16 19:56:22,154 - root - ERROR - 'int' object is not iterable
+2020-11-16 19:56:23,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 19:58:55,161 - root - ERROR - 'int' object is not iterable
+2020-11-16 19:58:56,013 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:00:19,275 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:05:51,164 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:05:52,005 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:06:22,489 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:09:24,153 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:09:25,003 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:09:48,735 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:12:46,004 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:13:14,575 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:14:45,155 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:14:46,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:15:02,338 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:15:50,158 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:15:51,008 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:18:26,202 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:18:51,158 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:18:52,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:19:47,653 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:20:12,153 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:20:13,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:21:01,659 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:21:42,150 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:21:43,010 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:23:26,882 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:23:44,150 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:23:45,003 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:25:22,495 - root - ERROR - ('192.168.8.221', 23)
+2020-11-16 20:27:43,151 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:27:44,001 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:28:05,802 - root - ERROR - 'quequtask'
+2020-11-16 20:28:55,150 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:28:56,001 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:29:14,347 - root - ERROR - object bool can't be used in 'await' expression
+2020-11-16 20:32:06,177 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:32:07,002 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:32:23,358 - root - ERROR - object bool can't be used in 'await' expression
+2020-11-16 20:33:02,160 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:33:03,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:33:22,812 - root - ERROR - object bool can't be used in 'await' expression
+2020-11-16 20:33:54,158 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:33:55,013 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:34:10,000 - root - ERROR - object bool can't be used in 'await' expression
+2020-11-16 20:34:45,150 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:34:46,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:42:35,151 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:42:36,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:44:50,150 - root - ERROR - 'int' object is not iterable
+2020-11-16 20:44:51,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 23:13:19,290 - root - ERROR - ('10.0.173.151', 23)
+2020-11-16 23:16:21,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 23:16:54,152 - root - ERROR - 'int' object is not iterable
+2020-11-16 23:16:55,000 - root - ERROR - 'int' object is not iterable
+2020-11-16 23:19:21,063 - root - ERROR - An asyncio.Future, a coroutine or an awaitable is required
+2020-11-16 23:22:26,150 - root - ERROR - 'int' object is not iterable
+2020-11-16 23:22:27,002 - root - ERROR - 'int' object is not iterable

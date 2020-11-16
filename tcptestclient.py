@@ -33,4 +33,4 @@ def start_tcp_client(ip, port):
 
 
 if __name__ == '__main__':
-    start_tcp_client('10.0.173.151', 8809)
+    start_tcp_client('192.168.8.221', 8809)
