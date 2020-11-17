@@ -65,23 +65,23 @@ class TaskControler(Process):
         server_sock.shutdown()
         server_sock.close()
 
-    def waitfor_resp(self, data, clientsock):
-        cmds = data.split(b'\r\n')
-        target = eval(cmds[0])
-        tp = TransferPackage(target=target)
-        tp.data['func'] = str(cmds[1], encoding='utf8')
-        tp.data['args'] = eval(cmds[2])
-        self.q_task.put(tp)
-        time.sleep(0.5)
-        if not self.q_rsl.empty():
-            # rsl = self.q_rsl.get()
-            self._return_result()
-        else:
-            rsl = QUEUE_RSL_EMPTY
-            print('queue_rsl is None')
-        print('\033[1;36m', rsl, '\033[0m')
-        resp = bytes(str(rsl), encoding='utf8')
-        clientsock.send(resp)
+    # def waitfor_resp(self, data, clientsock):
+    #     cmds = data.split(b'\r\n')
+    #     target = eval(cmds[0])
+    #     tp = TransferPackage(target=target)
+    #     tp.data['func'] = str(cmds[1], encoding='utf8')
+    #     tp.data['args'] = eval(cmds[2])
+    #     self.q_task.put(tp)
+    #     time.sleep(0.5)
+    #     if not self.q_rsl.empty():
+    #         # rsl = self.q_rsl.get()
+    #         self._return_result()
+    #     else:
+    #         rsl = QUEUE_RSL_EMPTY
+    #         print('queue_rsl is None')
+    #     print('\033[1;36m', rsl, '\033[0m')
+    #     resp = bytes(str(rsl), encoding='utf8')
+    #     clientsock.send(resp)
 
     def puttask(self, data):
         # package to transferpackage and put into task queue
@@ -108,7 +108,7 @@ class TaskControler(Process):
                 # resp = 'target:' + str(target) + ', data: ' + str(data)
                 # print(resp)
                 # self.sock.send(bytes(resp, encoding='utf8'))
-                data_dict = transfer_package.get_all()
+                data_dict = transfer_package.to_dict()
                 data_send = bytes('{}'.format(data_dict), encoding='utf-8')
                 if self.sock:
                     self.sock.send(data_send)
@@ -120,6 +120,13 @@ class TaskControler(Process):
 
     def stop(self):
         self.isrunning = False
+
+    def stock(self):
+        """
+        入库管理
+        :return:
+        """
+        pass
 
 
 if __name__ == '__main__':

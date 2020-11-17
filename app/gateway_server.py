@@ -64,29 +64,34 @@ class GatewayServer(Process):
 
     def time_thread(self):
         # 定时循环执行线程
-        msg = self.check_push_from_equipments()
-        if msg:
-            pkg = TransferPackage(source=msg['addr'], msg_type=2, data=msg['data'], code=206, eq_type=1)
-            self.queue_rsl.put(pkg)
         self.check_equipments_status()
+        self.check_push_from_equipments()
         t = threading.Timer(interval=5, function=self.time_thread)
         t.daemon = True
         t.start()
 
     def check_equipments_status(self):
-        t_status = {}
         with self.lock:
             for k, v in self.terminal_active.items():
                 if v['thread'].isAlive():
-                    print(k, 'is online')
+                    if self.terminal_active[k]['status'] is not True:
+                        self.terminal_active[k]['status'] = True
+                        pkg = TransferPackage(source=k, msg_type=2, code=205)
+                        self.queue_rsl.put(pkg)
+                        print(k, 'is online')
                 else:
-                    self.terminal_active[k]['status'] = False
-                    print(k, 'is offline')
+                    if self.terminal_active[k]['status'] is True:
+                        self.terminal_active[k]['status'] = False
+                        pkg = TransferPackage(source=k, msg_type=2, code=204)
+                        self.queue_rsl.put(pkg)
+                        print(k, 'is offline')
 
     def check_push_from_equipments(self):
         if not self.queue_equipment_push.empty():
             with self.lock_q_equipment_push:
                 data = self.queue_equipment_push.get()
+                pkg = TransferPackage(source=data['addr'], msg_type=2, data=data['data'], code=206, eq_type=data['eq_type'])
+                self.queue_rsl.put(pkg)
                 print(data)
         else:
             print('no equipment push data update')
@@ -121,7 +126,7 @@ class GatewayServer(Process):
                     thread.start()
                     self.lock.acquire()
                     self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
-                                                  'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
+                                                  'queuersl': queue_rsl, 'status': False, 'subevent': subevent, 'data': {}}
                     self.lock.release()
                     print('客户端(%s)已成功连接。。' % str(addr))
                     mylogger.info('客户端(%s)已成功连接。。' % str(addr))
@@ -165,7 +170,7 @@ class GatewayServer(Process):
                     thread.start()
                     self.lock.acquire()
                     self.terminal_active[addr] = {'thread': thread, 'type': client_type, 'queuetask': queue_task,
-                                                  'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
+                                                  'queuersl': queue_rsl, 'status': False, 'subevent': subevent, 'data': {}}
                     self.lock.release()
                     mylogger.info('客户端(%s)已成功连接。。' % str(addr))
                     print('客户端(%s)已成功连接。。' % str(addr))
@@ -216,27 +221,36 @@ class GatewayServer(Process):
 
     def _get_data_from_equipment(self, transfer_package):
         # 异步访问硬件
-        target = transfer_package.target
-        task = transfer_package.data['func']
-        args = transfer_package.data['args']
-        # get the queue of equipment
-        self.lock.acquire()
-        qt = self.terminal_active[target]['queuetask']
-        qr = self.terminal_active[target]['queuersl']
-        subevent = self.terminal_active[target]['subevent']
-        self.lock.release()
-        subevent.clear()
-        qt.put((task, args))
-        subevent.wait()
-        if not qr.empty():
-            data = qr.get()
-            transfer_package.data['rsl'] = data
-            transfer_package.code = 200
-            self.queue_rsl.put(transfer_package)
-        else:
-            transfer_package.code = 202
-            self.queue_rsl.put(transfer_package)
-            print(target, ' qr is empty!')
+        try:
+            target = transfer_package.target
+            task = transfer_package.data['func']
+            args = transfer_package.data['args']
+            # get the queue of equipment
+            self.lock.acquire()
+            qt = self.terminal_active[target]['queuetask']
+            qr = self.terminal_active[target]['queuersl']
+            subevent = self.terminal_active[target]['subevent']
+            self.lock.release()
+            subevent.clear()
+            qt.put((task, args))
+            subevent.wait()
+            if not qr.empty():
+                data = qr.get()
+                transfer_package.data['rsl'] = data
+                transfer_package.code = 200
+                transfer_package.source = transfer_package.target
+                transfer_package.target = None
+                transfer_package.msg_type = 3
+                self.queue_rsl.put(transfer_package)
+            else:
+                transfer_package.code = 202
+                self.queue_rsl.put(transfer_package)
+                transfer_package.source = transfer_package.target
+                transfer_package.target = None
+                transfer_package.msg_type = 3
+                print(target, ' qr is empty!')
+        except Exception as e:
+            mylogger.error(e)
 
     def stop(self):
         self.lock.acquire()

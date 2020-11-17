@@ -54,7 +54,7 @@ class GravityShelf(threading.Thread):
                             if allg != current_data:
                                 current_data.update(allg)
                                 with self.lock_q_push:
-                                    self.queue_push_data.put({'addr': self.addr, 'data': allg})
+                                    self.queue_push_data.put({'addr': self.addr, 'data': allg, 'eq_type': 1})
                         # print(time.asctime(), 'G--getAllInfo: ', allg)
                     else:
                         pass
@@ -623,8 +623,93 @@ class Lcd(threading.Thread):
             return ERR_EQUIPMENT_RESP
 
 
+# class EntranceGuard(threading.Thread):
+#     lib = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
+#
+#     def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data, lock_q_push):
+#         threading.Thread.__init__(self)
+#         self.ip = addr[0]
+#         self.port = addr[1]
+#         self.isrunning = True
+#         self.queuetask = queuetask
+#         self.queuersl = queuersl
+#         self.queue_push_data = queue_push_data
+#         self.lock_q_push = lock_q_push
+#         self.lock = threading.RLock()
+#         self.lib = EntranceGuard.lib
+#         self.handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
+#                                                 b',port=' + bytes(str(self.port), encoding='utf8') +
+#                                                 b',timeout=2000,passwd=')
+#         if self.handle == 0:
+#             print('Fail to Connect.')
+#
+#     def run(self):
+#         cursec = 0
+#         current_data = None
+#         while self.isrunning:
+#             self.lock.acquire()
+#             try:
+#                 if not self.queuetask.empty():
+#                     task, args = self.queuetask.get()
+#                     rsl = methodcaller(task, *args)(self)
+#                     if rsl is not None:
+#                         self.queuersl.put(rsl)
+#                 else:
+#                     time.sleep(10)
+#                     rsl = 'somebody is in stroeroom: (' + self.ip + ':' + str(port) + ')'
+#                     with self.lock_q_push:
+#                         self.queue_push_data.put({'addr': (self.ip, self.port), 'data': rsl})
+#                     # localtime = time.localtime(time.time())
+#                     # if localtime.tm_sec != cursec:
+#                     #     cursec = localtime.tm_sec
+#                     #     rsl = self.getNewEvent()
+#                     #     print('gate--getNewEvent: ', rsl)
+#                     #     if rsl != current_data:
+#                     #         current_data = rsl
+#                     #         with self.lock_q_push:
+#                     #             self.queue_push_data.put({'addr': self.addr, 'data': rsl})
+#                     # else:
+#                     #     pass
+#             finally:
+#                 self.lock.release()
+#
+#     def getDeviceParam(self):
+#         buff = create_string_buffer("b".encode('utf-8'), 1024)
+#         rsl = self.lib.GetDeviceParam(self.handle, byref(buff), 1024, bytes('IPAddress,ReaderCount,MThreshold'.encode('utf-8')))
+#         if rsl == 0:
+#             return buff.value
+#         else:
+#             return rsl
+#
+#     def getNewEvent(self):
+#         count = self.lib.GetDeviceDataCount(self.handle, bytes('transaction'.encode('utf-8')))
+#         if count >= 0:
+#             size = count * 2000
+#             buff = create_string_buffer("q".encode('utf-8'), size)
+#             filter1 = b'Index=' + bytes(str(count), encoding='utf8')
+#             rsl = self.lib.GetDeviceData(self.handle, byref(buff), size, bytes('transaction'.encode('utf-8')), b'*', filter1, b'')
+#             if rsl >= 0:
+#                 last_record = buff.value.split(b'\r\n')[1]
+#                 recode_list = last_record.split(b',')
+#                 eventtype = recode_list[3]
+#                 user = str(recode_list[0], encoding='gb18030')
+#                 if eventtype == b'0':
+#                     print('\033[1;33m USER--', user, ' is authed....\033[0m')
+#                     resp = 'Auth: ' + str(last_record, encoding='gb18030')
+#                 else:
+#                     print('\033[1;33m USER--', user, ' is non-authed....\033[0m')
+#                     resp = 'Non-auth: ' + str(last_record, encoding='gb18030')
+#                 return resp
+#             else:
+#                 return rsl
+#         else:
+#             return count
+#
+#     def __del__(self):
+#         self.lib.Disconnect(self.handle)
+
+
 class EntranceGuard(threading.Thread):
-    lib = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
 
     def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data, lock_q_push):
         threading.Thread.__init__(self)
@@ -636,12 +721,6 @@ class EntranceGuard(threading.Thread):
         self.queue_push_data = queue_push_data
         self.lock_q_push = lock_q_push
         self.lock = threading.RLock()
-        self.lib = EntranceGuard.lib
-        self.handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
-                                                b',port=' + bytes(str(self.port), encoding='utf8') +
-                                                b',timeout=2000,passwd=')
-        if self.handle == 0:
-            print('Fail to Connect.')
 
     def run(self):
         cursec = 0
@@ -655,51 +734,9 @@ class EntranceGuard(threading.Thread):
                     if rsl is not None:
                         self.queuersl.put(rsl)
                 else:
-                    localtime = time.localtime(time.time())
-                    if localtime.tm_sec != cursec:
-                        cursec = localtime.tm_sec
-                        rsl = self.getNewEvent()
-                        print('gate--getNewEvent: ', rsl)
-                        if rsl != current_data:
-                            current_data = rsl
-                            with self.lock_q_push:
-                                self.queue_push_data.put({'addr': self.addr, 'data': rsl})
-                    else:
-                        pass
+                    time.sleep(60)
+                    rsl = 'somebody is in stroeroom: (' + self.ip + ':' + str(self.port) + ')'
+                    with self.lock_q_push:
+                        self.queue_push_data.put({'addr': (self.ip, self.port), 'data': rsl, 'eq_type': 3})
             finally:
                 self.lock.release()
-
-    def getDeviceParam(self):
-        buff = create_string_buffer("b".encode('utf-8'), 1024)
-        rsl = self.lib.GetDeviceParam(self.handle, byref(buff), 1024, bytes('IPAddress,ReaderCount,MThreshold'.encode('utf-8')))
-        if rsl == 0:
-            return buff.value
-        else:
-            return rsl
-
-    def getNewEvent(self):
-        count = self.lib.GetDeviceDataCount(self.handle, bytes('transaction'.encode('utf-8')))
-        if count >= 0:
-            size = count * 2000
-            buff = create_string_buffer("q".encode('utf-8'), size)
-            filter1 = b'Index=' + bytes(str(count), encoding='utf8')
-            rsl = self.lib.GetDeviceData(self.handle, byref(buff), size, bytes('transaction'.encode('utf-8')), b'*', filter1, b'')
-            if rsl >= 0:
-                last_record = buff.value.split(b'\r\n')[1]
-                recode_list = last_record.split(b',')
-                eventtype = recode_list[3]
-                user = str(recode_list[0], encoding='gb18030')
-                if eventtype == b'0':
-                    print('\033[1;33m USER--', user, ' is authed....\033[0m')
-                    resp = 'Auth: ' + str(last_record, encoding='gb18030')
-                else:
-                    print('\033[1;33m USER--', user, ' is non-authed....\033[0m')
-                    resp = 'Non-auth: ' + str(last_record, encoding='gb18030')
-                return resp
-            else:
-                return rsl
-        else:
-            return count
-
-    def __del__(self):
-        self.lib.Disconnect(self.handle)
