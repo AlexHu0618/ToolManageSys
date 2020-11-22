@@ -96,8 +96,8 @@ role_user = Table('rela_role_user', Base.metadata,
                   )
 
 entrance_user = Table('rela_entrance_user', Base.metadata,
-                      Column('entrance_id', String(50), ForeignKey('role.uuid', ondelete='CASCADE', onupdate='CASCADE')),
-                      Column('user_id', String(50), ForeignKey('role.uuid', ondelete='CASCADE', onupdate='CASCADE'))
+                      Column('entrance_id', String(50), ForeignKey('entrance.id', ondelete='CASCADE', onupdate='CASCADE')),
+                      Column('user_id', String(50), ForeignKey('user.uuid', ondelete='CASCADE', onupdate='CASCADE'))
                       )
 
 
@@ -198,7 +198,7 @@ class Role(Base, MyBase):
     __tablename__ = 'role'
     uuid = Column(String(50), primary_key=True, unique=True, nullable=False, default=lambda: str(uuid4()))
     name = Column(String(100), nullable=False, default='common')
-    level = Column(Integer, nullable=False)  # 1-super_admin; 2-admin; 3-common.
+    level = Column(Integer, default=3)  # 1-super_admin; 2-admin; 3-common.
     users = relationship('User', secondary=role_user, back_populates='roles')
 
     @classmethod
@@ -219,10 +219,8 @@ class Role(Base, MyBase):
         users = []
         for id in users_id:
             user = User.by_uuid(uuid=id)
-            print(user.roles)
             user.roles = [Role.by_uuid(uuid=self.uuid)]
             users.append(user)
-            print(user.roles)
         rsl = Role.save_all(users)
         return rsl
 
@@ -263,8 +261,8 @@ class Storeroom(Base, MyBase):
 class Entrance(Base, MyBase):
     __tablename__ = 'entrance'
     id = Column(String(50), primary_key=True, unique=True, nullable=False, default=lambda: str(uuid4()))
-    ip = Column(String(100))
-    port = Column(Integer)
+    ip = Column(String(100), nullable=False)
+    port = Column(Integer, nullable=False)
     name = Column(String(100))
     code = Column(String(100))
     is_server = Column(Boolean, default=True)
@@ -275,6 +273,10 @@ class Entrance(Base, MyBase):
 
     storeroom = relationship('Storeroom', back_populates='entrance')
     users = relationship('User', secondary=entrance_user, back_populates='entrances')
+
+    @classmethod
+    def by_addr(cls, ip, port):
+        return dbSession.query(cls).filter(cls.ip == ip, cls.port == port).first()
 
 
 class ChannelMachine(Base, MyBase):
@@ -290,7 +292,11 @@ class ChannelMachine(Base, MyBase):
     last_offline_time = Column(DateTime, default=datetime.now)
     storeroom_id = Column(String(50), ForeignKey('storeroom.id'))
 
-    storeroom = relationship('Storeroom', back_populates='channel_machine')
+    storeroom = relationship('Storeroom', back_populates='channel_machines')
+
+    @classmethod
+    def by_addr(cls, ip, port):
+        return dbSession.query(cls).filter(cls.ip == ip, cls.port == port).first()
 
 
 class CodeScanner(Base, MyBase):
@@ -306,7 +312,11 @@ class CodeScanner(Base, MyBase):
     last_offline_time = Column(DateTime, default=datetime.now)
     storeroom_id = Column(String(50), ForeignKey('storeroom.id'))
 
-    storeroom = relationship('Storeroom', back_populates='channel_machine')
+    storeroom = relationship('Storeroom', back_populates='code_scanners')
+
+    @classmethod
+    def by_addr(cls, ip, port):
+        return dbSession.query(cls).filter(cls.ip == ip, cls.port == port).first()
 
 
 class Shelf(Base, MyBase):

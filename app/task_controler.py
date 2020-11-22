@@ -5,7 +5,7 @@ import time
 from .globalvar import *
 import struct
 from app.myLogger import mylogger
-from database.models import Equipment
+from database.models2 import Collector
 
 
 class TaskControler(Process):
