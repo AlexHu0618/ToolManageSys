@@ -12,6 +12,7 @@ def start_tcp_client(ip, port):
         try:
             print("start connect to server ")
             s.connect((ip, port))
+            print('success conn to ', ip, port)
             break
         except socket.error:
             failed_count += 1
@@ -19,18 +20,24 @@ def start_tcp_client(ip, port):
             if failed_count == 100:
                 return
 
-    try:
-        while True:
+    while True:
+        try:
             rsl = s.recv(1024)
             print(rsl)
             data = bytes.fromhex('01  06  02  00  01  02  03  04  78')
             s.send(data)
-    except KeyboardInterrupt:
-        s.shutdown(2)
-        s.close()
-    finally:
-        s.close()
+        except BrokenPipeError:
+            while True:
+                print("start connect to server ")
+                s.connect((ip, port))
+                print('success conn to ', ip, port)
+                break
+        except KeyboardInterrupt:
+            s.shutdown(2)
+            s.close()
+        finally:
+            s.close()
 
 
 if __name__ == '__main__':
-    start_tcp_client('10.0.173.151', 8809)
+    start_tcp_client('192.168.8.221', 8809)

@@ -1,68 +1,71 @@
-2020-11-17 00:03:25,226 - root - INFO - START SERVER
-2020-11-17 00:03:25,249 - root - INFO - There is None registered server for connecting!
-2020-11-17 00:03:28,247 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
-2020-11-17 00:03:41,003 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:05:57,557 - root - INFO - START SERVER
-2020-11-17 00:05:57,575 - root - INFO - There is None registered server for connecting!
-2020-11-17 00:06:17,031 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
-2020-11-17 00:06:36,163 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:06:37,007 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:06:49,738 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
-2020-11-17 00:09:23,154 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:09:24,006 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:17:35,459 - root - INFO - START SERVER
-2020-11-17 00:17:35,484 - root - INFO - There is None registered server for connecting!
-2020-11-17 00:17:48,558 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
-2020-11-17 00:18:25,169 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:18:26,001 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:18:57,934 - root - INFO - START SERVER
-2020-11-17 00:18:57,951 - root - INFO - There is None registered server for connecting!
-2020-11-17 00:19:06,402 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
-2020-11-17 00:19:19,001 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:22:10,944 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
-2020-11-17 00:22:24,155 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:22:25,016 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:22:53,789 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
-2020-11-17 00:22:57,152 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:22:58,000 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:23:08,179 - root - INFO - 客户端(('192.168.8.221', 23))已成功连接。。
-2020-11-17 00:23:19,159 - root - ERROR - 'int' object is not iterable
-2020-11-17 00:23:20,001 - root - ERROR - 'int' object is not iterable
-2020-11-17 10:59:15,080 - root - INFO - START SERVER
-2020-11-17 10:59:15,161 - root - INFO - There is None registered server for connecting!
-2020-11-17 10:59:46,379 - root - INFO - 客户端(('10.0.173.151', 23))已成功连接。。
-2020-11-17 11:00:40,150 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:00:41,016 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:00:51,648 - root - INFO - 客户端(('10.0.173.151', 23))已成功连接。。
-2020-11-17 11:01:19,151 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:01:20,008 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:01:25,154 - root - INFO - 客户端(('10.0.173.151', 23))已成功连接。。
-2020-11-17 11:03:06,168 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:03:07,003 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:03:22,805 - root - INFO - 客户端(('10.0.173.151', 23))已成功连接。。
-2020-11-17 11:03:46,170 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:03:47,001 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:03:54,238 - root - INFO - 客户端(('10.0.173.151', 23))已成功连接。。
-2020-11-17 11:08:42,150 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:08:43,020 - root - ERROR - 'int' object is not iterable
-2020-11-17 11:14:53,482 - root - INFO - START SERVER
-2020-11-17 11:14:56,517 - root - INFO - 客户端(('10.0.173.151', 4370))已成功连接。。
-2020-11-17 11:19:18,158 - root - INFO - START SERVER
-2020-11-17 11:19:18,178 - root - INFO - 客户端(('10.0.173.151', 4370))已成功连接。。
-2020-11-17 11:19:45,212 - root - INFO - START SERVER
-2020-11-17 11:19:45,227 - root - INFO - 客户端(('10.0.173.151', 4370))已成功连接。。
-2020-11-17 11:25:00,248 - root - INFO - START SERVER
-2020-11-17 11:25:00,266 - root - INFO - 客户端(('10.0.173.151', 4370))已成功连接。。
-2020-11-17 11:41:41,601 - root - INFO - START SERVER
-2020-11-17 11:41:41,621 - root - INFO - 客户端(('10.0.173.151', 4370))已成功连接。。
-2020-11-17 11:45:59,477 - root - INFO - START SERVER
-2020-11-17 11:45:59,493 - root - INFO - 客户端(('10.0.173.151', 4370))已成功连接。。
-2020-11-17 11:46:05,113 - root - INFO - 客户端(('10.0.173.151', 23))已成功连接。。
-2020-11-17 12:15:47,153 - root - ERROR - 'int' object is not iterable
-2020-11-17 12:15:48,000 - root - ERROR - 'int' object is not iterable
-2020-11-17 12:15:52,031 - root - INFO - START SERVER
-2020-11-17 12:15:52,051 - root - INFO - 客户端(('10.0.173.151', 4370))已成功连接。。
-2020-11-17 12:15:56,513 - root - INFO - 客户端(('10.0.173.151', 23))已成功连接。。
-2020-11-17 12:27:41,003 - root - ERROR - 'int' object is not iterable
-2020-11-17 12:28:42,026 - root - INFO - START SERVER
-2020-11-17 12:28:42,044 - root - INFO - 客户端(('10.0.173.151', 4370))已成功连接。。
+2020-11-21 01:53:12,416 - root - INFO - main.py:43 - START SERVER
+2020-11-21 01:53:12,449 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 11:49:19,973 - root - INFO - main.py:43 - START SERVER
+2020-11-21 11:49:20,045 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 11:58:36,748 - root - INFO - main.py:43 - START SERVER
+2020-11-21 11:58:36,767 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 11:58:51,908 - root - ERROR - gateway_server.py:234 - 'dict' object has no attribute 'target'
+2020-11-21 12:10:57,796 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:10:57,817 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:11:10,999 - root - WARNING - task_controler.py:95 - decoding to str: need a bytes-like object, dict found
+2020-11-21 12:17:30,299 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:17:30,315 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:17:38,023 - root - ERROR - gateway_server.py:234 - 'dict' object has no attribute 'target'
+2020-11-21 12:20:33,330 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:20:33,347 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:20:42,667 - root - WARNING - task_controler.py:98 - too many values to unpack (expected 2)
+2020-11-21 12:22:32,454 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:22:32,469 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:22:43,997 - root - WARNING - task_controler.py:100 - too many values to unpack (expected 2)
+2020-11-21 12:23:31,347 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:23:31,361 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:23:38,183 - root - WARNING - task_controler.py:100 - 'TransferPackage' object does not support item assignment
+2020-11-21 12:29:24,548 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:29:24,582 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:29:37,002 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:29:37,021 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:30:13,248 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:30:13,264 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:31:05,265 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:31:05,283 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:41:13,378 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:41:13,395 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:42:42,527 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:42:42,541 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:43:17,721 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:43:17,732 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:47:56,470 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:47:56,485 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:48:25,464 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:48:25,486 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:48:53,442 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:48:53,457 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:51:44,413 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:51:44,432 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:53:08,675 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:53:08,690 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:55:58,528 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:55:58,546 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 12:57:07,970 - root - INFO - main.py:43 - START SERVER
+2020-11-21 12:57:07,985 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 13:05:08,612 - root - INFO - main.py:43 - START SERVER
+2020-11-21 13:05:08,631 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 13:07:23,649 - root - INFO - main.py:43 - START SERVER
+2020-11-21 13:07:23,664 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 13:11:52,969 - root - INFO - main.py:43 - START SERVER
+2020-11-21 13:11:52,987 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 13:15:18,721 - root - INFO - main.py:43 - START SERVER
+2020-11-21 13:15:18,737 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 16:55:21,555 - root - INFO - main.py:43 - START SERVER
+2020-11-21 16:55:21,603 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 17:06:20,636 - root - INFO - main.py:43 - START SERVER
+2020-11-21 17:06:20,654 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。
+2020-11-21 17:07:50,271 - root - INFO - gateway_server.py:178 - 客户端(('192.168.8.221', 23))已成功连接。。
+2020-11-21 18:54:44,467 - root - INFO - main.py:43 - START SERVER
+2020-11-21 18:54:44,479 - root - INFO - gateway_server.py:47 - There is None registered server for connecting!
+2020-11-21 21:42:30,724 - root - INFO - main.py:43 - START SERVER
+2020-11-21 21:42:30,747 - root - INFO - gateway_server.py:47 - There is None registered server for connecting!
+2020-11-21 21:44:28,312 - root - INFO - main.py:45 - START SERVER
+2020-11-21 21:44:28,327 - root - ERROR - gateway_server.py:66 - 'list' object has no attribute 'items'
+2020-11-21 21:46:01,003 - root - INFO - main.py:45 - START SERVER
+2020-11-21 21:46:01,018 - root - INFO - gateway_server.py:135 - 客户端(('192.168.8.221', 4370))已成功连接。。

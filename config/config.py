@@ -13,7 +13,11 @@ logconfigs = {
 
     "formatters": {
         "simple": {
-            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+            "format": "%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s"
+        },
+        "standard_format": {
+            "format": "[%(levelname)s][%(asctime)s][%(threadName)s:%(thread)d][task_id:%(name)s]"
+                      "\n[%(filename)s:%(lineno)d][%(message)s]"
         }
     },
 
@@ -52,7 +56,7 @@ logconfigs = {
         "error_file_handler": {
             "class": "logging.handlers.RotatingFileHandler",
             "level": "ERROR",
-            "formatter": "simple",
+            "formatter": "standard_format",
             "filename": "./logs/errors.log",
             "maxBytes": 1024*1024*10,      # 日志大小10M
             "backupCount": 20,             # 最多保存20份日志，写完时轮转

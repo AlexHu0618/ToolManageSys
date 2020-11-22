@@ -1,14 +1,19 @@
 import socket
-from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard
+# from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard
+from app.object_test import GravityShelf, RfidR2000, Lcd, EntranceGuard
 from queue import Queue
 from app.myLogger import mylogger
 import threading
 from operator import methodcaller
 from multiprocessing import Process
 from app.globalvar import *
+import time
 
 
 class GatewayServer(Process):
+    """
+    所有的TCP设备终端应该按库房进行分类管理；
+    """
     def __init__(self, port: int, server_registered: dict, client_registered: dict, queue_task, queue_rsl):
         super().__init__()
         # {(ip, port): {'thread': thread, 'type': str, 'queuetask': queue, 'queuersl': queue, 'status': True, 'subeven': even, 'data': {}), }
@@ -22,17 +27,16 @@ class GatewayServer(Process):
         self.queue_task = queue_task
         self.queue_rsl = queue_rsl
         self.queue_equipment_push = Queue(100)
-        self.lock_q_equipment_push = threading.RLock()
-        self.loop = None
 
     def run(self):
-        ########################
-        # 1、主动连接所有已注册服务端；
-        # 2、监听等待连接所有已注册客户端；
-        # 3、打开注册子线程；
-        # 4、打开创建与监测子线程；
-        # 5、打开交互接口。
-        #######################
+        """
+        1、主动连接所有已注册服务端；
+        2、监听等待连接所有已注册客户端；
+        3、打开注册子线程；
+        4、打开创建与监测子线程；
+        5、打开交互接口。
+        :return:
+        """
         try:
             # connect all servers
             if self.servers is not None:
@@ -56,14 +60,16 @@ class GatewayServer(Process):
                 if status:
                     self._handle_cmd()
                 else:
-                    self.loop.close()
                     break
         except Exception as e:
             print('gateway_server: ', e)
             mylogger.error(e)
 
     def time_thread(self):
-        # 定时循环执行线程
+        """
+        定时循环执行线程
+        :return:
+        """
         self.check_equipments_status()
         self.check_push_from_equipments()
         t = threading.Timer(interval=5, function=self.time_thread)
@@ -88,15 +94,12 @@ class GatewayServer(Process):
 
     def check_push_from_equipments(self):
         if not self.queue_equipment_push.empty():
-            with self.lock_q_equipment_push:
-                data = self.queue_equipment_push.get()
-                pkg = TransferPackage(source=data['addr'], msg_type=2, data=data['data'], code=206, eq_type=data['eq_type'])
-                self.queue_rsl.put(pkg)
-                print(data)
+            pkg = self.queue_equipment_push.get()
+            self.queue_rsl.put(pkg)
         else:
             print('no equipment push data update')
-            data = None
-        return data
+            pkg = None
+        return pkg
 
     def _connect_server(self, addr: tuple, ttype: str):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -110,15 +113,15 @@ class GatewayServer(Process):
         while True:
             try:
                 if terminal_type == 'guard':
-                    thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push, self.lock_q_equipment_push)
+                    thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push)
                 else:
                     s.connect(addr)
                     if terminal_type == 'G':
-                        thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, self.lock_q_equipment_push)
+                        thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
                     elif terminal_type == 'L':
                         thread = Lcd(addr, s, queue_task, queue_rsl, subevent)
                     elif terminal_type == 'R':
-                        thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, self.lock_q_equipment_push)
+                        thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
                     else:
                         pass
                 if thread:
@@ -158,11 +161,11 @@ class GatewayServer(Process):
                 thread = None
                 client_type = self.clients[addr] if addr in self.clients.keys() else None
                 if client_type == 'G':
-                    thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, self.lock_q_equipment_push)
+                    thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push)
                 elif client_type == 'L':
                     thread = Lcd(addr, client_sock, queue_task, queue_rsl, subevent)
                 elif client_type == 'R':
-                    thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, self.lock_q_equipment_push)
+                    thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push)
                 else:
                     pass
                 if thread:
@@ -178,22 +181,36 @@ class GatewayServer(Process):
             server_sock.close()
 
     def add_new(self, ip: str, port: int, type_new: str, isserver: bool):
+        """
+        1、尝试连接设备；
+        2、加入数据库；
+        :param ip:
+        :param port:
+        :param type_new:
+        :param isserver:
+        :return:
+        """
         addr = (ip, port)
-        if isserver:
-            rsl = self._connect_server(addr=addr, ttype=type_new)
-            if rsl:
-                return True
+        try:
+            if isserver:
+                rsl = self._connect_server(addr=addr, ttype=type_new)
+                if rsl:
+                    return True
+                else:
+                    return False
             else:
-                return False
-        else:
-            try:
                 self.lock.acquire()
                 self.clients[addr] = type_new
                 self.lock.release()
-                return True
-            except Exception as e:
-                mylogger.error(e)
-                return False
+                time.sleep(1)
+                if addr in self.terminal_active.keys():
+                    return True
+                else:
+                    return False
+        except Exception as e:
+            print(e)
+            mylogger.error(e)
+            return False
 
     def _handle_cmd(self):
         try:
@@ -203,24 +220,36 @@ class GatewayServer(Process):
                 target = transfer_package.target
                 task = transfer_package.data['func']
                 args = transfer_package.data['args']
-                print('\033[1;33m', task, ' ', args, '\033[0m')
+                print('\033[1;33m CMD: ', task, ' ', args, '\033[0m')
                 # cmd for the equipment running async
-                if target is not None:
+                if transfer_package.msg_type == 0:
                     thd = threading.Thread(target=self._get_data_from_equipment, args=(transfer_package,))
                     thd.setDaemon(True)
                     thd.start()
                 # cmd for gateway server
-                else:
+                elif transfer_package.msg_type == 1:
                     rsl = methodcaller(task, *args)(self)
-                    if rsl is not None:
-                        self.queue_rsl.put(rsl)
+                    if rsl is True:
+                        transfer_package.code = SUCCESS
+                        transfer_package.msg_type = 4
+                    else:
+                        transfer_package.code = ERR_RESP
+                        transfer_package.msg_type = 4
+                    self.queue_rsl.put(transfer_package)
+                else:
+                    pass
             else:
                 pass
         except Exception as e:
+            print(e)
             mylogger.error(e)
 
     def _get_data_from_equipment(self, transfer_package):
-        # 异步访问硬件
+        """
+        异步访问硬件
+        :param transfer_package:
+        :return:
+        """
         try:
             target = transfer_package.target
             task = transfer_package.data['func']
@@ -235,19 +264,9 @@ class GatewayServer(Process):
             qt.put((task, args))
             subevent.wait()
             if not qr.empty():
-                data = qr.get()
-                transfer_package.data['rsl'] = data
-                transfer_package.code = 200
-                transfer_package.source = transfer_package.target
-                transfer_package.target = None
-                transfer_package.msg_type = 3
-                self.queue_rsl.put(transfer_package)
+                pkg = qr.get()
+                self.queue_rsl.put(pkg)
             else:
-                transfer_package.code = 202
-                self.queue_rsl.put(transfer_package)
-                transfer_package.source = transfer_package.target
-                transfer_package.target = None
-                transfer_package.msg_type = 3
                 print(target, ' qr is empty!')
         except Exception as e:
             mylogger.error(e)
