@@ -6,6 +6,7 @@ from .globalvar import *
 import struct
 from app.myLogger import mylogger
 from database.models2 import Collector
+import sys
 
 
 class TaskControler(Process):
@@ -115,7 +116,8 @@ class TaskControler(Process):
                     data_dict = transfer_package.to_dict()
                     # self._analyze_pkg(package=data_dict)
                     data_send = bytes('{}'.format(data_dict), encoding='utf-8')
-                    print(data_send)
+                    # print('File: "' + __file__ + '", Line ' + str(sys._getframe().f_lineno) + ' , in ' + sys._getframe().f_code.co_name)
+                    # print(data_send)
                     if self.sock:
                         self.sock.send(data_send)
             except (OSError, BrokenPipeError):

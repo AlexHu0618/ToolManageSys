@@ -1,6 +1,509 @@
-2020-11-22 20:06:39,901 - root - INFO - main.py:48 - START SERVER
-2020-11-22 20:06:58,647 - root - INFO - main.py:48 - START SERVER
-2020-11-22 20:08:17,237 - root - INFO - main.py:48 - START SERVER
-2020-11-22 20:09:32,946 - root - INFO - main.py:48 - START SERVER
-2020-11-22 20:10:19,826 - root - INFO - main.py:48 - START SERVER
-2020-11-22 20:14:44,822 - root - INFO - main.py:48 - START SERVER
+2020-11-23 10:32:06,481 - root - INFO - main.py:48 - START SERVER
+2020-11-23 10:32:07,098 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 10:32:07,951 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 10:32:39,227 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 10:33:44,164 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 10:42:01,609 - root - INFO - main.py:48 - START SERVER
+2020-11-23 10:42:02,167 - root - INFO - gateway_server.py:136 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 10:42:02,335 - root - INFO - gateway_server.py:179 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 10:45:18,492 - root - INFO - main.py:48 - START SERVER
+2020-11-23 10:45:19,043 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 10:45:19,585 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 10:46:17,308 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 10:49:08,347 - root - INFO - main.py:48 - START SERVER
+2020-11-23 10:49:08,895 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 10:49:09,559 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 10:49:23,249 - root - ERROR - Object2.py:70 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 10:49:45,608 - root - INFO - main.py:48 - START SERVER
+2020-11-23 10:49:46,153 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 10:49:47,028 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 10:52:00,577 - root - INFO - main.py:48 - START SERVER
+2020-11-23 10:52:01,126 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 10:52:01,342 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 10:53:57,992 - root - INFO - main.py:48 - START SERVER
+2020-11-23 10:53:58,538 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 10:53:59,100 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 10:54:19,216 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 11:00:05,183 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:00:05,783 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:00:06,335 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:05:00,136 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:05:00,737 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:05:01,116 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:05:01,445 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:02,176 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:03,168 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:04,173 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:05,166 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:06,159 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:07,185 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:08,165 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:09,170 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:23,739 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:05:24,288 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:05:24,827 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:05:25,157 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:25,332 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:26,172 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:27,158 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:28,172 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:29,157 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:30,192 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:31,177 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:32,171 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:33,172 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:34,160 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:35,173 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:36,168 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:37,180 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:38,160 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:39,176 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:40,173 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:41,170 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:42,168 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:43,184 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:44,174 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:45,179 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:05:46,192 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 11:06:02,498 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:06:03,047 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:06:03,108 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:08:12,362 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:08:12,914 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:08:12,958 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:11:20,953 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:11:21,504 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:11:21,876 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:15:30,263 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 11:16:27,687 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:16:28,238 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:16:28,986 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:17:39,178 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 11:18:26,203 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 11:18:45,289 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 11:21:30,175 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 11:22:58,260 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:22:58,809 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:22:59,523 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:23:44,746 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:23:45,343 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:23:45,992 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:24:31,363 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:24:31,913 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:24:32,552 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:27:08,866 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:27:09,413 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:27:10,193 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:27:50,394 - root - INFO - main.py:48 - START SERVER
+2020-11-23 11:27:50,942 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 11:27:50,979 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 11:34:55,230 - root - ERROR - Object2.py:70 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 11:35:09,199 - root - ERROR - Object2.py:70 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 11:49:50,153 - root - ERROR - Object2.py:70 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 12:01:12,411 - root - INFO - main.py:48 - START SERVER
+2020-11-23 12:01:12,962 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 12:01:13,271 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 12:02:49,086 - root - INFO - main.py:48 - START SERVER
+2020-11-23 12:02:49,636 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 12:02:50,433 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 12:06:22,633 - root - INFO - main.py:48 - START SERVER
+2020-11-23 12:06:23,188 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 12:06:23,709 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 12:06:43,070 - root - INFO - main.py:48 - START SERVER
+2020-11-23 12:06:43,722 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 12:06:44,204 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 12:07:13,223 - root - ERROR - Object2.py:69 - name 'TIMEOUT_EQUIPMENT' is not defined
+2020-11-23 12:10:01,664 - root - INFO - main.py:48 - START SERVER
+2020-11-23 12:10:02,220 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 12:10:02,303 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 12:11:26,254 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:12:07,234 - root - ERROR - Object2.py:69 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 12:17:03,191 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:17:37,188 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:18:27,235 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:20:30,347 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:21:47,214 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:30:23,231 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:34:36,153 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:34:37,305 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:38,458 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:39,614 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:40,768 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:41,921 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:43,078 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:44,232 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:45,392 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:46,548 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:47,709 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:48,865 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:50,018 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:51,171 - root - ERROR - Object2.py:69 - 'int' object is not iterable
+2020-11-23 12:34:51,322 - root - ERROR - Object2.py:69 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 12:34:53,742 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 12:35:26,927 - root - INFO - main.py:48 - START SERVER
+2020-11-23 12:35:27,534 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 12:35:27,791 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 12:36:20,485 - root - INFO - main.py:48 - START SERVER
+2020-11-23 12:36:21,034 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 12:36:21,317 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 12:39:21,207 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:41:01,301 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:42:56,168 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:43:01,249 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:45:33,201 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:45:56,229 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:48:33,258 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:49:29,228 - root - ERROR - Object2.py:69 - 'int' object has no attribute 'hex'
+2020-11-23 12:51:29,649 - root - INFO - main.py:48 - START SERVER
+2020-11-23 12:51:30,198 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 12:51:30,971 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:49:02,586 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:49:03,142 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:49:03,423 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:49:03,453 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:04,009 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:05,005 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:06,009 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:07,000 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:08,000 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:09,001 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:10,001 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:11,000 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:12,001 - root - ERROR - Object2.py:59 - check_data_update() got an unexpected keyword argument 'old'
+2020-11-23 13:49:36,483 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:49:37,034 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:49:37,579 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:49:37,759 - root - ERROR - Object2.py:59 - 'dict' object has no attribute 'len'
+2020-11-23 13:49:38,168 - root - ERROR - Object2.py:59 - 'dict' object has no attribute 'len'
+2020-11-23 13:49:39,153 - root - ERROR - Object2.py:59 - 'dict' object has no attribute 'len'
+2020-11-23 13:49:40,171 - root - ERROR - Object2.py:59 - 'dict' object has no attribute 'len'
+2020-11-23 13:49:41,167 - root - ERROR - Object2.py:59 - 'dict' object has no attribute 'len'
+2020-11-23 13:49:42,153 - root - ERROR - Object2.py:59 - 'dict' object has no attribute 'len'
+2020-11-23 13:51:54,142 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:51:54,693 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:51:54,970 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:51:55,137 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:51:55,311 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:51:56,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:51:57,170 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:51:58,171 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:51:59,171 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:00,199 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:01,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:02,196 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:03,168 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:04,185 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:05,156 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:06,158 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:07,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:08,175 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:09,182 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:10,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:11,181 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:12,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:13,170 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:14,156 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:15,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:16,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:17,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:18,180 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:19,156 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:20,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:21,176 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:22,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:23,164 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:24,156 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:25,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:26,179 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:27,180 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:28,156 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:29,175 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:30,191 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:31,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:32,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:33,171 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:34,168 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:35,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:36,158 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:37,175 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:38,187 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:39,166 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:40,186 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:41,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:42,168 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:43,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:44,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:45,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:46,180 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:47,180 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:48,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:49,178 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:50,200 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:51,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:52,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:53,188 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:54,166 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:55,156 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:56,182 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:57,168 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:58,160 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:52:59,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:00,158 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:01,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:02,166 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:03,159 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:04,159 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:05,171 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:06,171 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:07,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:08,199 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:09,159 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:10,158 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:11,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:12,181 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:13,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:14,176 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:15,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:16,168 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:17,176 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:18,183 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:19,157 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:20,174 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:21,183 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:22,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:23,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:24,178 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:25,177 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:26,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:27,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:28,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:29,183 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:30,184 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:31,164 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:32,188 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:33,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:34,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:35,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:36,166 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:37,179 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:38,193 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:39,198 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:40,179 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:41,175 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:42,182 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:43,178 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:44,177 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:45,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:46,203 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:47,181 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:48,176 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:49,183 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:50,157 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:51,157 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:52,160 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:53,168 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:54,173 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:55,160 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:56,157 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:57,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:58,177 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:53:59,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:00,191 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:01,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:02,171 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:03,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:04,181 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:05,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:06,178 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:07,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:08,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:09,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:10,176 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:11,195 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:12,179 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:13,170 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:14,173 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:15,176 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:16,245 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:17,190 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:18,179 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:19,176 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:20,199 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:21,157 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:22,170 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:23,186 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:24,168 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:25,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:26,185 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:27,179 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:28,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:29,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:30,175 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:31,171 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:32,182 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:33,164 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:34,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:35,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:36,159 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:37,171 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:38,178 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:39,184 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:40,184 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:41,175 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:42,158 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:43,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:44,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:45,198 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:46,176 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:47,186 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:51,167 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:54:51,718 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:54:52,174 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:54:52,342 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:53,178 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:54,164 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:55,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:56,183 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:57,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:58,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:54:59,160 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:00,186 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:01,168 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:02,164 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:03,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:04,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:05,176 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:06,187 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:07,166 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:08,199 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:09,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:10,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:11,174 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:12,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:13,175 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:14,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:15,157 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:16,179 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:17,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:18,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:19,175 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:20,188 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:21,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:22,173 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:23,175 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:24,189 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:37,585 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:55:38,193 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:55:38,533 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:55:38,711 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:39,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:40,178 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:41,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:42,216 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:43,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:55:44,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:24,827 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:57:25,378 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:57:25,894 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:57:26,050 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:26,223 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:27,160 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:28,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:29,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:30,159 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:31,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:32,159 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:33,163 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:34,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:35,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:36,164 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:37,158 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:38,166 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:39,186 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:40,173 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:57:41,164 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:23,710 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:58:24,307 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:58:25,219 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:58:25,391 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:26,160 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:27,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:28,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:29,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:30,173 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:31,161 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:51,291 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:58:51,839 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:58:52,749 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:58:52,925 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:53,191 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:54,174 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:55,164 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:58:56,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:13,685 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:59:14,237 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:59:14,884 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:59:15,108 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:15,292 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:16,181 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:17,158 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:18,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:19,168 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:20,166 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:45,202 - root - INFO - main.py:48 - START SERVER
+2020-11-23 13:59:45,749 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 13:59:46,046 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 13:59:46,244 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:47,182 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:48,160 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 13:59:49,166 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:04,475 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:02:05,028 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:02:05,532 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 14:02:05,715 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:06,179 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:07,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:08,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:09,173 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:10,157 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:11,164 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:12,177 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:13,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:14,177 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:02:15,159 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:03:53,108 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:03:53,659 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:03:53,727 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 14:03:53,896 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:03:54,170 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:03:55,165 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:03:56,186 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:03:57,162 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:03:58,173 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:03:59,156 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:04:00,185 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:04:01,156 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:04:02,179 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:04:03,184 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:04:04,172 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:04:23,452 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:04:23,999 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:04:24,943 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 14:07:38,360 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:07:38,967 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:07:39,717 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 14:07:39,915 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:07:40,173 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:07:41,167 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:07:42,169 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:07:43,166 - root - ERROR - Object2.py:59 - '01'
+2020-11-23 14:12:52,805 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:12:53,411 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:12:53,899 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 14:13:55,518 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:13:56,072 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:13:57,006 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 14:16:07,902 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:16:08,453 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:16:08,704 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 14:18:37,184 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'

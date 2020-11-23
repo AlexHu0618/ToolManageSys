@@ -11,13 +11,11 @@ import copy
 class GravityShelf(threading.Thread):
     """
         1.frame: Addr + Func + Register + Data + Check
+        2、地址从1-63，地址0用于广播，按地址大小进行返回；
     """
-    # intervals = {'0': 0.0001, '1': 0.0002, '2': 0.0005, '3': 0.001, '4': 0.002, '5': 0.005, '6': 0.01, '7': 0.02,
-    #              '8': 0.05, '9': 0.1, 'a': 0.2, 'b': 0.5, 'c': 1, 'd': 2, 'e': 5, 'A': 0.2, 'B': 0.5, 'C': 1,
-    #              'D': 2, 'E': 5}
-    intervals = {'48': 0.0001, '49': 0.0002, '50': 0.0005, '51': 0.001, '52': 0.002, '53': 0.005, '54': 0.01, '55': 0.02,
-                 '56': 0.05, '57': 0.1, '97': 0.2, '98': 0.5, '99': 1, '100': 2, '101': 5, '65': 0.2, '66': 0.5, '67': 1,
-                 '68': 2, '69': 5}
+    intervals = {'0': 0.0001, '1': 0.0002, '2': 0.0005, '3': 0.001, '4': 0.002, '5': 0.005, '6': 0.01, '7': 0.02,
+                 '8': 0.05, '9': 0.1, 'a': 0.2, 'b': 0.5, 'c': 1, 'd': 2, 'e': 5, 'A': 0.2, 'B': 0.5, 'C': 1,
+                 'D': 2, 'E': 5}
 
     def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data):
         threading.Thread.__init__(self)
@@ -35,8 +33,8 @@ class GravityShelf(threading.Thread):
 
     def run(self):
         cursec = 0
-        current_data = {}
-        self.setParam()
+        data_buff = {}
+        # self.setParam()
         while self.isrunning:
             try:
                 if not self.queuetask.empty():
@@ -50,17 +48,7 @@ class GravityShelf(threading.Thread):
                     localtime = time.localtime(time.time())
                     if localtime.tm_sec != cursec:
                         cursec = localtime.tm_sec
-                        rsl = self.readAllInfo()
-                        allg = {}
-                        if rsl is not None:
-                            for i in rsl:
-                                g = self.readWeight(i)
-                                allg[i] = g
-                            if allg != current_data:
-                                current_data.update(allg)
-                                pkg = TransferPackage(code=206, eq_type=1, data=allg, source=self.addr, msg_type=3)
-                                self.queue_push_data.put(pkg)
-                                print(time.asctime(), 'G--getAllInfo: ', allg)
+                        self.check_data_update(data_buff=data_buff)
                     else:
                         pass
             except Exception as e:
@@ -68,15 +56,30 @@ class GravityShelf(threading.Thread):
                 mylogger.error(e)
         print('网络断开啦，子线程%s要关闭了！' % threading.current_thread().name)
 
+    def check_data_update(self, data_buff):
+        rsl = self.readAllInfo()
+        allg = {}
+        if rsl is not None and len(rsl) >= len(data_buff):
+            for i in rsl:
+                g = self.readWeight(i)
+                if i not in data_buff.keys() or g != data_buff[i]:
+                    data_buff[i] = g
+                    data = {'addr_num': i, 'value': g}
+                    pkg = TransferPackage(code=206, eq_type=1, data=data, source=self.addr, msg_type=3)
+                    self.queue_push_data.put(pkg)
+                    print('Gravity data update--', data)
+                allg[i] = g
+            # print(time.asctime(), 'G--getAllInfo: ', allg)
+
     def readWeight(self, addr='01'):
         cmd_f = bytes.fromhex(addr + '05 02 05')
         lcr = sum(cmd_f) % 256
         cmd = cmd_f + lcr.to_bytes(length=1, byteorder='big', signed=False)
         data = self.getData(cmd)
+        code = data.hex()[9]
         if data is not None:
-            print(data)
             if data[:3] == bytes.fromhex(addr + '0602'):
-                interval = self.intervals[str(data[4])] if str(data[4]) in self.intervals.keys() else 1
+                interval = self.intervals[code] if code in self.intervals.keys() else 1
                 scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
                 value = scale * interval
                 return value
@@ -103,7 +106,7 @@ class GravityShelf(threading.Thread):
                 return data_total
             else:
                 # print('G--Warning', '等待TCP消息回应超时')
-                return TIMEOUT_EQUIPMENT
+                return TIMEOUT
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
             self.isrunning = False
@@ -301,7 +304,7 @@ class RfidR2000(threading.Thread):
                 return data_total
             else:
                 print('R--Warning', '等待TCP消息回应超时')
-                return TIMEOUT_EQUIPMENT
+                return TIMEOUT
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
             self.isrunning = False
@@ -623,7 +626,7 @@ class Lcd(threading.Thread):
             else:
                 return ERR_EQUIPMENT_RESP
         else:
-            return TIMEOUT_EQUIPMENT
+            return TIMEOUT
 
     def showNum(self, num: int, addr='01'):
         number = num if num < 1000 else 999
@@ -638,7 +641,7 @@ class Lcd(threading.Thread):
             else:
                 return ERR_EQUIPMENT_RESP
         else:
-            return TIMEOUT_EQUIPMENT
+            return TIMEOUT
 
     def onBacklight(self, activate=True, addr='01'):
         cmd_data = '01' if activate else '00'

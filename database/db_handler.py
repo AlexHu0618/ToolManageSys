@@ -50,6 +50,6 @@ def get_all_shelfs(storeroom, client, server):
             if collectors is not None:
                 for col in collectors:
                     if col.is_server is True:
-                        server[(col.ip, col.port)] = 'gravity' if col.type == 1 else 'rfid'
+                        server[(col.ip, col.port)] = 'gravity' if col.type == 1 else 'rfid2000'
                     else:
-                        client[(col.ip, col.port)] = 'gravity' if col.type == 1 else 'rfid'
+                        client[(col.ip, col.port)] = 'gravity' if col.type == 1 else 'rfid2000'

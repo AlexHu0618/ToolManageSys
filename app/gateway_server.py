@@ -1,6 +1,6 @@
 import socket
-# from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard
-from app.object_test import GravityShelf, RfidR2000, Lcd, EntranceGuard
+from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard
+# from app.object_test import GravityShelf, RfidR2000, Lcd, EntranceGuard
 from queue import Queue
 from app.myLogger import mylogger
 import threading
