@@ -550,3 +550,7 @@
 2020-11-23 15:01:52,151 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
 2020-11-23 15:01:52,603 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
 2020-11-23 15:04:31,233 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 15:08:57,207 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 15:51:20,429 - root - INFO - main.py:48 - START SERVER
+2020-11-23 15:51:20,980 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 15:51:21,911 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。

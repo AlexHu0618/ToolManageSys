@@ -9044,3 +9044,5 @@ readWeight'
 [Object2.py:57]['int' object has no attribute 'hex']
 [ERROR][2020-11-23 15:04:31,233][Thread-4:140283429779200][task_id:root]
 [Object2.py:56]['int' object has no attribute 'hex']
+[ERROR][2020-11-23 15:08:57,207][Thread-4:140283429779200][task_id:root]
+[Object2.py:56]['int' object has no attribute 'hex']

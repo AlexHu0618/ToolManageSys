@@ -748,16 +748,64 @@ class EntranceGuard(threading.Thread):
                     # print('\033[1;33m USER--', user, ' is authed....\033[0m')
                     resp = 'Auth: ' + str(last_record, encoding='gb18030')
                     return [user, resp]
-                # else:
-                #     print('\033[1;33m USER--', user, ' is non-authed....\033[0m')
-                #     resp = 'Non-auth: ' + str(last_record, encoding='gb18030')
-                # return resp
             else:
-                # return rsl
                 return None
         else:
-            # return count
             return None
+
+    def add_new_user(self, user_code, username='', fingerprint_template):
+        """
+        1、设置user表；
+        2、设置templatev10表；
+        3、设置userauthorize表；
+        :param user_code:
+        :param username:
+        :param fingerprint_template:
+        :return:
+        """
+        # set user
+        p_table = create_string_buffer(b'user')
+        data = 'Pin=%s\tName=%s\tDisable=0' % (user_code, username)
+        str_buf = create_string_buffer(bytes(data, encoding='utf-8'))
+        rsl_user = self.lib.SetDeviceData(self.handle, p_table, str_buf, b'')
+
+        # set fingerprint
+        finger_id = 3  # 0~9, default=3
+        # with open(fpath_template, "r") as f:  # 打开文件
+        #     template = f.read()  # 读取文件
+        template = fingerprint_template
+        data = 'Pin=%s\tFingerID=%d\tTemplate=%s\tValid=1' % (user_code, finger_id, template)
+        p_table = create_string_buffer(b'templatev10')
+        str_buf = create_string_buffer(bytes(data, encoding='utf-8'))
+        rsl_fgp = self.lib.SetDeviceData(self.handle, p_table, str_buf, b'')
+
+        # set userauthorize
+        p_table = create_string_buffer(b'userauthorize')
+        data = 'Pin=%s\tAuthorizeTimezoneId=1\tAuthorizeDoorId=1' % user_code
+        str_buf = create_string_buffer(bytes(data, encoding='utf-8'))
+        rsl_auth = self.lib.SetDeviceData(self.handle, p_table, str_buf, b'')
+
+        if rsl_user == 0 and rsl_fgp == 0 and rsl_auth == 0:
+            return True
+        else:
+            return False
+
+    def delete_user(self, user_code: str):
+        """
+        1、只要任意一个表删除成功即认为删除成功；
+        :param user_code:
+        :return:
+        """
+        tables = [b'user', b'fingerprint', b'userauthorize']
+        rsl_all = False
+        pin = user_code
+        filter2 = b'Pin=' + bytes(pin, encoding='utf8')
+        for t in tables:
+            p_table = create_string_buffer(t)
+            rsl = self.lib.DeleteDeviceData(self.handle, p_table, filter2, b'')
+            if rsl >= 0:
+                rsl_all = True
+        return rsl_all
 
     def __del__(self):
         self.lib.Disconnect(self.handle)

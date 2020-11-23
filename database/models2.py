@@ -107,7 +107,7 @@ class User(Base, MyBase):
     login_name = Column(String(100), nullable=False)
     _password = Column('login_password', String(100))
     real_name = Column(String(100))
-    code = Column(String(100), unique=True)
+    code = Column(String(100), unique=True)  # 必须为数字型字符
     card_id = Column(String(100), default='')
     cellphone = Column(String(50))
     mail = Column(String(50))
