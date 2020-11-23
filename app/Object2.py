@@ -35,6 +35,7 @@ class GravityShelf(threading.Thread):
         cursec = 0
         data_buff = {}
         # self.setParam()
+        self.getAllParams()
         while self.isrunning:
             try:
                 if not self.queuetask.empty():
@@ -81,7 +82,7 @@ class GravityShelf(threading.Thread):
             if data[:3] == bytes.fromhex(addr + '0602'):
                 interval = self.intervals[code] if code in self.intervals.keys() else 1
                 scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
-                value = scale * interval
+                value = int(scale * interval * 1000)
                 return value
             else:
                 return ERR_EQUIPMENT_RESP
