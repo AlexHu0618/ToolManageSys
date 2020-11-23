@@ -530,3 +530,23 @@
 2020-11-23 14:43:59,810 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
 2020-11-23 14:44:00,663 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
 2020-11-23 14:44:23,213 - root - ERROR - Object2.py:57 - 'int' object has no attribute 'hex'
+2020-11-23 14:45:31,206 - root - ERROR - Object2.py:57 - 'int' object has no attribute 'hex'
+2020-11-23 14:45:57,209 - root - ERROR - Object2.py:57 - 'int' object has no attribute 'hex'
+2020-11-23 14:47:05,297 - root - ERROR - Object2.py:57 - 'int' object has no attribute 'hex'
+2020-11-23 14:47:15,143 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:47:15,745 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:47:16,729 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 14:52:35,169 - root - ERROR - Object2.py:57 - 'int' object has no attribute 'hex'
+2020-11-23 14:53:38,664 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:53:39,213 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:53:40,110 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 14:58:24,592 - root - INFO - main.py:48 - START SERVER
+2020-11-23 14:58:25,144 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 14:58:25,373 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 15:00:40,248 - root - INFO - main.py:48 - START SERVER
+2020-11-23 15:00:40,802 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 15:00:41,066 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 15:01:51,602 - root - INFO - main.py:48 - START SERVER
+2020-11-23 15:01:52,151 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 15:01:52,603 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 15:04:31,233 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'

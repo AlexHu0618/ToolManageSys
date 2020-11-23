@@ -35,7 +35,6 @@ class GravityShelf(threading.Thread):
         cursec = 0
         data_buff = {}
         # self.setParam()
-        self.getAllParams()
         while self.isrunning:
             try:
                 if not self.queuetask.empty():
@@ -711,11 +710,15 @@ class EntranceGuard(threading.Thread):
                     if localtime.tm_sec != cursec:
                         cursec = localtime.tm_sec
                         rsl = self.getNewEvent()
-                        if (rsl is not None) and (rsl != current_data):
-                            print('gate--getNewEvent: ', rsl)
+                        if current_data is not None:
+                            if (rsl is not None) and (rsl != current_data):
+                                data = {'user': rsl[0], 'raw': rsl}
+                                pkg = TransferPackage(code=206, eq_type=3, data=data, source=(self.ip, self.port), msg_type=3)
+                                self.queue_push_data.put(pkg)
+                                print('gate--getNewEvent: ', rsl)
+                                current_data = copy.deepcopy(rsl)
+                        else:
                             current_data = copy.deepcopy(rsl)
-                            pkg = TransferPackage(code=206, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port), msg_type=3)
-                            self.queue_push_data.put(pkg)
                     else:
                         pass
             finally:
