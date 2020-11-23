@@ -62,7 +62,7 @@ class GravityShelf(threading.Thread):
         if rsl is not None and len(rsl) >= len(data_buff):
             for i in rsl:
                 g = self.readWeight(i)
-                if i not in data_buff.keys() or g != data_buff[i]:
+                if i not in data_buff.keys() or g != data_buff[i] and (abs(g - data_buff[i]) > 5):
                     data_buff[i] = g
                     data = {'addr_num': i, 'value': g}
                     pkg = TransferPackage(code=206, eq_type=1, data=data, source=self.addr, msg_type=3)
@@ -753,7 +753,7 @@ class EntranceGuard(threading.Thread):
         else:
             return None
 
-    def add_new_user(self, user_code, username='', fingerprint_template):
+    def add_new_user(self, user_code, fingerprint_template, username=''):
         """
         1、设置user表；
         2、设置templatev10表；
@@ -811,31 +811,17 @@ class EntranceGuard(threading.Thread):
         self.lib.Disconnect(self.handle)
 
 
-# class EntranceGuard(threading.Thread):
-#
-#     def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data):
-#         threading.Thread.__init__(self)
-#         self.ip = addr[0]
-#         self.port = addr[1]
-#         self.isrunning = True
-#         self.queuetask = queuetask
-#         self.queuersl = queuersl
-#         self.queue_push_data = queue_push_data
-#         self.lock = threading.RLock()
-#
-#     def run(self):
-#         while self.isrunning:
-#             self.lock.acquire()
-#             try:
-#                 if not self.queuetask.empty():
-#                     task, args = self.queuetask.get()
-#                     rsl = methodcaller(task, *args)(self)
-#                     if rsl is not None:
-#
-#                         self.queuersl.put(rsl)
-#                 else:
-#                     time.sleep(60)
-#                     pkg = TransferPackage(code=206, eq_type=3, data=None, source=(self.ip, self.port), msg_type=3)
-#                     self.queue_push_data.put(pkg)
-#             finally:
-#                 self.lock.release()
+class HIKVision(threading.Thread):
+    pass
+
+
+class CodeScanner(threading.Thread):
+    pass
+
+
+class ChannelMachine(threading.Thread):
+    pass
+
+
+class RfidFreqHop(threading.Thread):
+    pass

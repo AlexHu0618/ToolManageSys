@@ -554,3 +554,139 @@
 2020-11-23 15:51:20,429 - root - INFO - main.py:48 - START SERVER
 2020-11-23 15:51:20,980 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
 2020-11-23 15:51:21,911 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 19:33:09,543 - root - INFO - main.py:48 - START SERVER
+2020-11-23 19:33:10,107 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 19:33:10,392 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 19:34:46,897 - root - INFO - main.py:48 - START SERVER
+2020-11-23 19:34:47,451 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 19:34:48,004 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 19:37:05,210 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 19:37:49,241 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 19:42:24,273 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 19:44:31,177 - root - INFO - main.py:48 - START SERVER
+2020-11-23 19:44:31,730 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 19:44:31,980 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 19:46:41,627 - root - INFO - main.py:48 - START SERVER
+2020-11-23 19:46:42,180 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 19:46:42,185 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-23 19:46:43,191 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 19:47:08,076 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:10,037 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:12,113 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:13,000 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:14,029 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:15,002 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:16,028 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:17,001 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:18,026 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:19,004 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:20,028 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:21,002 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:22,028 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:23,002 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:24,029 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:25,004 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:26,029 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:27,001 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:28,027 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:29,001 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:30,035 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:31,001 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:32,028 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:33,012 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:34,040 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:35,011 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:36,032 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:37,000 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:38,028 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:39,015 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:40,027 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:41,007 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:42,025 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:43,005 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:44,026 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:45,012 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:46,028 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:47,000 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:48,029 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:49,005 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:50,036 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:51,012 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:52,030 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:53,012 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:54,028 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:55,002 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:56,032 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:57,009 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:58,027 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:47:59,002 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:00,028 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:01,007 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:02,034 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:03,009 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:04,032 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:05,003 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:06,025 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:07,003 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:08,041 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:09,001 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:10,031 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:11,000 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:12,048 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:13,011 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:14,029 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:15,011 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:16,037 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:17,003 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:18,032 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:19,002 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:20,039 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:21,008 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:22,025 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:23,010 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:24,032 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:25,000 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:26,039 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:27,007 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:28,024 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:29,003 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:30,037 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:31,003 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:32,038 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:33,002 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:34,029 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:35,008 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:36,036 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:37,002 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:38,031 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:39,020 - root - ERROR - Object2.py:569 - name 'ERR_EQUIPMENT_RESP' is not defined
+2020-11-23 19:48:42,878 - root - INFO - main.py:48 - START SERVER
+2020-11-23 19:48:43,430 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-23 19:48:43,434 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-23 19:48:44,018 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-23 19:54:03,250 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 19:54:49,233 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 19:55:53,293 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 19:56:00,266 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 19:56:34,339 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 19:59:32,343 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:00:11,163 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:01:12,344 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:02:14,330 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:02:16,153 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:04:34,288 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:08:14,237 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:09:50,301 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:11:19,245 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:14:55,322 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:17:16,172 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:17:46,274 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:20:11,440 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:26:58,291 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:29:19,244 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:33:34,223 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:34:08,195 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:37:31,323 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:40:52,223 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:41:04,200 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
+2020-11-23 20:42:11,191 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
