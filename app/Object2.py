@@ -1,3 +1,5 @@
+# 只要连接断开就会退出线程
+
 import threading
 from operator import methodcaller
 import socket
@@ -677,7 +679,7 @@ class Lcd(threading.Thread):
 class EntranceGuard(threading.Thread):
     lib = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
 
-    def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data):
+    def __init__(self, addr: tuple, handle, queuetask, queuersl, queue_push_data):
         threading.Thread.__init__(self)
         self.ip = addr[0]
         self.port = addr[1]
@@ -687,11 +689,7 @@ class EntranceGuard(threading.Thread):
         self.queue_push_data = queue_push_data
         self.lock = threading.RLock()
         self.lib = EntranceGuard.lib
-        self.handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
-                                                b',port=' + bytes(str(self.port), encoding='utf8') +
-                                                b',timeout=2000,passwd=')
-        if self.handle == 0:
-            print('Fail to Connect.')
+        self.handle = handle
 
     def run(self):
         cursec = 0
@@ -723,6 +721,21 @@ class EntranceGuard(threading.Thread):
                         pass
             finally:
                 self.lock.release()
+
+    @staticmethod
+    def conn(ip: str, port: int):
+        handle = EntranceGuard.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(ip, encoding='utf8') +
+                                       b',port=' + bytes(str(port), encoding='utf8') +
+                                       b',timeout=2000,passwd=')
+        if handle == 0:
+            print('Fail to Connect.')
+            return False
+        else:
+            return True
+
+    @staticmethod
+    def disconn(handle):
+        EntranceGuard.lib.Disconnect(handle)
 
     def getDeviceParam(self):
         buff = create_string_buffer("b".encode('utf-8'), 1024)
