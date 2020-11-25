@@ -679,7 +679,7 @@ class Lcd(threading.Thread):
 class EntranceGuard(threading.Thread):
     lib = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
 
-    def __init__(self, addr: tuple, handle, queuetask, queuersl, queue_push_data):
+    def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data):
         threading.Thread.__init__(self)
         self.ip = addr[0]
         self.port = addr[1]
@@ -689,9 +689,13 @@ class EntranceGuard(threading.Thread):
         self.queue_push_data = queue_push_data
         self.lock = threading.RLock()
         self.lib = EntranceGuard.lib
-        self.handle = handle
+        self.handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
+                                       b',port=' + bytes(str(self.port), encoding='utf8') +
+                                       b',timeout=2000,passwd=')
 
     def run(self):
+        # if self.handle == 0:
+        #     self.isrunning = False
         cursec = 0
         current_data = None
         while self.isrunning:
@@ -701,13 +705,17 @@ class EntranceGuard(threading.Thread):
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
-                        pkg = TransferPackage(code=200, eq_type=1, data={'rsl': rsl}, source=self.addr, msg_type=4)
+                        pkg = TransferPackage(code=200, eq_type=1, data={'rsl': rsl}, source=(self.ip, self.port), msg_type=4)
                         self.queuersl.put(pkg)
                 else:
                     localtime = time.localtime(time.time())
                     if localtime.tm_sec != cursec:
                         cursec = localtime.tm_sec
                         rsl = self.getNewEvent()
+                        if rsl is None:
+                            self.isrunning = False
+                        if rsl is None:
+                            self.isrunning = False
                         if current_data is not None:
                             if (rsl is not None) and (rsl != current_data):
                                 data = {'user': rsl[0], 'raw': rsl}
@@ -719,8 +727,11 @@ class EntranceGuard(threading.Thread):
                             current_data = copy.deepcopy(rsl)
                     else:
                         pass
+            except Exception as e:
+                print(e)
             finally:
                 self.lock.release()
+        self.lib.Disconnect(self.handle)
 
     @staticmethod
     def conn(ip: str, port: int):
@@ -729,9 +740,9 @@ class EntranceGuard(threading.Thread):
                                        b',timeout=2000,passwd=')
         if handle == 0:
             print('Fail to Connect.')
-            return False
+            return None
         else:
-            return True
+            return handle
 
     @staticmethod
     def disconn(handle):

@@ -37,7 +37,7 @@ class TaskControler(Process):
         while self.isrunning:
             try:
                 while True:
-                    print('waitting for new connection')
+                    print('waitting for new web connection')
                     client_sock, addr = server_sock.accept()
                     self.sock = client_sock
                     print('new conn: ', addr)

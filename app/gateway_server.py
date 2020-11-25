@@ -40,6 +40,13 @@ class GatewayServer(Process):
         :return:
         """
         try:
+            # connect all servers
+            if self.servers is not None:
+                print("Start to connect to registered servers!!!!")
+                for k, v in self.servers.items():
+                    self._connect_server(addr=k, ttype=v)
+            else:
+                mylogger.info('There is None registered server for connecting!')
             # monitor and reconn servers
             thread_reconn_server = threading.Thread(target=self._reconnect_offline_server)
             thread_reconn_server.daemon = True
@@ -113,21 +120,86 @@ class GatewayServer(Process):
         :return:
         """
         while self.isrunning:
+            self.lock.acquire()
             server_offline = dict(set(self.servers.items()) - set(self.server_active.items()))
+            self.lock.release()
             if server_offline is not None:
                 print("Start to reconnect to offline servers!!!!")
                 for k, v in server_offline.items():
                     self._connect_server(addr=k, ttype=v)
-            else:
-                time.sleep(10)
+            time.sleep(20)
+
+    # def _connect_server(self, addr: tuple, ttype: str):
+    #     """
+    #     1、如果连接成功，则发送pkg给task管理器，并加入server激活字典；
+    #     :param addr:
+    #     :param ttype:
+    #     :return:
+    #     """
+    #     failed_count = 0
+    #     terminal_type = ttype
+    #     queue_task = Queue(50)
+    #     queue_rsl = Queue(50)
+    #     subevent = threading.Event()
+    #     thread = None
+    #     while True:
+    #         if terminal_type == 'guard':
+    #             pass
+    #             # print('guard')
+    #             # break
+    #             # thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push)
+    #             # if thread:
+    #             #     thread.daemon = True
+    #             #     thread.start()
+    #             #     self.lock.acquire()
+    #             #     self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
+    #             #                                   'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
+    #             #     self.server_active[addr] = terminal_type
+    #             #     self.lock.release()
+    #             #     print('服务端(%s)已成功连接。。' % str(addr))
+    #             #     mylogger.info('服务端(%s)已成功连接。。' % str(addr))
+    #             # else:
+    #             #     print('fail to connect to server %s' % str(addr))
+    #             #     mylogger.warning('fail to connect to server %s' % str(addr))
+    #             # break
+    #         else:
+    #             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    #             s.settimeout(0.1)
+    #             try:
+    #                 s.connect(addr)
+    #                 if terminal_type == 'G':
+    #                     thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
+    #                 elif terminal_type == 'L':
+    #                     thread = Lcd(addr, s, queue_task, queue_rsl, subevent)
+    #                 elif terminal_type == 'R':
+    #                     thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
+    #                 else:
+    #                     pass
+    #                 if thread:
+    #                     thread.daemon = True
+    #                     thread.start()
+    #                     self.lock.acquire()
+    #                     self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
+    #                                                   'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
+    #                     self.server_active[addr] = terminal_type
+    #                     self.lock.release()
+    #                     print('服务端(%s)已成功连接。。' % str(addr))
+    #                     mylogger.info('服务端(%s)已成功连接。。' % str(addr))
+    #                 else:
+    #                     s.shutdown(flag=2)
+    #                     s.close()
+    #                 break
+    #             except socket.error:
+    #                 failed_count += 1
+    #                 # print("fail to connect to server %d times" % failed_count)
+    #                 if failed_count == 10:
+    #                     s.shutdown(flag=2)
+    #                     s.close()
+    #                     print('fail to connect to server %s' % str(addr))
+    #                     mylogger.warning('fail to connect to server %s' % str(addr))
+    #                     break
 
     def _connect_server(self, addr: tuple, ttype: str):
-        """
-        1、如果连接成功，则发送pkg给task管理器，并加入server激活字典；
-        :param addr:
-        :param ttype:
-        :return:
-        """
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(0.1)
         failed_count = 0
@@ -137,32 +209,10 @@ class GatewayServer(Process):
         subevent = threading.Event()
         thread = None
         while True:
-            if terminal_type == 'guard':
-                handle = EntranceGuard.conn(addr[0], addr[1])
-                if handle is True:
-                    thread = EntranceGuard(addr, handle, queue_task, queue_rsl, self.queue_equipment_push)
-                    if thread:
-                        thread.daemon = True
-                        thread.start()
-                        self.lock.acquire()
-                        self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
-                                                      'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
-                        self.server_active[addr] = terminal_type
-                        self.lock.release()
-                        print('服务端(%s)已成功连接。。' % str(addr))
-                        mylogger.info('服务端(%s)已成功连接。。' % str(addr))
-                    else:
-                        EntranceGuard.disconn(handle)
-                    break
+            try:
+                if terminal_type == 'guard':
+                    thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push)
                 else:
-                    failed_count += 1
-                    if failed_count == 10:
-                        print('fail to connect to server %s' % str(addr))
-                        mylogger.warning('fail to connect to server %s' % str(addr))
-                        EntranceGuard.disconn(handle)
-                        break
-            else:
-                try:
                     s.connect(addr)
                     if terminal_type == 'G':
                         thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
@@ -172,29 +222,24 @@ class GatewayServer(Process):
                         thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
                     else:
                         pass
-                    if thread:
-                        thread.daemon = True
-                        thread.start()
-                        self.lock.acquire()
-                        self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
-                                                      'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
-                        self.server_active[addr] = terminal_type
-                        self.lock.release()
-                        print('服务端(%s)已成功连接。。' % str(addr))
-                        mylogger.info('服务端(%s)已成功连接。。' % str(addr))
-                    else:
-                        s.shutdown(flag=2)
-                        s.close()
-                    break
-                except socket.error:
-                    failed_count += 1
-                    # print("fail to connect to server %d times" % failed_count)
-                    if failed_count == 10:
-                        s.shutdown(flag=2)
-                        s.close()
-                        print('fail to connect to server %s' % str(addr))
-                        mylogger.warning('fail to connect to server %s' % str(addr))
-                        break
+                if thread:
+                    thread.daemon = True
+                    thread.start()
+                    self.lock.acquire()
+                    self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
+                                                  'queuersl': queue_rsl, 'status': False, 'subevent': subevent, 'data': {}}
+                    self.server_active[addr] = terminal_type
+                    self.lock.release()
+                    print('客户端(%s)已成功连接。。' % str(addr))
+                    mylogger.info('客户端(%s)已成功连接。。' % str(addr))
+                    return True
+            except socket.error:
+                failed_count += 1
+                # print("fail to connect to server %d times" % failed_count)
+                if failed_count == 10:
+                    print('fail to connect to server %s' % str(addr))
+                    mylogger.warning('fail to connect to server %s' % str(addr))
+                    return False
 
     def _monitor_access(self):
         # 创建socket对象

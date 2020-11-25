@@ -1,870 +1,289 @@
-2020-11-24 13:42:29,500 - root - INFO - main.py:48 - START SERVER
-2020-11-24 13:42:30,089 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-24 13:42:30,093 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-24 13:42:30,115 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-24 13:43:33,624 - root - INFO - main.py:48 - START SERVER
-2020-11-24 13:43:34,227 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-24 13:43:34,230 - root - INFO - gateway_server.py:135 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-24 13:43:35,012 - root - INFO - gateway_server.py:178 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-24 13:43:41,182 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 13:50:21,212 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 13:50:30,188 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 13:55:46,224 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 13:59:33,241 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 13:59:45,186 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:00:03,177 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:04:48,245 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:07:16,327 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:07:41,267 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:08:03,437 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:09:05,192 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:13:35,203 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:20:00,207 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:20:18,367 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:22:53,178 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:22:54,340 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:22:55,514 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:22:56,676 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:22:57,833 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:22:58,999 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:00,161 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:01,317 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:02,477 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:03,642 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:04,796 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:05,949 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:07,107 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:08,325 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:09,478 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:10,632 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:11,790 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:12,946 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:14,107 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:15,261 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:16,416 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:23:17,568 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:24:17,217 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:30:46,266 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:31:39,184 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:32:33,187 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:33:21,238 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:34:18,285 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:34:54,159 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:38:10,280 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:43:46,161 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:48:28,235 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:55:03,175 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:57:38,370 - root - ERROR - Object2.py:56 - 'int' object has no attribute 'hex'
-2020-11-24 14:57:39,582 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:40,770 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:41,955 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:43,135 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:44,309 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:45,486 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:46,640 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:47,821 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:48,997 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:50,154 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:51,313 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:52,467 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:53,621 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:54,782 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:55,953 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:57,107 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:58,264 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:57:59,419 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:00,571 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:01,724 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:02,877 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:04,029 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:05,184 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:06,346 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:07,503 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:08,656 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:09,808 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:10,963 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:12,119 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:13,280 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:14,438 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:15,593 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:16,747 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:17,910 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:19,072 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:20,226 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:21,382 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:22,539 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:23,704 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:24,862 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:26,026 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:27,188 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:28,340 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:29,493 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:30,646 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:31,799 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:32,956 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:34,119 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:35,276 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:36,436 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:37,596 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:38,763 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:39,922 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:41,081 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:42,247 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:43,412 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:44,571 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:45,738 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:46,898 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:48,063 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:49,216 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:50,388 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:51,548 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:52,700 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:53,853 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:55,007 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:56,161 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:57,337 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:58,489 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:58:59,645 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:00,810 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:01,962 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:03,115 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:04,273 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:05,440 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:06,605 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:07,760 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:08,919 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:10,072 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:11,225 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:12,377 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:13,530 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:14,693 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:15,851 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:17,003 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:18,155 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:19,307 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:20,460 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:21,612 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:22,769 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:23,921 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:25,073 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:26,235 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:27,389 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:28,542 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:29,694 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:30,846 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:32,000 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:33,158 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:34,310 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:35,462 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:36,617 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:37,770 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:38,922 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:40,074 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:41,225 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:42,377 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:43,529 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:44,687 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:45,839 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:47,011 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:48,163 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:49,315 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:50,468 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:51,620 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:52,772 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:53,932 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:55,096 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:56,252 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:57,407 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:58,569 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 14:59:59,748 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:00,903 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:02,059 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:03,213 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:04,366 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:05,520 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:06,673 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:07,825 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:08,982 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:10,156 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:11,323 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:12,490 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:13,642 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:14,806 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:15,967 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:17,132 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:18,295 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:19,447 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:20,600 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:21,752 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:22,905 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:24,057 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:25,209 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:26,361 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:27,513 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:28,669 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:29,822 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:30,975 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:32,130 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:33,283 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:34,435 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:35,587 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:36,740 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:37,897 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:39,058 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:40,210 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:41,365 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:42,517 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:43,679 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:44,841 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:45,996 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:47,149 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:48,308 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:49,504 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:50,668 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:51,821 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:52,975 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:54,128 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:55,280 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:56,432 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:57,596 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:58,749 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:00:59,902 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:01,061 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:02,233 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:03,386 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:04,549 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:05,701 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:06,854 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:08,013 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:09,170 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:10,344 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:11,498 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:12,654 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:13,810 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:14,968 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:16,125 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:17,278 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:18,433 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:19,590 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:20,742 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:21,894 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:23,047 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:24,203 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:25,359 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:26,511 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:27,663 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:28,815 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:29,970 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:31,123 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:32,275 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:33,436 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:34,593 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:35,749 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:36,909 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:38,061 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:39,213 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:40,365 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:41,517 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:42,675 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:43,833 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:44,989 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:46,150 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:47,306 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:48,469 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:49,627 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:50,782 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:51,952 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:53,118 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:54,276 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:55,431 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:56,589 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:57,742 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:01:58,894 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:00,046 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:01,198 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:02,350 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:03,502 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:04,655 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:05,807 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:06,959 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:08,111 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:09,268 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:10,421 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:11,581 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:12,734 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:13,896 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:15,051 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:16,206 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:17,359 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:18,512 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:19,669 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:20,833 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:21,988 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:23,140 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:24,293 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:25,451 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:26,603 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:27,755 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:28,932 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:30,088 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:31,241 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:32,396 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:33,552 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:34,708 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:35,868 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:37,022 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:38,174 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:39,326 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:40,483 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:41,644 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:42,800 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:43,953 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:45,110 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:46,270 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:47,428 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:48,581 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:49,736 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:50,887 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:52,046 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:53,199 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:54,358 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:55,510 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:56,663 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:57,816 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:02:58,973 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:00,140 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:01,294 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:02,446 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:03,598 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:04,751 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:05,903 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:07,056 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:08,214 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:09,371 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:10,528 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:11,682 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:12,835 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:13,989 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:15,150 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:16,309 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:17,464 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:18,631 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:19,788 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:20,941 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:22,101 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:23,276 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:24,429 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:25,582 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:26,736 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:27,898 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:29,053 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:30,207 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:31,364 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:32,519 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:33,684 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:34,837 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:35,989 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:37,147 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:38,300 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:39,452 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:40,604 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:41,756 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:42,908 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:44,060 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:45,212 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:46,366 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:47,521 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:48,677 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:49,829 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:50,986 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:52,141 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:53,294 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:54,447 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:55,601 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:56,759 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:57,914 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:03:59,075 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:00,232 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:01,398 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:02,554 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:03,712 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:04,867 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:06,020 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:07,172 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:08,325 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:09,477 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:10,630 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:11,782 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:12,934 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:14,086 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:15,238 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:16,392 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:17,550 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:18,707 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:19,863 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:21,016 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:22,180 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:23,341 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:24,494 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:25,646 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:26,798 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:27,950 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:29,102 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:30,256 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:31,417 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:32,576 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:33,738 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:34,890 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:36,042 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:37,194 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:38,352 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:39,510 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:40,663 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:41,821 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:42,974 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:44,126 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:45,279 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:46,431 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:47,584 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:48,738 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:49,890 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:51,042 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:52,194 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:53,346 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:54,498 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:55,653 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:56,816 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:58,018 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:04:59,179 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:00,331 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:01,485 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:02,640 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:03,794 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:04,946 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:06,101 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:07,253 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:08,405 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:09,557 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:10,709 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:11,861 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:13,013 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:14,179 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:15,332 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:16,484 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:17,636 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:18,788 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:19,944 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:21,096 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:22,247 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:23,399 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:24,551 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:25,702 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:26,854 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:28,006 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:29,158 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:30,310 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:31,463 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:32,615 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:33,767 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:34,919 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:36,071 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:37,241 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:38,393 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:39,546 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:40,699 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:41,853 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:43,008 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:44,166 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:45,321 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:46,478 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:47,637 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:48,790 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:49,946 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:51,102 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:52,259 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:53,413 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:54,568 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:55,729 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:56,881 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:58,033 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:05:59,185 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:00,347 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:01,524 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:02,691 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:03,848 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:05,007 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:06,163 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:07,316 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:08,481 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:09,633 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:10,785 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:11,937 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:13,097 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:14,261 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:15,427 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:16,602 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:17,754 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:18,906 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:20,058 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:21,210 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:22,362 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:23,514 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:24,668 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:25,821 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:26,977 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:28,129 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:29,284 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:30,447 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:31,605 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:32,757 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:33,909 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:35,061 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:36,213 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:37,366 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:38,526 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:39,687 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:40,843 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:41,995 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:43,147 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:44,299 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:45,451 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:46,603 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:47,759 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:48,911 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:50,063 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:51,215 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:52,368 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:53,520 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:54,674 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:55,832 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:56,985 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:58,147 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:06:59,311 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:00,477 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:01,637 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:02,798 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:03,950 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:05,107 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:06,259 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:07,411 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:08,563 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:09,715 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:10,867 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:12,020 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:13,182 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:14,335 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:15,487 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:16,640 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:17,794 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:18,953 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:20,106 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:21,258 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:22,412 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:23,577 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:24,735 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:25,893 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:27,048 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:28,203 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:29,355 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:30,507 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:31,659 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:32,812 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:33,964 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:35,116 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:36,268 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:37,423 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:38,579 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:39,732 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:40,884 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:42,036 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:43,189 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:44,342 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:45,495 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:46,651 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:47,807 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:48,959 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:50,112 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:51,264 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:52,416 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:53,570 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:54,723 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:55,875 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:57,028 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:58,185 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:07:59,354 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:00,511 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:01,668 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:02,824 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:03,981 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:05,136 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:06,311 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:07,467 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:08,628 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:09,782 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:10,934 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:12,087 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:13,241 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:14,403 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:15,561 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:16,718 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:17,872 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:19,031 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:20,201 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:21,363 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:22,525 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:23,691 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:24,848 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:26,004 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:27,162 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:28,323 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:29,480 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:30,640 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:31,823 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:33,012 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:34,176 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:35,332 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:36,492 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:37,644 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:38,804 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:39,962 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:41,120 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:42,272 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:43,424 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:44,576 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:45,728 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:46,888 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:48,040 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:49,200 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:50,353 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:51,505 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:52,657 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:53,809 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:54,967 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:56,132 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:57,289 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:58,445 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:08:59,602 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:00,761 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:01,916 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:03,076 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:04,228 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:05,384 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:06,537 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:07,693 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:08,857 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:10,020 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:11,175 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:12,331 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:13,486 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:14,645 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:15,810 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:16,970 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:18,122 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:19,282 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:20,436 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:21,589 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:22,751 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:23,911 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:25,063 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:26,217 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:27,370 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:28,534 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:29,688 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:30,850 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:32,003 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:33,157 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:34,315 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:35,467 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:36,633 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:37,795 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:38,947 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:40,100 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:41,253 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:42,408 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:43,561 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:44,725 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:45,881 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:47,035 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:48,191 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:49,352 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:50,513 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:51,678 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:52,839 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:53,992 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:55,149 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:56,314 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:57,466 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:58,619 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:09:59,785 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:00,942 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:02,118 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:03,275 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:04,441 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:05,609 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:06,763 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:07,917 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:09,072 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:10,225 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:11,387 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:12,542 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:13,721 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:14,880 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:16,043 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:17,204 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:18,363 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:19,525 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:20,680 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:21,843 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:23,009 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:24,174 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:25,329 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:26,484 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:27,636 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:28,788 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:29,940 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:31,092 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:32,245 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:33,397 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:34,550 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:35,702 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:36,855 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:38,010 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:39,162 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:40,316 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:41,468 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:42,622 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:43,779 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:44,932 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:46,084 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:47,237 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:48,394 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:49,554 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:50,724 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:51,883 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:53,040 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:54,199 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:55,355 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:56,508 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:57,671 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:58,825 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:10:59,993 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:01,145 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:02,301 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:03,457 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:04,613 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:05,765 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:06,923 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:08,077 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:09,230 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:10,382 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:11,535 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:12,688 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:13,853 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:15,022 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:16,174 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:17,326 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:18,478 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:19,637 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:20,790 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:21,946 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:23,102 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:24,262 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:25,414 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:26,567 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:27,719 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:28,882 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:30,035 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:31,188 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:32,343 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:33,498 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:34,655 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:35,808 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:36,961 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:38,119 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:39,276 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:40,428 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:41,584 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:42,746 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:43,904 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:45,063 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:46,222 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:47,388 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:48,543 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:49,701 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:50,856 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:52,008 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:53,160 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:54,312 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:55,467 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:56,620 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:57,773 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:11:58,926 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:00,078 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:01,231 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:02,387 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:03,540 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:04,692 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:05,845 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:06,999 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:08,157 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:09,310 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:10,462 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:11,619 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:12,776 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:13,931 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:15,088 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:16,252 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:17,406 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:18,558 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:19,711 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:20,868 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:22,022 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:23,182 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:24,344 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:25,500 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:26,664 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:27,830 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:28,995 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:30,147 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:31,299 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:32,453 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:33,607 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:34,778 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:35,947 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:37,107 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:38,273 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:39,436 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:40,598 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:41,758 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:42,920 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:44,077 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:45,240 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:46,394 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:47,554 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:48,709 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:49,861 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:51,042 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:52,212 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:53,364 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:54,517 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:55,670 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:56,830 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:57,995 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:12:59,148 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:00,301 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:01,453 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:02,606 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:03,759 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:04,911 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:06,064 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:07,218 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:08,372 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:09,524 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:10,677 - root - ERROR - Object2.py:56 - 'int' object is not iterable
-2020-11-24 15:13:10,829 - root - ERROR - Object2.py:56 - object of type 'int' has no len()
-2020-11-24 19:08:16,951 - root - INFO - main.py:48 - START SERVER
-2020-11-24 19:08:17,515 - root - INFO - gateway_server.py:138 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-24 19:08:17,520 - root - INFO - gateway_server.py:138 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-24 19:08:55,399 - root - INFO - main.py:48 - START SERVER
-2020-11-24 19:08:55,998 - root - INFO - gateway_server.py:138 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-24 19:08:56,002 - root - INFO - gateway_server.py:138 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:13:43,171 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:13:43,224 - root - INFO - gateway_server.py:184 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:16:03,091 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:17:14,539 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:17:14,568 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:17:15,105 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:18:48,169 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:18:48,187 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:18:58,891 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:19:22,152 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:19:22,166 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:21:43,770 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:24:10,162 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:24:38,806 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:24:45,901 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:26:15,172 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:26:44,285 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:27:57,860 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:27:57,875 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:27:58,527 - root - INFO - gateway_server.py:154 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:28:19,262 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:28:19,280 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:30:11,916 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:30:11,933 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:30:12,533 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:30:44,353 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:31:31,854 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:31:31,871 - root - INFO - gateway_server.py:187 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:32:05,859 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:33:30,524 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:33:41,875 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:35:39,557 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:36:02,463 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:36:02,485 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:36:03,126 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:36:49,102 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:37:02,449 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:37:09,913 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:37:58,858 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:37:58,874 - root - INFO - gateway_server.py:189 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:38:07,978 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:38:07,996 - root - INFO - gateway_server.py:189 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:38:54,547 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:42:24,435 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:42:32,890 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:42:33,494 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:43:29,559 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:44:08,349 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:44:08,370 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:45:29,618 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:45:29,634 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:47:33,812 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:47:34,413 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:47:53,225 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:47:53,244 - root - INFO - gateway_server.py:193 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:48:02,470 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:48:48,152 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:48:48,170 - root - INFO - gateway_server.py:193 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:49:29,464 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:49:29,480 - root - INFO - gateway_server.py:195 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:50:42,135 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:51:09,608 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:51:09,629 - root - INFO - gateway_server.py:196 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:51:10,253 - root - INFO - gateway_server.py:158 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:51:27,125 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:52:01,708 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:53:46,318 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:53:46,333 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:55:00,227 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:55:00,836 - root - INFO - gateway_server.py:158 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:55:00,871 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:55:38,929 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:55:38,970 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:57:17,326 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:57:17,346 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:57:31,566 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:57:31,588 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:57:35,157 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:57:37,366 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:57:37,380 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 13:57:38,026 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:57:45,489 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:57:46,140 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:58:52,420 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:58:53,026 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 13:59:04,402 - root - INFO - main.py:48 - START SERVER
+2020-11-25 13:59:29,301 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:02:32,273 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:02:32,289 - root - INFO - gateway_server.py:187 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:02:42,135 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:02:42,150 - root - INFO - gateway_server.py:187 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:04:44,629 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:04:44,643 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:04:55,408 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:05:07,333 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:05:07,346 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:05:45,427 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:05:45,442 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:05:58,529 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:05:58,543 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:11:47,619 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:12:26,291 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:12:26,900 - root - INFO - gateway_server.py:161 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 14:13:48,624 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:13:56,693 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:13:56,714 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:40:00,231 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:40:00,262 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:40:00,878 - root - INFO - gateway_server.py:161 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 14:41:28,047 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:41:28,065 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:42:37,892 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:42:37,912 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:43:25,461 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:43:26,069 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 14:44:34,238 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:44:34,843 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 14:47:05,955 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:47:05,974 - root - INFO - gateway_server.py:185 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:50:02,277 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:50:02,879 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 14:50:20,550 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:50:21,151 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 14:51:06,718 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:51:06,738 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:51:14,602 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:51:24,710 - root - INFO - main.py:48 - START SERVER
+2020-11-25 14:51:24,726 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 14:53:05,991 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:20:06,991 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:20:07,864 - root - INFO - gateway_server.py:241 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 15:20:23,900 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:20:24,689 - root - INFO - gateway_server.py:241 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 15:21:37,165 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-25 15:21:42,151 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-25 15:21:43,305 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-25 15:21:44,459 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-25 15:21:45,612 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-25 15:21:46,765 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-25 15:22:28,484 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:22:28,583 - root - INFO - gateway_server.py:241 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 15:23:01,926 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:23:01,942 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 15:24:37,598 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:24:37,614 - root - INFO - gateway_server.py:192 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 15:25:20,730 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:26:12,566 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:26:12,583 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 15:27:13,055 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:27:13,081 - root - INFO - gateway_server.py:192 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 15:27:52,808 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:27:53,358 - root - INFO - gateway_server.py:158 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 15:28:00,916 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:28:25,951 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:28:25,965 - root - INFO - gateway_server.py:193 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 15:29:06,804 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:29:07,351 - root - INFO - gateway_server.py:161 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 15:29:15,096 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:29:15,113 - root - INFO - gateway_server.py:196 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 15:30:20,409 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:30:20,426 - root - INFO - gateway_server.py:198 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 15:30:45,603 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:30:45,620 - root - INFO - gateway_server.py:198 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 15:30:51,532 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:30:53,175 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:30:53,192 - root - INFO - gateway_server.py:198 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 15:34:05,778 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:34:32,052 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:37:47,612 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:42:38,451 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:46:18,192 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:47:02,934 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:48:15,931 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:54:29,495 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:55:08,424 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:56:05,876 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:56:51,265 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:57:17,536 - root - INFO - main.py:48 - START SERVER
+2020-11-25 15:57:34,971 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:17:32,797 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:18:20,507 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:19:14,762 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:19:40,258 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:20:01,658 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:20:53,894 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:24:49,350 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:26:18,997 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:31:50,827 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:32:50,055 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:39:24,844 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:39:46,413 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:40:09,429 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:40:24,503 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:40:38,257 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:42:15,870 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:43:50,329 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:53:20,071 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:55:27,970 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:56:01,819 - root - INFO - main.py:48 - START SERVER
+2020-11-25 16:56:01,861 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 17:21:25,046 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:21:25,091 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 17:21:39,930 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:21:39,971 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 17:32:23,902 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:32:37,065 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:32:41,032 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:32:41,607 - root - INFO - gateway_server.py:152 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 17:34:50,635 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:34:50,676 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 17:35:23,939 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:35:23,988 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 17:45:43,394 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:45:43,452 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 17:46:13,089 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:46:13,130 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 17:46:47,536 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:46:58,944 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:46:59,538 - root - INFO - gateway_server.py:152 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 17:47:31,098 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:50:09,082 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:51:27,922 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:51:27,970 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 17:55:19,287 - root - INFO - main.py:48 - START SERVER
+2020-11-25 17:55:19,331 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 17:55:20,018 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 17:56:25,169 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-25 18:02:30,608 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:02:30,647 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:10:23,096 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:10:23,137 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:10:23,152 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:10:53,809 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:10:53,857 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:10:53,870 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:11:34,317 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:11:34,352 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:11:34,353 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:11:34,865 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 18:12:16,580 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:12:16,595 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:12:16,599 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:12:26,391 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:12:26,408 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:12:26,437 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:12:33,886 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:12:33,926 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:12:33,955 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:12:34,381 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 18:13:17,107 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:13:17,124 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:13:17,127 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:13:17,576 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 18:13:42,018 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:13:42,985 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 18:23:38,008 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:23:38,049 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:23:38,069 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:24:58,116 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:24:58,915 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 18:25:56,822 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:25:56,858 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:25:56,878 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:38:30,436 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:38:30,643 - root - INFO - gateway_server.py:230 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 18:51:20,794 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:51:20,813 - root - INFO - gateway_server.py:228 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:51:20,818 - root - INFO - gateway_server.py:228 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:51:21,152 - root - INFO - gateway_server.py:272 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 18:53:07,347 - root - INFO - main.py:48 - START SERVER
+2020-11-25 18:53:07,363 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 18:53:07,367 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 18:53:07,884 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 19:14:56,818 - root - INFO - main.py:48 - START SERVER
+2020-11-25 19:14:56,919 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 19:14:56,933 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 19:16:40,515 - root - INFO - main.py:48 - START SERVER
+2020-11-25 19:16:40,534 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 19:16:40,537 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 19:16:40,848 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 19:21:49,374 - root - INFO - main.py:48 - START SERVER
+2020-11-25 19:21:49,933 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 19:21:49,945 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 19:21:50,828 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 19:30:30,003 - root - INFO - main.py:48 - START SERVER
+2020-11-25 19:30:30,562 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-25 19:30:30,565 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-25 19:30:30,690 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-25 19:30:51,216 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'

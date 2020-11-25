@@ -28,7 +28,7 @@ def main():
                                  queue_task=q_task, queue_rsl=q_rsl)
         myserver.start()
         mycontroler = TaskControler(queue_task=q_task, queue_rsl=q_rsl)
-        mycontroler.start()
+        # mycontroler.start()
         while True:
             # time.sleep(1)
             pass
