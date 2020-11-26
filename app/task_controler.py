@@ -5,7 +5,7 @@ import time
 from .globalvar import *
 import struct
 from app.myLogger import mylogger
-from database.models2 import Collector
+from database.models2 import Entrance
 import sys
 
 
@@ -21,11 +21,12 @@ class TaskControler(Process):
 
     def run(self):
         thread_conn = threading.Thread(target=self._monitorconn)
-        thread_send = threading.Thread(target=self._send_data)
+        thread_send = threading.Thread(target=self._get_push_data)
         thread_conn.daemon = True
         thread_send.daemon = True
         thread_conn.start()
         thread_send.start()
+        print('start task')
         while self.isrunning:
             pass
 
@@ -102,24 +103,25 @@ class TaskControler(Process):
             print(e)
             mylogger.warning(e)
 
-    def _send_data(self):
+    def _get_push_data(self):
         """
         1、从队列获取package；
         2、分析包并触发相应处理程序；
         3、发送package。
         :return:
         """
+        print('start send data')
         while self.isrunning:
             try:
                 if not self.q_rsl.empty():
                     transfer_package = self.q_rsl.get()
                     data_dict = transfer_package.to_dict()
-                    # self._analyze_pkg(package=data_dict)
-                    data_send = bytes('{}'.format(data_dict), encoding='utf-8')
+                    self._analyze_pkg(package=data_dict)
+                    # data_send = bytes('{}'.format(data_dict), encoding='utf-8')
                     # print('File: "' + __file__ + '", Line ' + str(sys._getframe().f_lineno) + ' , in ' + sys._getframe().f_code.co_name)
                     # print(data_send)
-                    if self.sock:
-                        self.sock.send(data_send)
+                    # if self.sock:
+                    #     self.sock.send(data_send)
             except (OSError, BrokenPipeError):
                 continue
             except Exception as e:
@@ -128,20 +130,22 @@ class TaskControler(Process):
                 continue
 
     def _analyze_pkg(self, package: dict):
+        """
+        门禁事件：1、查询是否存在该门禁的处理线程，存在则结束，开始新线程，否则创建；
+        :param package:
+        :return:
+        """
         try:
-            if package['msg_type'] == 3 and package['eq_type'] in (3, 5):
+            print('analyze pkg: ', package)
+            if package['msg_type'] == 3 and package['equipment_type'] in (3, 5):
+                print(package['data']['user'], ' enter to storeroom--', package['source'])
                 addr = package['source']
-                user_code = package['data']['rsl'][0]
-                with self.lock_storeroom_user:
-                    if addr not in self.storeroom_user_dict.keys():
-                        self.storeroom_user_dict[addr] = user_code
-                        thread_enter = threading.Thread(target=self._enter_manage)
-                        thread_enter.daemon = True
-                        thread_enter.start()
-                    else:
-                        self.storeroom_user_dict[addr] = user_code
+                user_code = package['data']['user']
+                thread_store_mag = StoreroomManager(addr=addr)
+                thread_store_mag.daemon = True
+                thread_store_mag.start()
             else:
-                pass
+                print(package['data'])
         except Exception as e:
             mylogger.error(e)
 
@@ -161,8 +165,9 @@ class TaskControler(Process):
         :return:
         """
         cur_store_change = {}  # grid: value
+        print('entrance storeroom')
 
-    def exit_manage(self):
+    def _exit_manage(self):
         """
         出库房管理
         1、解除库房：人的绑定；
@@ -180,15 +185,32 @@ class TaskControler(Process):
 
 
 class StoreroomManager(threading.Thread):
+    """
+    进库房管理
+        1、发送进入通知发送到web；
+        2、先判断库房的管理模式；
+        3、从DB获取该库房的所有货架addr，以及user的工具包
+        4、查询工具包中物资点亮LCD；
+        5、循环监听发送数据包中该库房所有货架的数值变化，变化值发送到web；
+        6、等待退出条件（web确认/超时/新门禁通知）退出该循环；
+        7、调用出库管理。
+    """
     def __init__(self, addr):
+        threading.Thread.__init__(self)
         self.addr = addr
+        self.manage_mode = None
+        self.storeroom_id = None
+        self.entrance
 
     def run(self):
         """
+        1、获取该库房的管理模式、所有相关设备与货架信息；
         循环获取货架状态变化并发送到web
         :return:
         """
-        pass
+        print('thread in')
+        self._get_all_shelfs()
+        print('thread out')
 
     def _get_toolkit_data(self, user):
         """
@@ -198,13 +220,18 @@ class StoreroomManager(threading.Thread):
         """
         pass
 
-    def _get_all_shelfs(self, storeroom_id):
+    def _get_all_shelfs(self):
         """
         从DB获取该库房的所有货架数据
         :param storeroom_id:
         :return:
         """
-        pass
+        entrance = Entrance.by_addr(self.addr[0], self.addr[1])
+        print(entrance.id)
+        storeroom = entrance.storeroom
+        self.storeroom_id = storeroom.id
+        self.manage_mode = storeroom.manage_mode
+        print(storeroom.shelfs)
 
 
 if __name__ == '__main__':

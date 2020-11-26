@@ -69,7 +69,7 @@ class GravityShelf(threading.Thread):
                     data = {'addr_num': i, 'value': g}
                     pkg = TransferPackage(code=206, eq_type=1, data=data, source=self.addr, msg_type=3)
                     self.queue_push_data.put(pkg)
-                    print('Gravity data update--', data)
+                    # print('Gravity data update--', data)
                 allg[i] = g
             # print(time.asctime(), 'G--getAllInfo: ', allg)
 
@@ -705,7 +705,7 @@ class EntranceGuard(threading.Thread):
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
-                        pkg = TransferPackage(code=200, eq_type=1, data={'rsl': rsl}, source=(self.ip, self.port), msg_type=4)
+                        pkg = TransferPackage(code=200, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port), msg_type=4)
                         self.queuersl.put(pkg)
                 else:
                     localtime = time.localtime(time.time())

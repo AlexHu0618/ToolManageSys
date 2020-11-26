@@ -56,7 +56,7 @@ class GatewayServer(Process):
             thread_monitor_client.daemon = True
             thread_monitor_client.start()
             # monitor status subthread on time
-            t = threading.Timer(interval=5, function=self.time_thread)
+            t = threading.Timer(interval=1, function=self.time_thread)
             t.daemon = True
             t.start()
             # wait for cmd
@@ -80,7 +80,7 @@ class GatewayServer(Process):
         """
         self.check_equipments_status()
         self.check_push_from_equipments()
-        t = threading.Timer(interval=5, function=self.time_thread)
+        t = threading.Timer(interval=1, function=self.time_thread)
         t.daemon = True
         t.start()
 

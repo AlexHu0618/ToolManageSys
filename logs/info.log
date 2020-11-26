@@ -1,289 +1,310 @@
-2020-11-25 13:13:43,171 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:13:43,224 - root - INFO - gateway_server.py:184 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:16:03,091 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:17:14,539 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:17:14,568 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:17:15,105 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:18:48,169 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:18:48,187 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:18:58,891 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:19:22,152 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:19:22,166 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:21:43,770 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:24:10,162 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:24:38,806 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:24:45,901 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:26:15,172 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:26:44,285 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:27:57,860 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:27:57,875 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:27:58,527 - root - INFO - gateway_server.py:154 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:28:19,262 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:28:19,280 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:30:11,916 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:30:11,933 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:30:12,533 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:30:44,353 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:31:31,854 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:31:31,871 - root - INFO - gateway_server.py:187 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:32:05,859 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:33:30,524 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:33:41,875 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:35:39,557 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:36:02,463 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:36:02,485 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:36:03,126 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:36:49,102 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:37:02,449 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:37:09,913 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:37:58,858 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:37:58,874 - root - INFO - gateway_server.py:189 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:38:07,978 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:38:07,996 - root - INFO - gateway_server.py:189 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:38:54,547 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:42:24,435 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:42:32,890 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:42:33,494 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:43:29,559 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:44:08,349 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:44:08,370 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:45:29,618 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:45:29,634 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:47:33,812 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:47:34,413 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:47:53,225 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:47:53,244 - root - INFO - gateway_server.py:193 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:48:02,470 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:48:48,152 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:48:48,170 - root - INFO - gateway_server.py:193 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:49:29,464 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:49:29,480 - root - INFO - gateway_server.py:195 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:50:42,135 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:51:09,608 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:51:09,629 - root - INFO - gateway_server.py:196 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:51:10,253 - root - INFO - gateway_server.py:158 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:51:27,125 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:52:01,708 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:53:46,318 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:53:46,333 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:55:00,227 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:55:00,836 - root - INFO - gateway_server.py:158 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:55:00,871 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:55:38,929 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:55:38,970 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:57:17,326 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:57:17,346 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:57:31,566 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:57:31,588 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:57:35,157 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:57:37,366 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:57:37,380 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 13:57:38,026 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:57:45,489 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:57:46,140 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:58:52,420 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:58:53,026 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 13:59:04,402 - root - INFO - main.py:48 - START SERVER
-2020-11-25 13:59:29,301 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:02:32,273 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:02:32,289 - root - INFO - gateway_server.py:187 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:02:42,135 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:02:42,150 - root - INFO - gateway_server.py:187 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:04:44,629 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:04:44,643 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:04:55,408 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:05:07,333 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:05:07,346 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:05:45,427 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:05:45,442 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:05:58,529 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:05:58,543 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:11:47,619 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:12:26,291 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:12:26,900 - root - INFO - gateway_server.py:161 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 14:13:48,624 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:13:56,693 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:13:56,714 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:40:00,231 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:40:00,262 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:40:00,878 - root - INFO - gateway_server.py:161 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 14:41:28,047 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:41:28,065 - root - INFO - gateway_server.py:194 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:42:37,892 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:42:37,912 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:43:25,461 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:43:26,069 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 14:44:34,238 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:44:34,843 - root - INFO - gateway_server.py:157 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 14:47:05,955 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:47:05,974 - root - INFO - gateway_server.py:185 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:50:02,277 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:50:02,879 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 14:50:20,550 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:50:21,151 - root - INFO - gateway_server.py:155 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 14:51:06,718 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:51:06,738 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:51:14,602 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:51:24,710 - root - INFO - main.py:48 - START SERVER
-2020-11-25 14:51:24,726 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 14:53:05,991 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:20:06,991 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:20:07,864 - root - INFO - gateway_server.py:241 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 15:20:23,900 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:20:24,689 - root - INFO - gateway_server.py:241 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 15:21:37,165 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-25 15:21:42,151 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-25 15:21:43,305 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-25 15:21:44,459 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-25 15:21:45,612 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-25 15:21:46,765 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-25 15:22:28,484 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:22:28,583 - root - INFO - gateway_server.py:241 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 15:23:01,926 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:23:01,942 - root - INFO - gateway_server.py:190 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 15:24:37,598 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:24:37,614 - root - INFO - gateway_server.py:192 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 15:25:20,730 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:26:12,566 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:26:12,583 - root - INFO - gateway_server.py:191 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 15:27:13,055 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:27:13,081 - root - INFO - gateway_server.py:192 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 15:27:52,808 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:27:53,358 - root - INFO - gateway_server.py:158 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 15:28:00,916 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:28:25,951 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:28:25,965 - root - INFO - gateway_server.py:193 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 15:29:06,804 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:29:07,351 - root - INFO - gateway_server.py:161 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 15:29:15,096 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:29:15,113 - root - INFO - gateway_server.py:196 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 15:30:20,409 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:30:20,426 - root - INFO - gateway_server.py:198 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 15:30:45,603 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:30:45,620 - root - INFO - gateway_server.py:198 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 15:30:51,532 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:30:53,175 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:30:53,192 - root - INFO - gateway_server.py:198 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 15:34:05,778 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:34:32,052 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:37:47,612 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:42:38,451 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:46:18,192 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:47:02,934 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:48:15,931 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:54:29,495 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:55:08,424 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:56:05,876 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:56:51,265 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:57:17,536 - root - INFO - main.py:48 - START SERVER
-2020-11-25 15:57:34,971 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:17:32,797 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:18:20,507 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:19:14,762 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:19:40,258 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:20:01,658 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:20:53,894 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:24:49,350 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:26:18,997 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:31:50,827 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:32:50,055 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:39:24,844 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:39:46,413 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:40:09,429 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:40:24,503 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:40:38,257 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:42:15,870 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:43:50,329 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:53:20,071 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:55:27,970 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:56:01,819 - root - INFO - main.py:48 - START SERVER
-2020-11-25 16:56:01,861 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 17:21:25,046 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:21:25,091 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 17:21:39,930 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:21:39,971 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 17:32:23,902 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:32:37,065 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:32:41,032 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:32:41,607 - root - INFO - gateway_server.py:152 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 17:34:50,635 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:34:50,676 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 17:35:23,939 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:35:23,988 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 17:45:43,394 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:45:43,452 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 17:46:13,089 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:46:13,130 - root - INFO - gateway_server.py:179 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 17:46:47,536 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:46:58,944 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:46:59,538 - root - INFO - gateway_server.py:152 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 17:47:31,098 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:50:09,082 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:51:27,922 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:51:27,970 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 17:55:19,287 - root - INFO - main.py:48 - START SERVER
-2020-11-25 17:55:19,331 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 17:55:20,018 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 17:56:25,169 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-25 18:02:30,608 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:02:30,647 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:10:23,096 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:10:23,137 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:10:23,152 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:10:53,809 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:10:53,857 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:10:53,870 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:11:34,317 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:11:34,352 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:11:34,353 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:11:34,865 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 18:12:16,580 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:12:16,595 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:12:16,599 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:12:26,391 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:12:26,408 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:12:26,437 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:12:33,886 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:12:33,926 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:12:33,955 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:12:34,381 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 18:13:17,107 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:13:17,124 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:13:17,127 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:13:17,576 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 18:13:42,018 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:13:42,985 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 18:23:38,008 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:23:38,049 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:23:38,069 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:24:58,116 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:24:58,915 - root - INFO - gateway_server.py:229 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 18:25:56,822 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:25:56,858 - root - INFO - gateway_server.py:180 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:25:56,878 - root - INFO - gateway_server.py:153 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:38:30,436 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:38:30,643 - root - INFO - gateway_server.py:230 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 18:51:20,794 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:51:20,813 - root - INFO - gateway_server.py:228 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:51:20,818 - root - INFO - gateway_server.py:228 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:51:21,152 - root - INFO - gateway_server.py:272 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 18:53:07,347 - root - INFO - main.py:48 - START SERVER
-2020-11-25 18:53:07,363 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 18:53:07,367 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 18:53:07,884 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 19:14:56,818 - root - INFO - main.py:48 - START SERVER
-2020-11-25 19:14:56,919 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 19:14:56,933 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 19:16:40,515 - root - INFO - main.py:48 - START SERVER
-2020-11-25 19:16:40,534 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 19:16:40,537 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 19:16:40,848 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 19:21:49,374 - root - INFO - main.py:48 - START SERVER
-2020-11-25 19:21:49,933 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 19:21:49,945 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 19:21:50,828 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 19:30:30,003 - root - INFO - main.py:48 - START SERVER
-2020-11-25 19:30:30,562 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-25 19:30:30,565 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-25 19:30:30,690 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-25 19:30:51,216 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:21:52,544 - root - INFO - main.py:48 - START SERVER
+2020-11-26 15:21:53,111 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 15:21:53,117 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 15:21:53,639 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 15:22:56,060 - root - ERROR - task_controler.py:150 - 'rsl'
+2020-11-26 15:27:27,278 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:29:35,344 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:31:38,155 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:34:41,293 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:35:58,153 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:35:59,307 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:00,459 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:01,611 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:02,766 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:03,927 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:05,092 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:06,248 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:07,400 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:08,554 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:09,706 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:10,868 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:12,020 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:13,173 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:14,326 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:15,479 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:16,633 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:17,786 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:18,938 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:20,092 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:21,247 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:22,407 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:23,560 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:24,714 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:25,866 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:27,018 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:28,170 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:29,329 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:30,484 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:31,639 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:32,792 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:33,944 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:35,100 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:36,256 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:37,410 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:38,563 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:39,722 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:40,886 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:42,039 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:43,195 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:44,352 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:45,504 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:46,658 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:47,812 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:36:48,966 - root - ERROR - Object2.py:58 - 'int' object is not iterable
+2020-11-26 15:37:38,190 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:40:09,201 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:40:24,193 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:43:06,188 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:47:23,246 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:50:29,231 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:50:30,562 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:58:57,266 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 15:59:39,158 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:03:30,171 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:08:06,199 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:10:55,291 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:13:13,212 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:13:49,152 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:16:41,178 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:16:46,549 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:16:47,101 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:16:47,104 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:16:48,000 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:17:02,275 - root - ERROR - task_controler.py:152 - 'rsl'
+2020-11-26 16:18:32,779 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:18:33,325 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:18:33,329 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:18:34,014 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:18:50,686 - root - ERROR - task_controler.py:153 - 'rsl'
+2020-11-26 16:20:24,196 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:20:27,960 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:20:28,511 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:20:28,514 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:20:28,973 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:20:43,972 - root - ERROR - task_controler.py:153 - Thread.__init__() not called
+2020-11-26 16:21:01,297 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:22:35,026 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:22:35,627 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:22:35,630 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:22:36,015 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:23:32,980 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:23:33,531 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:23:33,534 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:23:34,211 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:28:41,696 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:28:42,247 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:28:42,251 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:28:43,018 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:29:56,525 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:29:57,071 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:29:57,074 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:29:57,834 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:33:22,986 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:33:23,535 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:33:23,538 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:33:23,985 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:34:36,196 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:35:28,153 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:36:00,318 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:36:20,204 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:37:53,388 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:37:53,936 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:37:53,940 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:37:54,015 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:38:52,155 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:43:06,184 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:49:01,344 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:50:30,176 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 16:52:28,981 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:52:29,532 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:52:29,536 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:52:30,023 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:54:24,922 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:54:25,470 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:54:25,474 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:54:26,037 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:55:19,805 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:55:20,355 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:55:20,358 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:55:21,084 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 16:57:40,788 - root - INFO - main.py:48 - START SERVER
+2020-11-26 16:57:41,340 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 16:57:41,343 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 16:57:41,753 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 17:05:24,338 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:11:27,174 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:11:40,908 - root - INFO - main.py:48 - START SERVER
+2020-11-26 17:11:41,511 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 17:11:41,518 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 17:11:42,108 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 17:15:14,154 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:19:40,313 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:22:27,266 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:33:05,200 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:40:18,219 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:41:11,154 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:45:09,228 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:52:21,223 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 17:53:10,217 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:00:01,238 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:04:26,205 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:06:07,264 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:12:52,300 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:21:51,251 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:24:18,302 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:26:00,265 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:26:38,248 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:31:46,272 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:32:03,152 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:33:08,231 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:37:18,221 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:38:31,199 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:43:51,277 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:45:20,289 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:53:59,152 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:55:56,190 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:55:57,453 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 18:56:11,246 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:02:45,264 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:09:06,175 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:11:44,158 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:11:48,241 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:14:42,335 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:16:37,202 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:25:41,180 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:32:45,339 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:41:33,188 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:47:06,237 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:50:16,356 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:56:07,292 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:57:42,280 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 19:58:43,153 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:00:54,249 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:05:25,190 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:05:35,274 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:06:51,258 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:12:44,302 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:14:04,289 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:14:22,293 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:14:52,217 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:17:07,239 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:18:39,234 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:27:54,192 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:27:58,180 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:28:28,231 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:29:53,202 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:31:08,238 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:43:27,219 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:43:43,231 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:48:23,287 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:51:52,205 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:52:46,303 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:54:48,225 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:55:25,153 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:56:37,243 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 20:58:18,365 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:00:04,152 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:04:44,305 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:10:10,362 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:10:53,238 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:16:38,269 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:17:44,200 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:18:49,236 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:19:03,220 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:19:53,189 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:22:15,290 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:22:43,261 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:26:28,168 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:31:30,163 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:32:39,223 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:43:01,153 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 21:46:21,226 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 22:00:56,280 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 22:01:43,202 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 22:02:25,498 - root - INFO - main.py:48 - START SERVER
+2020-11-26 22:02:25,546 - root - ERROR - gateway_server.py:72 - string indices must be integers
+2020-11-26 22:03:11,727 - root - INFO - main.py:48 - START SERVER
+2020-11-26 22:03:11,740 - root - ERROR - gateway_server.py:72 - string indices must be integers
+2020-11-26 22:04:14,167 - root - INFO - main.py:48 - START SERVER
+2020-11-26 22:04:14,821 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 22:04:14,824 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 22:04:14,941 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 22:04:15,108 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:04:15,330 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:04:16,184 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:04:17,206 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:04:18,255 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:04:19,279 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:04:20,232 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:04:21,279 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:04:22,258 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:04:23,317 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:17,865 - root - INFO - main.py:48 - START SERVER
+2020-11-26 22:05:18,468 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 22:05:18,471 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 22:05:19,095 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 22:05:19,272 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:20,177 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:21,182 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:22,219 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:23,203 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:24,234 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:25,254 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:26,308 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:27,325 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:05:28,355 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:07:56,503 - root - INFO - main.py:48 - START SERVER
+2020-11-26 22:07:57,109 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 22:07:57,112 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 22:07:57,260 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 22:07:57,421 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:07:58,187 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:07:59,193 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:08:00,209 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:08:01,220 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:08:02,249 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:08:03,256 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:08:04,319 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:08:05,474 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:08:06,279 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:38,717 - root - INFO - main.py:48 - START SERVER
+2020-11-26 22:10:39,273 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 22:10:39,276 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 22:10:39,624 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 22:10:39,817 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:40,162 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:41,181 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:42,230 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:43,205 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:44,219 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:46,206 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 22:10:46,504 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:47,309 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:48,354 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:10:49,445 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:12:48,304 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 22:13:49,530 - root - INFO - main.py:48 - START SERVER
+2020-11-26 22:13:50,138 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 22:13:50,141 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 22:13:51,000 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 22:13:51,170 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:13:52,192 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:13:53,188 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:13:54,216 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:13:55,193 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:13:56,268 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:13:57,259 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:13:58,269 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:13:59,283 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:14:00,345 - root - ERROR - Object2.py:58 - name 'datal' is not defined
+2020-11-26 22:14:35,197 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-26 22:14:42,912 - root - INFO - main.py:48 - START SERVER
+2020-11-26 22:14:43,465 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 22:14:43,468 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 22:14:43,910 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 22:15:41,753 - root - INFO - main.py:48 - START SERVER
+2020-11-26 22:15:42,351 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-26 22:15:42,354 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-26 22:15:43,206 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-26 22:16:11,054 - root - ERROR - task_controler.py:150 - 'StoreroomManager' object has no attribute 'entrance'

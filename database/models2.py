@@ -86,6 +86,10 @@ class MyBase:
         return dbSession.query(cls).filter_by(code=code).first()
 
     @classmethod
+    def by_addr(cls, ip, port):
+        return dbSession.query(cls).filter_by(ip=ip, port=port).first()
+
+    @classmethod
     def all(cls):
         return dbSession.query(cls).all()
 
@@ -349,10 +353,12 @@ class Grid(Base, MyBase):
     is_have_case = Column(Boolean, default=False)
     weight_case = Column(Integer, default=0)
     status = Column(Integer, default=0)  # 0-离线；1-正常；2-传感器故障；3-位置错误；
-    total = Column(Integer, default=0)
+    total = Column(Integer, default=0)  # 重力格为总重量；RFID格为物资总个数；
     led_id = Column(String(50))
     led_addr = Column(String(10), default='0x01')  # '0xFF'
+    antenna_num = Column(String(20))  # '0,1,2,3'
     shelf_id = Column(String(50), ForeignKey('shelf.id'))
+
 
     shelf = relationship('Shelf', back_populates='grids')
     goods = relationship('Goods', back_populates='grid')

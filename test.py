@@ -55,7 +55,7 @@ def get_user():
 # # set user
 def set_user():
     p_table = create_string_buffer(b'user')
-    data = 'Pin=7777\tName=test\tDisable=0'
+    data = 'Pin=7777\tCardNo=12345\tName=test\tDisable=0'
     str_buf = create_string_buffer(bytes(data, encoding='utf-8'))
     rsl = comm.SetDeviceData(handle, p_table, str_buf, b'')
     print(rsl)
@@ -139,10 +139,10 @@ if __name__ == '__main__':
     get_userauthorize()
     get_fingerprint()
 
-    # set_user()
+    set_user()
     # set_userauthorize()
     # set_fingerprint()
 
-    delete_user()
+    # delete_user()
 
     comm.Disconnect(handle)
