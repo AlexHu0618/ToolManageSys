@@ -19,7 +19,7 @@ class GravityShelf(threading.Thread):
                  '8': 0.05, '9': 0.1, 'a': 0.2, 'b': 0.5, 'c': 1, 'd': 2, 'e': 5, 'A': 0.2, 'B': 0.5, 'C': 1,
                  'D': 2, 'E': 5}
 
-    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data):
+    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data, storeroom_id):
         threading.Thread.__init__(self)
         self.BUFFSIZE = 1024
         self.all_id = ()
@@ -31,6 +31,7 @@ class GravityShelf(threading.Thread):
         self.event = event
         self.queue_push_data = queue_push_data
         self.addr = addr
+        self.storeroom_id = storeroom_id
         self.frequency = 1  # secends
 
     def run(self):
@@ -43,7 +44,7 @@ class GravityShelf(threading.Thread):
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
-                        pkg = TransferPackage(code=200, eq_type=1, data={'rsl': rsl}, source=self.addr, msg_type=4)
+                        pkg = TransferPackage(code=200, eq_type=1, data={'rsl': rsl}, source=self.addr, msg_type=4, storeroom_id=self.storeroom_id)
                         self.queuersl.put(pkg)
                         self.event.set()
                 else:
@@ -67,7 +68,7 @@ class GravityShelf(threading.Thread):
                 if i not in data_buff.keys() or g != data_buff[i] and (abs(g - data_buff[i]) > 5):
                     data_buff[i] = g
                     data = {'addr_num': i, 'value': g}
-                    pkg = TransferPackage(code=206, eq_type=1, data=data, source=self.addr, msg_type=3)
+                    pkg = TransferPackage(code=206, eq_type=1, data=data, source=self.addr, msg_type=3, storeroom_id=self.storeroom_id)
                     self.queue_push_data.put(pkg)
                     # print('Gravity data update--', data)
                 allg[i] = g
@@ -218,7 +219,7 @@ class RfidR2000(threading.Thread):
     """
         1.frame: Head(0xA0) + Len + Addr + Cmd + Data + Check
     """
-    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data):
+    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data, storeroom_id):
         threading.Thread.__init__(self)
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
@@ -229,6 +230,7 @@ class RfidR2000(threading.Thread):
         self.queuersl = queuersl
         self.event = event
         self.addr = addr
+        self.storeroom_id = storeroom_id
         self.queue_push_data = queue_push_data
         self.lock = threading.RLock()
 
@@ -242,7 +244,7 @@ class RfidR2000(threading.Thread):
             #         task, args = self.queuetask.get()
             #         rsl = methodcaller(task, *args)(self)
             #         if rsl is not None:
-            #             pkg = TransferPackage(code=200, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=4)
+            #             pkg = TransferPackage(code=200, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=4, storeroom_id=self.storeroom_id)
             #             self.queuersl.put(pkg)
             #             self.event.set()
             #     else:
@@ -256,7 +258,7 @@ class RfidR2000(threading.Thread):
             #             rsl = {'00': rsl0, '01': rsl1, '02': rsl2, '03': rsl3}
             #             if rsl != current_data:
             #                 current_data.update(rsl)
-            #                 pkg = TransferPackage(code=206, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=3)
+            #                 pkg = TransferPackage(code=206, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=3, storeroom_id=self.storeroom_id)
             #                 self.queue_push_data.put(pkg)
             #             # print('R--inventory: ', rsl)
             #         else:
@@ -264,7 +266,7 @@ class RfidR2000(threading.Thread):
             # finally:
             #     self.lock.release()
             time.sleep(10)
-            print('RFID_R2000 back data')
+            print('RFID_R2000 back data, storeroom_id= ', self.storeroom_id)
 
     def check(self, cmd_f):
         # complement ---- (~sum + 1)
@@ -530,9 +532,10 @@ class Lcd(threading.Thread):
     """
         1.frame: Head(0x7E) + Addr + Cmd + Len + Data + Check + End(0x68)
     """
-    def __init__(self, addr, tcp_socket, queuetask, queuersl, event):
+    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, storeroom_id):
         threading.Thread.__init__(self)
         self.addr = addr
+        self.storeroom_id = storeroom_id
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
         self.alladdrs = ('03', '04')
@@ -551,7 +554,7 @@ class Lcd(threading.Thread):
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
-                        pkg = TransferPackage(code=200, eq_type=1, data={'rsl': rsl}, source=self.addr, msg_type=6)
+                        pkg = TransferPackage(code=200, eq_type=1, data={'rsl': rsl}, source=self.addr, msg_type=6, storeroom_id=self.storeroom_id)
                         self.queuersl.put(pkg)
                         self.event.set()
                 else:
@@ -681,10 +684,11 @@ class Lcd(threading.Thread):
 class EntranceGuard(threading.Thread):
     lib = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
 
-    def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data):
+    def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data, storeroom_id):
         threading.Thread.__init__(self)
         self.ip = addr[0]
         self.port = addr[1]
+        self.storeroom_id = storeroom_id
         self.isrunning = True
         self.queuetask = queuetask
         self.queuersl = queuersl
@@ -707,7 +711,7 @@ class EntranceGuard(threading.Thread):
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
-                        pkg = TransferPackage(code=200, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port), msg_type=4)
+                        pkg = TransferPackage(code=200, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port), msg_type=4, storeroom_id=self.storeroom_id)
                         self.queuersl.put(pkg)
                 else:
                     localtime = time.localtime(time.time())
@@ -721,7 +725,7 @@ class EntranceGuard(threading.Thread):
                         if current_data is not None:
                             if (rsl is not None) and (rsl != current_data):
                                 data = {'user': rsl[0], 'raw': rsl}
-                                pkg = TransferPackage(code=206, eq_type=3, data=data, source=(self.ip, self.port), msg_type=3)
+                                pkg = TransferPackage(code=206, eq_type=3, data=data, source=(self.ip, self.port), msg_type=3, storeroom_id=self.storeroom_id)
                                 self.queue_push_data.put(pkg)
                                 print('gate--getNewEvent: ', rsl)
                                 current_data = copy.deepcopy(rsl)

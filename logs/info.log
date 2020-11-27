@@ -50,3 +50,20 @@
 2020-11-27 18:33:43,427 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
 2020-11-27 18:34:46,246 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
 2020-11-27 18:36:18,337 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 18:37:37,311 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 18:38:10,236 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 18:44:12,211 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 18:47:00,251 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 18:53:05,192 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 19:06:59,453 - root - INFO - main.py:60 - START SERVER
+2020-11-27 19:06:59,523 - root - ERROR - gateway_server.py:73 - __init__() missing 1 required positional argument: 'storeroom_id'
+2020-11-27 19:09:21,636 - root - INFO - main.py:60 - START SERVER
+2020-11-27 19:09:22,288 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-27 19:09:22,291 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-11-27 19:09:22,293 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-27 19:10:14,754 - root - INFO - main.py:60 - START SERVER
+2020-11-27 19:10:15,406 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-27 19:10:15,409 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-11-27 19:10:15,411 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-27 19:10:15,790 - root - INFO - gateway_server.py:280 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-27 19:11:16,310 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'

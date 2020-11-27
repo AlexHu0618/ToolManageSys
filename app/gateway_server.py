@@ -212,15 +212,15 @@ class GatewayServer(Process):
         while True:
             try:
                 if terminal_type == 'entrance':
-                    thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push)
+                    thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id)
                 else:
                     s.connect(addr)
                     if terminal_type == 'gravity':
-                        thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
+                        thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id)
                     elif terminal_type == 'led':
-                        thread = Lcd(addr, s, queue_task, queue_rsl, subevent)
+                        thread = Lcd(addr, s, queue_task, queue_rsl, subevent, storeroom_id)
                     elif terminal_type == 'rfid2000':
-                        thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
+                        thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id)
                     else:
                         pass
                 if thread:
@@ -260,12 +260,13 @@ class GatewayServer(Process):
                 subevent = threading.Event()
                 thread = None
                 client_type = self.clients[addr][0] if addr in self.clients.keys() else None
+                storeroom_id = self.clients[addr][1] if addr in self.clients.keys() else None
                 if client_type == 'gravity':
-                    thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push)
+                    thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id)
                 elif client_type == 'led':
-                    thread = Lcd(addr, client_sock, queue_task, queue_rsl, subevent)
+                    thread = Lcd(addr, client_sock, queue_task, queue_rsl, subevent, storeroom_id)
                 elif client_type == 'rfid2000':
-                    thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push)
+                    thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id)
                 else:
                     pass
                 if thread:
