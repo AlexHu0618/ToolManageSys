@@ -329,8 +329,8 @@ class Shelf(Base, MyBase):
     name = Column(String(100), nullable=False)
     code = Column(String(100), nullable=False)
     type = Column(Integer)  # 1-重力；2-RFID
-    row_num = Column(Integer)
-    col_num = Column(Integer)
+    row_num = Column(Integer, default=0)
+    col_num = Column(Integer, default=0)
     storeroom_id = Column(String(50), ForeignKey('storeroom.id'))
 
     storeroom = relationship('Storeroom', back_populates='shelfs')
@@ -377,7 +377,7 @@ class Collector(Base, MyBase):
     port = Column(Integer)
     is_server = Column(Boolean, default=False)
     type = Column(Integer)  # 1-重力；2-RFID；
-    sensor_num = Column(Integer)  # 当前连接的传感器数量或天线数量
+    sensor_count = Column(Integer)  # 当前连接的传感器数量或天线数量
     status = Column(Integer, default=1)  # 0-离线；1-正常；
     last_offline_time = Column(DateTime, default=datetime.now)
     shelf_id = Column(String(50), ForeignKey('shelf.id'))
@@ -397,12 +397,16 @@ class Indicator(Base, MyBase):
     ip = Column(String(100))
     port = Column(Integer)
     is_server = Column(Boolean, default=False)
-    sensor_num = Column(Integer)  # 当前连接的指示器数量
+    module_count = Column(Integer, default=0)  # 当前连接的指示器模块数量
     status = Column(Integer, default=1)  # 0-离线；1-正常；
     last_offline_time = Column(DateTime, default=datetime.now)
     shelf_id = Column(String(50), ForeignKey('shelf.id'))
 
     shelf = relationship('Shelf', back_populates='indicators')
+
+    @classmethod
+    def by_addr(cls, ip, port):
+        return dbSession.query(cls).filter(cls.ip == ip, cls.port == port).first()
 
 
 class Goods(Base, MyBase):

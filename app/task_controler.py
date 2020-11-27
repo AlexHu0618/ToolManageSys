@@ -131,7 +131,10 @@ class TaskControler(Process):
 
     def _analyze_pkg(self, package: dict):
         """
-        门禁事件：1、查询是否存在该门禁的处理线程，存在则结束，开始新线程，否则创建；
+        门禁事件：
+        1、查询是否存在该门禁的处理线程，存在则结束，开始新线程，否则创建；
+        数据更新事件：
+        1、根据设备pkg中storeroom的ID号放入相应的线程；
         :param package:
         :return:
         """
@@ -152,37 +155,6 @@ class TaskControler(Process):
     def stop(self):
         self.isrunning = False
 
-    def _enter_manage(self):
-        """
-        进库房管理
-        1、发送进入通知发送到web；
-        2、先判断库房的管理模式；
-        3、从DB获取该库房的所有货架addr，以及user的工具包
-        4、查询工具包中物资点亮LCD；
-        5、循环监听发送数据包中该库房所有货架的数值变化，变化值发送到web；
-        6、等待退出条件（web确认/超时/新门禁通知）退出该循环；
-        7、调用出库管理。
-        :return:
-        """
-        cur_store_change = {}  # grid: value
-        print('entrance storeroom')
-
-    def _exit_manage(self):
-        """
-        出库房管理
-        1、解除库房：人的绑定；
-        2、保存库存与工具包信息到DB。
-        :return:
-        """
-        pass
-
-    def check_inventory(self):
-        """
-        盘点
-        :return:
-        """
-        pass
-
 
 class StoreroomManager(threading.Thread):
     """
@@ -200,16 +172,18 @@ class StoreroomManager(threading.Thread):
         self.addr = addr
         self.manage_mode = None
         self.storeroom_id = None
-        self.entrance
+        self.isrunning = True
 
     def run(self):
         """
-        1、获取该库房的管理模式、所有相关设备与货架信息；
-        循环获取货架状态变化并发送到web
+        1、获取该库房的管理模式;
+        2、根据模式选择相应的处理方法并循环执行；
         :return:
         """
         print('thread in')
-        self._get_all_shelfs()
+        self._get_manage_mode()
+        # while self.isrunning:
+        #     pass
         print('thread out')
 
     def _get_toolkit_data(self, user):
@@ -220,7 +194,7 @@ class StoreroomManager(threading.Thread):
         """
         pass
 
-    def _get_all_shelfs(self):
+    def _get_manage_mode(self):
         """
         从DB获取该库房的所有货架数据
         :param storeroom_id:
@@ -232,6 +206,22 @@ class StoreroomManager(threading.Thread):
         self.storeroom_id = storeroom.id
         self.manage_mode = storeroom.manage_mode
         print(storeroom.shelfs)
+
+    def _exit_manage(self):
+        """
+        出库房管理
+        1、解除库房：人的绑定；
+        2、保存库存与工具包信息到DB。
+        :return:
+        """
+        pass
+
+    def check_inventory(self):
+        """
+        盘点
+        :return:
+        """
+        pass
 
 
 if __name__ == '__main__':

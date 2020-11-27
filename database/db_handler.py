@@ -3,53 +3,76 @@ import copy
 
 
 def get_all_equipments():
-    # {store_id: {'client': {equipment_addr: type}, 'server': {equipment_addr: type}}, }
+    """
+    1、分别获取门禁、扫码枪、通道机、采集器、LED；
+    :return: 
+    """
+    # {'storeroom_id': {'clients': {equipment_addr: type, }, 'servers': {equipment_addr: type, }}, }
     storeroom_equipment_dict = dict()
     all_stroerooms = Storeroom.all()
     if all_stroerooms is not None:
-        for sr in all_stroerooms:
-            client = dict()
-            server = dict()
-            get_all_entrances(storeroom=sr, client=client, server=server)
-            get_all_code_scanners(storeroom=sr, client=client, server=server)
-            get_all_shelfs(storeroom=sr, client=client, server=server)
-            client_server = dict()
-            if client is not None:
-                client_server['client'] = copy.deepcopy(client)
-            if server is not None:
-                client_server['server'] = copy.deepcopy(server)
-            if client_server is not None:
-                storeroom_equipment_dict[sr.id] = client_server
+        for storeroom in all_stroerooms:
+            clients_servers = {'clients': dict(), 'servers': dict()}
+            get_all_entrances(storeroom=storeroom, clients_servers=clients_servers)
+            get_all_code_scanners(storeroom=storeroom, clients_servers=clients_servers)
+            get_all_channel_machine(storeroom=storeroom, clients_servers=clients_servers)
+            get_all_collectors(storeroom=storeroom, clients_servers=clients_servers)
+            get_all_led(storeroom=storeroom, clients_servers=clients_servers)
+            if clients_servers['clients'] is not None or clients_servers['servers'] is not None:
+                storeroom_equipment_dict[storeroom.id] = clients_servers
     return storeroom_equipment_dict
 
 
-def get_all_entrances(storeroom, client, server):
+def get_all_entrances(storeroom, clients_servers):
     entrance = storeroom.entrance
     if entrance is not None:
         if entrance.is_server is True:
-            server[(entrance.ip, entrance.port)] = 'guard'
+            clients_servers['servers'][(entrance.ip, entrance.port)] = 'entrance'
         else:
-            client[(entrance.ip, entrance.port)] = 'guard'
+            clients_servers['clients'][(entrance.ip, entrance.port)] = 'entrance'
 
 
-def get_all_code_scanners(storeroom, client, server):
-    scanner = storeroom.code_scanners
-    if scanner is not None:
-        for sn in scanner:
-            if sn.is_server is True:
-                server[(sn.ip, sn.port)] = 'code_scan'
+def get_all_code_scanners(storeroom, clients_servers):
+    scanners = storeroom.code_scanners
+    if scanners is not None:
+        for scanner in scanners:
+            if scanner.is_server is True:
+                clients_servers['servers'][(scanner.ip, scanner.port)] = 'code_scan'
             else:
-                client[(sn.ip, sn.port)] = 'code_scan'
+                clients_servers['clients'][(scanner.ip, scanner.port)] = 'code_scan'
 
 
-def get_all_shelfs(storeroom, client, server):
+def get_all_collectors(storeroom, clients_servers):
     shelfs = storeroom.shelfs
     if shelfs is not None:
-        for sh in shelfs:
-            collectors = sh.collectors
+        for shelf in shelfs:
+            collectors = shelf.collectors
             if collectors is not None:
-                for col in collectors:
-                    if col.is_server is True:
-                        server[(col.ip, col.port)] = 'gravity' if col.type == 1 else 'rfid2000'
+                for collector in collectors:
+                    if collector.is_server is True:
+                        clients_servers['servers'][(collector.ip, collector.port)] = 'gravity' if collector.type == 1 else 'rfid2000'
                     else:
-                        client[(col.ip, col.port)] = 'gravity' if col.type == 1 else 'rfid2000'
+                        clients_servers['clients'][(collector.ip, collector.port)] = 'gravity' if collector.type == 1 else 'rfid2000'
+
+                        
+def get_all_channel_machine(storeroom, clients_servers):
+    channels = storeroom.channel_machines
+    if channels is not None:
+        for channel in channels:
+            if channel.is_server is True:
+                clients_servers['servers'][(channel.ip, channel.port)] = 'channel_machine'
+            else:
+                clients_servers['clients'][(channel.ip, channel.port)] = 'channel_machine'
+
+
+def get_all_led(storeroom, clients_servers):
+    shelfs = storeroom.shelfs
+    if shelfs is not None:
+        for shelf in shelfs:
+            indicators = shelf.indicators
+            if indicators is not None:
+                for indicator in indicators:
+                    if indicator.is_server is True:
+                        clients_servers['servers'][(indicator.ip, indicator.port)] = 'led'
+                    else:
+                        clients_servers['clients'][(indicator.ip, indicator.port)] = 'led'

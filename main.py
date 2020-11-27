@@ -14,17 +14,25 @@ def main():
     q_task = Queue(50)
     q_rsl = Queue(50)
     try:
-        # rsl = get_all_equipments()
-        # print(rsl)
+        rsl = get_all_equipments()
+        servers_registered = dict()  # {addr: (type, storeroom_id)}
+        clients_registered = dict()
+        for r_id, s_c in rsl.items():
+            temp_servers = {k: (v, r_id) for k, v in s_c['servers'].items()}
+            servers_registered.update(temp_servers)
+            temp_clients = {k: (v, r_id) for k, v in s_c['clients'].items()}
+            clients_registered.update(temp_clients)
+        print('servers_registered: ', servers_registered)
+        print('clients_registered: ', clients_registered)
         # rsl = mydb.getAllServers()
         # server_registered = rsl if rsl else None
         # print('server_registered: ', server_registered)
         # rsl2 = mydb.getAllClients()
         # client_registered = rsl2 if rsl2 else None
         # print('client_registered: ', client_registered)
-        server_registered = {('192.168.0.201', 4370): 'guard', ('192.168.0.117', 23): 'L'}
-        client_registered = {('192.168.0.97', 26): 'G'}
-        myserver = GatewayServer(port=8809, server_registered=server_registered, client_registered=client_registered,
+        # server_registered = {('192.168.0.201', 4370): 'entrance', ('192.168.0.117', 23): 'led'}
+        # client_registered = {('192.168.0.97', 26): 'gravity'}
+        myserver = GatewayServer(port=8809, servers_registered=servers_registered, clients_registered=clients_registered,
                                  queue_task=q_task, queue_rsl=q_rsl)
         myserver.start()
         mycontroler = TaskControler(queue_task=q_task, queue_rsl=q_rsl)
@@ -33,15 +41,19 @@ def main():
             # time.sleep(1)
             pass
     except KeyboardInterrupt:
+        # mydb.close()
+        # myserver.stop()
+        # mycontroler.stop()
+        # print('stop')
+        print('keyboard interrupt')
+    except Exception as e:
+        print(e)
+        mylogger.error(e)
+    finally:
         mydb.close()
         myserver.stop()
         mycontroler.stop()
         print('stop')
-    # finally:
-    #     mydb.close()
-    #     myserver.stop()
-    #     mycontroler.stop()
-    #     print('stop')
 
 
 if __name__ == '__main__':

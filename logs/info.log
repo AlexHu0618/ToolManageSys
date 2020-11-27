@@ -1,310 +1,52 @@
-2020-11-26 15:21:52,544 - root - INFO - main.py:48 - START SERVER
-2020-11-26 15:21:53,111 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 15:21:53,117 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 15:21:53,639 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 15:22:56,060 - root - ERROR - task_controler.py:150 - 'rsl'
-2020-11-26 15:27:27,278 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:29:35,344 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:31:38,155 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:34:41,293 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:35:58,153 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:35:59,307 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:00,459 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:01,611 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:02,766 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:03,927 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:05,092 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:06,248 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:07,400 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:08,554 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:09,706 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:10,868 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:12,020 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:13,173 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:14,326 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:15,479 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:16,633 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:17,786 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:18,938 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:20,092 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:21,247 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:22,407 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:23,560 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:24,714 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:25,866 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:27,018 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:28,170 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:29,329 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:30,484 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:31,639 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:32,792 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:33,944 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:35,100 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:36,256 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:37,410 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:38,563 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:39,722 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:40,886 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:42,039 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:43,195 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:44,352 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:45,504 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:46,658 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:47,812 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:36:48,966 - root - ERROR - Object2.py:58 - 'int' object is not iterable
-2020-11-26 15:37:38,190 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:40:09,201 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:40:24,193 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:43:06,188 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:47:23,246 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:50:29,231 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:50:30,562 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:58:57,266 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 15:59:39,158 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:03:30,171 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:08:06,199 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:10:55,291 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:13:13,212 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:13:49,152 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:16:41,178 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:16:46,549 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:16:47,101 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:16:47,104 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:16:48,000 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:17:02,275 - root - ERROR - task_controler.py:152 - 'rsl'
-2020-11-26 16:18:32,779 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:18:33,325 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:18:33,329 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:18:34,014 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:18:50,686 - root - ERROR - task_controler.py:153 - 'rsl'
-2020-11-26 16:20:24,196 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:20:27,960 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:20:28,511 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:20:28,514 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:20:28,973 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:20:43,972 - root - ERROR - task_controler.py:153 - Thread.__init__() not called
-2020-11-26 16:21:01,297 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:22:35,026 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:22:35,627 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:22:35,630 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:22:36,015 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:23:32,980 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:23:33,531 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:23:33,534 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:23:34,211 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:28:41,696 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:28:42,247 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:28:42,251 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:28:43,018 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:29:56,525 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:29:57,071 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:29:57,074 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:29:57,834 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:33:22,986 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:33:23,535 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:33:23,538 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:33:23,985 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:34:36,196 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:35:28,153 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:36:00,318 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:36:20,204 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:37:53,388 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:37:53,936 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:37:53,940 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:37:54,015 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:38:52,155 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:43:06,184 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:49:01,344 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:50:30,176 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 16:52:28,981 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:52:29,532 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:52:29,536 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:52:30,023 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:54:24,922 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:54:25,470 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:54:25,474 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:54:26,037 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:55:19,805 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:55:20,355 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:55:20,358 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:55:21,084 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 16:57:40,788 - root - INFO - main.py:48 - START SERVER
-2020-11-26 16:57:41,340 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 16:57:41,343 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 16:57:41,753 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 17:05:24,338 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:11:27,174 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:11:40,908 - root - INFO - main.py:48 - START SERVER
-2020-11-26 17:11:41,511 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 17:11:41,518 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 17:11:42,108 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 17:15:14,154 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:19:40,313 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:22:27,266 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:33:05,200 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:40:18,219 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:41:11,154 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:45:09,228 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:52:21,223 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 17:53:10,217 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:00:01,238 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:04:26,205 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:06:07,264 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:12:52,300 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:21:51,251 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:24:18,302 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:26:00,265 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:26:38,248 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:31:46,272 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:32:03,152 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:33:08,231 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:37:18,221 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:38:31,199 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:43:51,277 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:45:20,289 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:53:59,152 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:55:56,190 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:55:57,453 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 18:56:11,246 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:02:45,264 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:09:06,175 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:11:44,158 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:11:48,241 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:14:42,335 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:16:37,202 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:25:41,180 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:32:45,339 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:41:33,188 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:47:06,237 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:50:16,356 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:56:07,292 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:57:42,280 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 19:58:43,153 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:00:54,249 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:05:25,190 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:05:35,274 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:06:51,258 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:12:44,302 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:14:04,289 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:14:22,293 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:14:52,217 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:17:07,239 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:18:39,234 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:27:54,192 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:27:58,180 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:28:28,231 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:29:53,202 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:31:08,238 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:43:27,219 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:43:43,231 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:48:23,287 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:51:52,205 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:52:46,303 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:54:48,225 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:55:25,153 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:56:37,243 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 20:58:18,365 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:00:04,152 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:04:44,305 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:10:10,362 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:10:53,238 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:16:38,269 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:17:44,200 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:18:49,236 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:19:03,220 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:19:53,189 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:22:15,290 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:22:43,261 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:26:28,168 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:31:30,163 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:32:39,223 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:43:01,153 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 21:46:21,226 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 22:00:56,280 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 22:01:43,202 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 22:02:25,498 - root - INFO - main.py:48 - START SERVER
-2020-11-26 22:02:25,546 - root - ERROR - gateway_server.py:72 - string indices must be integers
-2020-11-26 22:03:11,727 - root - INFO - main.py:48 - START SERVER
-2020-11-26 22:03:11,740 - root - ERROR - gateway_server.py:72 - string indices must be integers
-2020-11-26 22:04:14,167 - root - INFO - main.py:48 - START SERVER
-2020-11-26 22:04:14,821 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 22:04:14,824 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 22:04:14,941 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 22:04:15,108 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:04:15,330 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:04:16,184 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:04:17,206 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:04:18,255 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:04:19,279 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:04:20,232 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:04:21,279 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:04:22,258 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:04:23,317 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:17,865 - root - INFO - main.py:48 - START SERVER
-2020-11-26 22:05:18,468 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 22:05:18,471 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 22:05:19,095 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 22:05:19,272 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:20,177 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:21,182 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:22,219 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:23,203 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:24,234 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:25,254 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:26,308 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:27,325 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:05:28,355 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:07:56,503 - root - INFO - main.py:48 - START SERVER
-2020-11-26 22:07:57,109 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 22:07:57,112 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 22:07:57,260 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 22:07:57,421 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:07:58,187 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:07:59,193 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:08:00,209 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:08:01,220 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:08:02,249 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:08:03,256 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:08:04,319 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:08:05,474 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:08:06,279 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:38,717 - root - INFO - main.py:48 - START SERVER
-2020-11-26 22:10:39,273 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 22:10:39,276 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 22:10:39,624 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 22:10:39,817 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:40,162 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:41,181 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:42,230 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:43,205 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:44,219 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:46,206 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 22:10:46,504 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:47,309 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:48,354 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:10:49,445 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:12:48,304 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 22:13:49,530 - root - INFO - main.py:48 - START SERVER
-2020-11-26 22:13:50,138 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 22:13:50,141 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 22:13:51,000 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 22:13:51,170 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:13:52,192 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:13:53,188 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:13:54,216 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:13:55,193 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:13:56,268 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:13:57,259 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:13:58,269 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:13:59,283 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:14:00,345 - root - ERROR - Object2.py:58 - name 'datal' is not defined
-2020-11-26 22:14:35,197 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-26 22:14:42,912 - root - INFO - main.py:48 - START SERVER
-2020-11-26 22:14:43,465 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 22:14:43,468 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 22:14:43,910 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 22:15:41,753 - root - INFO - main.py:48 - START SERVER
-2020-11-26 22:15:42,351 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-26 22:15:42,354 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-26 22:15:43,206 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-26 22:16:11,054 - root - ERROR - task_controler.py:150 - 'StoreroomManager' object has no attribute 'entrance'
+2020-11-27 15:09:07,589 - root - INFO - main.py:48 - START SERVER
+2020-11-27 15:09:08,257 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-27 15:09:08,276 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-27 15:09:08,777 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-27 15:21:19,295 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 15:25:06,160 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 15:25:51,187 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 15:37:36,254 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 15:39:17,208 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 15:42:42,308 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 15:44:15,257 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 15:48:57,187 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 15:51:10,329 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 16:02:20,936 - root - INFO - main.py:51 - START SERVER
+2020-11-27 16:55:53,725 - root - INFO - main.py:51 - START SERVER
+2020-11-27 16:57:58,017 - root - INFO - main.py:51 - START SERVER
+2020-11-27 16:58:53,576 - root - INFO - main.py:51 - START SERVER
+2020-11-27 17:17:17,739 - root - INFO - main.py:52 - START SERVER
+2020-11-27 17:17:18,398 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-27 17:17:18,402 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
+2020-11-27 17:17:18,552 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-27 17:45:39,414 - root - INFO - main.py:59 - START SERVER
+2020-11-27 17:45:39,477 - root - ERROR - gateway_server.py:73 - getsockaddrarg: AF_INET address must be tuple, not str
+2020-11-27 17:46:50,240 - root - INFO - main.py:61 - START SERVER
+2020-11-27 17:46:50,299 - root - ERROR - gateway_server.py:73 - getsockaddrarg: AF_INET address must be tuple, not str
+2020-11-27 17:49:20,815 - root - INFO - main.py:62 - START SERVER
+2020-11-27 17:49:20,873 - root - ERROR - gateway_server.py:73 - getsockaddrarg: AF_INET address must be tuple, not str
+2020-11-27 17:49:44,408 - root - INFO - main.py:62 - START SERVER
+2020-11-27 17:49:45,053 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-27 17:49:45,057 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.97', 23))已成功连接。。
+2020-11-27 17:49:45,317 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))连接创建线程失败。。
+2020-11-27 17:52:58,609 - root - INFO - main.py:62 - START SERVER
+2020-11-27 17:52:59,257 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-27 17:52:59,261 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.97', 23))已成功连接。。
+2020-11-27 17:53:00,150 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))连接创建线程失败。。
+2020-11-27 17:54:44,783 - root - INFO - main.py:60 - START SERVER
+2020-11-27 17:54:45,434 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
+2020-11-27 17:54:45,438 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.97', 23))已成功连接。。
+2020-11-27 17:54:46,022 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))连接创建线程失败。。
+2020-11-27 17:57:31,424 - root - INFO - main.py:60 - START SERVER
+2020-11-27 17:57:32,071 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-27 17:57:32,074 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-11-27 17:57:32,595 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-27 18:02:15,198 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 18:15:08,218 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 18:33:42,020 - root - INFO - main.py:60 - START SERVER
+2020-11-27 18:33:42,679 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-11-27 18:33:42,682 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-11-27 18:33:42,686 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-11-27 18:33:43,427 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-11-27 18:34:46,246 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
+2020-11-27 18:36:18,337 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'

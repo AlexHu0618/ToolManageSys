@@ -236,33 +236,35 @@ class RfidR2000(threading.Thread):
         cursec = 0
         current_data = {}
         while self.isrunning:
-            self.lock.acquire()
-            try:
-                if not self.queuetask.empty():
-                    task, args = self.queuetask.get()
-                    rsl = methodcaller(task, *args)(self)
-                    if rsl is not None:
-                        pkg = TransferPackage(code=200, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=4)
-                        self.queuersl.put(pkg)
-                        self.event.set()
-                else:
-                    localtime = time.localtime(time.time())
-                    if localtime.tm_sec != cursec:
-                        cursec = localtime.tm_sec
-                        rsl0 = self.inventory('00')
-                        rsl1 = self.inventory('01')
-                        rsl2 = self.inventory('02')
-                        rsl3 = self.inventory('03')
-                        rsl = {'00': rsl0, '01': rsl1, '02': rsl2, '03': rsl3}
-                        if rsl != current_data:
-                            current_data.update(rsl)
-                            pkg = TransferPackage(code=206, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=3)
-                            self.queue_push_data.put(pkg)
-                        # print('R--inventory: ', rsl)
-                    else:
-                        pass
-            finally:
-                self.lock.release()
+            # self.lock.acquire()
+            # try:
+            #     if not self.queuetask.empty():
+            #         task, args = self.queuetask.get()
+            #         rsl = methodcaller(task, *args)(self)
+            #         if rsl is not None:
+            #             pkg = TransferPackage(code=200, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=4)
+            #             self.queuersl.put(pkg)
+            #             self.event.set()
+            #     else:
+            #         localtime = time.localtime(time.time())
+            #         if localtime.tm_sec != cursec:
+            #             cursec = localtime.tm_sec
+            #             rsl0 = self.inventory('00')
+            #             rsl1 = self.inventory('01')
+            #             rsl2 = self.inventory('02')
+            #             rsl3 = self.inventory('03')
+            #             rsl = {'00': rsl0, '01': rsl1, '02': rsl2, '03': rsl3}
+            #             if rsl != current_data:
+            #                 current_data.update(rsl)
+            #                 pkg = TransferPackage(code=206, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=3)
+            #                 self.queue_push_data.put(pkg)
+            #             # print('R--inventory: ', rsl)
+            #         else:
+            #             pass
+            # finally:
+            #     self.lock.release()
+            time.sleep(10)
+            print('RFID_R2000 back data')
 
     def check(self, cmd_f):
         # complement ---- (~sum + 1)
