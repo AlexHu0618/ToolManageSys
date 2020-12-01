@@ -15,12 +15,12 @@ def main():
     q_rsl = Queue(50)
     try:
         rsl = get_all_equipments()
-        servers_registered = dict()  # {addr: (type, storeroom_id)}
+        servers_registered = dict()  # {addr: (type, storeroom_id, uuid)}
         clients_registered = dict()
         for r_id, s_c in rsl.items():
-            temp_servers = {k: (v, r_id) for k, v in s_c['servers'].items()}
+            temp_servers = {k: (v[0], r_id, v[1]) for k, v in s_c['servers'].items()}
             servers_registered.update(temp_servers)
-            temp_clients = {k: (v, r_id) for k, v in s_c['clients'].items()}
+            temp_clients = {k: (v[0], r_id, v[1]) for k, v in s_c['clients'].items()}
             clients_registered.update(temp_clients)
         print('servers_registered: ', servers_registered)
         print('clients_registered: ', clients_registered)

@@ -1,4 +1,4 @@
-from multiprocessing import Process
+from multiprocessing import Process, Queue
 import threading
 import socket
 import time
@@ -16,7 +16,7 @@ class TaskControler(Process):
         self.q_task = queue_task  # 从web接收的数据包队列
         self.q_rsl = queue_rsl  # 发送到web的数据包队列
         self.isrunning = True
-        self.storeroom_user_dict = dict()  # 当前进入此库房的人 {库房addr：人uuid}
+        self.storeroom_thread = dict()  # {'storeroom_id': {'thread': thread, 'queue': queue}, }
         self.lock_storeroom_user = threading.RLock()
 
     def run(self):
@@ -132,7 +132,7 @@ class TaskControler(Process):
     def _analyze_pkg(self, package: dict):
         """
         门禁事件：
-        1、查询是否存在该门禁的处理线程，存在则结束，开始新线程，否则创建；
+        1、查询是否存在该门禁的处理线程，存活的就放入pkg，否则创建开始新线程；
         数据更新事件：
         1、根据设备pkg中storeroom的ID号放入相应的线程；
         :param package:
@@ -140,15 +140,21 @@ class TaskControler(Process):
         """
         try:
             print('analyze pkg: ', package)
+            storeroom_id = package['storeroom_id']
             if package['msg_type'] == 3 and package['equipment_type'] in (3, 5):
-                print(package['data']['user'], ' enter to storeroom--', package['source'])
-                addr = package['source']
-                user_code = package['data']['user']
-                thread_store_mag = StoreroomManager(addr=addr)
-                thread_store_mag.daemon = True
-                thread_store_mag.start()
+                if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
+                    self.storeroom_thread['queue'].put(package)
+                else:
+                    print(package['data']['user'], ' enter to storeroom--', package['source'])
+                    addr = package['source']
+                    user_code = package['data']['user']
+                    queue_storeroom = Queue(50)
+                    thread_store_mag = StoreroomManager(addr=addr, user_code=user_code, queue_storeroom=queue_storeroom)
+                    thread_store_mag.daemon = True
+                    thread_store_mag.start()
+                    self.storeroom_thread[storeroom_id] = {'thread': thread_store_mag, 'queue': queue_storeroom}
             else:
-                print(package['data'])
+                self.storeroom_thread[storeroom_id]['queue'].put(package)
         except Exception as e:
             mylogger.error(e)
 
@@ -159,20 +165,33 @@ class TaskControler(Process):
 class StoreroomManager(threading.Thread):
     """
     进库房管理
-        1、发送进入通知发送到web；
-        2、先判断库房的管理模式；
-        3、从DB获取该库房的所有货架addr，以及user的工具包
-        4、查询工具包中物资点亮LCD；
-        5、循环监听发送数据包中该库房所有货架的数值变化，变化值发送到web；
-        6、等待退出条件（web确认/超时/新门禁通知）退出该循环；
-        7、调用出库管理。
+    1、线程初始化先判断该库房的管理模式；
+    2、从DB获取该库房的所有货架addr，以及user的工具包
+    3、获取当前用户的借还信息列表；
+    4、持续监听接收pkg，并定时监听数据是否有变化；
+    5、包分析：
+        5.1 若为门禁pkg，则保存当前用户的借还信息，修改当前线程用户名；
+        5.2 模式一, 若为货架pkg，则对比用户的借还信息并缓存更新； 模式三, 若为入口通道机，则缓存更新用户归还信息；若为出通道机，
+        则缓存更新用户借出信息。发送更新信息到web，扫码枪同理。若为web确定信息pkg，则保存当前用户借还信息并结束线程。
+    6、定时到则结束线程。
+
+        # 1、判断是否为新用户门禁登录；
+        # 1、发送进入通知发送到web；
+        # 2、先判断库房的管理模式；
+        # 3、从DB获取该库房的所有货架addr，以及user的工具包
+        # 4、查询工具包中物资点亮LCD；
+        # 5、循环监听发送数据包中该库房所有货架的数值变化，变化值发送到web；
+        # 6、等待退出条件（web确认/超时/新门禁通知）退出该循环；
+        # 7、调用出库管理。
     """
-    def __init__(self, addr):
+    def __init__(self, addr, user_code, queue_storeroom):
         threading.Thread.__init__(self)
         self.addr = addr
-        self.manage_mode = None
+        self.user_code = user_code
+        self.manage_mode = 1  # default=1
         self.storeroom_id = None
         self.isrunning = True
+        self.queue_pkg = queue_storeroom
 
     def run(self):
         """
@@ -182,9 +201,20 @@ class StoreroomManager(threading.Thread):
         """
         print('thread in')
         self._get_manage_mode()
-        # while self.isrunning:
-        #     pass
+        while self.isrunning:
+            if not self.queue_pkg.empty():
+                pkg = self.queue_pkg.get()
+                print('store: ', self.storeroom_id, ' got package: ', pkg)
+                self._handle_package(pkg)
+            else:
+                pass
         print('thread out')
+
+    def handle_mode_one(self):
+        pass
+
+    def handle_mode_three(self):
+        pass
 
     def _get_toolkit_data(self, user):
         """

@@ -45,7 +45,7 @@ class GatewayServer(Process):
             if self.servers is not None:
                 print("Start to connect to registered servers!!!!")
                 for k, v in self.servers.items():
-                    self._connect_server(addr=k, ttype=v[0], storeroom_id=v[1])
+                    self._connect_server(addr=k, ttype=v[0], storeroom_id=v[1], uuid=v[2])
             else:
                 mylogger.info('There is None registered server for connecting!')
             # monitor and reconn servers
@@ -91,7 +91,7 @@ class GatewayServer(Process):
         :return:
         """
         with self.lock:
-            for k, v in self.terminal_active.items():
+            for k, v in self.terminal_active.copy().items():
                 if not v['thread'].isAlive():
                     pkg = TransferPackage(source=k, msg_type=2, code=204)
                     self.queue_rsl.put(pkg)
@@ -200,7 +200,7 @@ class GatewayServer(Process):
     #                     mylogger.warning('fail to connect to server %s' % str(addr))
     #                     break
 
-    def _connect_server(self, addr: tuple, ttype: str, storeroom_id: str):
+    def _connect_server(self, addr: tuple, ttype: str, storeroom_id: str, uuid: str):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(0.1)
         failed_count = 0
@@ -212,15 +212,15 @@ class GatewayServer(Process):
         while True:
             try:
                 if terminal_type == 'entrance':
-                    thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id)
+                    thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id, uuid)
                 else:
                     s.connect(addr)
                     if terminal_type == 'gravity':
-                        thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id)
+                        thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                     elif terminal_type == 'led':
-                        thread = Lcd(addr, s, queue_task, queue_rsl, subevent, storeroom_id)
+                        thread = Lcd(addr, s, queue_task, queue_rsl, subevent, storeroom_id, uuid)
                     elif terminal_type == 'rfid2000':
-                        thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id)
+                        thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                     else:
                         pass
                 if thread:
@@ -228,7 +228,8 @@ class GatewayServer(Process):
                     thread.start()
                     self.lock.acquire()
                     self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
-                                                  'queuersl': queue_rsl, 'status': False, 'subevent': subevent, 'data': {}}
+                                                  'queuersl': queue_rsl, 'status': False, 'subevent': subevent,
+                                                  'data': {}, 'is_server': True}
                     self.server_active[addr] = (terminal_type, storeroom_id)
                     self.lock.release()
                     print('服务端(%s)已成功连接。。' % str(addr))
@@ -261,12 +262,13 @@ class GatewayServer(Process):
                 thread = None
                 client_type = self.clients[addr][0] if addr in self.clients.keys() else None
                 storeroom_id = self.clients[addr][1] if addr in self.clients.keys() else None
+                uuid = self.clients[addr][2] if addr in self.clients.keys() else None
                 if client_type == 'gravity':
-                    thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id)
+                    thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                 elif client_type == 'led':
-                    thread = Lcd(addr, client_sock, queue_task, queue_rsl, subevent, storeroom_id)
+                    thread = Lcd(addr, client_sock, queue_task, queue_rsl, subevent, storeroom_id, uuid)
                 elif client_type == 'rfid2000':
-                    thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id)
+                    thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                 else:
                     pass
                 if thread:
@@ -274,7 +276,8 @@ class GatewayServer(Process):
                     thread.start()
                     self.lock.acquire()
                     self.terminal_active[addr] = {'thread': thread, 'type': client_type, 'queuetask': queue_task,
-                                                  'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
+                                                  'queuersl': queue_rsl, 'status': True, 'subevent': subevent,
+                                                  'data': {}, 'is_server': False}
                     self.client_active[addr] = client_type
                     self.lock.release()
                     mylogger.info('客户端(%s)已成功连接。。' % str(addr))
@@ -285,11 +288,10 @@ class GatewayServer(Process):
         finally:
             server_sock.close()
 
-    def add_new(self, ip: str, port: int, type_new: str, isserver: bool, storeroom_id: str):
+    def add_new(self, ip: str, port: int, type_new: str, isserver: bool, storeroom_id: str, uuid: str):
         """
         1、加入设备服务器列表或设备客户端列表；
         2、尝试连接设备；
-        3、加入数据库；
         :param ip:
         :param port:
         :param type_new:
@@ -300,16 +302,16 @@ class GatewayServer(Process):
         try:
             if isserver:
                 self.lock.acquire()
-                self.servers[addr] = (type_new, storeroom_id)
+                self.servers[addr] = (type_new, storeroom_id, uuid)
                 self.lock.release()
-                self._connect_server(addr=addr, ttype=type_new, storeroom_id=storeroom_id)
+                self._connect_server(addr=addr, ttype=type_new, storeroom_id=storeroom_id, uuid=uuid)
                 if addr in self.server_active.keys():
                     return True
                 else:
                     return False
             else:
                 self.lock.acquire()
-                self.clients[addr] = (type_new, storeroom_id)
+                self.clients[addr] = (type_new, storeroom_id, uuid)
                 self.lock.release()
                 time.sleep(1)
                 if addr in self.client_active:
