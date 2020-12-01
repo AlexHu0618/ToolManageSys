@@ -226,7 +226,7 @@ class StoreroomManager(threading.Thread):
 
     def _get_manage_mode(self):
         """
-        从DB获取该库房的所有货架数据
+        从DB获取该库房的管理模式以及所有货架数据
         :param storeroom_id:
         :return:
         """
@@ -236,6 +236,9 @@ class StoreroomManager(threading.Thread):
         self.storeroom_id = storeroom.id
         self.manage_mode = storeroom.manage_mode
         print(storeroom.shelfs)
+
+    def _get_history(self):
+        pass
 
     def _exit_manage(self):
         """

@@ -51,8 +51,7 @@ class GravityShelf(threading.Thread):
                         self.event.set()
                 else:
                     localtime = time.localtime(time.time())
-                    if localtime.tm_sec != cursec:
-                        cursec = localtime.tm_sec
+                    if localtime.tm_sec % 10 == 0:
                         self.check_data_update(data_buff=data_buff)
                     else:
                         pass
@@ -66,6 +65,7 @@ class GravityShelf(threading.Thread):
         for i in rsl:
             g = self.readWeight(i)
             data_buff[i] = g
+        print('GravityShelf--', self.uuid, ' initial: ', data_buff)
 
     def check_data_update(self, data_buff):
         rsl = self.readAllInfo()
@@ -74,6 +74,7 @@ class GravityShelf(threading.Thread):
             for i in rsl:
                 g = self.readWeight(i)
                 if i not in data_buff.keys() or g != data_buff[i] and (abs(g - data_buff[i]) > 5):
+                    print('g - data_buff[i] ', g, data_buff[i])
                     data = {'addr_num': i, 'value': g, 'is_increased': True if g - data_buff[i] > 0 else False}
                     pkg = TransferPackage(code=206, eq_type=1, data=data, source=self.addr, msg_type=3,
                                           storeroom_id=self.storeroom_id, eq_id=self.uuid)
@@ -555,7 +556,7 @@ class Lcd(threading.Thread):
         self.queuersl = queuersl
         self.event = event
         self.lock = threading.RLock()
-        self.uuid=uuid
+        self.uuid = uuid
 
     def run(self):
         num = 0
@@ -605,7 +606,7 @@ class Lcd(threading.Thread):
             data = self.tcp_socket.recv(self.BUFFSIZE)
             # print('LCD BACK DATA: ', data)
         except socket.timeout:
-            print('L--Warning', '等待TCP消息回应超时')
+            # print('L--Warning', '等待TCP消息回应超时')
             return None
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')

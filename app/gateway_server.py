@@ -127,7 +127,7 @@ class GatewayServer(Process):
             if server_offline is not None:
                 print("Start to reconnect to offline servers!!!!")
                 for k, v in server_offline.items():
-                    self._connect_server(addr=k, ttype=v[0], storeroom_id=v[1])
+                    self._connect_server(addr=k, ttype=v[0], storeroom_id=v[1], uuid=v[2])
             time.sleep(20)
 
     # def _connect_server(self, addr: tuple, ttype: str):

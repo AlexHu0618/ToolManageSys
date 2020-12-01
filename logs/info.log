@@ -1,230 +1,121 @@
-2020-11-27 15:09:07,589 - root - INFO - main.py:48 - START SERVER
-2020-11-27 15:09:08,257 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 15:09:08,276 - root - INFO - gateway_server.py:234 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 15:09:08,777 - root - INFO - gateway_server.py:278 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 15:21:19,295 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 15:25:06,160 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 15:25:51,187 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 15:37:36,254 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 15:39:17,208 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 15:42:42,308 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 15:44:15,257 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 15:48:57,187 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 15:51:10,329 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 16:02:20,936 - root - INFO - main.py:51 - START SERVER
-2020-11-27 16:55:53,725 - root - INFO - main.py:51 - START SERVER
-2020-11-27 16:57:58,017 - root - INFO - main.py:51 - START SERVER
-2020-11-27 16:58:53,576 - root - INFO - main.py:51 - START SERVER
-2020-11-27 17:17:17,739 - root - INFO - main.py:52 - START SERVER
-2020-11-27 17:17:18,398 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 17:17:18,402 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 17:17:18,552 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 17:45:39,414 - root - INFO - main.py:59 - START SERVER
-2020-11-27 17:45:39,477 - root - ERROR - gateway_server.py:73 - getsockaddrarg: AF_INET address must be tuple, not str
-2020-11-27 17:46:50,240 - root - INFO - main.py:61 - START SERVER
-2020-11-27 17:46:50,299 - root - ERROR - gateway_server.py:73 - getsockaddrarg: AF_INET address must be tuple, not str
-2020-11-27 17:49:20,815 - root - INFO - main.py:62 - START SERVER
-2020-11-27 17:49:20,873 - root - ERROR - gateway_server.py:73 - getsockaddrarg: AF_INET address must be tuple, not str
-2020-11-27 17:49:44,408 - root - INFO - main.py:62 - START SERVER
-2020-11-27 17:49:45,053 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 17:49:45,057 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 17:49:45,317 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))连接创建线程失败。。
-2020-11-27 17:52:58,609 - root - INFO - main.py:62 - START SERVER
-2020-11-27 17:52:59,257 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 17:52:59,261 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 17:53:00,150 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))连接创建线程失败。。
-2020-11-27 17:54:44,783 - root - INFO - main.py:60 - START SERVER
-2020-11-27 17:54:45,434 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 17:54:45,438 - root - INFO - gateway_server.py:235 - 客户端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 17:54:46,022 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))连接创建线程失败。。
-2020-11-27 17:57:31,424 - root - INFO - main.py:60 - START SERVER
-2020-11-27 17:57:32,071 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 17:57:32,074 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 17:57:32,595 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 18:02:15,198 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 18:15:08,218 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 18:33:42,020 - root - INFO - main.py:60 - START SERVER
-2020-11-27 18:33:42,679 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 18:33:42,682 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 18:33:42,686 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 18:33:43,427 - root - INFO - gateway_server.py:279 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 18:34:46,246 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 18:36:18,337 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 18:37:37,311 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 18:38:10,236 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 18:44:12,211 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 18:47:00,251 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 18:53:05,192 - root - ERROR - Object2.py:58 - 'int' object has no attribute 'hex'
-2020-11-27 19:06:59,453 - root - INFO - main.py:60 - START SERVER
-2020-11-27 19:06:59,523 - root - ERROR - gateway_server.py:73 - __init__() missing 1 required positional argument: 'storeroom_id'
-2020-11-27 19:09:21,636 - root - INFO - main.py:60 - START SERVER
-2020-11-27 19:09:22,288 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 19:09:22,291 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 19:09:22,293 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 19:10:14,754 - root - INFO - main.py:60 - START SERVER
-2020-11-27 19:10:15,406 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 19:10:15,409 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 19:10:15,411 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 19:10:15,790 - root - INFO - gateway_server.py:280 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 19:11:16,310 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:14:29,225 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:18:59,190 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:23:00,152 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:26:12,313 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:28:00,153 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:33:25,293 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:33:54,155 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:38:58,155 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:40:46,199 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:48:37,167 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 19:49:25,223 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:00:38,243 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:02:35,199 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:03:35,211 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:06:04,294 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:13:35,270 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:16:29,220 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:16:49,187 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:16:50,445 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:17:46,195 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:18:53,153 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:21:00,325 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:22:42,152 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:23:46,273 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:32:00,394 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:35:15,231 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:35:44,310 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:40:19,716 - root - INFO - main.py:60 - START SERVER
-2020-11-27 20:40:20,374 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 20:40:20,378 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 20:40:20,383 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 20:40:21,133 - root - INFO - gateway_server.py:280 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 20:40:56,077 - root - ERROR - task_controler.py:158 - name 'Queue' is not defined
-2020-11-27 20:43:38,486 - root - INFO - main.py:60 - START SERVER
-2020-11-27 20:43:39,139 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 20:43:39,142 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 20:43:39,145 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 20:43:39,743 - root - INFO - gateway_server.py:280 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 20:43:41,292 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:43:59,679 - root - ERROR - task_controler.py:159 - name 'Queue' is not defined
-2020-11-27 20:44:30,209 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:46:16,235 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:47:12,052 - root - INFO - main.py:60 - START SERVER
-2020-11-27 20:47:12,702 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 20:47:12,705 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 20:47:12,707 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 20:47:13,090 - root - INFO - gateway_server.py:280 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 20:47:36,088 - root - ERROR - task_controler.py:160 - name 'Queue' is not defined
-2020-11-27 20:48:35,295 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:48:56,304 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:49:03,487 - root - INFO - main.py:60 - START SERVER
-2020-11-27 20:49:04,134 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 20:49:04,137 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 20:49:04,139 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 20:49:05,066 - root - INFO - gateway_server.py:280 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 20:49:25,557 - root - ERROR - task_controler.py:160 - name 'Queue' is not defined
-2020-11-27 20:49:26,239 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:50:43,220 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:50:52,371 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:51:15,246 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:53:27,152 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 20:53:49,789 - root - INFO - main.py:60 - START SERVER
-2020-11-27 20:53:50,439 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 20:53:50,443 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 20:53:50,445 - root - INFO - gateway_server.py:235 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 20:53:51,016 - root - INFO - gateway_server.py:280 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 20:56:59,818 - root - INFO - main.py:60 - START SERVER
-2020-11-27 20:57:00,470 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 20:57:00,525 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 20:57:00,567 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 20:57:01,017 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 20:58:09,589 - root - INFO - main.py:60 - START SERVER
-2020-11-27 20:58:10,190 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 20:58:10,194 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 20:58:10,196 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 20:58:11,054 - root - INFO - gateway_server.py:284 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:08:51,957 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:08:52,614 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:08:52,621 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:08:52,623 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:08:53,519 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:09:53,130 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:09:53,788 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:09:53,792 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:09:53,794 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:09:54,254 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:12:52,733 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:12:53,395 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:12:53,399 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:12:53,402 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:12:54,257 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:15:38,427 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:15:39,082 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:15:39,085 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:15:39,088 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:15:39,959 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:16:31,067 - root - ERROR - task_controler.py:161 - name 'Queue' is not defined
-2020-11-27 21:17:40,210 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:18:56,202 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:19:02,821 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:19:03,485 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:19:03,488 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:19:03,490 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:19:04,076 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:19:30,054 - root - ERROR - task_controler.py:162 - name 'Queue' is not defined
-2020-11-27 21:24:17,034 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:24:17,737 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:24:17,740 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:24:17,743 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:24:18,057 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:24:46,317 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:24:58,213 - root - ERROR - task_controler.py:163 - name 'Queue' is not defined
-2020-11-27 21:25:55,199 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:27:34,908 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:27:35,567 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:27:35,574 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:27:35,586 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:27:36,015 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:28:00,061 - root - ERROR - task_controler.py:166 - name 'Queue' is not defined
-2020-11-27 21:31:18,634 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:31:19,286 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:31:19,290 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:31:19,292 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:31:19,927 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:31:43,030 - root - ERROR - task_controler.py:166 - name 'Queue' is not defined
-2020-11-27 21:32:16,118 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:32:16,769 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:32:16,772 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:32:16,775 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:32:17,562 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:32:38,128 - root - ERROR - task_controler.py:166 - name 'queue_storeroom' is not defined
-2020-11-27 21:33:56,559 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:33:57,155 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:33:57,158 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:33:57,161 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:33:58,013 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:35:06,314 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:35:15,806 - root - INFO - main.py:60 - START SERVER
-2020-11-27 21:35:16,461 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-11-27 21:35:16,464 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-11-27 21:35:16,467 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-11-27 21:35:17,014 - root - INFO - gateway_server.py:282 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-11-27 21:40:09,308 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:40:12,194 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:40:29,267 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:40:30,576 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:41:16,314 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:41:26,346 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:42:34,226 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:46:54,228 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:50:49,215 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:50:52,269 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:52:01,204 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:52:44,286 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 21:52:54,231 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 22:06:32,260 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 22:12:51,223 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 22:14:53,274 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 22:24:24,308 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 22:26:56,206 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
-2020-11-27 22:30:45,327 - root - ERROR - Object2.py:59 - 'int' object has no attribute 'hex'
+2020-12-01 14:32:12,790 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:32:13,477 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:32:13,482 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:32:13,486 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:32:13,842 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:32:14,512 - root - ERROR - task_controler.py:159 - None
+2020-12-01 14:33:59,334 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:33:59,931 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:33:59,935 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:33:59,937 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:34:00,109 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:34:00,787 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:34:00,809 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:34:01,000 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:34:50,854 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:34:51,450 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:34:51,461 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:34:51,464 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:34:51,474 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:34:51,580 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:35:33,760 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:35:34,361 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:35:34,364 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:35:34,366 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:35:34,564 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:36:30,219 - root - ERROR - Object2.py:61 - 'int' object has no attribute 'hex'
+2020-12-01 14:38:45,500 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:38:46,105 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:38:46,108 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:38:46,111 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:38:46,125 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:38:47,014 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:38:54,280 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:38:56,340 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:39:24,054 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:39:25,053 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:39:26,053 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:42:26,006 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:42:26,608 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:42:26,611 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:42:26,616 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:42:26,631 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:42:27,061 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:43:29,997 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:43:30,594 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:43:30,598 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:43:30,600 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:43:30,611 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:43:31,013 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:43:43,886 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:43:59,040 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:44:00,038 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:47:03,355 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:47:04,001 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:47:04,004 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:47:04,010 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:47:04,014 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:47:04,018 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:47:04,022 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:47:38,147 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:47:49,195 - root - ERROR - Object2.py:61 - 'int' object has no attribute 'hex'
+2020-12-01 14:47:52,357 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:48:07,776 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:48:08,790 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:48:14,972 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:48:19,154 - root - ERROR - Object2.py:61 - 'int' object is not iterable
+2020-12-01 14:48:20,310 - root - ERROR - Object2.py:61 - 'int' object is not iterable
+2020-12-01 14:48:21,463 - root - ERROR - Object2.py:61 - 'int' object is not iterable
+2020-12-01 14:48:22,617 - root - ERROR - Object2.py:61 - 'int' object is not iterable
+2020-12-01 14:48:23,780 - root - ERROR - Object2.py:61 - 'int' object is not iterable
+2020-12-01 14:49:17,861 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:49:18,459 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:49:18,463 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:49:18,466 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:49:18,484 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:49:18,487 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:49:57,277 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:49:57,877 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:49:57,880 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:49:57,883 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:49:58,591 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:50:14,562 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:50:15,160 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:50:15,163 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:50:15,166 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:50:30,617 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:50:31,270 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:50:31,273 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:50:31,275 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:50:31,285 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:50:31,293 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:50:32,131 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:51:12,670 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:51:13,267 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:51:13,270 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:51:13,273 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:51:13,280 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:51:13,290 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:51:13,408 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:52:21,056 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:52:21,663 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:52:21,666 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:52:21,669 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:52:21,678 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:52:22,433 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:52:59,375 - root - INFO - main.py:60 - START SERVER
+2020-12-01 14:52:59,974 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 14:52:59,977 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 14:52:59,979 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 14:53:00,800 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 14:53:16,096 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:53:32,520 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 14:53:34,247 - root - ERROR - Object2.py:61 - 'int' object has no attribute 'hex'
+2020-12-01 15:00:30,693 - root - INFO - main.py:60 - START SERVER
+2020-12-01 15:00:31,343 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-01 15:00:31,347 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-01 15:00:31,349 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 15:00:31,354 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-01 15:00:32,015 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-01 15:00:51,015 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-01 15:01:01,294 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
