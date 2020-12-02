@@ -5,7 +5,7 @@ import time
 from .globalvar import *
 import struct
 from app.myLogger import mylogger
-from database.models2 import Entrance
+from database.models2 import Entrance, User, Grid
 import sys
 
 
@@ -188,10 +188,13 @@ class StoreroomManager(threading.Thread):
         threading.Thread.__init__(self)
         self.addr = addr
         self.user_code = user_code
+        self.user_id = None
         self.manage_mode = 1  # default=1
         self.storeroom_id = None
         self.isrunning = True
         self.queue_pkg = queue_storeroom
+        self.gravity_goods = dict()  # {'grid_id': (type, value), }
+        self.rfid_goods = dict()  # {'grid_id': (type, value), }
 
     def run(self):
         """
@@ -199,21 +202,41 @@ class StoreroomManager(threading.Thread):
         2、根据模式选择相应的处理方法并循环执行；
         :return:
         """
-        print('thread in')
         self._get_manage_mode()
+        self._get_user()
         while self.isrunning:
             if not self.queue_pkg.empty():
                 pkg = self.queue_pkg.get()
                 print('store: ', self.storeroom_id, ' got package: ', pkg)
-                self._handle_package(pkg)
+                if self.manage_mode == 1:
+                    self._handle_mode_one(pkg=pkg)
+                elif self.manage_mode == 3:
+                    self._handle_mode_three(pkg=pkg)
+                else:
+                    pass
             else:
                 pass
-        print('thread out')
 
-    def handle_mode_one(self):
+    def _handle_mode_one(self, pkg):
+        if pkg['equipment_type'] == 3:
+            self._save_data2db()
+            self.user_code = pkg['data']['user']
+            self._get_user()
+        elif pkg['equipment_type'] == 1:
+            eq_id = pkg['equipment_id']
+            sensor_addr = pkg['data']['addr_num']
+            grid = self._get_grid(eq_id=eq_id, sensor_addr=sensor_addr)
+            self.gravity_goods[grid.id] = (grid.type, pkg['data']['value'])
+            print(self.gravity_goods)
+        elif pkg['equipment_type'] == 2:
+            pass
+        else:
+            pass
+
+    def _handle_mode_three(self, pkg):
         pass
 
-    def handle_mode_three(self):
+    def _save_data2db(self):
         pass
 
     def _get_toolkit_data(self, user):
@@ -236,6 +259,17 @@ class StoreroomManager(threading.Thread):
         self.storeroom_id = storeroom.id
         self.manage_mode = storeroom.manage_mode
         print(storeroom.shelfs)
+
+    def _get_user(self):
+        user = User.by_code(code=self.user_code)
+        if user is not None:
+            self.user_id = user.uuid
+        else:
+            mylogger.error('get no user by code %s' % self.user_code)
+
+    def _get_grid(self, eq_id, sensor_addr):
+        grid = Grid.by_eqid_sensor(eq_id=eq_id, sensor_addr=sensor_addr)
+        return grid
 
     def _get_history(self):
         pass

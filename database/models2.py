@@ -8,7 +8,7 @@
 # @version : 0.1.0
 
 from uuid import uuid4
-from datetime import datetime
+from datetime import datetime, date
 from string import printable
 
 from pbkdf2 import PBKDF2
@@ -345,7 +345,7 @@ class Grid(Base, MyBase):
     name = Column(String(100), nullable=False)
     code = Column(String(100), nullable=False)
     collector_id = Column(String(50))
-    sensor_addr = Column(String(10), default='0x01')  # '0xFF'
+    sensor_addr = Column(String(10), default=None)  # '0xFF'
     row_num = Column(Integer, nullable=False)  # location
     col_num = Column(Integer, nullable=False)
     type = Column(Integer, default=1)  # 0-工具；1-仪器；2-耗材
@@ -355,8 +355,11 @@ class Grid(Base, MyBase):
     status = Column(Integer, default=0)  # 0-离线；1-正常；2-传感器故障；3-位置错误；
     total = Column(Integer, default=0)  # 重力格为总重量；RFID格为物资总个数；
     led_id = Column(String(50))
-    led_addr = Column(String(10), default='0x01')  # '0xFF'
-    antenna_num = Column(String(20))  # '0,1,2,3'
+    led_addr = Column(String(10), default='01')  # '0xFF'
+    antenna_num = Column(String(50))  # '0,1,2,3'
+    is_multiple = Column(Boolean, default=False)
+    min_inventory = Column(Integer, default=0)
+    is_understock = Column(Boolean, default=False)
     shelf_id = Column(String(50), ForeignKey('shelf.id'))
 
 
@@ -366,6 +369,10 @@ class Grid(Base, MyBase):
     @classmethod
     def by_row_col(cls, shelf_id, row_num, col_num):
         return dbSession.query(cls).filter(cls.shelf_id == shelf_id, cls.row_num == row_num, cls.col_num == col_num).first()
+
+    @classmethod
+    def by_eqid_sensor(cls, eq_id, sensor_addr):
+        return dbSession.query(cls).filter_by(collector_id=eq_id, sensor_addr=sensor_addr).first()
 
 
 class Collector(Base, MyBase):
@@ -414,19 +421,18 @@ class Goods(Base, MyBase):
     id = Column(String(50), primary_key=True, unique=True, nullable=False, default=lambda: str(uuid4()))
     name = Column(String(100), nullable=False)
     code = Column(String(100), nullable=False)
-    parent_type = Column(String(100))
-    model_number = Column(String(100))
+    parent_type = Column(String(100), default='')
+    model_number = Column(String(100), default='')
     rfid_uid = Column(String(100), default=None)
     type = Column(Integer)  # 0-工具；1-仪器；2-耗材
     check_cycle = Column(Integer)  # months
-    last_check_date = Column(Date)
+    last_check_date = Column(Date, default=date.today)
     scrap_date = Column(Date)
-    stock_remind = Column(Integer)
-    date_produce = Column(Date)
+    produce_date = Column(Date)
     monitor_way = Column(Integer)  # 1-重力；2-RFID
     weight = Column(Integer)  # 单个重量, 单位g
-    count = Column(Integer, default=1)
-    status = Column(Integer)  # 1-正常；2-维修；3-检验；4-报废；
+    count = Column(Integer, default=1)  # 数量
+    status = Column(Integer, default=1)  # 1-正常；2-维修；3-检验；4-报废；
     is_in_store = Column(Boolean, default=True)
     goods_pic = Column(BLOB)
     grid_id = Column(String(50), ForeignKey('grid.id'))

@@ -1,121 +1,1788 @@
-2020-12-01 14:32:12,790 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:32:13,477 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:32:13,482 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:32:13,486 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:32:13,842 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:32:14,512 - root - ERROR - task_controler.py:159 - None
-2020-12-01 14:33:59,334 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:33:59,931 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:33:59,935 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:33:59,937 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:34:00,109 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:34:00,787 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:34:00,809 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:34:01,000 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:34:50,854 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:34:51,450 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:34:51,461 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:34:51,464 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:34:51,474 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:34:51,580 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:35:33,760 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:35:34,361 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:35:34,364 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:35:34,366 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:35:34,564 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:36:30,219 - root - ERROR - Object2.py:61 - 'int' object has no attribute 'hex'
-2020-12-01 14:38:45,500 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:38:46,105 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:38:46,108 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:38:46,111 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:38:46,125 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:38:47,014 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:38:54,280 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:38:56,340 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:39:24,054 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:39:25,053 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:39:26,053 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:42:26,006 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:42:26,608 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:42:26,611 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:42:26,616 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:42:26,631 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:42:27,061 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:43:29,997 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:43:30,594 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:43:30,598 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:43:30,600 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:43:30,611 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:43:31,013 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:43:43,886 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:43:59,040 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:44:00,038 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:47:03,355 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:47:04,001 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:47:04,004 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:47:04,010 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:47:04,014 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:47:04,018 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:47:04,022 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:47:38,147 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:47:49,195 - root - ERROR - Object2.py:61 - 'int' object has no attribute 'hex'
-2020-12-01 14:47:52,357 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:48:07,776 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:48:08,790 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:48:14,972 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:48:19,154 - root - ERROR - Object2.py:61 - 'int' object is not iterable
-2020-12-01 14:48:20,310 - root - ERROR - Object2.py:61 - 'int' object is not iterable
-2020-12-01 14:48:21,463 - root - ERROR - Object2.py:61 - 'int' object is not iterable
-2020-12-01 14:48:22,617 - root - ERROR - Object2.py:61 - 'int' object is not iterable
-2020-12-01 14:48:23,780 - root - ERROR - Object2.py:61 - 'int' object is not iterable
-2020-12-01 14:49:17,861 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:49:18,459 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:49:18,463 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:49:18,466 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:49:18,484 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:49:18,487 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:49:57,277 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:49:57,877 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:49:57,880 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:49:57,883 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:49:58,591 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:50:14,562 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:50:15,160 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:50:15,163 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:50:15,166 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:50:30,617 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:50:31,270 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:50:31,273 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:50:31,275 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:50:31,285 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:50:31,293 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:50:32,131 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:51:12,670 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:51:13,267 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:51:13,270 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:51:13,273 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:51:13,280 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:51:13,290 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:51:13,408 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:52:21,056 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:52:21,663 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:52:21,666 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:52:21,669 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:52:21,678 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:52:22,433 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:52:59,375 - root - INFO - main.py:60 - START SERVER
-2020-12-01 14:52:59,974 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 14:52:59,977 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 14:52:59,979 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 14:53:00,800 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 14:53:16,096 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:53:32,520 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 14:53:34,247 - root - ERROR - Object2.py:61 - 'int' object has no attribute 'hex'
-2020-12-01 15:00:30,693 - root - INFO - main.py:60 - START SERVER
-2020-12-01 15:00:31,343 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
-2020-12-01 15:00:31,347 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
-2020-12-01 15:00:31,349 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 15:00:31,354 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
-2020-12-01 15:00:32,015 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
-2020-12-01 15:00:51,015 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
-2020-12-01 15:01:01,294 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 15:57:18,303 - root - INFO - main.py:60 - START SERVER
+2020-12-02 15:57:18,946 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 15:57:18,949 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-02 15:57:18,953 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 15:57:18,975 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-02 15:57:18,999 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 15:57:19,116 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 16:04:42,062 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 16:12:41,938 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 16:15:21,700 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 16:16:41,426 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 16:18:29,024 - root - INFO - main.py:60 - START SERVER
+2020-12-02 16:18:29,637 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 16:18:29,652 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-02 16:18:29,669 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:18:29,723 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:18:29,815 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 16:18:31,764 - root - ERROR - task_controler.py:159 - None
+2020-12-02 16:19:29,914 - root - INFO - main.py:60 - START SERVER
+2020-12-02 16:19:30,580 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 16:19:30,587 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-02 16:19:30,595 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:19:30,603 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.97', 23))已成功连接。。
+2020-12-02 16:19:31,128 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 16:19:32,673 - root - ERROR - task_controler.py:159 - None
+2020-12-02 16:25:11,766 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 16:30:32,237 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 16:33:48,140 - root - INFO - main.py:60 - START SERVER
+2020-12-02 16:33:48,803 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 16:33:48,814 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:33:48,823 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:33:48,857 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:33:48,895 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:33:49,591 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 16:33:53,031 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:33:54,053 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:03,597 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:04,611 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:13,029 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:14,069 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:24,450 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:32,778 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:33,879 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:42,379 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:43,399 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:34:50,917 - root - INFO - main.py:60 - START SERVER
+2020-12-02 16:34:51,524 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 16:34:51,537 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:34:51,566 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:34:51,619 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:34:51,646 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 16:35:03,068 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:04,086 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:13,502 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:14,603 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:24,061 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:32,526 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:33,605 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:43,935 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:44,990 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:52,221 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:35:53,207 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:03,610 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:04,649 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:13,111 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:14,095 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:23,476 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:24,527 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:33,961 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:43,304 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:53,612 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:36:54,736 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:03,029 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:04,064 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:14,504 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:15,519 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:22,840 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:23,855 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:33,152 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:34,197 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:43,504 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:44,554 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:37:52,981 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:38:03,414 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:38:08,372 - root - INFO - main.py:60 - START SERVER
+2020-12-02 16:38:08,981 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 16:38:08,993 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:38:09,004 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:38:09,068 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:38:09,090 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:38:09,788 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 16:38:10,273 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:10,763 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:10,984 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:11,240 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:13,115 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:38:14,169 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:38:20,215 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:20,487 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:20,695 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:20,955 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:21,149 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:22,521 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:38:23,551 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:38:30,195 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:30,411 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:30,601 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:30,806 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:31,021 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:40,204 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:40,457 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:40,705 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:40,927 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:41,100 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:42,393 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:38:43,443 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:38:50,202 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:50,404 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:50,621 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:51,097 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:38:53,859 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:38:54,879 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:00,205 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:00,402 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:00,610 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:00,812 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:01,020 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:03,116 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:04,161 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:10,211 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:10,434 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:10,633 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:10,842 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:11,045 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:13,570 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:14,610 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:20,198 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:20,393 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:20,586 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:20,798 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:21,006 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:23,969 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:24,955 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:30,209 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:30,412 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:30,638 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:30,875 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:31,056 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:33,267 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:40,201 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:40,696 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:40,938 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:41,165 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:43,692 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:44,821 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:50,203 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:50,421 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:50,650 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:50,862 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:51,078 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:39:54,161 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:39:55,182 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:00,261 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:00,459 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:00,711 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:00,932 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:01,125 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:02,422 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:03,548 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:10,216 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:10,417 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:10,644 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:10,881 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:11,060 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:12,957 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:13,997 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:20,192 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:20,400 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:20,630 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:20,827 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:21,024 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:24,436 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:25,513 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:30,191 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:30,438 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:30,662 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:30,862 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:31,080 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:33,863 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:34,861 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:40,219 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:40,446 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:40,650 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:40,844 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:41,063 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:44,295 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:45,370 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:50,233 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:50,444 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:50,718 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:50,920 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:51,110 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:40:53,663 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:40:54,756 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:41:00,249 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:00,435 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:00,619 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:00,803 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:00,990 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:01,168 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:02,997 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:41:04,035 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:41:10,212 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:10,423 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:10,631 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:10,839 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:11,035 - root - ERROR - Object2.py:60 - '04'
+2020-12-02 16:41:21,968 - root - INFO - main.py:60 - START SERVER
+2020-12-02 16:41:22,579 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 16:41:22,588 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:41:22,607 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:41:22,642 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:41:22,666 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 16:41:33,167 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:41:34,261 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:41:42,826 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:41:43,906 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:41:52,355 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:42:03,771 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:42:04,837 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:42:14,062 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:42:15,082 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:42:33,859 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:42:44,132 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:42:53,514 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:42:54,504 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:58:45,669 - root - INFO - main.py:60 - START SERVER
+2020-12-02 16:58:46,279 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 16:58:46,290 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:58:46,305 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:58:46,328 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 16:58:46,357 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 16:58:47,354 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 16:58:52,571 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:58:53,667 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:59:03,054 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:59:04,046 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:59:12,376 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:59:13,479 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:59:23,793 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:59:24,764 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:59:32,992 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:59:44,481 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 16:59:51,492 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 16:59:53,649 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:04,004 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:05,082 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:13,326 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:14,430 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:22,805 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:23,876 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:32,304 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:33,328 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:42,877 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:43,888 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:53,120 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:00:54,177 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:01:02,562 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:01:03,613 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:01:13,029 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:01:14,097 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:01:23,669 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:01:24,687 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:01:33,083 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:01:34,044 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:01:51,842 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 17:02:01,279 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 17:02:13,682 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:02:14,690 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:02:23,076 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:02:24,057 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:02:34,537 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:02:35,563 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:02:43,044 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:02:43,991 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:02:53,621 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:02:54,623 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:03:03,022 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:03:04,086 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:03:13,432 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:03:14,527 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:03:53,319 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:03:54,426 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:04:03,736 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:04:04,769 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:04:13,236 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:04:14,291 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:04:43,669 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:04:44,708 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:04:53,067 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:04:54,128 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:05,514 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:13,692 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:14,674 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:23,028 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:24,055 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:33,264 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:43,720 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:44,932 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:53,238 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:05:54,263 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:02,924 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:03,898 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:13,364 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:14,470 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:23,710 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:24,808 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:33,054 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:34,116 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:42,372 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:44,433 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:53,707 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:06:54,790 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:07:03,073 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:07:04,124 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:07:12,449 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:07:24,052 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:07:25,073 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:07:33,470 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:07:34,526 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:07:43,840 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:07:44,906 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:08:12,948 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:08:23,370 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:08:24,453 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:08:31,719 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:08:32,764 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:08:43,061 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:08:44,107 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:08:53,266 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:08:54,309 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:04,044 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:05,070 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:13,258 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:14,366 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:22,885 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:23,872 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:33,088 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:34,131 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:43,516 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:53,030 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:09:54,045 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:02,285 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:03,306 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:12,601 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:13,742 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:22,918 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:32,259 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:33,322 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:43,772 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:44,733 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:53,026 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:10:54,040 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:03,449 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:04,480 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:23,104 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:24,364 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:33,748 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:34,721 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:43,077 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:44,189 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:53,479 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:11:54,484 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:03,855 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:04,865 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:13,281 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:14,322 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:23,882 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:24,920 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:32,264 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:33,305 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:43,724 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:44,733 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:54,051 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:12:55,116 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:03,296 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:04,313 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:14,677 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:22,937 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:23,987 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:34,382 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:35,409 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:43,849 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:44,883 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:51,785 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 17:13:53,117 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:13:54,176 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:03,614 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:04,748 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:13,062 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:14,055 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:22,568 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:23,653 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:33,103 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:34,122 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:43,553 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:44,645 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:54,031 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:14:55,154 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:03,345 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:04,295 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:13,821 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:14,855 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:24,133 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:25,151 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:32,614 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:33,706 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:43,020 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:44,054 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:54,411 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:15:55,455 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:16:03,720 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:16:23,312 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:16:24,350 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:16:33,932 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:16:34,837 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:16:44,226 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:16:51,445 - root - ERROR - task_controler.py:159 - None
+2020-12-02 17:22:42,091 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 17:28:10,028 - root - INFO - main.py:60 - START SERVER
+2020-12-02 17:28:10,651 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 17:28:10,661 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 17:28:10,694 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 17:28:10,996 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 17:28:13,886 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:28:23,096 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:29:13,155 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:29:23,461 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:30:02,855 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:30:12,171 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:30:22,504 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:30:32,877 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:30:43,087 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:30:52,336 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:31:01,734 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:31:03,800 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:31:12,031 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:31:22,474 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:31:32,678 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:31:52,305 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:32:02,528 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:32:11,890 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:32:22,295 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:32:31,716 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:32:43,129 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:32:52,433 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:33:03,833 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:33:13,108 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:33:23,378 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:34:43,078 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:34:53,500 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:36:23,229 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:36:33,566 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:36:43,848 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:36:53,060 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:37:13,664 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:37:22,976 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:37:33,159 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:37:43,634 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:38:13,662 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:38:43,664 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:39:53,793 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:40:03,061 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:40:21,427 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 17:40:23,683 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:40:33,044 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:41:43,399 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:41:53,754 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:42:23,583 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:42:43,020 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:42:53,148 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:43:12,812 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:43:23,080 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:43:32,484 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:43:41,685 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:44:03,394 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:44:12,660 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:44:32,305 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:44:42,668 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:44:53,029 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:45:03,272 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:45:23,999 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:45:33,457 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:45:53,047 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:46:13,678 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:46:23,080 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:46:33,499 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:47:03,618 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:47:23,154 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:48:03,492 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:48:13,885 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:48:23,105 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:48:53,101 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:49:03,495 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:49:12,822 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:49:16,169 - root - INFO - main.py:60 - START SERVER
+2020-12-02 17:49:16,806 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 17:49:16,822 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 17:49:16,837 - root - INFO - gateway_server.py:236 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 17:49:17,061 - root - INFO - gateway_server.py:283 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 17:49:23,055 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:49:33,361 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:49:43,645 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:50:13,688 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:50:21,287 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 17:50:23,077 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:51:03,300 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:51:13,695 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:51:23,061 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:51:33,244 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:52:03,344 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:52:13,783 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:52:33,461 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:52:43,743 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:53:53,123 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:54:03,617 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:54:32,959 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:54:43,316 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:55:33,512 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:55:53,220 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:56:03,593 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:56:13,826 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:56:23,137 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:56:33,512 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:57:23,156 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:57:42,885 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:59:23,375 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:59:43,163 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 17:59:53,532 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:00:13,227 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:00:52,836 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:01:03,338 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:01:23,062 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:01:33,493 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:01:53,123 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:02:01,249 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 18:02:03,553 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:02:11,654 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 18:02:23,289 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:02:33,579 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:02:43,864 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:02:53,064 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:03:03,372 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:03:13,784 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:03:23,035 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:03:33,503 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:03:43,837 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:03:53,096 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:04:23,067 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:04:33,329 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:04:53,055 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:05:03,345 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:06:52,125 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 18:06:53,185 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:07:03,640 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:08:33,918 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:08:43,231 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:08:53,732 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:09:02,990 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:09:43,053 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:10:03,891 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:10:23,501 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:10:33,791 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:10:53,273 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:11:01,530 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 18:11:12,913 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:14:43,039 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:14:53,231 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:15:12,864 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:15:23,169 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:15:33,488 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:15:42,882 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:16:23,256 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:16:33,625 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:17:43,005 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:17:53,251 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:18:03,703 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:18:12,968 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:19:03,679 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:19:12,932 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:19:23,190 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:19:53,052 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:20:23,037 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:20:43,838 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:20:53,077 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:21:03,258 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:21:33,438 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:21:53,048 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:22:23,090 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:22:53,070 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:23:03,421 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:23:13,884 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:23:23,122 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:23:53,340 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:24:13,076 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:24:23,464 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:24:33,810 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:25:13,041 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:25:43,038 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:26:23,478 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:26:33,815 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:26:43,008 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:27:03,656 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:27:23,340 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:27:33,653 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:27:42,986 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:28:03,633 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:28:12,980 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:28:33,585 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:28:53,442 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:29:43,253 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:30:02,946 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:30:23,739 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:30:33,004 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:30:53,746 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:31:02,881 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:31:32,944 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:31:43,392 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:31:53,705 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:32:13,322 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:32:36,126 - root - INFO - main.py:60 - START SERVER
+2020-12-02 18:32:36,799 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 18:32:36,840 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 18:32:36,881 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 18:32:37,921 - root - INFO - gateway_server.py:289 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 18:32:43,055 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:33:43,118 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:34:03,704 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:34:23,188 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:34:43,970 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:35:03,564 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:35:13,884 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:35:21,269 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 18:36:33,111 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:36:43,452 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:37:11,427 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 18:37:13,359 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:37:53,828 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:38:32,926 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:38:43,331 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:39:43,144 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:39:53,498 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:40:33,795 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:40:43,004 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:41:03,773 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:41:13,011 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:42:03,708 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:42:13,017 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:42:23,522 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:42:43,090 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:42:53,282 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:43:12,952 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:43:23,228 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:43:33,467 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:44:03,353 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:44:13,740 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:44:33,315 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:45:13,650 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:46:31,192 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 18:46:41,176 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 18:46:53,285 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:47:03,724 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:48:02,953 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:48:13,123 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:48:33,762 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:48:43,006 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:49:13,796 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:49:43,589 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:49:52,904 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:50:23,078 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:50:33,312 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:50:43,694 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:51:52,947 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:52:03,193 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:52:13,574 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:52:22,958 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:52:53,006 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:53:03,290 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:54:13,870 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:54:33,512 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:55:13,012 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:55:33,613 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:55:43,039 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:56:03,746 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:56:13,099 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:56:42,842 - root - INFO - main.py:60 - START SERVER
+2020-12-02 18:56:43,460 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 18:56:43,483 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 18:56:43,500 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 18:56:44,178 - root - INFO - gateway_server.py:289 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 18:56:53,905 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:57:13,456 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:57:33,035 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:57:43,300 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:58:27,164 - root - INFO - main.py:60 - START SERVER
+2020-12-02 18:58:27,778 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 18:58:27,800 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 18:58:27,821 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 18:58:28,012 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 18:58:28,765 - root - INFO - gateway_server.py:290 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 18:58:33,090 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:58:34,088 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:58:43,614 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:58:44,662 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:59:02,358 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:59:06,552 - root - INFO - main.py:60 - START SERVER
+2020-12-02 18:59:07,168 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 18:59:07,229 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 18:59:07,247 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 18:59:07,277 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 18:59:07,996 - root - INFO - gateway_server.py:290 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 18:59:13,464 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 18:59:22,897 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:00:03,299 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:00:13,596 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:02:03,435 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:02:08,323 - root - INFO - main.py:60 - START SERVER
+2020-12-02 19:02:08,994 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 19:02:09,019 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:02:09,046 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 19:02:10,059 - root - INFO - gateway_server.py:290 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 19:02:13,223 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:02:23,511 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:03:03,718 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:03:13,038 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:03:33,686 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:03:42,965 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:04:01,166 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:04:03,497 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:04:11,709 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:04:12,818 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:04:43,659 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:05:03,051 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:06:33,259 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:06:43,585 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:06:53,832 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:07:13,508 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:07:23,852 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:07:33,044 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:07:43,485 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:08:03,185 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:08:33,338 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:08:43,825 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:08:53,067 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:09:13,654 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:09:43,434 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:09:52,884 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:10:03,292 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:10:13,730 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:10:33,317 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:10:43,683 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:10:52,900 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:11:13,576 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:11:51,914 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:13:02,988 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:13:13,298 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:13:23,564 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:13:31,512 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:13:32,875 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:14:13,249 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:14:23,545 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:15:03,771 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:15:13,875 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:15:33,274 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:15:42,952 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:15:53,153 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:16:23,074 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:16:43,699 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:16:53,055 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:17:43,366 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:18:03,057 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:18:53,572 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:19:13,120 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:19:23,554 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:19:43,306 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:19:53,573 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:20:03,013 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:20:23,680 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:20:43,172 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:21:02,786 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:21:24,797 - root - INFO - main.py:60 - START SERVER
+2020-12-02 19:21:25,419 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 19:21:25,438 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:21:25,447 - root - INFO - gateway_server.py:243 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 19:21:25,890 - root - INFO - gateway_server.py:290 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 19:21:32,832 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:21:43,083 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:22:02,815 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:22:22,345 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:22:32,808 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:22:43,199 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:23:01,919 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:23:03,060 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:24:12,100 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:24:22,826 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:24:52,215 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:25:02,671 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:25:13,064 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:25:32,674 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:25:42,137 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:26:03,147 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:26:12,529 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:26:22,870 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:26:32,143 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:27:13,009 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:27:22,283 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:27:43,089 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:27:52,395 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:28:33,467 - root - INFO - main.py:60 - START SERVER
+2020-12-02 19:28:34,079 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 19:28:34,088 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:28:34,109 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 19:28:34,160 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:28:34,378 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 19:28:42,473 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:28:43,502 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:28:52,833 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:28:53,883 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:29:03,033 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:29:04,112 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:29:24,415 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:29:25,420 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:29:34,786 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:29:35,871 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:29:42,071 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:29:43,090 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:29:50,431 - root - INFO - main.py:60 - START SERVER
+2020-12-02 19:29:51,052 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 19:29:51,070 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:29:51,115 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 19:29:51,163 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 19:29:51,195 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:29:51,714 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 19:30:03,602 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:04,632 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:08,671 - root - INFO - main.py:60 - START SERVER
+2020-12-02 19:30:09,333 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 19:30:09,343 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:30:09,367 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 19:30:09,402 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:30:09,764 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 19:30:12,598 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:13,646 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:22,892 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:23,901 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:35,240 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:36,264 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:43,549 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:44,669 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:53,058 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:30:54,069 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:02,506 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:03,524 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:13,001 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:14,086 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:23,373 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:24,399 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:33,840 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:34,878 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:43,138 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:44,136 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:53,776 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:31:54,839 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:04,155 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:05,159 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:13,820 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:14,896 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:23,143 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:24,158 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:31,696 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:32:32,492 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:33,517 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:43,131 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:44,143 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:32:52,425 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:33:04,019 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:33:05,079 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:33:12,460 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:33:13,356 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:33:22,702 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:33:23,779 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:33:33,308 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:33:55,288 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:33:56,327 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:02,685 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:03,678 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:13,340 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:14,427 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:22,814 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:23,897 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:33,219 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:34,261 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:42,596 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:43,634 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:53,078 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:34:54,110 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:03,541 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:04,680 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:12,958 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:14,020 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:23,313 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:24,350 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:32,718 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:33,818 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:44,133 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:45,237 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:52,426 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:35:53,507 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:03,064 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:04,284 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:13,742 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:14,784 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:22,085 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:23,130 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:32,588 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:33,663 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:42,024 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:43,078 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:52,491 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:36:53,529 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:02,919 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:03,963 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:12,282 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:13,268 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:22,697 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:23,756 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:33,054 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:34,122 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:42,544 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:43,613 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:53,157 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:37:54,191 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:01,681 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:02,709 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:13,119 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:14,110 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:22,422 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:23,582 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:33,853 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:34,950 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:42,243 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:43,305 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:53,797 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:38:54,827 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:03,256 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:04,310 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:13,719 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:14,731 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:23,127 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:24,122 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:32,382 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:33,438 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:42,996 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:44,049 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:52,381 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:39:53,411 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:02,947 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:03,835 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:15,326 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:16,482 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:22,590 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:23,636 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:33,001 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:34,008 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:42,406 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:43,571 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:52,966 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:40:54,042 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:04,265 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:05,334 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:12,568 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:13,587 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:23,961 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:24,990 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:33,342 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:34,439 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:42,689 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:43,728 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:53,033 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:41:54,053 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:05,467 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:06,461 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:12,582 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:23,999 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:25,039 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:32,405 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:42,838 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:43,835 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:52,232 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:42:53,245 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:03,026 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:04,016 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:11,368 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:12,388 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:21,950 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:43:25,026 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:26,021 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:33,236 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:34,274 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:42,765 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:43,783 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:52,345 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:43:53,387 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:02,960 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:03,947 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:15,558 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:16,537 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:22,869 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:34,124 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:35,151 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:43,797 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:44,797 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:52,066 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:44:53,100 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:02,404 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:03,417 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:12,858 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:13,904 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:24,308 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:25,271 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:33,679 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:34,680 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:42,024 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:43,099 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:52,654 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:45:53,605 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:03,045 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:04,093 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:14,548 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:15,583 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:23,071 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:24,157 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:34,784 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:35,881 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:45,730 - root - INFO - main.py:60 - START SERVER
+2020-12-02 19:46:46,348 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 19:46:46,353 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:46:46,356 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 19:46:46,361 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:46:47,118 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 19:46:51,557 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:52,581 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:53,605 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:46:54,700 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:01,007 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:02,018 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:11,542 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:21,966 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:22,988 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:23,995 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:31,223 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:41,730 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:51,430 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:52,489 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:53,499 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:54,569 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:47:55,638 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:48:02,959 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:48:03,986 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:48:13,402 - root - INFO - main.py:60 - START SERVER
+2020-12-02 19:48:14,015 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 19:48:14,018 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 19:48:14,021 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 19:48:14,478 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 19:48:31,585 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:48:32,604 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:48:33,629 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:11,013 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:11,179 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:49:12,030 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:13,040 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:31,641 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:32,728 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:33,771 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:41,041 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:42,065 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:43,075 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:51,420 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:52,443 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:49:53,459 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:50:01,724 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:50:02,782 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:50:03,801 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:50:11,015 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:50:12,016 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:50:13,027 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:50:31,521 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:50:32,570 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:50:33,573 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:51:41,045 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:51:42,051 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:51:43,094 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:51:51,331 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:51:52,368 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:51:53,440 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:52:00,752 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:52:01,788 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:52:02,856 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:52:11,012 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:52:12,046 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:52:13,073 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:53:01,460 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:53:02,478 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:53:03,505 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:53:11,746 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:53:12,767 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:53:13,802 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:53:51,097 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:53:52,115 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:53:53,133 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:01,317 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:02,334 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:03,436 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:11,640 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:12,726 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:13,664 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:21,024 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:22,017 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:23,024 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:31,129 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:32,126 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:33,236 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:41,379 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:42,431 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:43,428 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:50,839 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:51,847 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:54:52,874 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:55:01,051 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:55:02,062 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:55:03,078 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:01,074 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:02,092 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:03,126 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:11,313 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:12,359 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:13,378 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:41,248 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:42,241 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:43,281 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:51,522 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:52,563 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:56:53,600 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:57:11,224 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 19:57:21,712 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:57:22,824 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:57:23,869 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:57:31,018 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:57:32,043 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:57:33,110 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:59:31,146 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:59:32,234 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:59:33,313 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:59:41,556 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:59:42,580 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 19:59:43,589 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:00:31,077 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:00:32,116 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:00:33,145 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:00:41,517 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:00:42,585 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:00:43,569 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:01:20,931 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:01:21,951 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:01:22,967 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:01:31,138 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:01:32,167 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:01:33,184 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:02:20,903 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:02:21,910 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:02:22,925 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:02:31,223 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:02:32,239 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:02:33,353 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:09:22,513 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:09:30,887 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:09:31,160 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 20:09:31,915 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:09:32,936 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:09:51,428 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:09:52,512 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:09:53,508 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:10:12,237 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:10:30,971 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:10:31,993 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:10:33,022 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:10:41,202 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:10:42,194 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:10:43,319 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:10:52,688 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:11:12,250 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:11:41,269 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:11:42,295 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:11:51,539 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:12:02,795 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:12:11,018 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:12:12,016 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:12:13,059 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:12:22,308 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:12:31,617 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:12:43,075 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:12:51,723 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 20:13:10,997 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:01,657 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:02,760 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:11,010 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:12,004 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:13,026 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:30,808 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:31,840 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:32,847 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:41,039 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:42,055 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:43,078 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:51,363 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:52,369 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:14:53,394 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:15:11,054 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:15:12,057 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:15:13,065 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:15:22,417 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:15:43,081 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:01,618 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:02,627 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:03,658 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:10,858 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:11,891 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:12,916 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:41,759 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:42,762 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:43,811 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:51,113 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:52,109 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:16:53,125 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:17:01,401 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:17:02,402 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:17:03,442 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:17:11,675 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:17:12,807 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:17:13,802 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:17:50,992 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:17:52,062 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:17:53,074 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:18:01,224 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 20:18:01,441 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:18:02,472 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:18:03,511 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:18:40,737 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:18:41,774 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:18:42,828 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:18:51,084 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:18:52,086 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:18:53,126 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:19:30,851 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:19:31,875 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:19:32,897 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:19:51,658 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:19:52,666 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:19:53,696 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:20:11,495 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:20:12,546 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:20:13,586 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:20:20,962 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:20:21,989 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:20:23,009 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:20:51,501 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 20:21:40,843 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:21:41,870 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:21:42,921 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:21:51,158 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:21:52,185 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:21:53,263 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:22:11,026 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:22:12,047 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:22:13,101 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:22:21,424 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:22:22,547 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:22:23,514 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:22:51,739 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:22:52,782 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:22:53,824 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:11,336 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:12,365 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:13,435 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:30,938 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:31,967 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:33,007 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:41,241 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:42,264 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:43,336 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:51,552 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:52,573 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:23:53,604 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:24:00,889 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:24:01,915 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:24:02,945 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:24:41,253 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:24:42,288 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:24:43,302 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:24:51,302 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 20:25:00,832 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:25:01,870 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:25:02,893 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:00,867 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:01,895 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:02,960 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:11,292 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:12,357 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:13,422 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:21,597 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:22,603 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:23,628 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:41,107 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:42,111 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:26:43,125 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:11,064 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:12,094 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:13,110 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:21,450 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:22,481 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:23,545 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:30,776 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:31,797 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:32,880 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:41,213 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:42,238 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:43,280 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:51,641 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:52,646 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:28:53,687 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:29:00,899 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:29:01,934 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:29:02,929 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:30:20,796 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:30:21,788 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:30:22,832 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:30:41,242 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:30:42,245 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:30:43,251 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:31:19,152 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:31:19,776 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:31:19,780 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:31:19,791 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:31:19,985 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:31:32,212 - root - ERROR - task_controler.py:159 - None
+2020-12-02 20:32:27,122 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:32:27,782 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:32:27,786 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:32:27,789 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:32:27,801 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:32:28,105 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:32:30,918 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:32:35,036 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:32:36,106 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:32:37,156 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:32:38,140 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:32:39,185 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:32:42,309 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:32:43,377 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:32:44,378 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:32:54,510 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:32:55,126 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:32:55,131 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:32:55,134 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:32:55,999 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:33:03,355 - root - ERROR - task_controler.py:159 - None
+2020-12-02 20:34:01,111 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:34:01,727 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:34:01,730 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:34:01,734 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:34:02,085 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:34:51,999 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 20:35:51,227 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:35:52,255 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:35:53,297 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:35:54,328 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:36:01,559 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:36:02,601 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:36:03,612 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:36:04,657 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:36:51,094 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:36:52,109 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:36:53,105 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:36:54,150 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:37:01,410 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:37:02,453 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:37:03,460 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:37:04,490 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:39:11,484 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:39:12,519 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:39:13,585 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:39:14,582 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:39:21,762 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:39:22,820 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:39:23,842 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:39:24,900 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:41:51,304 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:41:52,346 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:41:53,359 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:41:54,420 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:01,759 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:02,745 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:03,828 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:04,884 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:11,198 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:12,211 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:13,235 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:14,291 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:21,564 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:22,535 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:23,555 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:24,593 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:41,189 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:42,202 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:43,274 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:44,292 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:51,569 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:52,587 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:53,668 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:42:54,774 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:31,012 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:32,045 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:33,052 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:34,098 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:41,280 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:42,349 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:43,397 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:44,472 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:50,788 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:51,796 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:52,852 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:43:53,914 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:01,127 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:02,184 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:03,191 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:04,204 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:21,689 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:22,674 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:23,716 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:24,715 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:30,895 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:31,895 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:32,965 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:44:33,964 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:46:42,244 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:46:43,310 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:46:52,583 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:46:53,641 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:47:12,417 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:47:13,461 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:47:33,035 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:47:34,027 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:47:52,465 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:47:53,483 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:48:12,325 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:48:32,068 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:48:33,088 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:48:34,118 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:11,083 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:12,085 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:13,123 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:14,117 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:21,352 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:22,383 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:23,435 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:24,430 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:40,933 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:41,958 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:43,001 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:44,031 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:51,192 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:50:55,347 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:50:55,970 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:50:55,974 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:50:55,976 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:50:55,991 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:50:55,994 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:50:56,736 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:51:02,196 - root - ERROR - task_controler.py:159 - None
+2020-12-02 20:51:11,446 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:51:12,062 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:51:12,066 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:51:12,069 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:51:12,636 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:51:21,324 - root - ERROR - task_controler.py:159 - None
+2020-12-02 20:51:39,693 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:51:40,359 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:51:40,363 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:51:40,366 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:51:40,372 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:51:40,391 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:51:40,932 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:51:42,438 - root - ERROR - task_controler.py:159 - None
+2020-12-02 20:54:17,409 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:54:18,031 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:54:18,035 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:54:18,038 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:54:18,044 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:54:18,505 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:54:21,069 - root - ERROR - task_controler.py:159 - None
+2020-12-02 20:55:29,123 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:55:29,736 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:55:29,741 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:55:29,744 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:55:30,325 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:55:31,856 - root - ERROR - task_controler.py:159 - None
+2020-12-02 20:56:13,542 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:56:14,155 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:56:14,159 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:56:14,161 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:56:14,175 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:56:14,186 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:56:14,569 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:56:22,788 - root - ERROR - task_controler.py:159 - None
+2020-12-02 20:56:59,315 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:56:59,982 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:56:59,986 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:56:59,989 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:56:59,994 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:57:00,057 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:57:02,031 - root - ERROR - task_controler.py:159 - None
+2020-12-02 20:58:12,073 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:58:12,691 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:58:12,695 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:58:12,700 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:58:12,711 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:58:13,075 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 20:58:21,022 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:58:22,020 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:58:23,021 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:58:24,069 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:58:33,413 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:58:43,845 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:58:51,031 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:59:01,255 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 20:59:50,823 - root - INFO - main.py:60 - START SERVER
+2020-12-02 20:59:51,450 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 20:59:51,454 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:59:51,457 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:59:51,473 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 20:59:51,485 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 20:59:52,361 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:00:01,863 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:00:02,888 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:00:11,391 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:00:12,420 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:00:14,470 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:00:21,879 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:00:42,022 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:00:54,187 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:00:54,810 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:00:54,815 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:00:54,817 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:00:54,828 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:00:54,950 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:01:01,014 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:01:02,054 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:01:12,583 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:01:22,083 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:01:31,599 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:01:32,610 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:01:42,055 - root - ERROR - task_controler.py:159 - None
+2020-12-02 21:02:31,265 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:02:31,930 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:02:31,933 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:02:31,937 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:02:32,325 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:03:21,438 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:03:30,717 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:03:33,833 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:03:43,216 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:03:51,231 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 21:03:53,662 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:04:03,049 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:04:20,795 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:04:21,408 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:04:21,412 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:04:21,416 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:04:21,421 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:04:21,494 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:04:32,975 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:04:33,660 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:04:33,665 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:04:33,667 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:04:33,673 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:04:34,602 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:04:51,394 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:05:00,875 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:05:02,945 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:05:13,178 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:05:36,865 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:05:37,477 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:05:37,481 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:05:37,484 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:05:37,492 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:05:37,511 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:05:38,292 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:05:41,642 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:05:42,681 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:05:43,681 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:05:51,013 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:06:01,617 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:06:02,673 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:06:03,713 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:07:01,358 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:07:02,388 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:07:12,495 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:07:13,111 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:07:13,115 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:07:13,118 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:07:14,031 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:07:23,455 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:07:31,697 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:07:33,763 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:07:41,013 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:07:51,644 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:08:03,057 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:08:11,265 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:08:13,374 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:08:23,545 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:08:33,779 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:08:51,332 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:08:53,391 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:00,756 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:11,058 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:13,098 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:21,530 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:09:22,156 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:09:22,160 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:09:22,163 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:09:22,171 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:09:22,178 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:09:22,955 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:09:31,520 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:32,621 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:33,594 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:34,603 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:35,635 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:36,696 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:37,716 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:38,804 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:42,923 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:09:43,956 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:10:20,195 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:10:20,810 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:10:20,815 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:10:20,819 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:10:20,828 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:10:20,843 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:10:21,661 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:10:30,223 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:10:31,212 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:10:32,254 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:10:33,293 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:10:34,308 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:10:36,563 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:10:37,235 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:10:37,241 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:10:37,243 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:10:37,941 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:10:51,660 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:11:01,077 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:11:31,150 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:11:50,979 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:12:01,266 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:12:03,342 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:12:11,592 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:12:13,635 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:12:20,871 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:12:23,977 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:12:31,270 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:12:43,847 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:13:31,283 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:13:33,349 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:13:41,751 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:13:43,838 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:13:51,025 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:14:01,511 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:14:10,856 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:14:11,845 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 21:14:21,166 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:14:21,646 - root - ERROR - Object2.py:60 - 'int' object has no attribute 'hex'
+2020-12-02 21:14:40,753 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:14:51,018 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:14:53,072 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:15:03,434 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:16:10,869 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:16:21,290 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:16:31,544 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:16:40,816 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:16:57,218 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:16:57,831 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:16:57,835 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:16:57,839 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:16:57,854 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:16:57,901 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:17:02,015 - root - ERROR - task_controler.py:159 - None
+2020-12-02 21:22:16,845 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:22:17,512 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:22:17,518 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:22:17,521 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:22:17,526 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:22:17,544 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:22:18,532 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:22:21,817 - root - ERROR - task_controler.py:159 - None
+2020-12-02 21:23:01,661 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:23:02,276 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:23:02,280 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:23:02,284 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:23:03,221 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:23:06,370 - root - ERROR - task_controler.py:159 - None
+2020-12-02 21:24:51,249 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:24:51,885 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:24:51,888 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:24:51,892 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:24:51,898 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:24:52,733 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:24:55,965 - root - ERROR - task_controler.py:159 - None
+2020-12-02 21:26:04,161 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:26:04,777 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:26:04,781 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:26:04,785 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:26:05,688 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:26:09,917 - root - ERROR - task_controler.py:159 - None
+2020-12-02 21:27:14,130 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:27:14,741 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:27:14,744 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:27:14,747 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:27:14,759 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:27:14,774 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:27:15,037 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:27:20,006 - root - ERROR - task_controler.py:159 - None
+2020-12-02 21:29:57,793 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:29:58,460 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:29:58,464 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:29:58,467 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:29:59,188 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:32:18,404 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:32:19,020 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:32:19,024 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:32:19,028 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:32:19,036 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:32:19,052 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:32:19,575 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:32:31,338 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:32:32,373 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:32:33,468 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:32:34,518 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:32:35,529 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:32:36,548 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:32:42,910 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:32:43,908 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:33:00,786 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:33:01,844 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:33:02,821 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:33:03,829 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:33:32,688 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:33:33,305 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:33:33,309 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:33:33,312 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:33:33,325 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:33:33,674 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:33:51,053 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:33:52,051 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:33:53,061 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:33:54,084 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:36:22,811 - root - INFO - main.py:60 - START SERVER
+2020-12-02 21:36:23,424 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.201', 4370))已成功连接。。
+2020-12-02 21:36:23,428 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 26))已成功连接。。
+2020-12-02 21:36:23,432 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:36:23,437 - root - INFO - gateway_server.py:238 - 服务端(('192.168.0.117', 23))已成功连接。。
+2020-12-02 21:36:23,761 - root - INFO - gateway_server.py:285 - 客户端(('192.168.0.97', 26))已成功连接。。
+2020-12-02 21:36:40,980 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:36:41,957 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:37:21,023 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:37:22,028 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:37:23,024 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'
+2020-12-02 21:37:24,067 - root - ERROR - task_controler.py:159 - 'e5b8f43c-5ff9-4ada-b399-3bd431811be7'

@@ -245,40 +245,55 @@ class RfidR2000(threading.Thread):
         self.queue_push_data = queue_push_data
         self.lock = threading.RLock()
         self.uuid = uuid
+        self.ants = ['00', '01', '02', '03', '04', '05', '06', '07']
+        self. data_buff = {}
 
     def run(self):
-        cursec = 0
-        current_data = {}
+        self._initial_data()
         while self.isrunning:
-            # self.lock.acquire()
-            # try:
-            #     if not self.queuetask.empty():
-            #         task, args = self.queuetask.get()
-            #         rsl = methodcaller(task, *args)(self)
-            #         if rsl is not None:
-            #             pkg = TransferPackage(code=200, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
-            #             self.queuersl.put(pkg)
-            #             self.event.set()
-            #     else:
-            #         localtime = time.localtime(time.time())
-            #         if localtime.tm_sec != cursec:
-            #             cursec = localtime.tm_sec
-            #             rsl0 = self.inventory('00')
-            #             rsl1 = self.inventory('01')
-            #             rsl2 = self.inventory('02')
-            #             rsl3 = self.inventory('03')
-            #             rsl = {'00': rsl0, '01': rsl1, '02': rsl2, '03': rsl3}
-            #             if rsl != current_data:
-            #                 current_data.update(rsl)
-            #                 pkg = TransferPackage(code=206, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
-            #                 self.queue_push_data.put(pkg)
-            #             # print('R--inventory: ', rsl)
-            #         else:
-            #             pass
-            # finally:
-            #     self.lock.release()
-            time.sleep(10)
-            print('RFID_R2000 back data, storeroom_id= ', self.storeroom_id)
+            self.lock.acquire()
+            try:
+                if not self.queuetask.empty():
+                    task, args = self.queuetask.get()
+                    rsl = methodcaller(task, *args)(self)
+                    if rsl is not None:
+                        pkg = TransferPackage(code=200, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                        self.queuersl.put(pkg)
+                        self.event.set()
+                else:
+                    localtime = time.localtime(time.time())
+                    if localtime.tm_sec % 10 == 0:
+                        self._check_data_update()
+                        # print('R--inventory: ', rsl)
+                    else:
+                        pass
+            finally:
+                self.lock.release()
+            # time.sleep(10)
+            # print('RFID_R2000 back data, storeroom_id= ', self.storeroom_id)
+
+    def _initial_data(self):
+        self.reset_inv_buf()
+        for ant in self.ants.copy():
+            rsl = self.inventory(ant_id=ant)
+            if rsl == -1:
+                self.ants.remove(ant)
+            else:
+                self.data_buff[ant] = rsl
+        rsl_data = self.getAndResetBuf()
+        print(rsl_data)
+        print('R2000--', self.uuid, ' working ant: ', self.data_buff)
+
+    def _check_data_update(self):
+        for ant in self.ants:
+            rsl = self.inventory(ant_id=ant)
+            if rsl is not None and rsl != self.data_buff[ant]:
+                self.data_buff[ant] = rsl
+                data = {ant: rsl}
+                pkg = TransferPackage(code=206, eq_type=2, data=data, source=self.addr, msg_type=3,
+                                      storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                self.queue_push_data.put(pkg)
+        self.getAndResetBuf()
 
     def check(self, cmd_f):
         # complement ---- (~sum + 1)
@@ -292,11 +307,13 @@ class RfidR2000(threading.Thread):
             return 1
         else:
             tag_count = int.from_bytes(data[4:6], byteorder='big', signed=False)
-            return tag_count
+            all_bytes = (int(data[1]) + 2) * tag_count
+            frame_count = all_bytes // self.BUFFSIZE
+            return frame_count if all_bytes % self.BUFFSIZE == 0 else frame_count + 1
 
     def getData(self, cmd, multiframe=False):
-        self.tcp_socket.settimeout(1)
-        data_total = []
+        self.tcp_socket.settimeout(5)
+        data_total = b''
         try:
             self.tcp_socket.send(cmd)
             # print('RFID2000 cmd send: ', cmd)
@@ -314,7 +331,7 @@ class RfidR2000(threading.Thread):
                         isfirst = False
                     if num == count:
                         break
-                    data_total.append(data)
+                    data_total += data
             else:
                 data = self.tcp_socket.recv(self.BUFFSIZE)
         except socket.timeout:
@@ -390,6 +407,7 @@ class RfidR2000(threading.Thread):
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
+        print(data)
         if data[0:4] == bytes.fromhex(('A0 04' + self.addr_num + '75')):
             ant_id = data[4]
             return ant_id
@@ -402,9 +420,9 @@ class RfidR2000(threading.Thread):
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
         if data[0:5] == bytes.fromhex(('A0 04' + self.addr_num + '74 10')):
-            return SUCCESS
+            return True
         else:
-            return ERR_EQUIPMENT_RESP
+            return False
 
     def inventory(self, ant_id='00'):
         rsl = self.setWorkAntenna(ant_id)
@@ -416,10 +434,14 @@ class RfidR2000(threading.Thread):
             data = self.getData(cmd, False)
             if data[0:5] == bytes.fromhex('A0 0C' + self.addr_num + '80' + ant_id):
                 tag_count = int.from_bytes(data[5:7], byteorder='big', signed=False)
-                # print('tag_count: ', tag_count)
+                print('ant(%s) tag_count: %d' % (data[4], tag_count))
                 return tag_count
+            elif data[0:5] == bytes.fromhex('A0 04' + self.addr_num + '80 22'):
+                return -1
+            else:
+                return None
         else:
-            return ERR_EQUIPMENT_RESP
+            return None
 
     def getAndResetBuf(self):
         cmd_f = 'A0 03' + self.addr_num + '90'
@@ -427,7 +449,7 @@ class RfidR2000(threading.Thread):
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, True)
         print('cmd back:', data)
-        if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
+        if data[0][0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
             print('ErrorCode: ', hex(data[4]))
             return ERR_EQUIPMENT_RESP
         else:
@@ -455,7 +477,7 @@ class RfidR2000(threading.Thread):
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
-        print('cmd back:', data)
+        # print('cmd back:', data)
 
 
 # class RfidJH2880(object):
@@ -879,7 +901,7 @@ class RfidR2000FH(threading.Thread):
         threading.Thread.__init__(self)
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
-        self.addr_num = '01'
+        self.addr_num = b'\x01'
         self.ant_count = 8
         self.isrunning = True
         self.queuetask = queuetask
@@ -890,7 +912,7 @@ class RfidR2000FH(threading.Thread):
         self.uuid = uuid
         self.queue_push_data = queue_push_data
         self.lock = threading.RLock()
-        self.ctrl_mask = ''
+        self.ctrl_mask = b'\x0001' + b'\21'
 
     def run(self):
         while self.isrunning:
@@ -905,7 +927,9 @@ class RfidR2000FH(threading.Thread):
         MID = 0x12
         :return:
         """
-        pass
+        mid = b'\x12'
+        data = ''
+        cmd = self.ctrl_mask + mid + self.addr_num
 
     def read_epc(self):
         """

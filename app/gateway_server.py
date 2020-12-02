@@ -8,6 +8,8 @@ from operator import methodcaller
 from multiprocessing import Process
 from app.globalvar import *
 import time
+from database.models2 import Grid
+from database.models2 import dbSession as db
 
 
 class GatewayServer(Process):
