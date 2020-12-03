@@ -131,10 +131,11 @@ class TaskControler(Process):
 
     def _analyze_pkg(self, package: dict):
         """
-        门禁事件：
-        1、查询是否存在该门禁的处理线程，存活的就放入pkg，否则创建开始新线程；
-        数据更新事件：
-        1、根据设备pkg中storeroom的ID号放入相应的线程；
+        1、门禁事件：
+            查询是否存在该门禁的处理线程，存活的就放入pkg，否则创建开始新线程；
+        2、数据更新事件：
+            根据设备pkg中storeroom的ID号放入相应的线程；
+        3、其他推送到web的响应事件；
         :param package:
         :return:
         """
@@ -153,8 +154,11 @@ class TaskControler(Process):
                     thread_store_mag.daemon = True
                     thread_store_mag.start()
                     self.storeroom_thread[storeroom_id] = {'thread': thread_store_mag, 'queue': queue_storeroom}
+            elif package['msg_type'] == 3:
+                if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
+                    self.storeroom_thread[storeroom_id]['queue'].put(package)
             else:
-                self.storeroom_thread[storeroom_id]['queue'].put(package)
+                pass
         except Exception as e:
             mylogger.error(e)
 
@@ -218,6 +222,13 @@ class StoreroomManager(threading.Thread):
                 pass
 
     def _handle_mode_one(self, pkg):
+        """
+        1、新门禁用户事件；
+        2、重力货架事件；
+        3、RFID货架事件；
+        :param pkg:
+        :return:
+        """
         if pkg['equipment_type'] == 3:
             self._save_data2db()
             self.user_code = pkg['data']['user']
@@ -237,7 +248,12 @@ class StoreroomManager(threading.Thread):
         pass
 
     def _save_data2db(self):
-        pass
+        """
+        1、先查询用户是否有借出，有则清除并更新格子重量；
+        :return:
+        """
+        for k, v in self.gravity_goods:
+            pass
 
     def _get_toolkit_data(self, user):
         """
