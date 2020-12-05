@@ -456,4 +456,8 @@ class History_inbound_outbound(Base, MyBase):
     count = Column(Integer)
     outbound_datetime = Column(DateTime)
     inbound_datetime = Column(DateTime, default=None)
-    status = Column(Integer, default=1)  # 0-已还；1-未还；3-催还；
+    status = Column(Integer, default=1)  # 0-已还；1-未还；2-催还；
+
+    @classmethod
+    def by_user_not_return(cls, user_id):
+        return dbSession.query(cls).filter(cls.user_id == user_id, cls.status != 0).all()

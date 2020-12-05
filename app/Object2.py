@@ -75,7 +75,7 @@ class GravityShelf(threading.Thread):
                 g = self.readWeight(i)
                 if i not in data_buff.keys() or g != data_buff[i] and (abs(g - data_buff[i]) > 5):
                     print('g - data_buff[i] ', g, data_buff[i])
-                    data = {'addr_num': i, 'value': g, 'is_increased': True if g - data_buff[i] > 0 else False}
+                    data = {'addr_num': i, 'value': g - data_buff[i], 'is_increased': True if g - data_buff[i] > 0 else False}
                     pkg = TransferPackage(code=206, eq_type=1, data=data, source=self.addr, msg_type=3,
                                           storeroom_id=self.storeroom_id, eq_id=self.uuid)
                     self.queue_push_data.put(pkg)
@@ -246,7 +246,7 @@ class RfidR2000(threading.Thread):
         self.lock = threading.RLock()
         self.uuid = uuid
         self.ants = ['00', '01', '02', '03', '04', '05', '06', '07']
-        self. data_buff = {}
+        self. data_buff = list()
 
     def run(self):
         self._initial_data()
@@ -278,22 +278,31 @@ class RfidR2000(threading.Thread):
             rsl = self.inventory(ant_id=ant)
             if rsl == -1:
                 self.ants.remove(ant)
-            else:
-                self.data_buff[ant] = rsl
         rsl_data = self.getAndResetBuf()
-        print(rsl_data)
-        print('R2000--', self.uuid, ' working ant: ', self.data_buff)
+        if rsl_data is not None:
+            self.data_buff += rsl_data
+        print('R2000--', self.uuid, ' current EPCs: ', self.data_buff)
 
     def _check_data_update(self):
-        for ant in self.ants:
-            rsl = self.inventory(ant_id=ant)
-            if rsl is not None and rsl != self.data_buff[ant]:
-                self.data_buff[ant] = rsl
-                data = {ant: rsl}
-                pkg = TransferPackage(code=206, eq_type=2, data=data, source=self.addr, msg_type=3,
-                                      storeroom_id=self.storeroom_id, eq_id=self.uuid)
-                self.queue_push_data.put(pkg)
-        self.getAndResetBuf()
+        try:
+            for ant in self.ants:
+                rsl = self.inventory(ant_id=ant)
+            rsl_data = self.getAndResetBuf()
+            print('old EPCs: ', self.data_buff)
+            print('new EPCs: ', rsl_data)
+            if rsl_data is not None:
+                diff_epcs = list(set(epc[0] for epc in rsl_data) ^ set(epc[0] for epc in self.data_buff))
+                print(diff_epcs)
+                if diff_epcs:
+                    is_increase = True if len(rsl_data) > len(self.data_buff) else False
+                    diff = [epc_ant for epc_ant in rsl_data if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]
+                    data = {'epcs': diff, 'is_increase': is_increase}
+                    pkg = TransferPackage(code=206, eq_type=2, data=data, source=self.addr, msg_type=3,
+                                          storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                    self.queue_push_data.put(pkg)
+                    self.data_buff = rsl_data
+        except Exception as e:
+            print('R2000 exception: ', e)
 
     def check(self, cmd_f):
         # complement ---- (~sum + 1)
@@ -312,7 +321,7 @@ class RfidR2000(threading.Thread):
             return frame_count if all_bytes % self.BUFFSIZE == 0 else frame_count + 1
 
     def getData(self, cmd, multiframe=False):
-        self.tcp_socket.settimeout(5)
+        self.tcp_socket.settimeout(1)
         data_total = b''
         try:
             self.tcp_socket.send(cmd)
@@ -329,9 +338,9 @@ class RfidR2000(threading.Thread):
                         count = self.count_frame(data)
                         print('count: ', count)
                         isfirst = False
+                        data_total += data
                     if num == count:
                         break
-                    data_total += data
             else:
                 data = self.tcp_socket.recv(self.BUFFSIZE)
         except socket.timeout:
@@ -448,29 +457,35 @@ class RfidR2000(threading.Thread):
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, True)
-        print('cmd back:', data)
-        if data[0][0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
-            print('ErrorCode: ', hex(data[4]))
-            return ERR_EQUIPMENT_RESP
+        # print('cmd back:', data)
+        if data != b'':
+            if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
+                print('ErrorCode: ', hex(data[4]))
+                return None
+            else:
+                # 截取每条数据
+                frames = []
+                length = int(data[1])
+                tag_count = int.from_bytes(data[4:6], byteorder='big', signed=False)
+                start = 0
+                for i in range(tag_count):
+                    end = start + length + 2
+                    frames.append(data[start:end])
+                    start = end
+                # 提取EPC
+                epcs = []
+                for f in frames:
+                    data_len = f[6]
+                    epc = f[9:5 + data_len]
+                    mask = b'\x03'
+                    freq_ant = f[7 + data_len + 1:7 + data_len + 2]
+                    ant = bytes([freq_ant[0] & mask[0]])
+                    epc_ant = (epc, ant)
+                    epcs.append(epc_ant)
+                self.reset_inv_buf()
+                return epcs
         else:
-            frames = []
-            length = int(data[1])
-            print(length)
-            tag_count = int.from_bytes(data[4:6], byteorder='big', signed=False)
-            print(tag_count)
-            start = 0
-            for i in range(tag_count):
-                end = start + length + 2
-                frames.append(data[start:end])
-                start = end
-            print(frames)
-            epcs = []
-            for f in frames:
-                data_len = f[6]
-                epc = f[9:5 + data_len]
-                print(epc)
-                epcs.append(epc)
-            return epcs
+            return None
 
     def reset_inv_buf(self):
         cmd_f = 'A0 03 ' + self.addr_num + '93'

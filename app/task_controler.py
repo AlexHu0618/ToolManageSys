@@ -5,7 +5,7 @@ import time
 from .globalvar import *
 import struct
 from app.myLogger import mylogger
-from database.models2 import Entrance, User, Grid
+from database.models2 import Entrance, User, Grid, History_inbound_outbound
 import sys
 
 
@@ -172,21 +172,13 @@ class StoreroomManager(threading.Thread):
     1、线程初始化先判断该库房的管理模式；
     2、从DB获取该库房的所有货架addr，以及user的工具包
     3、获取当前用户的借还信息列表；
+    4、开启定时子线程；
     4、持续监听接收pkg，并定时监听数据是否有变化；
     5、包分析：
         5.1 若为门禁pkg，则保存当前用户的借还信息，修改当前线程用户名；
         5.2 模式一, 若为货架pkg，则对比用户的借还信息并缓存更新； 模式三, 若为入口通道机，则缓存更新用户归还信息；若为出通道机，
         则缓存更新用户借出信息。发送更新信息到web，扫码枪同理。若为web确定信息pkg，则保存当前用户借还信息并结束线程。
     6、定时到则结束线程。
-
-        # 1、判断是否为新用户门禁登录；
-        # 1、发送进入通知发送到web；
-        # 2、先判断库房的管理模式；
-        # 3、从DB获取该库房的所有货架addr，以及user的工具包
-        # 4、查询工具包中物资点亮LCD；
-        # 5、循环监听发送数据包中该库房所有货架的数值变化，变化值发送到web；
-        # 6、等待退出条件（web确认/超时/新门禁通知）退出该循环；
-        # 7、调用出库管理。
     """
     def __init__(self, addr, user_code, queue_storeroom):
         threading.Thread.__init__(self)
@@ -199,6 +191,8 @@ class StoreroomManager(threading.Thread):
         self.queue_pkg = queue_storeroom
         self.gravity_goods = dict()  # {'grid_id': (type, value), }
         self.rfid_goods = dict()  # {'grid_id': (type, value), }
+        self.is_close = True
+        self.lock = threading.RLock()
 
     def run(self):
         """
@@ -208,8 +202,13 @@ class StoreroomManager(threading.Thread):
         """
         self._get_manage_mode()
         self._get_user()
+        interval = 60
+        over_timer = threading.Timer(interval=interval, function=self._get_is_close, args=[interval, ])
+        over_timer.start()
         while self.isrunning:
             if not self.queue_pkg.empty():
+                with self.lock:
+                    self.is_close = False
                 pkg = self.queue_pkg.get()
                 print('store: ', self.storeroom_id, ' got package: ', pkg)
                 if self.manage_mode == 1:
@@ -220,6 +219,20 @@ class StoreroomManager(threading.Thread):
                     pass
             else:
                 pass
+
+    def _get_is_close(self, interval):
+        """
+        定时判断是否没有update，是则结束借还线程；
+        :return:
+        """
+        if self.is_close:
+            print('\033[1;33m', 'Times out to close thread--', threading.current_thread().name, '\033[0m')
+            self._exit_manage()
+        else:
+            with self.lock:
+                self.is_close = True
+            over_timer = threading.Timer(interval=interval, function=self._get_is_close, args=[interval, ])
+            over_timer.start()
 
     def _handle_mode_one(self, pkg):
         """
@@ -237,7 +250,12 @@ class StoreroomManager(threading.Thread):
             eq_id = pkg['equipment_id']
             sensor_addr = pkg['data']['addr_num']
             grid = self._get_grid(eq_id=eq_id, sensor_addr=sensor_addr)
-            self.gravity_goods[grid.id] = (grid.type, pkg['data']['value'])
+            if grid.id in self.gravity_goods.keys():
+                self.gravity_goods[grid.id][1] += pkg['data']['value']
+                if abs(self.gravity_goods[grid.id][1]) < 5:
+                    del self.gravity_goods[grid.id]
+            else:
+                self.gravity_goods[grid.id] = [grid.type, pkg['data']['value']]
             print(self.gravity_goods)
         elif pkg['equipment_type'] == 2:
             pass
@@ -252,7 +270,15 @@ class StoreroomManager(threading.Thread):
         1、先查询用户是否有借出，有则清除并更新格子重量；
         :return:
         """
-        for k, v in self.gravity_goods:
+        history_list = History_inbound_outbound.by_user_not_return()
+        goods_id = [h.goods_id for h in history_list]
+        if history_list is not None:
+            for k, v in self.gravity_goods:
+                goods = Grid.by_id(k)
+                weight_change = v[1] - goods.weight
+                if k in goods_id:
+                    pass
+        else:
             pass
 
     def _get_toolkit_data(self, user):
@@ -297,7 +323,8 @@ class StoreroomManager(threading.Thread):
         2、保存库存与工具包信息到DB。
         :return:
         """
-        pass
+        with self.lock:
+            self.isrunning = False
 
     def check_inventory(self):
         """
