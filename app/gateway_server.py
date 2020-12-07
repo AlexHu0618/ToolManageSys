@@ -102,7 +102,7 @@ class GatewayServer(Process):
                     else:
                         del self.client_active[k]
                     del self.terminal_active[k]
-                    mylogger.warning('equipment %s is offline' % k)
+                    mylogger.warning('equipment (%s, %d) is offline' % k)
                     self._modify_db_eq_status(eq_type=v['type'], addr=k, is_online=False)
 
     def check_push_from_equipments(self):

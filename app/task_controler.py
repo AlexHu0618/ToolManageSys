@@ -144,7 +144,7 @@ class TaskControler(Process):
             storeroom_id = package['storeroom_id']
             if package['msg_type'] == 3 and package['equipment_type'] in (3, 5):
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
-                    self.storeroom_thread['queue'].put(package)
+                    self.storeroom_thread[storeroom_id]['queue'].put(package)
                 else:
                     print(package['data']['user'], ' enter to storeroom--', package['source'])
                     addr = package['source']
@@ -201,7 +201,7 @@ class StoreroomManager(threading.Thread):
         :return:
         """
         self._get_manage_mode()
-        self._get_user()
+        self._set_current_user()
         interval = 60
         over_timer = threading.Timer(interval=interval, function=self._get_is_close, args=[interval, ])
         over_timer.start()
@@ -245,7 +245,8 @@ class StoreroomManager(threading.Thread):
         if pkg['equipment_type'] == 3:
             self._save_data2db()
             self.user_code = pkg['data']['user']
-            self._get_user()
+            self._set_current_user()
+            print('current user is ', self.user_code)
         elif pkg['equipment_type'] == 1:
             # 1.modify grid; 2.modify history;
             eq_id = pkg['equipment_id']
@@ -261,13 +262,14 @@ class StoreroomManager(threading.Thread):
         elif pkg['equipment_type'] == 2:
             # 1.modify goods; 2.modify history;
             eq_id = pkg['equipment_id']
-            ant = pkg['data']['epcs'][1]
-            epc = pkg['data']['epcs'][0]
-            is_increased = pkg['data']['is_increased']
-            if epc in self.rfid_goods.keys():
-                del self.rfid_goods[epc]
-            else:
-                self.rfid_goods[epc] = (eq_id, ant, is_increased)
+            is_increased = pkg['data']['is_increase']
+            for epc_ant in pkg['data']['epcs']:
+                ant = epc_ant[1]
+                epc = epc_ant[0]
+                if epc in self.rfid_goods.keys():
+                    del self.rfid_goods[epc]
+                else:
+                    self.rfid_goods[epc] = (eq_id, ant, is_increased)
             print('all RFID--', self.rfid_goods)
         else:
             pass
@@ -282,7 +284,8 @@ class StoreroomManager(threading.Thread):
         3、同时检测是否放置错误的重力格子或者RFID格子；
         :return:
         """
-        history_list = History_inbound_outbound.by_user_not_return()
+        print('_save_data2db')
+        history_list = History_inbound_outbound.by_user_need_return(self.user_id)
         goods_id = [h.goods_id for h in history_list]
         if history_list is not None:
             for k, v in self.gravity_goods:
@@ -314,7 +317,7 @@ class StoreroomManager(threading.Thread):
         self.manage_mode = storeroom.manage_mode
         print(storeroom.shelfs)
 
-    def _get_user(self):
+    def _set_current_user(self):
         user = User.by_code(code=self.user_code)
         if user is not None:
             self.user_id = user.uuid
@@ -335,6 +338,7 @@ class StoreroomManager(threading.Thread):
         2、保存库存与工具包信息到DB。
         :return:
         """
+        self._save_data2db()
         with self.lock:
             self.isrunning = False
 

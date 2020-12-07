@@ -301,6 +301,7 @@ class RfidR2000(threading.Thread):
                                           storeroom_id=self.storeroom_id, eq_id=self.uuid)
                     self.queue_push_data.put(pkg)
                     self.data_buff = rsl_data
+            self.reset_inv_buf()
         except Exception as e:
             print('R2000 exception: ', e)
 
