@@ -8,8 +8,7 @@ from operator import methodcaller
 from multiprocessing import Process
 from app.globalvar import *
 import time
-from database.models2 import Grid
-from database.models2 import dbSession as db
+from database.models2 import Entrance, Collector, Indicator, CodeScanner, ChannelMachine
 
 
 class GatewayServer(Process):
@@ -103,6 +102,8 @@ class GatewayServer(Process):
                     else:
                         del self.client_active[k]
                     del self.terminal_active[k]
+                    mylogger.warning('equipment %s is offline' % k)
+                    self._modify_db_eq_status(eq_type=v['type'], addr=k, is_online=False)
 
     def check_push_from_equipments(self):
         """
@@ -235,7 +236,8 @@ class GatewayServer(Process):
                     self.server_active[addr] = (terminal_type, storeroom_id)
                     self.lock.release()
                     print('服务端(%s)已成功连接。。' % str(addr))
-                    mylogger.info('服务端(%s)已成功连接。。' % str(addr))
+                    mylogger.info('服务端(%s)已成功连接。。online' % str(addr))
+                    self._modify_db_eq_status(eq_type=terminal_type, addr=addr, is_online=True)
                     return True
             except socket.error:
                 failed_count += 1
@@ -282,7 +284,8 @@ class GatewayServer(Process):
                                                   'data': {}, 'is_server': False}
                     self.client_active[addr] = client_type
                     self.lock.release()
-                    mylogger.info('客户端(%s)已成功连接。。' % str(addr))
+                    mylogger.info('客户端(%s)已成功连接。。online' % str(addr))
+                    self._modify_db_eq_status(eq_type=client_type, addr=addr, is_online=True)
                     print('客户端(%s)已成功连接。。' % str(addr))
                 else:
                     mylogger.info('客户端(%s)连接创建线程失败。。' % str(addr))
@@ -388,3 +391,30 @@ class GatewayServer(Process):
         self.lock.acquire()
         self.isrunning = False
         self.lock.release()
+
+    def _modify_db_eq_status(self, eq_type: str, addr: tuple, is_online: bool):
+        """
+        设备的类型包括：['entrance', 'code_scane', 'channel_machine', 'led', 'gravity', 'rfid2000']
+        :param eq_type:
+        :return:
+        """
+        if eq_type == 'entrance':
+            entrance = Entrance.by_addr(ip=addr[0], port=addr[1])
+            if entrance is not None:
+                entrance.update(entrance.status, int(is_online))
+            else:
+                mylogger.warning('Not found object(%s,%d) from DB-entrance while updating' % addr)
+        elif eq_type == 'gravity' or 'rfid200':
+            collector = Collector.by_addr(ip=addr[0], port=addr[1])
+            if collector is not None:
+                collector.update(collector.status, int(is_online))
+            else:
+                mylogger.warning('Not found object(%s,%d) from DB-collector while updating' % addr)
+        elif eq_type == 'led':
+            indicator = Indicator.by_addr(ip=addr[0], port=addr[1])
+            if indicator is not None:
+                indicator.update(indicator.status, int(is_online))
+            else:
+                mylogger.warning('Not found object(%s,%d) from DB-indicator while updating' % addr)
+        else:
+            pass

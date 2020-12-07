@@ -5,7 +5,7 @@ import time
 from .globalvar import *
 import struct
 from app.myLogger import mylogger
-from database.models2 import Entrance, User, Grid, History_inbound_outbound
+from database.models2 import Entrance, User, Grid, History_inbound_outbound, Goods
 import sys
 
 
@@ -190,7 +190,7 @@ class StoreroomManager(threading.Thread):
         self.isrunning = True
         self.queue_pkg = queue_storeroom
         self.gravity_goods = dict()  # {'grid_id': (type, value), }
-        self.rfid_goods = dict()  # {'grid_id': (type, value), }
+        self.rfid_goods = dict()  # {'ecp': (eq_id, ant, is_increased), }
         self.is_close = True
         self.lock = threading.RLock()
 
@@ -247,18 +247,28 @@ class StoreroomManager(threading.Thread):
             self.user_code = pkg['data']['user']
             self._get_user()
         elif pkg['equipment_type'] == 1:
+            # 1.modify grid; 2.modify history;
             eq_id = pkg['equipment_id']
             sensor_addr = pkg['data']['addr_num']
-            grid = self._get_grid(eq_id=eq_id, sensor_addr=sensor_addr)
+            grid = self._get_gravity_grid(eq_id=eq_id, sensor_addr=sensor_addr)
             if grid.id in self.gravity_goods.keys():
                 self.gravity_goods[grid.id][1] += pkg['data']['value']
                 if abs(self.gravity_goods[grid.id][1]) < 5:
                     del self.gravity_goods[grid.id]
             else:
                 self.gravity_goods[grid.id] = [grid.type, pkg['data']['value']]
-            print(self.gravity_goods)
+            print('all gravity--', self.gravity_goods)
         elif pkg['equipment_type'] == 2:
-            pass
+            # 1.modify goods; 2.modify history;
+            eq_id = pkg['equipment_id']
+            ant = pkg['data']['epcs'][1]
+            epc = pkg['data']['epcs'][0]
+            is_increased = pkg['data']['is_increased']
+            if epc in self.rfid_goods.keys():
+                del self.rfid_goods[epc]
+            else:
+                self.rfid_goods[epc] = (eq_id, ant, is_increased)
+            print('all RFID--', self.rfid_goods)
         else:
             pass
 
@@ -268,6 +278,8 @@ class StoreroomManager(threading.Thread):
     def _save_data2db(self):
         """
         1、先查询用户是否有借出，有则清除并更新格子重量；
+        2、更改对应EPC的在库状态，更新用户的借还历史；
+        3、同时检测是否放置错误的重力格子或者RFID格子；
         :return:
         """
         history_list = History_inbound_outbound.by_user_not_return()
@@ -309,7 +321,7 @@ class StoreroomManager(threading.Thread):
         else:
             mylogger.error('get no user by code %s' % self.user_code)
 
-    def _get_grid(self, eq_id, sensor_addr):
+    def _get_gravity_grid(self, eq_id, sensor_addr):
         grid = Grid.by_eqid_sensor(eq_id=eq_id, sensor_addr=sensor_addr)
         return grid
 

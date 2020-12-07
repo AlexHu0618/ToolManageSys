@@ -356,7 +356,7 @@ class Grid(Base, MyBase):
     total = Column(Integer, default=0)  # 重力格为总重量；RFID格为物资总个数；
     led_id = Column(String(50))
     led_addr = Column(String(10), default='01')  # '0xFF'
-    antenna_num = Column(String(50))  # '0,1,2,3'
+    antenna_num = Column(String(50))  # '00,01,02,03'
     is_multiple = Column(Boolean, default=False)
     min_inventory = Column(Integer, default=0)
     is_understock = Column(Boolean, default=False)
@@ -433,11 +433,15 @@ class Goods(Base, MyBase):
     weight = Column(Integer)  # 单个重量, 单位g
     count = Column(Integer, default=1)  # 数量
     status = Column(Integer, default=1)  # 1-正常；2-维修；3-检验；4-报废；
-    is_in_store = Column(Boolean, default=True)
+    is_in_store = Column(Boolean, default=True)  # RFID
     goods_pic = Column(BLOB)
     grid_id = Column(String(50), ForeignKey('grid.id'))
 
     grid = relationship('Grid', back_populates='goods')
+
+    @classmethod
+    def by_rfid_uid(cls, epc):
+        return dbSession.query(cls).filter_by(rfid_uid=epc).first()
 
 
 class Toolkit(Base, MyBase):
