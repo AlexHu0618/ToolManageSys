@@ -70,7 +70,7 @@ class MyBase:
             return 1
         except Exception as e:
             dbSession.rollback()
-            print(e)
+            print('DB update', e)
             return None
 
     @classmethod
@@ -383,7 +383,7 @@ class Collector(Base, MyBase):
     ip = Column(String(100))
     port = Column(Integer)
     is_server = Column(Boolean, default=False)
-    type = Column(Integer)  # 1-重力；2-RFID；
+    type = Column(Integer)  # 1-重力； 2-RFIDR2000; 3-RFIDR2000FH；
     sensor_count = Column(Integer)  # 当前连接的传感器数量或天线数量
     status = Column(Integer, default=1)  # 0-离线；1-正常；
     last_offline_time = Column(DateTime, default=datetime.now)

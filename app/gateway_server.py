@@ -1,5 +1,5 @@
 import socket
-from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard
+from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard, RfidR2000FH
 # from app.object_test import GravityShelf, RfidR2000, Lcd, EntranceGuard
 from queue import Queue
 from app.myLogger import mylogger
@@ -9,12 +9,13 @@ from multiprocessing import Process
 from app.globalvar import *
 import time
 from database.models2 import Entrance, Collector, Indicator, CodeScanner, ChannelMachine
+import datetime
 
 
 class GatewayServer(Process):
     """
     1、所有的TCP设备终端应该按库房进行分类管理；
-    2、设备的类型包括：['entrance', 'code_scane', 'channel_machine', 'led', 'gravity', 'rfid2000']
+    2、设备的类型包括：['entrance', 'code_scane', 'channel_machine', 'led', 'gravity', 'rfid2000', 'rfid2000fh']
     """
     def __init__(self, port: int, servers_registered: dict, clients_registered: dict, queue_task, queue_rsl):
         super().__init__()
@@ -96,7 +97,7 @@ class GatewayServer(Process):
                 if not v['thread'].isAlive():
                     pkg = TransferPackage(source=k, msg_type=2, code=204)
                     self.queue_rsl.put(pkg)
-                    print(k, 'is offline')
+                    print('\033[1;33m', k, 'is offline', '\033[0m')
                     if v['is_server']:
                         del self.server_active[k]
                     else:
@@ -224,6 +225,8 @@ class GatewayServer(Process):
                         thread = Lcd(addr, s, queue_task, queue_rsl, subevent, storeroom_id, uuid)
                     elif terminal_type == 'rfid2000':
                         thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
+                    elif terminal_type == 'rfid2000fh':
+                        thread = RfidR2000FH(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                     else:
                         pass
                 if thread:
@@ -273,6 +276,8 @@ class GatewayServer(Process):
                     thread = Lcd(addr, client_sock, queue_task, queue_rsl, subevent, storeroom_id, uuid)
                 elif client_type == 'rfid2000':
                     thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
+                elif client_type == 'rfid2000fh':
+                    thread = RfidR2000FH(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                 else:
                     pass
                 if thread:
@@ -394,27 +399,39 @@ class GatewayServer(Process):
 
     def _modify_db_eq_status(self, eq_type: str, addr: tuple, is_online: bool):
         """
-        设备的类型包括：['entrance', 'code_scane', 'channel_machine', 'led', 'gravity', 'rfid2000']
+        设备的类型包括：['entrance', 'code_scane', 'channel_machine', 'led', 'gravity', 'rfid2000', 'rfid2000fh']
         :param eq_type:
         :return:
         """
-        if eq_type == 'entrance':
-            entrance = Entrance.by_addr(ip=addr[0], port=addr[1])
-            if entrance is not None:
-                entrance.update(entrance.status, int(is_online))
+        try:
+            if eq_type == 'entrance':
+                entrance = Entrance.by_addr(ip=addr[0], port=addr[1])
+                if entrance is not None:
+                    entrance.update('status', int(is_online))
+                    if not is_online:
+                        cur_dt = str(datetime.datetime.now())
+                        entrance.update('last_offline_time', cur_dt)
+                else:
+                    mylogger.warning('Not found object(%s,%d) from DB-entrance while updating' % addr)
+            elif eq_type in ['gravity', 'rfid2000', 'rfid2000fh']:
+                collector = Collector.by_addr(ip=addr[0], port=addr[1])
+                if collector is not None:
+                    collector.update('status', int(is_online))
+                    if not is_online:
+                        cur_dt = str(datetime.datetime.now())
+                        collector.update('last_offline_time', cur_dt)
+                else:
+                    mylogger.warning('Not found object(%s,%d) from DB-collector while updating' % addr)
+            elif eq_type == 'led':
+                indicator = Indicator.by_addr(ip=addr[0], port=addr[1])
+                if indicator is not None:
+                    indicator.update('status', int(is_online))
+                    if not is_online:
+                        cur_dt = str(datetime.datetime.now())
+                        indicator.update('last_offline_time', cur_dt)
+                else:
+                    mylogger.warning('Not found object(%s,%d) from DB-indicator while updating' % addr)
             else:
-                mylogger.warning('Not found object(%s,%d) from DB-entrance while updating' % addr)
-        elif eq_type == 'gravity' or 'rfid200':
-            collector = Collector.by_addr(ip=addr[0], port=addr[1])
-            if collector is not None:
-                collector.update(collector.status, int(is_online))
-            else:
-                mylogger.warning('Not found object(%s,%d) from DB-collector while updating' % addr)
-        elif eq_type == 'led':
-            indicator = Indicator.by_addr(ip=addr[0], port=addr[1])
-            if indicator is not None:
-                indicator.update(indicator.status, int(is_online))
-            else:
-                mylogger.warning('Not found object(%s,%d) from DB-indicator while updating' % addr)
-        else:
-            pass
+                pass
+        except Exception as e:
+            print('_modify_db_eq_status', e)

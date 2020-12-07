@@ -8,6 +8,7 @@ import time
 from app.myLogger import mylogger
 from app.globalvar import *
 import copy
+from queue import Queue
 
 
 class GravityShelf(threading.Thread):
@@ -34,6 +35,7 @@ class GravityShelf(threading.Thread):
         self.storeroom_id = storeroom_id
         self.frequency = 1  # secends
         self.uuid = uuid
+        self.timeout_count = 0
 
     def run(self):
         data_buff = {}
@@ -114,11 +116,15 @@ class GravityShelf(threading.Thread):
                 data_total.append(data)
             else:
                 data = self.tcp_socket.recv(self.BUFFSIZE)
+            self.timeout_count = 0
         except socket.timeout:
             if multiframe and data_total:
                 return data_total
             else:
-                # print('G--Warning', '等待TCP消息回应超时')
+                print('G--Warning', '等待TCP消息回应超时')
+                self.timeout_count += 1
+                if self.timeout_count > 5:
+                    self.isrunning = False
                 return TIMEOUT
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
@@ -267,6 +273,8 @@ class RfidR2000(threading.Thread):
                         # print('R--inventory: ', rsl)
                     else:
                         pass
+            except Exception as e:
+                print(e)
             finally:
                 self.lock.release()
             # time.sleep(10)
@@ -288,8 +296,8 @@ class RfidR2000(threading.Thread):
             for ant in self.ants:
                 rsl = self.inventory(ant_id=ant)
             rsl_data = self.getAndResetBuf()
-            print('old EPCs: ', self.data_buff)
-            print('new EPCs: ', rsl_data)
+            # print('old EPCs: ', self.data_buff)
+            # print('new EPCs: ', rsl_data)
             if rsl_data is not None:
                 diff_epcs = list(set(epc[0] for epc in rsl_data) ^ set(epc[0] for epc in self.data_buff))
                 print(diff_epcs)
@@ -337,7 +345,7 @@ class RfidR2000(threading.Thread):
                     num += 1
                     if isfirst:
                         count = self.count_frame(data)
-                        print('count: ', count)
+                        # print('count: ', count)
                         isfirst = False
                         data_total += data
                     if num == count:
@@ -444,7 +452,7 @@ class RfidR2000(threading.Thread):
             data = self.getData(cmd, False)
             if data[0:5] == bytes.fromhex('A0 0C' + self.addr_num + '80' + ant_id):
                 tag_count = int.from_bytes(data[5:7], byteorder='big', signed=False)
-                print('ant(%s) tag_count: %d' % (data[4], tag_count))
+                # print('ant(%s) tag_count: %d' % (data[4], tag_count))
                 return tag_count
             elif data[0:5] == bytes.fromhex('A0 04' + self.addr_num + '80 22'):
                 return -1
@@ -928,28 +936,135 @@ class RfidR2000FH(threading.Thread):
         self.uuid = uuid
         self.queue_push_data = queue_push_data
         self.lock = threading.RLock()
-        self.ctrl_mask = b'\x0001' + b'\21'
+        self.q_cmd = Queue(50)
+        self.current_epcs = list()
+        self.data_buff = list()  # [(epc, ant), ]
+        self.timeout_counter = 0
 
     def run(self):
+        """
+        1、主线程负责外部指令处理以及接收处理，子线程负责数据发送；
+        2、使用生产消费者模式；
+        :return:
+        """
+        self.tcp_socket.settimeout(1)
+        thd_send = threading.Thread(target=self._send_recv)
+        thd_auto_inventory = threading.Timer(interval=5, function=self._inventory_once)
+        thd_send.daemon = True
+        thd_send.start()
+        thd_auto_inventory.start()
         while self.isrunning:
-            time.sleep(10)
-            print('RFID_R2000 frequency hopping back data, storeroom_id= ', self.storeroom_id)
+            try:
+                if not self.queuetask.empty():
+                    task, args = self.queuetask.get()
+                    rsl = methodcaller(task, *args)(self)
+                    if rsl is not None:
+                        pkg = TransferPackage(code=200, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                        self.queuersl.put(pkg)
+                        self.event.set()
+                else:
+                    localtime = time.localtime(time.time())
+                    if localtime.tm_sec % 10 == 0:
+                        self._check_data_update()
+                        time.sleep(1)
+                        # print('R--inventory: ', rsl)
+                    else:
+                        pass
+            except KeyboardInterrupt:
+                self.tcp_socket.shutdown(2)
+                self.tcp_socket.close()
+        print('thread R2000FH is closed.....')
 
-    def checksum(self):
-        pass
+    def _check_data_update(self):
+        try:
+            print('R2000FH old EPCs: ', self.data_buff)
+            print('R2000FH new EPCs: ', self.current_epcs)
+            if self.current_epcs is not None:
+                diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
+                print('R2000FH diff_epcs--', diff_epcs)
+                if diff_epcs:
+                    is_increase = True if len(self.current_epcs) > len(self.data_buff) else False
+                    diff = [epc_ant for epc_ant in self.current_epcs if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]
+                    data = {'epcs': diff, 'is_increase': is_increase}
+                    pkg = TransferPackage(code=206, eq_type=2, data=data, source=self.addr, msg_type=3,
+                                          storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                    self.queue_push_data.put(pkg)
+                with self.lock:
+                    self.data_buff.clear()
+                    self.data_buff = self.current_epcs
+        except Exception as e:
+            print('R2000FH exception: ', e)
 
-    def is_connecting(self):
-        """
-        MID = 0x12
-        :return:
-        """
-        mid = b'\x12'
-        data = ''
-        cmd = self.ctrl_mask + mid + self.addr_num
+    def _send_recv(self):
+        while self.isrunning:
+            if not self.q_cmd.empty():
+                cmd = self.q_cmd.get()
+                self.tcp_socket.send(cmd)
+            else:
+                try:
+                    data = self.tcp_socket.recv(1024)
+                    self.timeout_counter = 0
+                    self._analyze_recv_data(data=data)
+                except socket.timeout:
+                    print('RFID2000FH times out')
+                    self.timeout_counter += 1
+                    if self.timeout_counter > 20:
+                        with self.lock:
+                            self.isrunning = False
+                    continue
+                except (OSError, BrokenPipeError):
+                    print('Error', 'TCP连接已断开')
+                    self.is_running = False
+                except AttributeError:
+                    print('Error', 'TCP未连接')
+                    self.is_running = False
+                except Exception as e:
+                    print('Error', repr(e))
 
-    def read_epc(self):
-        """
-        MID = 0x10
-        :return:
-        """
-        pass
+    def _analyze_recv_data(self, data):
+        len_all_data = len(data)
+        start = 0
+        end = 0
+        while end < len_all_data:
+            head = data[start:start + 5]
+            if head == bytes.fromhex('5A 00 01 12 00'):
+                len_data = int.from_bytes(data[(start + 5):(start + 7)], byteorder='big', signed=False)
+                len_epc = int.from_bytes(data[(start + 7):(start + 9)], byteorder='big', signed=False)
+                epc = data[(start + 9):(start + 9 + len_epc)]
+                ant = data[(start + 9 + len_epc + 2):(start + 9 + len_epc + 2 + 1)]
+                print('(EPC, ant)--(%s, %s)' % (epc, ant))
+                with self.lock:
+                    if (epc, ant) not in self.current_epcs:
+                        self.current_epcs.append((epc, ant))
+                start += (5 + 2 + len_data + 2)
+                end = start
+            elif head == bytes.fromhex('5A 00 01 12 02'):
+                start += (5 + 5)
+                end = start
+            else:
+                break
+
+    def _get_current_epc(self):
+        print(self.current_epcs)
+        with self.lock:
+            self.current_epcs.clear()
+
+    def _inventory_once(self):
+        cmd = bytes.fromhex('5A 00 01 02 10 00 05 00 00 00 FF 00 D4 68')
+        self.q_cmd.put(cmd)
+        with self.lock:
+            self.current_epcs.clear()
+        thd_auto_inventory = threading.Timer(interval=5, function=self._inventory_once)
+        thd_auto_inventory.start()
+
+    def _inventory(self):
+        cmd = bytes.fromhex('5A 00 01 02 10 00 05 00 00 00 FF 01 C4 49')
+        self.q_cmd.put(cmd)
+        time.sleep(1)
+        self._stop()
+        thd_auto_inventory = threading.Timer(interval=2, function=self._inventory)
+        thd_auto_inventory.start()
+
+    def _stop(self):
+        cmd = bytes.fromhex('5A 00 01 02 FF 00 00 88 5A')
+        self.q_cmd.put(cmd)

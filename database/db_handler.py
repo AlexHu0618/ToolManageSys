@@ -43,6 +43,7 @@ def get_all_code_scanners(storeroom, clients_servers):
 
 
 def get_all_collectors(storeroom, clients_servers):
+    type_name = {1: 'gravity', 2: 'rfid2000', 3: 'rfid2000fh'}
     shelfs = storeroom.shelfs
     if shelfs is not None:
         for shelf in shelfs:
@@ -50,9 +51,9 @@ def get_all_collectors(storeroom, clients_servers):
             if collectors is not None:
                 for collector in collectors:
                     if collector.is_server is True:
-                        clients_servers['servers'][(collector.ip, collector.port)] = ('gravity', collector.id) if collector.type == 1 else ('rfid2000', collector.id)
+                        clients_servers['servers'][(collector.ip, collector.port)] = (type_name[collector.type], collector.id)
                     else:
-                        clients_servers['clients'][(collector.ip, collector.port)] = ('gravity', collector.id) if collector.type == 1 else ('rfid2000', collector.id)
+                        clients_servers['clients'][(collector.ip, collector.port)] = (type_name[collector.type], collector.id)
 
                         
 def get_all_channel_machine(storeroom, clients_servers):
