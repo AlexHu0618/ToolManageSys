@@ -290,7 +290,6 @@ class StoreroomManager(threading.Thread):
         print('\033[1;33m', 'all gravity--', self.gravity_goods)
         print('all RFID--', self.rfid_goods, '\033[0m')
         history_list = History_inbound_outbound.by_user_need_return(self.user_id)
-        print(history_list)
         history_gravity = [h for h in history_list if h.monitor_way == 1]
         history_rfid = [h for h in history_list if h.monitor_way == 2]
         self._save_gravity_data(history=history_gravity)
@@ -309,7 +308,6 @@ class StoreroomManager(threading.Thread):
         """
         current_dt = datetime.datetime.now()
         grids_history = [h.grid_id for h in history]
-        print('grids_history--', grids_history)
         for k, v in self.gravity_goods.items():
             if v[0] == 2:
                 # 为耗材
@@ -324,7 +322,6 @@ class StoreroomManager(threading.Thread):
                         # 存在位置错误的
                         record = history[grids_history.index(k)]
                         diff = record.count - abs(v[1])
-                        print('# 存在位置错误的', record.is_wrong_place, diff)
                         if record.is_wrong_place and abs(diff) < self.gravity_precision:
                             record.update('is_wrong_place', 0)
                     else:
@@ -334,28 +331,23 @@ class StoreroomManager(threading.Thread):
                 else:
                     # 为归还
                     if k in grids_history:
-                        print('here1')
                         # 有未还
                         record = history[grids_history.index(k)]
-                        print(record)
                         diff = record.count - v[1]
                         if abs(diff) < self.gravity_precision:
-                            print('1')
                             # 全部归还
                             record.update('status', 0)
                             record.update('inbound_datetime', current_dt)
                         elif diff > 5:
-                            print('2')
                             # 部分归还
                             record.update('count', diff)
                             record.update('inbound_datetime', current_dt)
                         else:
-                            print(3)
                             # 放置错误
                             record.update('is_wrong_place', True)
                             record.update('inbound_datetime', current_dt)
                     else:
-                        print('4')
+                        # 放置错误
                         record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), monitor_way=1,
                                                           inbound_datetime=current_dt, status=0, is_wrong_place=True)
                         record.save()
