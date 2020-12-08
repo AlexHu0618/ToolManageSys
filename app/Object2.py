@@ -252,7 +252,7 @@ class RfidR2000(threading.Thread):
         self.lock = threading.RLock()
         self.uuid = uuid
         self.ants = ['00', '01', '02', '03', '04', '05', '06', '07']
-        self. data_buff = list()
+        self.data_buff = list()
 
     def run(self):
         self._initial_data()
@@ -309,7 +309,6 @@ class RfidR2000(threading.Thread):
                                           storeroom_id=self.storeroom_id, eq_id=self.uuid)
                     self.queue_push_data.put(pkg)
                     self.data_buff = rsl_data
-            self.reset_inv_buf()
         except Exception as e:
             print('R2000 exception: ', e)
 
@@ -470,6 +469,8 @@ class RfidR2000(threading.Thread):
         if data != b'':
             if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
                 print('ErrorCode: ', hex(data[4]))
+                return None
+            elif data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '93'):
                 return None
             else:
                 # 截取每条数据
@@ -945,6 +946,7 @@ class RfidR2000FH(threading.Thread):
         """
         1、主线程负责外部指令处理以及接收处理，子线程负责数据发送；
         2、使用生产消费者模式；
+        3、每隔5s从设备读取一次数据更新；
         :return:
         """
         self.tcp_socket.settimeout(1)
@@ -991,7 +993,8 @@ class RfidR2000FH(threading.Thread):
                     self.queue_push_data.put(pkg)
                 with self.lock:
                     self.data_buff.clear()
-                    self.data_buff = self.current_epcs
+                    self.data_buff = [epc_ant for epc_ant in self.current_epcs]
+                    self.current_epcs.clear()
         except Exception as e:
             print('R2000FH exception: ', e)
 
@@ -1034,8 +1037,10 @@ class RfidR2000FH(threading.Thread):
                 ant = data[(start + 9 + len_epc + 2):(start + 9 + len_epc + 2 + 1)]
                 print('(EPC, ant)--(%s, %s)' % (epc, ant))
                 with self.lock:
-                    if (epc, ant) not in self.current_epcs:
+                    if epc not in [epc_ant[0] for epc_ant in self.current_epcs]:
                         self.current_epcs.append((epc, ant))
+                # if (epc, ant) not in self.current_epcs.copy():
+                #     self.current_epcs.append((epc, ant))
                 start += (5 + 2 + len_data + 2)
                 end = start
             elif head == bytes.fromhex('5A 00 01 12 02'):
@@ -1052,8 +1057,6 @@ class RfidR2000FH(threading.Thread):
     def _inventory_once(self):
         cmd = bytes.fromhex('5A 00 01 02 10 00 05 00 00 00 FF 00 D4 68')
         self.q_cmd.put(cmd)
-        with self.lock:
-            self.current_epcs.clear()
         thd_auto_inventory = threading.Timer(interval=5, function=self._inventory_once)
         thd_auto_inventory.start()
 

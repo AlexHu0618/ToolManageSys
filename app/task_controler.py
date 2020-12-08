@@ -285,16 +285,22 @@ class StoreroomManager(threading.Thread):
         :return:
         """
         print('_save_data2db')
+        print('\033[1;33m', 'all gravity--', self.gravity_goods)
+        print('all RFID--', self.rfid_goods, '\033[0m')
         history_list = History_inbound_outbound.by_user_need_return(self.user_id)
         goods_id = [h.goods_id for h in history_list]
         if history_list is not None:
-            for k, v in self.gravity_goods:
-                goods = Grid.by_id(k)
-                weight_change = v[1] - goods.weight
-                if k in goods_id:
-                    pass
+            pass
+            # for k, v in self.gravity_goods:
+            #     goods = Grid.by_id(k)
+            #     weight_change = v[1] - goods.weight
+            #     if k in goods_id:
+            #         pass
         else:
             pass
+        with self.lock:
+            self.rfid_goods.clear()
+            self.gravity_goods.clear()
 
     def _get_toolkit_data(self, user):
         """
