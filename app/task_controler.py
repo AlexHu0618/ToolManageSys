@@ -7,6 +7,7 @@ import struct
 from app.myLogger import mylogger
 from database.models2 import Entrance, User, Grid, History_inbound_outbound, Goods
 import sys
+import datetime
 
 
 class TaskControler(Process):
@@ -193,6 +194,7 @@ class StoreroomManager(threading.Thread):
         self.rfid_goods = dict()  # {'ecp': (eq_id, ant, is_increased), }
         self.is_close = True
         self.lock = threading.RLock()
+        self.gravity_precision = 10
 
     def run(self):
         """
@@ -288,19 +290,78 @@ class StoreroomManager(threading.Thread):
         print('\033[1;33m', 'all gravity--', self.gravity_goods)
         print('all RFID--', self.rfid_goods, '\033[0m')
         history_list = History_inbound_outbound.by_user_need_return(self.user_id)
-        goods_id = [h.goods_id for h in history_list]
-        if history_list is not None:
-            pass
-            # for k, v in self.gravity_goods:
-            #     goods = Grid.by_id(k)
-            #     weight_change = v[1] - goods.weight
-            #     if k in goods_id:
-            #         pass
-        else:
-            pass
+        print(history_list)
+        history_gravity = [h for h in history_list if h.monitor_way == 1]
+        history_rfid = [h for h in history_list if h.monitor_way == 2]
+        self._save_gravity_data(history=history_gravity)
+        self._save_rfid_data(history=history_rfid)
         with self.lock:
             self.rfid_goods.clear()
             self.gravity_goods.clear()
+
+    def _save_gravity_data(self, history: list):
+        """
+        1、若为耗材，则直接保存并设为已还；
+        2、若为借出，先判断是否位置错误，符合条件则设置为已还，否则新增借出并设置未还；
+        3、若为归还，则查询是否有未还，有再判断是否全部归还或者放置错误；没有则判断为放置错误；
+        :param history:
+        :return:
+        """
+        current_dt = datetime.datetime.now()
+        grids_history = [h.grid_id for h in history]
+        print('grids_history--', grids_history)
+        for k, v in self.gravity_goods.items():
+            if v[0] == 2:
+                # 为耗材
+                record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), outbound_datetime=current_dt,
+                                                   status=0, monitor_way=1)
+                record.save()
+            else:
+                # 工具或仪器
+                if v[1] < 0:
+                    # 为借出
+                    if k in grids_history:
+                        # 存在位置错误的
+                        record = history[grids_history.index(k)]
+                        diff = record.count - abs(v[1])
+                        print('# 存在位置错误的', record.is_wrong_place, diff)
+                        if record.is_wrong_place and abs(diff) < self.gravity_precision:
+                            record.update('is_wrong_place', 0)
+                    else:
+                        record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), monitor_way=1,
+                                                          outbound_datetime=current_dt, status=1)
+                        record.save()
+                else:
+                    # 为归还
+                    if k in grids_history:
+                        print('here1')
+                        # 有未还
+                        record = history[grids_history.index(k)]
+                        print(record)
+                        diff = record.count - v[1]
+                        if abs(diff) < self.gravity_precision:
+                            print('1')
+                            # 全部归还
+                            record.update('status', 0)
+                            record.update('inbound_datetime', current_dt)
+                        elif diff > 5:
+                            print('2')
+                            # 部分归还
+                            record.update('count', diff)
+                            record.update('inbound_datetime', current_dt)
+                        else:
+                            print(3)
+                            # 放置错误
+                            record.update('is_wrong_place', True)
+                            record.update('inbound_datetime', current_dt)
+                    else:
+                        print('4')
+                        record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), monitor_way=1,
+                                                          inbound_datetime=current_dt, status=0, is_wrong_place=True)
+                        record.save()
+
+    def _save_rfid_data(self, history: list):
+        pass
 
     def _get_toolkit_data(self, user):
         """

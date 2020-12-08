@@ -13,7 +13,7 @@ from string import printable
 
 from pbkdf2 import PBKDF2
 from sqlalchemy.orm import relationship
-from sqlalchemy import (Column, Integer, String, Table, BLOB, Boolean, DateTime, ForeignKey, Date)
+from sqlalchemy import (Column, Integer, String, Table, BLOB, Boolean, DateTime, ForeignKey, Date, and_, or_)
 from database.dbsession import Base
 from database.dbsession import dbSession
 
@@ -456,12 +456,16 @@ class History_inbound_outbound(Base, MyBase):
     __tablename__ = 'history_inbound_outbound'
     id = Column(String(50), primary_key=True, unique=True, nullable=False, default=lambda: str(uuid4()))
     user_id = Column(String(100))
+    grid_id = Column(String(100))
     goods_id = Column(String(100))
     count = Column(Integer)
     outbound_datetime = Column(DateTime)
     inbound_datetime = Column(DateTime, default=None)
-    status = Column(Integer, default=1)  # 0-已还；1-未还；2-催还；
+    status = Column(Integer, default=1)  # 0-已还；1-未还；2-催还;
+    is_wrong_place = Column(Boolean, default=False)  # 0-False; 1-True;
+    monitor_way = Column(Integer, default=2)  # 1-重力；2-RFID
 
     @classmethod
     def by_user_need_return(cls, user_id):
-        return dbSession.query(cls).filter(cls.user_id == user_id, cls.status != 0).all()
+        return dbSession.query(cls).filter(and_(cls.user_id == user_id,
+                                                or_(cls.status != 0, cls.is_wrong_place == 1))).all()

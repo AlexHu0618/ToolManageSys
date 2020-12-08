@@ -1049,10 +1049,9 @@ class RfidR2000FH(threading.Thread):
             else:
                 break
 
-    def _get_current_epc(self):
-        print(self.current_epcs)
-        with self.lock:
-            self.current_epcs.clear()
+    def get_current_epc(self):
+        print(self.data_buff)
+        return self.data_buff
 
     def _inventory_once(self):
         cmd = bytes.fromhex('5A 00 01 02 10 00 05 00 00 00 FF 00 D4 68')

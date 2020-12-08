@@ -417,6 +417,8 @@ class GatewayServer(Process):
                 collector = Collector.by_addr(ip=addr[0], port=addr[1])
                 if collector is not None:
                     collector.update('status', int(is_online))
+                    # shelf = collector.shelf
+                    # map(lambda grid: grid.update('status', int(is_online)), shelf.grids)
                     if not is_online:
                         cur_dt = str(datetime.datetime.now())
                         collector.update('last_offline_time', cur_dt)
