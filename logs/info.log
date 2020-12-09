@@ -1,467 +1,191 @@
-2020-12-08 14:30:11,471 - root - INFO - main.py:60 - START SERVER
-2020-12-08 14:30:12,178 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 14:30:12,235 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 14:30:12,246 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 14:30:12,305 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 14:30:12,331 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 14:30:12,476 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 14:30:12,555 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 14:30:16,430 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.117, 26) is offline
-2020-12-08 14:34:02,482 - root - INFO - main.py:60 - START SERVER
-2020-12-08 14:34:03,167 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 14:34:03,200 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 14:34:03,231 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 14:34:04,158 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 14:34:04,231 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 14:35:01,233 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 14:41:21,279 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 14:42:24,334 - root - ERROR - task_controler.py:325 - get no user by code 222222222
-2020-12-08 14:43:01,915 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 14:45:05,076 - root - INFO - main.py:60 - START SERVER
-2020-12-08 14:45:05,813 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 14:45:05,841 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 14:45:05,855 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 14:45:06,495 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 14:45:06,544 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 14:46:02,372 - root - ERROR - task_controler.py:327 - get no user by code 222222222
-2020-12-08 14:47:55,300 - root - INFO - main.py:60 - START SERVER
-2020-12-08 14:47:56,032 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 14:47:56,067 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 14:47:56,080 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 14:47:56,145 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 14:47:56,183 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 14:48:11,700 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 14:48:30,160 - root - ERROR - task_controler.py:328 - get no user by code 222222222
-2020-12-08 14:49:21,983 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 14:50:44,655 - root - INFO - main.py:60 - START SERVER
-2020-12-08 14:50:45,334 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 14:50:45,370 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 14:50:45,384 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 14:50:45,843 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 14:50:45,986 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 14:51:22,131 - root - ERROR - task_controler.py:331 - get no user by code 222222222
-2020-12-08 14:53:14,458 - root - ERROR - task_controler.py:331 - get no user by code 222222222
-2020-12-08 14:57:11,205 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 15:02:22,099 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 15:07:24,249 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:07:24,951 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:07:24,997 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:07:25,011 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:07:25,025 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:07:25,039 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:07:25,123 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:07:25,167 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:07:51,240 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 15:10:46,033 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:10:46,837 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:10:46,859 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:10:46,867 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:10:46,889 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:10:46,929 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:10:46,944 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:10:46,985 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:10:54,162 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.117, 26) is offline
-2020-12-08 15:11:27,309 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:11:27,996 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:11:28,028 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:11:28,053 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:11:28,084 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:11:28,122 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:11:28,391 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:11:28,449 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:11:35,464 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.117, 26) is offline
-2020-12-08 15:13:51,217 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 15:15:39,568 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:15:40,316 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:15:40,359 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:15:40,389 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:15:40,432 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:15:41,087 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:15:41,145 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:16:08,262 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:16:08,964 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:16:08,992 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:16:09,002 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:16:09,012 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:16:09,047 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:16:09,315 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:16:09,382 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:16:32,645 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:16:33,368 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:16:33,394 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:16:33,406 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:16:33,426 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:16:33,472 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:16:34,085 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:16:34,115 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:16:38,625 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.117, 26) is offline
-2020-12-08 15:24:20,889 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:24:21,570 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:24:21,603 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:24:21,629 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:24:21,651 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:24:22,043 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:24:22,094 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:24:53,008 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:24:53,678 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:24:53,729 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:24:53,745 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:24:53,849 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:24:53,945 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:28:05,452 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:28:06,133 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:28:06,165 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:28:06,183 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:28:06,197 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:28:06,244 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:28:06,375 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:28:06,434 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:28:51,277 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 15:29:02,602 - root - ERROR - Object2.py:635 - index out of range
-2020-12-08 15:31:30,908 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:31:31,687 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:31:31,714 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:31:31,724 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:31:31,754 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:31:31,783 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:31:32,247 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:31:32,343 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:31:37,147 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.117, 26) is offline
-2020-12-08 15:33:24,923 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:33:25,690 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:33:25,722 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:33:25,751 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:33:25,780 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:33:26,228 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:33:26,314 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:38:24,346 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:38:25,125 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:38:25,184 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:38:25,220 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:38:25,879 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:38:26,026 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:40:52,204 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 15:47:22,240 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 15:51:51,160 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:51:51,949 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:51:51,990 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:51:52,003 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:51:52,037 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:51:52,065 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:51:52,201 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:51:52,245 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:55:33,682 - root - INFO - main.py:60 - START SERVER
-2020-12-08 15:55:34,420 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 15:55:34,451 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:55:34,479 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 15:55:34,497 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 15:55:35,312 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 15:55:35,450 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 15:58:51,457 - root - ERROR - task_controler.py:331 - get no user by code 222222222
-2020-12-08 16:17:12,004 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 16:25:53,597 - root - INFO - main.py:60 - START SERVER
-2020-12-08 16:25:54,204 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 16:25:54,218 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 16:25:54,224 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 16:25:54,236 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 16:25:54,674 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 16:25:54,713 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 16:26:45,105 - root - ERROR - Object2.py:637 - index out of range
-2020-12-08 16:27:41,633 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 16:29:02,168 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 16:36:41,759 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 16:47:52,135 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 16:48:51,254 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 16:56:11,748 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 16:59:41,776 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 17:05:01,282 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 17:08:21,288 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 17:16:51,515 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 17:20:51,205 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 17:25:46,028 - root - ERROR - Object2.py:637 - index out of range
-2020-12-08 17:45:41,239 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 17:51:19,587 - root - ERROR - Object2.py:637 - index out of range
-2020-12-08 17:55:31,698 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:05:01,268 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:06:42,118 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:16:51,174 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:21:51,246 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:22:21,804 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:25:36,723 - root - INFO - main.py:60 - START SERVER
-2020-12-08 18:25:37,337 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 18:25:37,355 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 18:25:37,375 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 18:25:38,384 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 18:25:38,708 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 18:26:11,186 - root - ERROR - Object2.py:62 - 'int' object is not iterable
-2020-12-08 18:26:21,158 - root - ERROR - Object2.py:62 - 'int' object is not iterable
-2020-12-08 18:26:31,175 - root - ERROR - Object2.py:62 - 'int' object is not iterable
-2020-12-08 18:26:41,152 - root - ERROR - Object2.py:62 - 'int' object is not iterable
-2020-12-08 18:26:51,191 - root - ERROR - Object2.py:62 - 'int' object is not iterable
-2020-12-08 18:27:01,151 - root - ERROR - Object2.py:62 - 'int' object is not iterable
-2020-12-08 18:27:01,199 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.97, 26) is offline
-2020-12-08 18:29:43,823 - root - INFO - main.py:60 - START SERVER
-2020-12-08 18:29:44,426 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 18:29:44,443 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 18:29:44,462 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 18:29:44,480 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 18:29:44,508 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 18:29:44,748 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 18:29:44,944 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 18:34:51,277 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:35:11,744 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:35:42,073 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:43:43,765 - root - ERROR - Object2.py:637 - index out of range
-2020-12-08 18:43:43,776 - root - ERROR - Object2.py:637 - index out of range
-2020-12-08 18:48:11,247 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:50:22,258 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 18:57:11,249 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 19:04:01,207 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 19:06:28,147 - root - ERROR - Object2.py:637 - index out of range
-2020-12-08 19:06:28,211 - root - ERROR - Object2.py:637 - index out of range
-2020-12-08 19:09:21,615 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 19:10:51,762 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 19:11:01,219 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 19:14:34,120 - root - INFO - main.py:60 - START SERVER
-2020-12-08 19:14:34,724 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 19:14:34,745 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 19:14:34,757 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 19:14:34,765 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 19:14:34,813 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 19:14:35,673 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 19:14:35,791 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 19:15:52,009 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 19:18:13,880 - root - INFO - main.py:60 - START SERVER
-2020-12-08 19:18:14,700 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 19:18:14,734 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 19:18:14,749 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 19:18:14,785 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 19:18:14,812 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 19:18:15,511 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 19:18:15,598 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 19:18:16,862 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.97, 26) is offline
-2020-12-08 19:19:00,458 - root - INFO - main.py:60 - START SERVER
-2020-12-08 19:19:01,195 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 19:19:01,224 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 19:19:01,237 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 19:19:01,837 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 19:19:01,998 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 19:19:37,449 - root - ERROR - task_controler.py:368 - get no user by code 222222222
-2020-12-08 19:19:42,045 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 19:20:51,736 - root - ERROR - task_controler.py:368 - get no user by code 222222222
-2020-12-08 19:21:48,749 - root - ERROR - task_controler.py:368 - get no user by code 222222222
-2020-12-08 19:22:50,276 - root - ERROR - task_controler.py:368 - get no user by code 222222222
-2020-12-08 19:25:51,186 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 19:32:21,726 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 19:54:41,535 - root - INFO - main.py:60 - START SERVER
-2020-12-08 19:54:42,146 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 19:54:42,163 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 19:54:42,173 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 19:54:42,427 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 19:54:42,471 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 19:55:39,939 - root - ERROR - task_controler.py:378 - get no user by code 222222222
-2020-12-08 19:57:03,157 - root - INFO - main.py:60 - START SERVER
-2020-12-08 19:57:03,899 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 19:57:03,931 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 19:57:03,943 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 19:57:04,899 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 19:57:05,036 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 19:57:38,903 - root - ERROR - task_controler.py:378 - get no user by code 222222222
-2020-12-08 20:00:32,017 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 20:01:31,522 - root - INFO - main.py:60 - START SERVER
-2020-12-08 20:01:32,273 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 20:01:32,305 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:01:32,320 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:01:32,358 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:01:32,372 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:01:32,975 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 20:01:33,036 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 20:02:14,038 - root - ERROR - task_controler.py:382 - get no user by code 222222222
-2020-12-08 20:03:02,188 - root - ERROR - task_controler.py:382 - get no user by code 222222222
-2020-12-08 20:03:52,123 - root - ERROR - task_controler.py:382 - get no user by code 222222222
-2020-12-08 20:04:21,488 - root - ERROR - task_controler.py:382 - get no user by code 222222222
-2020-12-08 20:05:00,123 - root - ERROR - task_controler.py:382 - get no user by code 222222222
-2020-12-08 20:05:12,274 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 20:06:51,223 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 20:13:35,449 - root - INFO - main.py:60 - START SERVER
-2020-12-08 20:13:36,171 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 20:13:36,208 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:13:36,228 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:13:36,513 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 20:13:36,639 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 20:14:18,270 - root - ERROR - task_controler.py:382 - get no user by code 222222222
-2020-12-08 20:14:48,377 - root - ERROR - task_controler.py:382 - get no user by code 222222222
-2020-12-08 20:39:53,552 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 20:39:53,632 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 20:40:11,259 - root - INFO - main.py:60 - START SERVER
-2020-12-08 20:40:12,364 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 20:40:12,439 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:40:12,511 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:40:12,602 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:40:12,684 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:40:13,188 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 20:40:13,617 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 20:40:44,923 - root - ERROR - task_controler.py:382 - get no user by code 222222222
-2020-12-08 20:41:33,732 - root - ERROR - task_controler.py:382 - get no user by code 222222222
-2020-12-08 20:42:01,305 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 20:42:59,367 - root - ERROR - Object2.py:637 - index out of range
-2020-12-08 20:44:21,069 - root - INFO - main.py:60 - START SERVER
-2020-12-08 20:44:21,992 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 20:44:22,051 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:44:22,072 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:44:22,093 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:44:22,146 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:44:22,470 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 20:44:22,578 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 20:44:58,617 - root - ERROR - task_controler.py:383 - get no user by code 222222222
-2020-12-08 20:45:40,569 - root - ERROR - task_controler.py:383 - get no user by code 222222222
-2020-12-08 20:46:41,238 - root - INFO - main.py:60 - START SERVER
-2020-12-08 20:46:42,012 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 20:46:42,054 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:46:42,072 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:46:42,849 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 20:46:43,007 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 20:47:17,471 - root - ERROR - task_controler.py:383 - get no user by code 222222222
-2020-12-08 20:47:45,808 - root - ERROR - task_controler.py:383 - get no user by code 222222222
-2020-12-08 20:51:18,200 - root - ERROR - task_controler.py:383 - get no user by code 222222222
-2020-12-08 20:52:35,767 - root - ERROR - task_controler.py:383 - get no user by code 222222222
-2020-12-08 20:55:19,058 - root - ERROR - task_controler.py:383 - get no user by code 222222222
-2020-12-08 20:56:50,696 - root - INFO - main.py:60 - START SERVER
-2020-12-08 20:56:51,659 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 20:56:51,689 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:56:51,709 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:56:51,734 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:56:51,777 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:56:52,524 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 20:56:52,610 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 20:57:05,491 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.201, 4370) is offline
-2020-12-08 20:57:18,151 - root - INFO - main.py:60 - START SERVER
-2020-12-08 20:57:18,968 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 20:57:19,024 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:57:19,049 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:57:19,979 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 20:57:20,025 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 20:58:00,111 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 20:59:05,321 - root - INFO - main.py:60 - START SERVER
-2020-12-08 20:59:06,258 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 20:59:06,290 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 20:59:06,310 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:59:06,378 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 20:59:06,685 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 20:59:06,880 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 20:59:40,331 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:00:11,189 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 21:00:42,000 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:02:30,294 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:02:31,189 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:02:31,230 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:02:31,248 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:02:31,431 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:02:31,535 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:03:04,578 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:06:00,371 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:06:01,132 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:06:01,166 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:06:01,185 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:06:01,222 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:06:02,273 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:06:02,506 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:06:06,623 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.117, 26) is offline
-2020-12-08 21:06:25,999 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:08:09,133 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:08:10,150 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:08:10,177 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:08:10,204 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:08:11,243 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:08:11,449 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:08:23,174 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:09:01,304 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:09:02,272 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:09:02,304 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:09:02,319 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:09:02,641 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:09:02,823 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:09:13,895 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:10:06,640 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:11:12,399 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:11:41,963 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:11:42,792 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:11:42,833 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:11:42,858 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:11:42,925 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:11:43,705 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:11:43,758 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:12:16,409 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:14:28,806 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:16:41,441 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:17:01,744 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 21:17:25,694 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:18:22,070 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 21:18:25,727 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:18:58,626 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:18:59,354 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:18:59,385 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:18:59,403 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:18:59,436 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:18:59,748 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:18:59,785 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:19:47,421 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:19:48,109 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:19:48,144 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:19:48,158 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:19:48,198 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:19:48,217 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:19:48,829 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:19:48,882 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:20:46,576 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:21:37,480 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:22:40,631 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:23:31,629 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:24:41,388 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 21:28:41,336 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 21:30:55,697 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:30:56,422 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:30:56,456 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:30:56,479 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:30:57,328 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:30:57,459 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:31:38,532 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:32:33,744 - root - ERROR - task_controler.py:391 - get no user by code 222222222
-2020-12-08 21:41:17,455 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:41:18,158 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:41:18,187 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:41:18,200 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:41:18,247 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:41:18,288 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:41:18,710 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:41:18,763 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:42:00,789 - root - ERROR - task_controler.py:392 - get no user by code 222222222
-2020-12-08 21:43:14,418 - root - ERROR - task_controler.py:392 - get no user by code 222222222
-2020-12-08 21:43:31,418 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 21:44:58,984 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:44:59,674 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:44:59,709 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:44:59,726 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:45:00,633 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:45:00,714 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:45:11,683 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-08 21:45:38,175 - root - ERROR - task_controler.py:392 - get no user by code 222222222
-2020-12-08 21:46:17,453 - root - ERROR - task_controler.py:392 - get no user by code 222222222
-2020-12-08 21:49:00,932 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:49:01,643 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:49:01,681 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:49:01,692 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:49:01,717 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:49:14,754 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:49:15,434 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:49:15,467 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:49:15,480 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:49:15,518 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:49:15,685 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:49:15,713 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-08 21:49:37,109 - root - INFO - main.py:60 - START SERVER
-2020-12-08 21:49:37,851 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-08 21:49:37,877 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-08 21:49:37,890 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-08 21:49:38,462 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-08 21:49:38,533 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:02:09,083 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:02:09,759 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:02:09,825 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:02:09,839 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:02:10,174 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:02:10,187 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:04:36,411 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:04:37,014 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:04:37,030 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:04:37,036 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:04:37,053 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:04:37,077 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:04:37,717 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:04:37,739 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:14:30,270 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:14:30,874 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:14:30,892 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:14:30,904 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:14:31,226 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:14:31,250 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:14:57,800 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:14:58,409 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:14:58,427 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:14:58,434 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:14:58,442 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:14:58,464 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:14:58,845 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:14:58,875 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:15:44,273 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:15:44,877 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:15:44,892 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:15:44,900 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:15:44,906 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:15:45,685 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:16:40,096 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:16:40,772 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:16:40,803 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:16:40,816 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:16:40,847 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:16:41,088 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:16:41,104 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:17:39,949 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:17:40,554 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:17:40,569 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:17:40,575 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:17:40,945 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:17:41,012 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:18:45,640 - root - ERROR - task_controler.py:384 - get no user by code 222222222
+2020-12-09 14:22:51,351 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:22:52,030 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:22:52,060 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:22:52,072 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:22:52,096 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:22:52,126 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:22:52,163 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:22:52,239 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:24:02,006 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:24:02,718 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:24:02,748 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:24:02,760 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:24:03,544 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:24:03,578 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:24:56,102 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:24:56,784 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:24:56,815 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:24:56,826 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:24:57,621 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:25:10,603 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:25:11,337 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:25:11,368 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:25:11,381 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:25:11,775 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:25:11,890 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:35:24,656 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:35:25,340 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:35:25,368 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:35:25,384 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:35:26,377 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:35:26,528 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:35:30,570 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.201, 4370) is offline
+2020-12-09 14:38:13,433 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:38:14,192 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:38:14,232 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:38:14,244 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:38:14,291 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:38:14,318 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:38:14,605 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:38:14,651 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:39:23,414 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:39:24,085 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:39:24,114 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:39:24,125 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:39:24,137 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:39:24,432 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:39:24,505 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:39:36,459 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:39:37,204 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:39:37,241 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:39:37,257 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:39:37,307 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:39:37,317 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:39:38,005 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:39:38,077 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:40:02,437 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:40:03,182 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:40:03,231 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:40:03,254 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:40:07,967 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:40:08,638 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:40:08,665 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:40:08,676 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:40:08,696 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:40:08,735 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:40:09,584 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:40:24,898 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:40:25,613 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:40:25,646 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:40:25,665 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:40:26,247 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:40:26,292 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:41:39,140 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:41:40,087 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:41:40,136 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:41:40,164 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:42:40,805 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:42:41,478 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:42:41,504 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:42:41,514 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:42:41,560 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:42:41,589 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:42:42,147 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:42:42,218 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:46:08,650 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:46:09,388 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:46:09,437 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:46:09,454 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:46:09,466 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:46:09,510 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:46:10,307 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:46:10,327 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:46:33,490 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:46:34,173 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:46:34,383 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:46:34,409 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:46:34,421 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:46:34,439 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:46:34,658 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:46:34,700 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:48:52,720 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:48:53,459 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:48:53,492 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:48:53,507 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:48:54,130 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 14:48:54,206 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 14:50:08,014 - root - INFO - main.py:60 - START SERVER
+2020-12-09 14:50:08,726 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 14:50:08,765 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 14:50:08,784 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 14:50:09,656 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 15:07:04,108 - root - INFO - main.py:60 - START SERVER
+2020-12-09 15:07:04,866 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-09 15:07:04,948 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 15:07:04,974 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:05,023 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 15:07:05,044 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-09 15:07:05,083 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-09 15:07:05,129 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:05,249 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-09 15:07:05,316 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-09 15:07:06,216 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:07,221 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:08,218 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:09,211 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:10,169 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:11,258 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:12,280 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:13,169 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:14,196 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:15,208 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:16,221 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:17,217 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:18,195 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:19,222 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:20,161 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:21,177 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:22,218 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:23,192 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:24,212 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:25,263 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:26,247 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
+2020-12-09 15:07:27,240 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user

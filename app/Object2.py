@@ -756,18 +756,15 @@ class EntranceGuard(threading.Thread):
         self.queuersl = queuersl
         self.queue_push_data = queue_push_data
         self.lock = threading.RLock()
+        self.current_data = None
         self.lib = EntranceGuard.lib
         self.handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
                                        b',port=' + bytes(str(self.port), encoding='utf8') +
                                        b',timeout=2000,passwd=')
 
     def run(self):
-        # if self.handle == 0:
-        #     self.isrunning = False
         cursec = 0
-        current_data = None
         while self.isrunning:
-            self.lock.acquire()
             try:
                 if not self.queuetask.empty():
                     task, args = self.queuetask.get()
@@ -781,26 +778,32 @@ class EntranceGuard(threading.Thread):
                     if localtime.tm_sec != cursec:
                         cursec = localtime.tm_sec
                         rsl = self.getNewEvent()
-                        if rsl is None:
-                            self.isrunning = False
-                        if rsl is None:
-                            self.isrunning = False
-                        if current_data is not None:
-                            if (rsl is not None) and (rsl != current_data):
-                                data = {'user': rsl[0], 'raw': rsl}
-                                pkg = TransferPackage(code=206, eq_type=3, data=data, source=(self.ip, self.port),
-                                                      msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
-                                self.queue_push_data.put(pkg)
-                                print('gate--getNewEvent: ', rsl)
-                                current_data = copy.deepcopy(rsl)
+                        if rsl:
+                            if self.current_data is not None:
+                                if rsl != self.current_data:
+                                    data = {'user': rsl[0], 'raw': rsl}
+                                    pkg = TransferPackage(code=206, eq_type=3, data=data, source=(self.ip, self.port),
+                                                          msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                                    self.queue_push_data.put(pkg)
+                                    print('gate--getNewEvent: ', rsl)
+                                    with self.lock:
+                                        self.current_data = copy.deepcopy(rsl)
+                            else:
+                                with self.lock:
+                                    self.current_data = copy.deepcopy(rsl)
+                        elif rsl is not None:
+                            # 非注册用户
+                            pass
                         else:
-                            current_data = copy.deepcopy(rsl)
+                            # 读取错误
+                            with self.lock:
+                                self.isrunning = False
                     else:
                         pass
             except Exception as e:
-                print(e)
-            finally:
-                self.lock.release()
+                print('except from EntranceGuard--', e)
+                mylogger.error(e)
+                break
         self.lib.Disconnect(self.handle)
 
     @staticmethod
@@ -835,6 +838,7 @@ class EntranceGuard(threading.Thread):
             rsl = self.lib.GetDeviceData(self.handle, byref(buff), size, bytes('transaction'.encode('utf-8')), b'*', filter1, b'')
             if rsl >= 0:
                 last_record = buff.value.split(b'\r\n')[1]
+                # print(last_record)
                 recode_list = last_record.split(b',')
                 eventtype = recode_list[3]
                 user = str(recode_list[0], encoding='gb18030')
@@ -842,9 +846,14 @@ class EntranceGuard(threading.Thread):
                     # print('\033[1;33m USER--', user, ' is authed....\033[0m')
                     resp = 'Auth: ' + str(last_record, encoding='gb18030')
                     return [user, resp]
+                else:
+                    mylogger.warning('(%s, %d)--GetDeviceData() get no registerd user' % (self.ip, self.port))
+                    return []
             else:
+                mylogger.error('(%s, %d)--GetDeviceData() get error code %d' % (self.ip, self.port, rsl))
                 return None
         else:
+            mylogger.error('(%s, %d)--GetDeviceDataCount() get error code %d' % (self.ip, self.port, count))
             return None
 
     def add_new_user(self, user_code, fingerprint_template, username=''):
