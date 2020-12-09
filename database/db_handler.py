@@ -1,4 +1,4 @@
-from .models2 import Storeroom
+from .models2 import Storeroom, Goods, History_inbound_outbound, Grid
 import copy
 
 
@@ -77,3 +77,13 @@ def get_all_led(storeroom, clients_servers):
                         clients_servers['servers'][(indicator.ip, indicator.port)] = ('led', indicator.id)
                     else:
                         clients_servers['clients'][(indicator.ip, indicator.port)] = ('led', indicator.id)
+
+
+def get_epcs():
+    # epcs = ['E200001B190D01322730658E', 'E200001A50110141044072D2', '201909250000000000000013', '201909250000000000000006']
+    # epc = Goods.by_rfid_uid(epcs=epcs)
+    # print([e.rfid_uid for e in epc])
+    eq_id = 'a0c7c6b4-c246-42ff-83a0-53d3bf1ca9f5'
+    ant_num = '03'
+    grid = Grid.by_eqid_antenna(eq_id=eq_id, antenna_num=ant_num)
+    print(grid.antenna_num)

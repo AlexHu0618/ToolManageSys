@@ -141,7 +141,7 @@ class TaskControler(Process):
         :return:
         """
         try:
-            print('analyze pkg: ', package)
+            # print('analyze pkg: ', package)
             storeroom_id = package['storeroom_id']
             if package['msg_type'] == 3 and package['equipment_type'] in (3, 5):
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
@@ -212,7 +212,7 @@ class StoreroomManager(threading.Thread):
                 with self.lock:
                     self.is_close = False
                 pkg = self.queue_pkg.get()
-                print('store: ', self.storeroom_id, ' got package: ', pkg)
+                # print('store: ', self.storeroom_id, ' got package: ', pkg)
                 if self.manage_mode == 1:
                     self._handle_mode_one(pkg=pkg)
                 elif self.manage_mode == 3:
@@ -290,6 +290,7 @@ class StoreroomManager(threading.Thread):
         print('\033[1;33m', 'all gravity--', self.gravity_goods)
         print('all RFID--', self.rfid_goods, '\033[0m')
         history_list = History_inbound_outbound.by_user_need_return(self.user_id)
+        print('history_list--', history_list)
         history_gravity = [h for h in history_list if h.monitor_way == 1]
         history_rfid = [h for h in history_list if h.monitor_way == 2]
         self._save_gravity_data(history=history_gravity)
@@ -322,8 +323,8 @@ class StoreroomManager(threading.Thread):
                         # 存在位置错误的
                         record = history[grids_history.index(k)]
                         diff = record.count - abs(v[1])
-                        if record.is_wrong_place and abs(diff) < self.gravity_precision:
-                            record.update('is_wrong_place', 0)
+                        if record.wrong_place_gid and abs(diff) < self.gravity_precision:
+                            record.update('wrong_place_gid', None)
                     else:
                         record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), monitor_way=1,
                                                           outbound_datetime=current_dt, status=1)
@@ -338,22 +339,80 @@ class StoreroomManager(threading.Thread):
                             # 全部归还
                             record.update('status', 0)
                             record.update('inbound_datetime', current_dt)
+                            if self.user_id != record.user_id:
+                                record.update('wrong_return_user', self.user_id)
                         elif diff > 5:
                             # 部分归还
                             record.update('count', diff)
                             record.update('inbound_datetime', current_dt)
+                            if self.user_id != record.user_id:
+                                record.update('wrong_return_user', self.user_id)
                         else:
                             # 放置错误
-                            record.update('is_wrong_place', True)
+                            record.update('wrong_place_gid', k)
                             record.update('inbound_datetime', current_dt)
                     else:
                         # 放置错误
                         record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), monitor_way=1,
-                                                          inbound_datetime=current_dt, status=0, is_wrong_place=True)
+                                                          inbound_datetime=current_dt, status=0, wrong_place_gid=k)
                         record.save()
 
     def _save_rfid_data(self, history: list):
-        pass
+        """
+        1、逐个判断借出或者归还；
+        2、借出：若耗材则直接保存已还，否则直接保存未还并设置goods出库；
+        3、归还：是否在未还列表，是则修改已还并设置goods入库，否则新增记录设置错误用户已还并设置goods入库；
+        :param history:
+        :return:
+        """
+        print('rfid history--', history)
+        current_dt = datetime.datetime.now()
+        # 先把self.rfid_goods中的key从bytes转为str；
+        rfid_current = {k.hex(): v for k, v in self.rfid_goods.items()}
+        goods_db = Goods.by_epc_list(epcs=rfid_current.keys())
+        goods_epc_db = [g.epc for g in goods_db]
+        epc_grid_id = {h.epc: h.grid_id for h in history} if history is not None else {}
+        for epc, v in rfid_current.items():
+            print('epc--', epc)
+            print('goods_epc_db--', goods_epc_db)
+            grid_current = Grid.by_eqid_antenna(eq_id=v[0], antenna_num=v[1].hex())
+            grid_id_current = grid_current.id if grid_current is not None else None
+            if epc in goods_epc_db:
+                # 存在于DB的EPC
+                if v[2] is True:
+                    # 为归还
+                    wrong_place_gid = grid_current if grid_id_current != epc_grid_id[epc] else None
+                    record = History_inbound_outbound.by_epc_need_return(epc=epc)
+                    if record:
+                        wrong_return_user = self.user_id if self.user_id != record.user_id else None
+                        record.update('status', 0)
+                        record.update('inbound_datetime', current_dt)
+                        record.update('wrong_place_gid', wrong_place_gid)
+                        record.update('wrong_return_user', wrong_return_user)
+                        goods = [g for g in goods_db if g.epc == epc]
+                        if goods:
+                            goods[0].update('is_in_store', 1)
+                    else:
+                        record = History_inbound_outbound(user_id=self.user_id, grid_id=grid_id_current, epc=epc,
+                                                          count=1, inbound_datetime=current_dt, status=0,
+                                                          wrong_place_gid=grid_id_current, wrong_return_uid=self.user_id)
+                        record.save()
+                        mylogger.warning('get no history by_epc_need_return() EPC(%s) but still was returned' % epc)
+                else:
+                    # 为借出
+                    record = History_inbound_outbound(user_id=self.user_id, grid_id=grid_id_current, epc=epc,
+                                                      count=1, outbound_datetime=current_dt, status=1)
+                    record.save()
+                    goods = [g for g in goods_db if g.epc == epc]
+                    if goods:
+                        goods[0].update('is_in_store', 0)
+            else:
+                # 不存在于DB的EPC
+                record = History_inbound_outbound(user_id=self.user_id, grid_id=grid_id_current, epc=epc,
+                                                  count=1, inbound_datetime=current_dt, status=0,
+                                                  wrong_place_gid=grid_id_current)
+                record.save()
+                mylogger.warning('get no goods in database by EPC(%s) but still was returned' % epc)
 
     def _get_toolkit_data(self, user):
         """

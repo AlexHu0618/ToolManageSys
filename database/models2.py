@@ -374,6 +374,10 @@ class Grid(Base, MyBase):
     def by_eqid_sensor(cls, eq_id, sensor_addr):
         return dbSession.query(cls).filter_by(collector_id=eq_id, sensor_addr=sensor_addr).first()
 
+    @classmethod
+    def by_eqid_antenna(cls, eq_id, antenna_num):
+        return dbSession.query(cls).filter(and_(cls.collector_id == eq_id, cls.antenna_num.contains(antenna_num))).first()
+
 
 class Collector(Base, MyBase):
     __tablename__ = 'collector'
@@ -423,7 +427,7 @@ class Goods(Base, MyBase):
     code = Column(String(100), nullable=False)
     parent_type = Column(String(100), default='')
     model_number = Column(String(100), default='')
-    rfid_uid = Column(String(100), default=None)
+    epc = Column(String(100), default=None)
     type = Column(Integer)  # 0-工具；1-仪器；2-耗材
     check_cycle = Column(Integer)  # months
     last_check_date = Column(Date, default=date.today)
@@ -440,8 +444,8 @@ class Goods(Base, MyBase):
     grid = relationship('Grid', back_populates='goods')
 
     @classmethod
-    def by_rfid_uid(cls, epc):
-        return dbSession.query(cls).filter_by(rfid_uid=epc).first()
+    def by_epc_list(cls, epcs: list):
+        return dbSession.query(cls).filter(cls.epc.in_(epcs)).all()
 
 
 class Toolkit(Base, MyBase):
@@ -457,15 +461,24 @@ class History_inbound_outbound(Base, MyBase):
     id = Column(String(50), primary_key=True, unique=True, nullable=False, default=lambda: str(uuid4()))
     user_id = Column(String(100))
     grid_id = Column(String(100))
-    goods_id = Column(String(100))
+    epc = Column(String(100))
     count = Column(Integer)
     outbound_datetime = Column(DateTime)
     inbound_datetime = Column(DateTime, default=None)
     status = Column(Integer, default=1)  # 0-已还；1-未还；2-催还;
-    is_wrong_place = Column(Boolean, default=False)  # 0-False; 1-True;
+    wrong_place_gid = Column(String(100), default=None)
+    wrong_return_uid = Column(String(100), default=None)
     monitor_way = Column(Integer, default=2)  # 1-重力；2-RFID
 
     @classmethod
     def by_user_need_return(cls, user_id):
         return dbSession.query(cls).filter(and_(cls.user_id == user_id,
-                                                or_(cls.status != 0, cls.is_wrong_place == 1))).all()
+                                                or_(cls.status != 0, cls.wrong_place_gid.isnot(None)))).all()
+
+    @classmethod
+    def by_epc_need_return(cls, epc):
+        return dbSession.query(cls).filter(cls.epc == epc, cls.status != 0).first()
+
+    @classmethod
+    def by_epcs_join_goods_tab(cls, epcs):
+        return dbSession.query(cls).join(Goods, cls.epc == Goods.epc).filter(Goods.epc.in_(epcs)).all()

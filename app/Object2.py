@@ -988,19 +988,19 @@ class RfidR2000FH(threading.Thread):
 
     def _check_data_update(self):
         try:
-            print('R2000FH old EPCs: ', self.data_buff)
-            print('R2000FH new EPCs: ', self.current_epcs)
-            if self.current_epcs is not None:
-                diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
-                print('R2000FH diff_epcs--', diff_epcs)
-                if diff_epcs:
-                    is_increase = True if len(self.current_epcs) > len(self.data_buff) else False
-                    diff = [epc_ant for epc_ant in self.current_epcs if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]
-                    data = {'epcs': diff, 'is_increase': is_increase}
-                    pkg = TransferPackage(code=206, eq_type=2, data=data, source=self.addr, msg_type=3,
-                                          storeroom_id=self.storeroom_id, eq_id=self.uuid)
-                    self.queue_push_data.put(pkg)
-                with self.lock:
+            with self.lock:
+                print('R2000FH old EPCs: ', self.data_buff)
+                print('R2000FH new EPCs: ', self.current_epcs)
+                if self.current_epcs is not None:
+                    diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
+                    print('R2000FH diff_epcs--', diff_epcs)
+                    if diff_epcs:
+                        is_increase = True if len(self.current_epcs) > len(self.data_buff) else False
+                        diff = [epc_ant for epc_ant in self.current_epcs if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]
+                        data = {'epcs': diff, 'is_increase': is_increase}
+                        pkg = TransferPackage(code=206, eq_type=2, data=data, source=self.addr, msg_type=3,
+                                              storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                        self.queue_push_data.put(pkg)
                     self.data_buff.clear()
                     self.data_buff = [epc_ant for epc_ant in self.current_epcs]
                     self.current_epcs.clear()
@@ -1018,7 +1018,7 @@ class RfidR2000FH(threading.Thread):
                     self.timeout_counter = 0
                     self._analyze_recv_data(data=data)
                 except socket.timeout:
-                    print('RFID2000FH times out')
+                    # print('RFID2000FH times out')
                     self.timeout_counter += 1
                     if self.timeout_counter > 20:
                         with self.lock:

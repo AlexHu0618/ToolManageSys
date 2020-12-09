@@ -115,7 +115,7 @@ class GatewayServer(Process):
             pkg = self.queue_equipment_push.get()
             self.queue_rsl.put(pkg)
         else:
-            print('no equipment push data update')
+            # print('no equipment push data update')
             pkg = None
         return pkg
 
