@@ -296,8 +296,8 @@ class RfidR2000(threading.Thread):
             for ant in self.ants:
                 rsl = self.inventory(ant_id=ant)
             rsl_data = self.getAndResetBuf()
-            # print('old EPCs: ', self.data_buff)
-            # print('new EPCs: ', rsl_data)
+            print('old EPCs: ', self.data_buff)
+            print('new EPCs: ', rsl_data)
             if rsl_data is not None:
                 diff_epcs = list(set(epc[0] for epc in rsl_data) ^ set(epc[0] for epc in self.data_buff))
                 print(diff_epcs)
@@ -469,7 +469,7 @@ class RfidR2000(threading.Thread):
         if data != b'':
             if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
                 print('ErrorCode: ', hex(data[4]))
-                return None
+                return []
             elif data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '93'):
                 return None
             else:

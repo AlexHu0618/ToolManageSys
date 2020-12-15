@@ -1,422 +1,515 @@
-2020-12-09 14:02:09,083 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:02:09,759 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:02:09,825 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:02:09,839 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:02:10,174 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:02:10,187 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:04:36,411 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:04:37,014 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:04:37,030 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:04:37,036 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:04:37,053 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:04:37,077 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:04:37,717 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:04:37,739 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:14:30,270 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:14:30,874 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:14:30,892 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:14:30,904 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:14:31,226 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:14:31,250 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:14:57,800 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:14:58,409 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:14:58,427 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:14:58,434 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:14:58,442 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:14:58,464 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:14:58,845 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:14:58,875 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:15:44,273 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:15:44,877 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:15:44,892 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:15:44,900 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:15:44,906 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:15:45,685 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:16:40,096 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:16:40,772 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:16:40,803 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:16:40,816 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:16:40,847 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:16:41,088 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:16:41,104 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:17:39,949 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:17:40,554 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:17:40,569 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:17:40,575 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:17:40,945 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:17:41,012 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:18:45,640 - root - ERROR - task_controler.py:384 - get no user by code 222222222
-2020-12-09 14:22:51,351 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:22:52,030 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:22:52,060 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:22:52,072 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:22:52,096 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:22:52,126 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:22:52,163 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:22:52,239 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:24:02,006 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:24:02,718 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:24:02,748 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:24:02,760 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:24:03,544 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:24:03,578 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:24:56,102 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:24:56,784 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:24:56,815 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:24:56,826 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:24:57,621 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:25:10,603 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:25:11,337 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:25:11,368 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:25:11,381 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:25:11,775 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:25:11,890 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:35:24,656 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:35:25,340 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:35:25,368 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:35:25,384 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:35:26,377 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:35:26,528 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:35:30,570 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.201, 4370) is offline
-2020-12-09 14:38:13,433 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:38:14,192 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:38:14,232 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:38:14,244 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:38:14,291 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:38:14,318 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:38:14,605 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:38:14,651 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:39:23,414 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:39:24,085 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:39:24,114 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:39:24,125 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:39:24,137 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:39:24,432 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:39:24,505 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:39:36,459 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:39:37,204 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:39:37,241 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:39:37,257 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:39:37,307 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:39:37,317 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:39:38,005 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:39:38,077 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:40:02,437 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:40:03,182 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:40:03,231 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:40:03,254 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:40:07,967 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:40:08,638 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:40:08,665 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:40:08,676 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:40:08,696 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:40:08,735 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:40:09,584 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:40:24,898 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:40:25,613 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:40:25,646 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:40:25,665 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:40:26,247 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:40:26,292 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:41:39,140 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:41:40,087 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:41:40,136 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:41:40,164 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:42:40,805 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:42:41,478 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:42:41,504 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:42:41,514 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:42:41,560 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:42:41,589 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:42:42,147 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:42:42,218 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:46:08,650 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:46:09,388 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:46:09,437 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:46:09,454 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:46:09,466 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:46:09,510 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:46:10,307 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:46:10,327 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:46:33,490 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:46:34,173 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:46:34,383 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:46:34,409 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:46:34,421 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:46:34,439 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:46:34,658 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:46:34,700 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:48:52,720 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:48:53,459 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:48:53,492 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:48:53,507 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:48:54,130 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 14:48:54,206 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 14:50:08,014 - root - INFO - main.py:60 - START SERVER
-2020-12-09 14:50:08,726 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 14:50:08,765 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 14:50:08,784 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 14:50:09,656 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 15:07:04,108 - root - INFO - main.py:60 - START SERVER
-2020-12-09 15:07:04,866 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 15:07:04,948 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 15:07:04,974 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:05,023 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 15:07:05,044 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 15:07:05,083 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 15:07:05,129 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:05,249 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 15:07:05,316 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 15:07:06,216 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:07,221 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:08,218 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:09,211 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:10,169 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:11,258 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:12,280 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:13,169 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:14,196 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:15,208 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:16,221 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:17,217 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:18,195 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:19,222 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:20,161 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:21,177 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:22,218 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:23,192 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:24,212 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:25,263 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:26,247 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:07:27,240 - root - WARNING - Object2.py:854 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:09:44,497 - root - ERROR - Object2.py:637 - index out of range
-2020-12-09 15:11:20,897 - root - INFO - main.py:60 - START SERVER
-2020-12-09 15:11:21,655 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 15:11:21,698 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 15:11:21,713 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 15:11:22,455 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 15:11:22,560 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 15:11:30,159 - root - WARNING - Object2.py:850 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:11:31,189 - root - WARNING - Object2.py:850 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:11:32,170 - root - WARNING - Object2.py:850 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:11:33,229 - root - WARNING - Object2.py:850 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:11:34,168 - root - WARNING - Object2.py:850 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:11:35,153 - root - WARNING - Object2.py:850 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:11:36,182 - root - WARNING - Object2.py:850 - (192.168.0.201, 4370)--GetDeviceData() get no registerd user
-2020-12-09 15:11:48,178 - root - ERROR - task_controler.py:384 - get no user by code 222222222
-2020-12-09 15:12:36,849 - root - ERROR - task_controler.py:384 - get no user by code 222222222
-2020-12-09 15:19:11,290 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 15:29:51,421 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 15:30:01,338 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 15:32:12,158 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 15:32:21,183 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 15:55:41,662 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 15:58:12,056 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 16:05:51,474 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 16:08:01,375 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 16:08:21,336 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 16:08:41,240 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 16:19:31,183 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 16:20:01,690 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 16:27:51,300 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 16:30:42,149 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 16:53:04,176 - root - INFO - main.py:63 - START SERVER
-2020-12-09 16:53:50,307 - root - INFO - main.py:63 - START SERVER
-2020-12-09 17:32:24,435 - root - INFO - main.py:63 - START SERVER
-2020-12-09 17:33:03,285 - root - INFO - main.py:63 - START SERVER
-2020-12-09 17:34:11,042 - root - INFO - main.py:63 - START SERVER
-2020-12-09 17:35:14,528 - root - INFO - main.py:63 - START SERVER
-2020-12-09 18:42:08,107 - root - INFO - main.py:63 - START SERVER
-2020-12-09 18:42:18,396 - root - INFO - main.py:63 - START SERVER
-2020-12-09 18:42:42,868 - root - INFO - main.py:63 - START SERVER
-2020-12-09 18:43:26,339 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:25:56,863 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:28:08,155 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:28:31,684 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:28:41,660 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:28:46,798 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:30:26,176 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:30:33,803 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:31:24,359 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:31:45,701 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:32:04,956 - root - INFO - main.py:63 - START SERVER
-2020-12-09 19:32:14,886 - root - INFO - main.py:63 - START SERVER
-2020-12-09 20:43:02,082 - root - INFO - main.py:63 - START SERVER
-2020-12-09 20:43:02,695 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 20:43:02,713 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 20:43:02,720 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 20:43:02,735 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 20:43:02,744 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 20:43:03,542 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 20:43:03,669 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 20:43:06,885 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.117, 26) is offline
-2020-12-09 20:45:03,994 - root - INFO - main.py:63 - START SERVER
-2020-12-09 20:45:04,782 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 20:45:04,814 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 20:45:04,840 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 20:45:05,629 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 20:45:05,734 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 20:52:31,635 - root - INFO - main.py:63 - START SERVER
-2020-12-09 20:52:32,330 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 20:52:32,363 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 20:52:32,377 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 20:52:32,417 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 20:52:32,450 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 20:52:32,651 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 20:52:32,766 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 20:53:17,590 - root - WARNING - task_controler.py:411 - get no goods in database by EPC(e200001b190d01322730658e) but still was returned
-2020-12-09 20:53:17,603 - root - ERROR - task_controler.py:439 - get no user by code 222222222
-2020-12-09 20:57:01,260 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:00:57,971 - root - WARNING - task_controler.py:411 - get no goods in database by EPC(e200001b190d01322730658e) but still was returned
-2020-12-09 21:00:58,023 - root - ERROR - task_controler.py:439 - get no user by code 222222222
-2020-12-09 21:03:31,419 - root - INFO - main.py:63 - START SERVER
-2020-12-09 21:03:32,275 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 21:03:32,306 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 21:03:32,320 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:03:32,376 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 21:03:32,406 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:03:33,055 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 21:03:33,183 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 21:04:18,197 - root - ERROR - task_controler.py:441 - get no user by code 222222222
-2020-12-09 21:05:40,038 - root - ERROR - task_controler.py:441 - get no user by code 222222222
-2020-12-09 21:06:56,664 - root - ERROR - task_controler.py:441 - get no user by code 222222222
-2020-12-09 21:07:25,945 - root - WARNING - task_controler.py:413 - get no goods in database by EPC(e2000019150f006319504b98) but still was returned
-2020-12-09 21:07:42,045 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:08:57,351 - root - WARNING - task_controler.py:413 - get no goods in database by EPC(e2000019150f006319504b98) but still was returned
-2020-12-09 21:08:57,682 - root - ERROR - task_controler.py:441 - get no user by code 222222222
-2020-12-09 21:11:11,716 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:13:02,013 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:14:01,499 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:17:39,020 - root - INFO - main.py:63 - START SERVER
-2020-12-09 21:17:39,881 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 21:17:39,912 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 21:17:39,923 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:17:39,939 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:17:39,950 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 21:17:40,392 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 21:17:40,520 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 21:20:15,491 - root - INFO - main.py:63 - START SERVER
-2020-12-09 21:20:16,208 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 21:20:16,236 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 21:20:16,251 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:20:16,272 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:20:16,772 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 21:20:16,805 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 21:25:45,998 - root - INFO - main.py:63 - START SERVER
-2020-12-09 21:25:46,763 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 21:25:46,793 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 21:25:46,812 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:25:46,830 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:25:47,789 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 21:25:47,867 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 21:25:50,258 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:25:50,540 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:25:50,760 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:25:51,079 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:00,228 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:00,545 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:00,867 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:02,075 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:26:10,259 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:10,510 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:10,766 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:10,982 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:11,348 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:20,259 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:20,550 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:20,805 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:21,093 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:30,240 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:30,496 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:30,747 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:31,037 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:40,210 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:40,454 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:40,693 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:40,967 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:41,240 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:50,242 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:50,519 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:50,776 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:51,068 - root - ERROR - Object2.py:62 - '08'
-2020-12-09 21:26:59,092 - root - INFO - main.py:63 - START SERVER
-2020-12-09 21:26:59,844 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 21:26:59,874 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 21:26:59,889 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:27:00,229 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 21:27:00,293 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 21:28:41,319 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:29:31,950 - root - ERROR - task_controler.py:441 - get no user by code 222222222
-2020-12-09 21:29:51,803 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:35:25,101 - root - INFO - main.py:63 - START SERVER
-2020-12-09 21:35:25,830 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 21:35:25,862 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 21:35:25,871 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:35:26,139 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 21:35:26,160 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 21:37:12,829 - root - ERROR - task_controler.py:441 - get no user by code 222222222
-2020-12-09 21:37:33,767 - root - WARNING - task_controler.py:413 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:38:42,652 - root - WARNING - task_controler.py:413 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:38:42,673 - root - ERROR - task_controler.py:441 - get no user by code 222222222
-2020-12-09 21:45:21,824 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:46:45,323 - root - INFO - main.py:63 - START SERVER
-2020-12-09 21:46:46,163 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 21:46:46,196 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 21:46:46,212 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 21:46:46,753 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 21:46:46,841 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 21:48:28,539 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:48:28,737 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 21:49:08,415 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:49:41,248 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:51:21,180 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 21:51:38,308 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:51:38,327 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 21:54:04,750 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(e2000019150f006319504b98) but still was returned
-2020-12-09 21:54:04,894 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:55:52,141 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 21:56:25,520 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:56:49,681 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:56:50,256 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 21:58:16,955 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 21:58:39,782 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:58:56,397 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 21:58:56,768 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 22:00:10,198 - root - ERROR - Object2.py:62 - object of type 'int' has no len()
-2020-12-09 22:00:10,884 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.97, 26) is offline
-2020-12-09 22:00:12,508 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 22:01:18,460 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 22:01:20,003 - root - ERROR - Object2.py:62 - object of type 'int' has no len()
-2020-12-09 22:01:20,994 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.97, 26) is offline
-2020-12-09 22:01:21,404 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 22:01:46,001 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 22:03:22,452 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(a00000000000000000a00021) but still was returned
-2020-12-09 22:09:38,254 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 22:10:00,847 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 22:10:45,973 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 22:11:45,167 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 22:12:32,142 - root - WARNING - task_controler.py:415 - get no goods in database by EPC(e2000019150f006319504b98) but still was returned
-2020-12-09 22:12:32,748 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 22:12:52,288 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
-2020-12-09 22:13:55,410 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 22:14:29,645 - root - ERROR - task_controler.py:443 - get no user by code 222222222
-2020-12-09 22:17:03,834 - root - INFO - main.py:63 - START SERVER
-2020-12-09 22:17:04,567 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 22:17:04,604 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 22:17:04,627 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 22:17:04,666 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 22:17:04,742 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 22:17:04,788 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 22:28:42,641 - root - INFO - main.py:63 - START SERVER
-2020-12-09 22:28:43,418 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 22:28:43,451 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 22:28:43,465 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 22:28:43,968 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 22:28:44,058 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 22:31:40,232 - root - INFO - main.py:63 - START SERVER
-2020-12-09 22:31:41,018 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-09 22:31:41,050 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
-2020-12-09 22:31:41,063 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
-2020-12-09 22:31:41,240 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
-2020-12-09 22:31:41,372 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
-2020-12-09 22:33:21,343 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 18:23:17,572 - root - INFO - main.py:63 - START SERVER
+2020-12-15 18:23:18,399 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 18:23:18,442 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:23:18,463 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:23:18,565 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:23:18,583 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:23:19,219 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-15 18:23:19,314 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-15 18:30:50,887 - root - INFO - main.py:63 - START SERVER
+2020-12-15 18:30:51,547 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 18:30:51,567 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:30:51,576 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:30:51,610 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:30:52,269 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-15 18:30:52,323 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-15 18:31:01,027 - root - ERROR - task_controler.py:169 - a bytes-like object is required, not 'dict'
+2020-12-15 18:31:10,278 - root - ERROR - task_controler.py:169 - a bytes-like object is required, not 'dict'
+2020-12-15 18:32:30,498 - root - ERROR - task_controler.py:169 - a bytes-like object is required, not 'dict'
+2020-12-15 18:32:40,996 - root - ERROR - task_controler.py:169 - a bytes-like object is required, not 'dict'
+2020-12-15 18:33:02,967 - root - ERROR - task_controler.py:169 - a bytes-like object is required, not 'dict'
+2020-12-15 18:33:10,270 - root - ERROR - task_controler.py:169 - a bytes-like object is required, not 'dict'
+2020-12-15 18:33:12,315 - root - ERROR - task_controler.py:169 - a bytes-like object is required, not 'dict'
+2020-12-15 18:33:20,688 - root - ERROR - task_controler.py:169 - a bytes-like object is required, not 'dict'
+2020-12-15 18:33:44,922 - root - INFO - main.py:63 - START SERVER
+2020-12-15 18:33:45,521 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 18:33:45,535 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:33:45,541 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:33:45,549 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:33:46,462 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-15 18:33:46,521 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-15 18:33:50,183 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:33:50,415 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:33:50,616 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:33:50,813 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:33:51,058 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:00,208 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:00,411 - root - ERROR - task_controler.py:170 - a bytes-like object is required, not 'dict'
+2020-12-15 18:34:00,417 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:00,605 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:00,789 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:00,971 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:01,157 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:10,218 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:10,436 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:10,632 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:10,814 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:11,001 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:20,210 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:20,428 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:20,640 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:20,833 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:21,026 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:30,208 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:30,405 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:30,615 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:30,823 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:31,016 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:40,170 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:40,396 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:40,582 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:40,759 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:40,937 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:41,112 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:50,195 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:50,389 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:50,592 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:50,794 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:34:51,013 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:00,208 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:00,414 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:00,612 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:00,804 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:00,993 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:01,362 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:10,195 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:10,398 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:10,595 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:10,772 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:10,953 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:11,145 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:20,215 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:20,424 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:20,627 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:20,839 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:21,033 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:30,184 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:30,417 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:30,637 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:30,817 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:30,990 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:31,226 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:40,205 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:40,400 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:40,579 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:40,820 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:41,023 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:50,185 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:50,359 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:50,582 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:50,782 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:50,974 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:51,227 - root - ERROR - Object2.py:62 - '03'
+2020-12-15 18:35:59,931 - root - INFO - main.py:63 - START SERVER
+2020-12-15 18:36:00,538 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 18:36:00,647 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:36:00,660 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:36:00,765 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:36:01,005 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-15 18:36:01,046 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-15 18:38:48,781 - root - INFO - main.py:63 - START SERVER
+2020-12-15 18:38:49,378 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 18:38:49,395 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:38:49,403 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:38:49,424 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:38:49,434 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:38:49,917 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-15 18:38:49,951 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-15 18:40:00,152 - root - ERROR - task_controler.py:171 - [Errno 32] Broken pipe
+2020-12-15 18:40:07,013 - root - INFO - main.py:63 - START SERVER
+2020-12-15 18:40:07,669 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 18:40:07,684 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:40:07,697 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:40:08,010 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-15 18:40:08,019 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-15 18:41:50,942 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:42:10,041 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:42:20,151 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:42:30,508 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:42:50,341 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:43:03,806 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:43:11,004 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:43:13,057 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:43:20,208 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:43:23,265 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:45:03,054 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:45:13,577 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:45:41,814 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 18:47:13,039 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:47:23,504 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:48:13,299 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:48:23,867 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:48:33,070 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:50:31,457 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 18:50:50,979 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:51:00,370 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:03,069 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:10,365 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:11,519 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 18:52:13,428 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:20,537 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:30,018 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:33,119 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:40,466 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:43,597 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:51,036 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:52:53,117 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:53:00,403 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:53:10,665 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:53:20,034 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:54:40,950 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:54:50,265 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:55:00,768 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:55:10,197 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:55:20,561 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:55:30,878 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:57:13,737 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:57:22,942 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 18:58:19,024 - root - INFO - main.py:63 - START SERVER
+2020-12-15 18:58:19,700 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 18:58:19,739 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 18:58:19,748 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 18:58:20,287 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-15 18:58:20,332 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-15 18:59:31,419 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 19:00:21,446 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 19:00:52,086 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 19:11:41,773 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 19:15:01,172 - root - ERROR - Object2.py:62 - 'int' object is not iterable
+2020-12-15 19:15:03,310 - root - ERROR - Object2.py:856 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-15 19:15:04,344 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.201, 4370) is offline
+2020-12-15 19:15:06,973 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 19:15:07,034 - root - ERROR - Object2.py:856 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -6
+2020-12-15 19:15:07,319 - root - WARNING - gateway_server.py:250 - fail to connect to server ('192.168.0.117', 26)
+2020-12-15 19:15:07,332 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.201, 4370) is offline
+2020-12-15 19:15:07,357 - root - WARNING - gateway_server.py:250 - fail to connect to server ('192.168.0.117', 23)
+2020-12-15 19:15:11,202 - root - ERROR - Object2.py:62 - 'int' object is not iterable
+2020-12-15 19:15:21,175 - root - ERROR - Object2.py:62 - 'int' object is not iterable
+2020-12-15 19:15:30,475 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 19:15:30,483 - root - ERROR - Object2.py:856 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -6
+2020-12-15 19:15:30,505 - root - WARNING - gateway_server.py:250 - fail to connect to server ('192.168.0.117', 26)
+2020-12-15 19:15:30,520 - root - WARNING - gateway_server.py:250 - fail to connect to server ('192.168.0.117', 23)
+2020-12-15 19:15:31,154 - root - ERROR - Object2.py:62 - 'int' object is not iterable
+2020-12-15 19:15:31,503 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.201, 4370) is offline
+2020-12-15 19:15:41,159 - root - ERROR - Object2.py:62 - 'int' object is not iterable
+2020-12-15 19:15:51,191 - root - ERROR - Object2.py:62 - 'int' object is not iterable
+2020-12-15 19:15:52,176 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.97, 26) is offline
+2020-12-15 19:15:53,555 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 19:15:53,567 - root - ERROR - Object2.py:856 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -6
+2020-12-15 19:15:53,629 - root - WARNING - gateway_server.py:250 - fail to connect to server ('192.168.0.117', 26)
+2020-12-15 19:15:53,649 - root - WARNING - gateway_server.py:250 - fail to connect to server ('192.168.0.117', 23)
+2020-12-15 19:15:54,278 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.201, 4370) is offline
+2020-12-15 19:33:01,723 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 19:37:11,533 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 19:38:01,917 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 19:40:41,737 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 19:49:21,566 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 19:57:31,727 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:02:01,600 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:03:51,477 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:08:41,779 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:13:32,000 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:17:21,232 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:18:31,788 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:22:31,769 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:28:51,209 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:31:02,104 - root - INFO - main.py:63 - START SERVER
+2020-12-15 20:31:02,787 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-15 20:31:02,815 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 20:31:02,826 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 23))已成功连接。。online
+2020-12-15 20:31:02,857 - root - INFO - gateway_server.py:242 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-15 20:31:02,905 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-15 20:31:02,936 - root - INFO - gateway_server.py:292 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-15 20:33:53,470 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:34:02,748 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:34:13,107 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:34:23,576 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:34:43,181 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:34:52,505 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:35:02,812 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:35:10,011 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:35:13,110 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:35:20,415 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:37:33,453 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:37:42,746 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:38:33,531 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:38:42,964 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:39:02,749 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:39:13,139 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:39:52,640 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:40:02,937 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:43:21,307 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:45:12,783 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:45:20,271 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:45:23,446 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:45:30,772 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:45:43,204 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:45:50,524 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:45:52,571 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:46:00,844 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:46:30,942 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:46:33,035 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:46:40,244 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:46:43,437 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:47:10,738 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:47:20,207 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:47:32,580 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:47:40,914 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:47:43,051 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:47:50,474 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:48:01,933 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:50:11,230 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 20:50:13,218 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:50:22,543 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:50:32,787 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:50:43,056 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:51:13,344 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:51:22,696 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:51:33,056 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:51:42,577 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:51:52,940 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:52:03,324 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:52:12,595 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:53:02,827 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:53:13,181 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:57:13,359 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:57:20,749 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:57:22,794 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:57:31,060 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:58:12,721 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:58:21,015 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:58:23,015 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:58:30,270 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:58:33,351 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:58:42,724 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:59:33,362 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:59:40,708 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:59:42,786 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 20:59:50,065 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:00:02,549 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:00:13,038 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:00:32,759 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:00:43,158 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:01:02,892 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:01:13,206 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:01:42,498 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:01:52,973 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:03:02,810 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:03:13,135 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:04:20,394 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:04:30,798 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:06:40,363 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:06:50,666 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:08:03,757 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:08:11,037 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:08:13,132 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:08:20,432 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:09:10,187 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:09:20,493 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:09:32,992 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:09:43,334 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:10:00,978 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:10:10,126 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:10:20,560 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:10:30,997 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:10:53,027 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:11:00,276 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:11:03,390 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:11:10,708 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:11:23,128 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:11:32,566 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:11:53,157 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:12:02,480 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:12:41,513 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 21:13:03,086 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:13:12,539 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:13:23,023 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:13:42,681 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:16:31,249 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 21:19:43,217 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:19:50,587 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:19:52,691 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:20:01,005 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:20:42,943 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:20:50,221 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:20:52,285 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:21:00,642 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:21:51,816 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 21:21:52,305 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:22:02,042 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 21:22:02,676 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:23:53,310 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:24:02,791 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:24:52,991 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:25:02,204 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:25:53,262 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:26:02,648 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:27:21,485 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 21:27:41,001 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:27:50,318 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:30:01,261 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 21:31:31,739 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 21:31:32,903 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:31:42,216 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:31:52,748 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:32:03,140 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:32:10,469 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:32:12,549 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:32:20,857 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:33:10,557 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:33:11,547 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 21:33:20,880 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:33:42,604 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:33:53,083 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:34:53,136 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:35:02,421 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:35:23,278 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:35:32,661 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:35:42,903 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:35:53,211 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:36:02,578 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:36:13,005 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:36:23,112 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:36:32,368 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:38:02,425 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:38:12,846 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:41:20,072 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:41:30,384 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:43:00,349 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:43:10,719 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:43:40,774 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:43:50,110 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:44:20,389 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:44:22,430 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:44:30,730 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:44:32,789 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:46:02,444 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:46:12,827 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:46:23,110 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:47:02,561 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:47:12,933 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:47:22,309 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:47:32,620 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:48:10,139 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:48:13,210 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:48:20,594 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:48:22,666 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:49:22,865 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:49:33,116 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:54:40,925 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:54:50,363 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:55:00,903 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:55:10,246 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:55:40,447 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:55:50,874 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:56:52,264 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:57:00,576 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:57:02,695 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:57:10,888 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:57:32,456 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:57:40,873 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:57:43,019 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:57:50,196 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:58:13,185 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:58:22,821 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:58:52,949 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:59:02,232 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:59:30,066 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:59:33,174 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:59:40,458 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 21:59:42,491 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:01:11,993 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 22:01:31,761 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 22:05:52,283 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:06:00,719 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:06:02,879 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:06:10,037 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:06:40,115 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:06:50,697 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:07:02,955 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:07:12,177 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:07:21,587 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 22:08:22,884 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:08:33,127 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:08:42,457 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:08:52,944 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:10:32,943 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:10:42,422 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:11:12,535 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:11:22,808 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:11:52,821 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:12:02,202 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:15:51,563 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 22:16:00,733 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:16:11,014 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:16:13,189 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:16:20,619 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:16:22,725 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:16:30,960 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:16:42,329 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:16:52,613 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:17:00,972 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:17:10,352 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:18:43,033 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:18:52,371 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:19:02,948 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:19:22,707 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:19:33,039 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:19:43,228 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:19:52,486 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:20:02,824 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:20:13,086 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:20:32,659 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:20:43,043 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:20:51,593 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 22:20:52,484 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:21:22,510 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:21:42,468 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:21:52,717 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:22:03,161 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:22:12,264 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:22:22,490 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:24:30,182 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:24:40,631 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:27:20,471 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:27:31,041 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:28:00,159 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:28:10,459 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:28:20,682 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:28:42,444 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:28:52,882 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:29:00,061 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:29:03,161 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:29:10,431 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:29:42,501 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:29:52,918 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:30:13,322 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:30:22,526 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:31:50,941 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:32:00,221 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:32:51,263 - root - ERROR - Object2.py:62 - 'int' object has no attribute 'hex'
+2020-12-15 22:32:52,291 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:33:02,702 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:33:13,144 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:33:22,334 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:33:52,537 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:34:02,816 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:37:10,873 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:37:20,083 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:37:30,491 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:37:40,836 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:37:41,912 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:38:00,487 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:38:33,498 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:38:57,546 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:39:00,710 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:39:10,078 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:39:20,429 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:39:30,878 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:39:32,942 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:39:40,338 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:39:42,419 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:39:50,751 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:39:52,834 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:40:03,123 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe
+2020-12-15 22:40:33,180 - root - ERROR - task_controler.py:170 - [Errno 32] Broken pipe

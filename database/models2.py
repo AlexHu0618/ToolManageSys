@@ -117,6 +117,7 @@ class User(Base, MyBase):
     mail = Column(String(50))
     fingerprint = Column(BLOB)
     avatar = Column(BLOB)
+    entrance_password = Column(String(100))
     register_time = Column(DateTime, default=datetime.now)
     last_login_time = Column(DateTime)
     roles = relationship('Role', secondary=role_user, back_populates='users')

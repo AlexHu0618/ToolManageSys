@@ -141,7 +141,10 @@ class TaskControler(Process):
         :return:
         """
         try:
-            # print('analyze pkg: ', package)
+            print('analyze pkg: ', package)
+            if self.sock:
+                data_send = bytes('{}'.format(package), encoding='utf-8')
+                self.sock.send(data_send)
             storeroom_id = package['storeroom_id']
             if package['msg_type'] == 3 and package['equipment_type'] in (3, 5):
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
@@ -160,6 +163,9 @@ class TaskControler(Process):
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
             else:
                 pass
+                # if self.sock:
+                #     data_send = bytes('{}'.format(package), encoding='utf-8')
+                #     self.sock.send(data_send)
         except Exception as e:
             mylogger.error(e)
 
