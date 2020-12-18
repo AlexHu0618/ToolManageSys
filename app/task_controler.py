@@ -19,6 +19,7 @@ class TaskControler(Process):
         self.isrunning = True
         self.storeroom_thread = dict()  # {'storeroom_id': {'thread': thread, 'queue': queue}, }
         self.lock_storeroom_user = threading.RLock()
+        self.web_pkg_counter = 0
 
     def run(self):
         thread_conn = threading.Thread(target=self._monitorconn)
@@ -58,20 +59,20 @@ class TaskControler(Process):
                         data = client_sock.recv(length)
                         print(time.asctime(), 'recv: ', data)
                         data_dict = eval(str(data, encoding='utf-8'))
-                        # # data_send = bytes('{}'.format(data_dict), encoding='utf-8')
-                        # # client_sock.send(data_send)
-                        # cmd = data_dict['data']['addr'].__str__() + '\r\n' + data_dict['data']['func'] + '\r\n' + \
-                        #       data_dict['data']['args'].__str__() + '\r\n' + data_dict['uuid']
-                        # cmd_b = bytes(cmd, encoding='utf-8')
-                        # print(cmd_b)
-                        # self.puttask(data=cmd_b)
-                        self.puttask(data_dict)
+                        self._analyze_web_pkg(data_dict)
             except (OSError, BrokenPipeError):
                 continue
             except KeyboardInterrupt:
                 break
         server_sock.shutdown()
         server_sock.close()
+
+    def _analyze_web_pkg(self, package: dict):
+        if package['msg_type'] == 2 and package['code'] == CLOSE_PROCESS_FROM_WEB:
+            mylogger.info('get pkg(close process) from webserver')
+            self._analyze_pkg(package=package)
+        else:
+            self.puttask(package)
 
     def puttask(self, data):
         # package to transferpackage and put into task queue
@@ -147,6 +148,7 @@ class TaskControler(Process):
                 self.sock.send(data_send)
             storeroom_id = package['storeroom_id']
             if package['msg_type'] == 3 and package['equipment_type'] in (3, 5):
+                # 门禁的数据更新pkg处理
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
                 else:
@@ -159,8 +161,22 @@ class TaskControler(Process):
                     thread_store_mag.start()
                     self.storeroom_thread[storeroom_id] = {'thread': thread_store_mag, 'queue': queue_storeroom}
             elif package['msg_type'] == 3:
+                # 其他设备的数据更新pkg处理
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
+            elif package['msg_type'] == 2 and package['code'] == 301:
+                # web确定按钮pkg
+                if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
+                    self.storeroom_thread[storeroom_id]['queue'].put(package)
+                    # 等待线程结束信号并返回web
+                else:
+                    # 此借还线程不存在，返回web信息不成功
+                    package['code'] = TASK_HANDLE_ERR
+                    package['msg_type'] = 4
+                    package['data'] = {'msg': 'the thread of storeroom is not alive'}
+                    if self.sock:
+                        data_send = bytes('{}'.format(package), encoding='utf-8')
+                        self.sock.send(data_send)
             else:
                 pass
                 # if self.sock:
