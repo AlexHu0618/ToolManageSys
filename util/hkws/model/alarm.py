@@ -1,7 +1,7 @@
 # 硬件产品预警布放相关
-from hkws.core.type_map import *
-from hkws.model.base import NET_DVR_TIME, NET_DVR_IPADDR
-from hkws.core.const import *
+from ..core.type_map import *
+from ..model.base import NET_DVR_TIME, NET_DVR_IPADDR
+from ..core.const import *
 
 
 # 报警设备信息结构体

@@ -9,6 +9,7 @@ from app.myLogger import mylogger
 from app.globalvar import *
 import copy
 from queue import Queue
+import os
 
 
 class GravityShelf(threading.Thread):
@@ -743,7 +744,8 @@ class Lcd(threading.Thread):
 
 
 class EntranceGuard(threading.Thread):
-    lib = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
+    path_cur = os.path.abspath(os.path.dirname(__file__))
+    lib = cdll.LoadLibrary(path_cur + "/../util/libs/zk_lib/libplcommpro.so")
 
     def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data, storeroom_id, uuid):
         threading.Thread.__init__(self)

@@ -1,9 +1,11 @@
 import pymysql
+from settings.config import config_parser as conpar
 
 
 class MyDB(object):
     def __init__(self):
-        self.__db = pymysql.connect('localhost', 'sa', '123456', 'tool_manage_sys')
+        CONF = conpar.read_yaml_file('mysql')
+        self.__db = pymysql.connect(CONF['host'], CONF['user'], CONF['password'], CONF['database'])
         self.__cursor = self.__db.cursor()
 
     def getAllClients(self):

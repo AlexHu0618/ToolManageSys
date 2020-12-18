@@ -1,7 +1,7 @@
 # 硬件产品基础结构体定义
 # 包含初始化SDK,用户注册设备等相关结构体
-from hkws.core.const import *
-from hkws.core.type_map import *
+from ..core.const import *
+from ..core.type_map import *
 
 
 # 设置sdk加载路劲

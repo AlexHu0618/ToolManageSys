@@ -1,8 +1,8 @@
 from ctypes import *
 import os
 import logging
-from hkws.config import Config
-from hkws.model import base, alarm, callbacks
+from .config import Config
+from .model import base, alarm, callbacks
 
 
 # 海康威视基础类，AI摄像机，通用摄像机，门禁产品，出入口产品通用
@@ -11,14 +11,14 @@ class BaseAdapter:
     so_list = []
 
     # 常规启动，初始化SDK到用户注册设备
-    def common_start(self, cnf: Config):
+    def common_start(self, sdk_path, ip, port, user, password):
         userId = -1
-        self.add_lib(cnf.SDKPath, cnf.Suffix)
+        self.add_lib(sdk_path, '.so')
         if len(self.so_list) == 0:
             return userId
         if not self.init_sdk():
             return userId
-        userId = self.login(cnf.IP, cnf.Port, cnf.User, cnf.Password)
+        userId = self.login(ip, port, user, password)
         if userId < 0:
             self.print_error("common_start 失败: the error code is")
         return userId

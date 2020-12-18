@@ -1,5 +1,5 @@
 # 硬件产品人像相关
-from hkws.core.type_map import *
+from ..core.type_map import *
 
 
 # 人体属性参数结构体。
