@@ -1,5 +1,5 @@
 import socket
-from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard, RfidR2000FH
+from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard, RfidR2000FH, HKVision
 # from app.object_test import GravityShelf, RfidR2000, Lcd, EntranceGuard
 from queue import Queue
 from app.myLogger import mylogger
@@ -15,7 +15,7 @@ import datetime
 class GatewayServer(Process):
     """
     1、所有的TCP设备终端应该按库房进行分类管理；
-    2、设备的类型包括：['entrance', 'code_scane', 'channel_machine', 'led', 'gravity', 'rfid2000', 'rfid2000fh']
+    2、设备的类型包括：['entrance_zk', 'entrance_hk', 'code_scane', 'channel_machine', 'led', 'gravity', 'rfid2000', 'rfid2000fh']
     """
     def __init__(self, port: int, servers_registered: dict, clients_registered: dict, queue_task, queue_rsl):
         super().__init__()
@@ -215,8 +215,10 @@ class GatewayServer(Process):
         thread = None
         while True:
             try:
-                if terminal_type == 'entrance':
+                if terminal_type == 'entrance_zk':
                     thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id, uuid)
+                elif terminal_type == 'entrance_hk':
+                    thread = HKVision(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id, uuid)
                 else:
                     s.connect(addr)
                     if terminal_type == 'gravity':
@@ -230,13 +232,13 @@ class GatewayServer(Process):
                     else:
                         pass
                 if thread:
-                    thread.daemon = True
+                    thread.setDaemon(True)
                     thread.start()
                     self.lock.acquire()
                     self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
                                                   'queuersl': queue_rsl, 'status': False, 'subevent': subevent,
                                                   'data': {}, 'is_server': True}
-                    self.server_active[addr] = (terminal_type, storeroom_id)
+                    self.server_active[addr] = (terminal_type, storeroom_id, uuid)
                     self.lock.release()
                     print('服务端(%s)已成功连接。。' % str(addr))
                     mylogger.info('服务端(%s)已成功连接。。online' % str(addr))
@@ -399,12 +401,12 @@ class GatewayServer(Process):
 
     def _modify_db_eq_status(self, eq_type: str, addr: tuple, is_online: bool):
         """
-        设备的类型包括：['entrance', 'code_scane', 'channel_machine', 'led', 'gravity', 'rfid2000', 'rfid2000fh']
+        设备的类型包括：['entrance_zk', 'code_scane', 'channel_machine', 'led', 'gravity', 'rfid2000', 'rfid2000fh']
         :param eq_type:
         :return:
         """
         try:
-            if eq_type == 'entrance':
+            if eq_type == 'entrance_zk':
                 entrance = Entrance.by_addr(ip=addr[0], port=addr[1])
                 if entrance is not None:
                     entrance.update('status', int(is_online))

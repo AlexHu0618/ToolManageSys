@@ -9,11 +9,24 @@ from .model import base, alarm, callbacks
 class BaseAdapter:
     # 动态sdk文件 .so .dll
     so_list = []
+    # 动态sdk文件路径
+    path_cur = os.path.abspath(os.path.dirname(__file__))
+    lib_path = path_cur + "/../libs/hkvision_lib/"
 
-    # 常规启动，初始化SDK到用户注册设备
-    def common_start(self, sdk_path, ip, port, user, password):
+    # 常规启动，初始化SDK
+    def add_init_sdk(self):
+        self.add_lib(self.lib_path, '.so')
+        if len(self.so_list) == 0:
+            return False
+        if not self.init_sdk():
+            return False
+        else:
+            return True
+
+    # 到用户注册设备
+    def common_start(self, ip, port, user, password):
         userId = -1
-        self.add_lib(sdk_path, '.so')
+        self.add_lib(self.lib_path, '.so')
         if len(self.so_list) == 0:
             return userId
         if not self.init_sdk():
@@ -83,6 +96,7 @@ class BaseAdapter:
     def sdk_clean(self):
         result = self.call_cpp("NET_DVR_Cleanup")
         logging.info("释放资源", result)
+        print("释放资源", result)
 
     # 设备登录
     def login(self, address="192.168.1.1", port=8000, user="admin", pwd="admin"):
@@ -203,3 +217,10 @@ class BaseAdapter:
     def print_error(self, msg=""):
         error_info = self.call_cpp("NET_DVR_GetLastError")
         logging.error(msg + str(error_info))
+
+    # 设置接收异常、重连等消息的窗口句柄或回调函数
+    def set_exceptioln_call_back(self, nMessage, preserved2, cbFunc, user_id):
+        result = self.call_cpp("NET_DVR_SetExceptionCallBack_V30", nMessage, preserved2, cbFunc, user_id)
+        if not result:
+            self.print_error("NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is ")
+        return result

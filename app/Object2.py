@@ -11,6 +11,11 @@ import copy
 from queue import Queue
 import os
 
+from util.hkws import base_adapter
+from util.hkws.model import alarm
+from util.hkws.model.base import *
+from threading import RLock
+
 
 class GravityShelf(threading.Thread):
     """
@@ -808,20 +813,20 @@ class EntranceGuard(threading.Thread):
                 break
         self.lib.Disconnect(self.handle)
 
-    @staticmethod
-    def conn(ip: str, port: int):
-        handle = EntranceGuard.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(ip, encoding='utf8') +
-                                       b',port=' + bytes(str(port), encoding='utf8') +
-                                       b',timeout=2000,passwd=')
-        if handle == 0:
-            print('Fail to Connect.')
-            return None
-        else:
-            return handle
-
-    @staticmethod
-    def disconn(handle):
-        EntranceGuard.lib.Disconnect(handle)
+    # @staticmethod
+    # def conn(ip: str, port: int):
+    #     handle = EntranceGuard.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(ip, encoding='utf8') +
+    #                                    b',port=' + bytes(str(port), encoding='utf8') +
+    #                                    b',timeout=2000,passwd=')
+    #     if handle == 0:
+    #         print('Fail to Connect.')
+    #         return None
+    #     else:
+    #         return handle
+    #
+    # @staticmethod
+    # def disconn(handle):
+    #     EntranceGuard.lib.Disconnect(handle)
 
     def getDeviceParam(self):
         buff = create_string_buffer("b".encode('utf-8'), 1024)
@@ -916,8 +921,148 @@ class EntranceGuard(threading.Thread):
         self.lib.Disconnect(self.handle)
 
 
-class HIKVision(threading.Thread):
-    pass
+class HKVision(threading.Thread):
+    ip_obj_dic = {}  # {ip: {'obj': obj, 'user_id': user_id}}
+    adapter = None
+    obj_counter = 0
+
+    def __init__(self, addr, queuetask, queuersl, queue_push_data, storeroom_id, uuid):
+        threading.Thread.__init__(self)
+        self.ip = addr[0]
+        self.port = addr[1]
+        self.username = 'admin'
+        self.password = 'abcd1234'
+        self.storeroom_id = storeroom_id
+        self.uuid = uuid
+        self.queuetask = queuetask
+        self.queuersl = queuersl
+        self.queue_push_data = queue_push_data
+        self.user_id = None
+        self.isrunning = True
+        self.lock = RLock()
+        HKVision.ip_obj_dic[self.ip] = {'obj': self}
+        HKVision.obj_counter += 1
+        self.alarm_handle = None
+
+    def run(self):
+        try:
+            print('thread name--', threading.current_thread().name)
+            if self._login():
+                print('success')
+                self._set_exception_cb()
+                self._get_alarm()
+                while self.isrunning:
+                    time.sleep(10)
+                self._close_alarm()
+                HKVision.adapter.logout(self.user_id)
+            else:
+                print('SDK init failed')
+        except Exception as e:
+            print(e)
+            mylogger.error('Hkvision %s got exception' % self.ip)
+        finally:
+            self._del_self()
+
+    def _del_self(self):
+        print('del obj')
+        print('thread name--', threading.current_thread().name)
+        if self.ip in HKVision.ip_obj_dic.keys():
+            del HKVision.ip_obj_dic[self.ip]
+            HKVision.obj_counter -= 1
+        if HKVision.obj_counter == 0 and HKVision.adapter is not None:
+            HKVision.adapter.sdk_clean()
+
+    def _login(self):
+        """
+        1、如果未初始化SDK适配器，则加载并初始化；
+        2、用户登录门禁主机；
+        :return:
+        """
+        if HKVision.adapter is None:
+            HKVision.adapter = base_adapter.BaseAdapter()
+            # rsl = HKVision.adapter.add_init_sdk()
+            # if not rsl:
+            #     print('Fail to initial SDK')
+            #     return False
+        userId = HKVision.adapter.common_start(ip=self.ip, port=self.port, user=self.username, password=self.password)
+        if userId < 0:
+            print('Failed to login')
+            return False
+        self.user_id = userId
+        HKVision.ip_obj_dic[self.ip]['user_id'] = self.user_id
+        return True
+
+    def _get_alarm(self):
+        data = HKVision.adapter.setup_alarm_chan_v31(self.message_call_back, self.user_id)
+        print("设置回调函数结果", data)
+        # 布防
+        alarm_result = self.adapter.setup_alarm_chan_v41(self.user_id)
+        print("设置人脸v41布防结果", alarm_result)
+        self.alarm_handle = alarm_result
+
+    def _close_alarm(self):
+        HKVision.adapter.close_alarm(self.alarm_handle)
+
+    def _set_exception_cb(self):
+        rsl = HKVision.adapter.set_exceptioln_call_back(None, None, self.exception_call_back, self.user_id)
+        print('set_exception_cb', rsl)
+
+    @staticmethod
+    @CFUNCTYPE(h_BOOL, h_LONG, POINTER(alarm.NET_DVR_ALARMER), POINTER(h_CHAR), h_DWORD, h_VOID_P)
+    def message_call_back(lCommand,
+                          pAlarmer,
+                          pAlarmInfo,
+                          dwBufLen,
+                          pUser):
+        print("lCommand:{},pAlarmer:{},pAlarmInfo:{},dwBufLen:{}".format(lCommand, pAlarmer, pAlarmInfo, dwBufLen))
+        if lCommand == 0x5002:
+            # 门禁主机报警信息
+            print('Command=', lCommand)
+            alarmer = alarm.NET_DVR_ALARMER()
+            memmove(pointer(alarmer), pAlarmer, sizeof(alarmer))
+            ip = bytearray(alarmer.sDeviceIP).decode(encoding='utf-8')
+            print('IP--', ip)
+            alarm_info = alarm.NET_DVR_ACS_ALARM_INFO()
+            memmove(pointer(alarm_info), pAlarmInfo, sizeof(alarm_info))
+            major_code = alarm_info.dwMajor
+            minor_code = alarm_info.dwMinor
+            if major_code == 5 and minor_code == 38:
+                print(hex(alarm_info.dwMajor))
+                print(hex(alarm_info.dwMinor))
+                cardno = bytearray(alarm_info.struAcsEventInfo.byCardNo).decode(encoding='utf-8')
+                user_code = alarm_info.struAcsEventInfo.dwEmployeeNo
+                print('user--%s(CARD--%s) was in' % (user_code, cardno))
+                print(alarm_info.byAcsEventInfoExtend)
+                print(alarm_info.byAcsEventInfoExtendV20)
+                HKVision.ip_obj_dic[ip]['obj'].set_auth_info(user_code, cardno)
+                if user_code == 1 or user_code == '1':
+                    HKVision.ip_obj_dic[ip]['obj'].stop()
+        return True
+
+    @staticmethod
+    @CFUNCTYPE(None, h_DWORD, h_BYTE, h_BYTE, h_VOID_P)
+    def exception_call_back(dwType,
+                            lUserID,
+                            lHandle,
+                            pUser):
+        print(hex(dwType), lUserID, lHandle, pUser)
+        if hex(dwType) == '0x8000':
+            # 网络断开异常
+            for k, v in HKVision.ip_obj_dic.items():
+                if v['user_id'] == lUserID:
+                    v['obj'].stop()
+
+    def set_auth_info(self, user_code, cardno):
+        print('(userCode, cardNo)--(%s, %s) was in!' % (user_code, cardno))
+        data = {'user': user_code, 'cardno': cardno}
+        pkg = TransferPackage(code=206, eq_type=3, data=data, source=(self.ip, self.port),
+                              msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+        self.queue_push_data.put(pkg)
+
+    def stop(self):
+        print('offline')
+        with self.lock:
+            self.isrunning = False
 
 
 class CodeScanner(threading.Thread):

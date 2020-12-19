@@ -16,7 +16,7 @@ class NET_DVR_ALARMER(Structure):
         ("byLinkPortValid", h_BYTE),
         ("byDeviceIPValid", h_BYTE),
         ("bySocketIPValid", h_BYTE),
-        ("lUserID", h_LONG),
+        ("lUserID", h_BYTE),
         ("sSerialNumber", h_BYTE * 48),
 
         ("dwDeviceVersion", h_DWORD),

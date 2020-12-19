@@ -268,10 +268,12 @@ class Entrance(Base, MyBase):
     id = Column(String(50), primary_key=True, unique=True, nullable=False, default=lambda: str(uuid4()))
     ip = Column(String(100), nullable=False)
     port = Column(Integer, nullable=False)
-    name = Column(String(100))
-    code = Column(String(100))
-    is_server = Column(Boolean, default=True)
-    type = Column(Integer, default=1)  # 1-指纹；2-人脸
+    name = Column(String(100))  # 设备名称
+    code = Column(String(100))  # 设备编号
+    login_name = Column(String(100))  # 登录用户名
+    login_password = Column(String(100))  # 登录密码
+    is_server = Column(Boolean, default=True)  # 是否作为服务端
+    type = Column(Integer, default=1)  # 1-中控；2-海康威视
     status = Column(Integer, default=1)  # 0-离线；1-在线；
     last_offline_time = Column(DateTime, default=datetime.now)
     storeroom_id = Column(String(50), ForeignKey('storeroom.id'))
