@@ -152,11 +152,11 @@ class TaskControler(Process):
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
                 else:
-                    print(package['data']['user'], ' enter to storeroom--', package['source'])
+                    print('\033[1;33m', package['data']['user'] + 'enter to storeroom--' + storeroom_id + ' by entrance--' + package['source'], '\033[0m')
                     addr = package['source']
                     user_code = package['data']['user']
                     queue_storeroom = Queue(50)
-                    thread_store_mag = StoreroomManager(addr=addr, user_code=user_code, queue_storeroom=queue_storeroom)
+                    thread_store_mag = StoreroomManager(addr=addr, user_code=user_code, queue_storeroom=queue_storeroom, q_send=self.q_rsl)
                     thread_store_mag.daemon = True
                     thread_store_mag.start()
                     self.storeroom_thread[storeroom_id] = {'thread': thread_store_mag, 'queue': queue_storeroom}
@@ -203,11 +203,12 @@ class StoreroomManager(threading.Thread):
         则缓存更新用户借出信息。发送更新信息到web，扫码枪同理。若为web确定信息pkg，则保存当前用户借还信息并结束线程。
     6、定时到则结束线程。
     """
-    def __init__(self, addr, user_code, queue_storeroom):
+    def __init__(self, addr, user_code, queue_storeroom, q_send):
         threading.Thread.__init__(self)
         self.addr = addr
         self.user_code = user_code
         self.user_id = None
+        self.q_send = q_send
         self.manage_mode = 1  # default=1
         self.storeroom_id = None
         self.isrunning = True
@@ -227,7 +228,7 @@ class StoreroomManager(threading.Thread):
         self._get_manage_mode()
         self._set_current_user()
         interval = 60
-        over_timer = threading.Timer(interval=interval, function=self._get_is_close, args=[interval, ])
+        over_timer = threading.Timer(interval=interval, function=self._check_timeout_to_close, args=[interval, ])
         over_timer.start()
         while self.isrunning:
             if not self.queue_pkg.empty():
@@ -244,7 +245,7 @@ class StoreroomManager(threading.Thread):
             else:
                 pass
 
-    def _get_is_close(self, interval):
+    def _check_timeout_to_close(self, interval):
         """
         定时判断是否没有update，是则结束借还线程；
         :return:
@@ -255,7 +256,7 @@ class StoreroomManager(threading.Thread):
         else:
             with self.lock:
                 self.is_close = True
-            over_timer = threading.Timer(interval=interval, function=self._get_is_close, args=[interval, ])
+            over_timer = threading.Timer(interval=interval, function=self._check_timeout_to_close, args=[interval, ])
             over_timer.start()
 
     def _handle_mode_one(self, pkg):
@@ -263,15 +264,21 @@ class StoreroomManager(threading.Thread):
         1、新门禁用户事件；
         2、重力货架事件；
         3、RFID货架事件；
+        4、web事件;
         :param pkg:
         :return:
         """
         if pkg['equipment_type'] == 3:
-            self._save_data2db()
-            self.user_code = pkg['data']['user']
-            self._set_current_user()
-            print('current user is ', self.user_code)
+            # 门禁package
+            rsl = self._save_data2db()
+            if rsl:
+                self.user_code = pkg['data']['user']
+                self._set_current_user()
+                print('current user was change to ', self.user_code)
+            else:
+                pass
         elif pkg['equipment_type'] == 1:
+            # 重力柜package
             # 1.modify grid; 2.modify history;
             eq_id = pkg['equipment_id']
             sensor_addr = pkg['data']['addr_num']
@@ -284,6 +291,7 @@ class StoreroomManager(threading.Thread):
                 self.gravity_goods[grid.id] = [grid.type, pkg['data']['value']]
             print('all gravity--', self.gravity_goods)
         elif pkg['equipment_type'] == 2:
+            # RFID柜package
             # 1.modify goods; 2.modify history;
             eq_id = pkg['equipment_id']
             is_increased = pkg['data']['is_increase']
@@ -295,11 +303,36 @@ class StoreroomManager(threading.Thread):
                 else:
                     self.rfid_goods[epc] = (eq_id, ant, is_increased)
             print('all RFID--', self.rfid_goods)
+        elif pkg['equipment_type'] == 7 and pkg['msg_type'] == 2:
+            # 触摸屏下发package
+            self._handle_web_btn_info_pkg(pkg=pkg)
         else:
             pass
 
     def _handle_mode_three(self, pkg):
         pass
+
+    def _handle_web_btn_info_pkg(self, pkg):
+        if pkg['code'] == 402:
+            # 点击确定按钮,保存并返回结果至web
+            rsl = self._save_data2db()
+            if rsl:
+                pkg['code'] = 200
+            else:
+                pkg['code'] = 401
+            if not pkg['data']['is_dir_in']:
+                with self.lock:
+                    self.isrunning = False
+            pkg['msg_type'] = 4
+            self.q_send.put(pkg)
+        elif pkg['code'] == 403:
+            # 点击查询按钮
+            pkg['code'] = 200
+            pkg['msg_type'] = 4
+            pkg['data']['goods_list'] = {'gravity': self.gravity_goods, 'rfid': self.rfid_goods}
+            self.q_send.put(pkg)
+        else:
+            pass
 
     def _save_data2db(self):
         """
@@ -308,18 +341,23 @@ class StoreroomManager(threading.Thread):
         3、同时检测是否放置错误的重力格子或者RFID格子；
         :return:
         """
-        print('_save_data2db')
-        print('\033[1;33m', 'all gravity--', self.gravity_goods)
-        print('all RFID--', self.rfid_goods, '\033[0m')
-        history_list = History_inbound_outbound.by_user_need_return(self.user_id)
-        print('history_list--', history_list)
-        history_gravity = [h for h in history_list if h.monitor_way == 1]
-        history_rfid = [h for h in history_list if h.monitor_way == 2]
-        self._save_gravity_data(history=history_gravity)
-        self._save_rfid_data(history=history_rfid)
-        with self.lock:
-            self.rfid_goods.clear()
-            self.gravity_goods.clear()
+        try:
+            print('_save_data2db')
+            print('\033[1;33m', 'all gravity--', self.gravity_goods)
+            print('all RFID--', self.rfid_goods, '\033[0m')
+            history_list = History_inbound_outbound.by_user_need_return(self.user_id)
+            # print('history_list--', history_list)
+            history_gravity = [h for h in history_list if h.monitor_way == 1]
+            history_rfid = [h for h in history_list if h.monitor_way == 2]
+            self._save_gravity_data(history=history_gravity)
+            self._save_rfid_data(history=history_rfid)
+            with self.lock:
+                self.rfid_goods.clear()
+                self.gravity_goods.clear()
+            return True
+        except Exception as e:
+            mylogger.error('Func _save_data2db ' + e)
+            return False
 
     def _save_gravity_data(self, history: list):
         """
@@ -387,7 +425,7 @@ class StoreroomManager(threading.Thread):
         :param history:
         :return:
         """
-        print('rfid history--', history)
+        # print('rfid history--', history)
         current_dt = datetime.datetime.now()
         # 先把self.rfid_goods中的key从bytes转为str；
         rfid_current = {k.hex(): v for k, v in self.rfid_goods.items()}
@@ -458,9 +496,16 @@ class StoreroomManager(threading.Thread):
         print(storeroom.shelfs)
 
     def _set_current_user(self):
+        """
+        设置当前库房登录者并发送至web
+        :return:
+        """
         user = User.by_code(code=self.user_code)
         if user is not None:
             self.user_id = user.uuid
+            data = {'user_id': self.user_id}
+            pkg_to_web = TransferPackage(code=404, eq_type=3, msg_type=2, storeroom_id=self.storeroom_id, data=data)
+            self.q_send.put(pkg_to_web.to_dict())
         else:
             mylogger.error('get no user by code %s' % self.user_code)
 
@@ -474,7 +519,7 @@ class StoreroomManager(threading.Thread):
     def _exit_manage(self):
         """
         出库房管理
-        1、解除库房：人的绑定；
+        1、解除库房&人的绑定；
         2、保存库存与工具包信息到DB。
         :return:
         """

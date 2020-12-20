@@ -1,12 +1,16 @@
 SUCCESS = 200
 TIMEOUT = 201
-ERR_EQUIPMENT_RESP = 202
-QUEUE_RSL_EMPTY = 203
-EQUIPMENT_OFFLINE = 204
-EQUIPMENT_ONLINE = 205
-EQUIPMENT_DATA_UPDATE = 206
-TASK_HANDLE_ERR = 207
-CLOSE_PROCESS_FROM_WEB = 301
+
+ERR_EQUIPMENT_RESP = 301
+QUEUE_RSL_EMPTY = 302
+EQUIPMENT_OFFLINE = 303
+EQUIPMENT_ONLINE = 304
+EQUIPMENT_DATA_UPDATE = 305
+
+TASK_HANDLE_ERR = 401
+BTN_CONFIRM_FROM_WEB = 402
+BTN_CHECK_FROM_WEB = 403
+USER_ENTRANCE_SUCCESS = 404
 
 
 class TransferPackage(object):
@@ -14,7 +18,7 @@ class TransferPackage(object):
         self.uuid = None
         self.target = target
         self.code = code  # 状态码
-        self.equipment_type = eq_type  # 1-重力；2-RFID；3-门禁；4-通道机；5-人脸机;6-LCD
+        self.equipment_type = eq_type  # 1-重力；2-RFID；3-门禁；4-通道机；5-人脸机;6-LCD;7-触摸屏终端;
         self.data = data
         self.source = source
         self.storeroom_id = storeroom_id

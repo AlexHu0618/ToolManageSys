@@ -1,8 +1,8 @@
 from ctypes import *
 import os
-import logging
 from .config import Config
 from .model import base, alarm, callbacks
+from app.myLogger import mylogger
 
 
 # 海康威视基础类，AI摄像机，通用摄像机，门禁产品，出入口产品通用
@@ -55,8 +55,8 @@ class BaseAdapter:
                 lib = cdll.LoadLibrary(so_lib)
                 try:
                     value = eval("lib.%s" % func_name)(*args)
-                    logging.info("调用的库：" + so_lib)
-                    logging.info("执行成功,返回值：" + str(value))
+                    mylogger.info("调用的库：" + so_lib)
+                    mylogger.info("执行成功,返回值：" + str(value))
                     return value
                 except:
                     continue
@@ -64,14 +64,14 @@ class BaseAdapter:
                 continue
             # logging.info("库文件载入失败：" + so_lib )
 
-        logging.error("没有找到接口！")
+        mylogger.error("没有找到接口！")
         return False
 
     # 初始化海康微视 sdk
     def init_sdk(self):
         init_res = self.call_cpp("NET_DVR_Init")  # SDK初始化
         if init_res:
-            logging.info("SDK初始化成功")
+            mylogger.info("SDK初始化成功")
             return True
         else:
             self.print_error("NET_DVR_GetLastError 初始化SDK失败: the error code is")
@@ -95,7 +95,7 @@ class BaseAdapter:
     # 释放sdk
     def sdk_clean(self):
         result = self.call_cpp("NET_DVR_Cleanup")
-        logging.info("释放资源", result)
+        mylogger.info("释放资源", result)
         print("释放资源", result)
 
     # 设备登录
@@ -141,7 +141,7 @@ class BaseAdapter:
     # 设备登出
     def logout(self, userId=0):
         result = self.call_cpp("NET_DVR_Logout", userId)
-        logging.info("登出", result)
+        mylogger.info("登出" + result)
 
     # 设置报警回调函数
     def setup_alarm_chan_v31(self, cbFunc, user_id):
@@ -216,7 +216,7 @@ class BaseAdapter:
     # msg 描述前缀
     def print_error(self, msg=""):
         error_info = self.call_cpp("NET_DVR_GetLastError")
-        logging.error(msg + str(error_info))
+        mylogger.error(msg + str(error_info))
 
     # 设置接收异常、重连等消息的窗口句柄或回调函数
     def set_exceptioln_call_back(self, nMessage, preserved2, cbFunc, user_id):
