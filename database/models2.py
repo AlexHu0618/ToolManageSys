@@ -258,7 +258,7 @@ class Storeroom(Base, MyBase):
 
     station = relationship('Station', back_populates='storerooms')
     shelfs = relationship('Shelf', back_populates='storeroom')
-    entrance = relationship('Entrance', uselist=False, back_populates='storeroom')
+    entrance = relationship('Entrance', back_populates='storeroom')
     channel_machines = relationship('ChannelMachine', back_populates='storeroom')
     code_scanners = relationship('CodeScanner', back_populates='storeroom')
 
@@ -276,7 +276,7 @@ class Entrance(Base, MyBase):
     type = Column(Integer, default=1)  # 1-中控；2-海康威视
     status = Column(Integer, default=1)  # 0-离线；1-在线；
     last_offline_time = Column(DateTime, default=datetime.now)
-    storeroom_id = Column(String(50), ForeignKey('storeroom.id'))
+    storeroom_id = Column(String(50), ForeignKey('storeroom.id'), unique=True)
 
     storeroom = relationship('Storeroom', back_populates='entrance')
     users = relationship('User', secondary=entrance_user, back_populates='entrances')
@@ -348,7 +348,7 @@ class Grid(Base, MyBase):
     name = Column(String(100), nullable=False)
     code = Column(String(100), nullable=False)
     collector_id = Column(String(50))
-    sensor_addr = Column(String(10), default=None)  # '0xFF'
+    sensor_addr = Column(String(10), default=None)  # '0xFF',RFID读写器地址号或重力传感器地址号
     row_num = Column(Integer, nullable=False)  # location
     col_num = Column(Integer, nullable=False)
     type = Column(Integer, default=1)  # 0-工具；1-仪器；2-耗材
@@ -391,6 +391,7 @@ class Collector(Base, MyBase):
     port = Column(Integer)
     is_server = Column(Boolean, default=False)
     type = Column(Integer)  # 1-重力； 2-RFIDR2000; 3-RFIDR2000FH；
+    node_addrs = Column(String(100))  # 所连接的RFID读写器地址号或重力传感器地址号
     sensor_count = Column(Integer)  # 当前连接的传感器数量或天线数量
     status = Column(Integer, default=1)  # 0-离线；1-正常；
     last_offline_time = Column(DateTime, default=datetime.now)
@@ -411,6 +412,7 @@ class Indicator(Base, MyBase):
     ip = Column(String(100))
     port = Column(Integer)
     is_server = Column(Boolean, default=False)
+    node_addrs = Column(String(100))  # 所连接的所有LED地址号
     module_count = Column(Integer, default=0)  # 当前连接的指示器模块数量
     status = Column(Integer, default=1)  # 0-离线；1-正常；
     last_offline_time = Column(DateTime, default=datetime.now)

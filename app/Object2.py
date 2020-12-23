@@ -10,6 +10,8 @@ from app.globalvar import *
 import copy
 from queue import Queue
 import os
+from binascii import *
+from crcmod import *
 
 from util.hkws import base_adapter
 from util.hkws.model import alarm
@@ -26,7 +28,7 @@ class GravityShelf(threading.Thread):
                  '8': 0.05, '9': 0.1, 'a': 0.2, 'b': 0.5, 'c': 1, 'd': 2, 'e': 5, 'A': 0.2, 'B': 0.5, 'C': 1,
                  'D': 2, 'E': 5}
 
-    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data, storeroom_id, uuid):
+    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data, storeroom_id, uuid, addr_nums):
         threading.Thread.__init__(self)
         self.BUFFSIZE = 1024
         self.all_id = ()
@@ -42,6 +44,7 @@ class GravityShelf(threading.Thread):
         self.frequency = 1  # secends
         self.uuid = uuid
         self.timeout_count = 0
+        self.addr_nums = addr_nums
 
     def run(self):
         data_buff = {}
@@ -70,10 +73,11 @@ class GravityShelf(threading.Thread):
 
     def _initial_data(self, data_buff: dict):
         rsl = self.readAllInfo()
-        for i in rsl:
-            g = self.readWeight(i)
-            data_buff[i] = g
-        print('GravityShelf--', self.uuid, ' initial: ', data_buff)
+        if rsl != ERR_EQUIPMENT_RESP:
+            for i in rsl:
+                g = self.readWeight(i)
+                data_buff[i] = g
+            print('GravityShelf--', self.uuid, ' initial: ', data_buff)
 
     def check_data_update(self, data_buff):
         rsl = self.readAllInfo()
@@ -155,7 +159,7 @@ class GravityShelf(threading.Thread):
         datas = self.getData(cmd, True)
         # print('info back:', datas)
         all_id = ()
-        if datas is not None:
+        if datas is not None and datas != TIMEOUT:
             newdatas = []
             # 防止tcp的粘包问题
             for data in datas:
@@ -302,11 +306,11 @@ class RfidR2000(threading.Thread):
             for ant in self.ants:
                 rsl = self.inventory(ant_id=ant)
             rsl_data = self.getAndResetBuf()
-            print('old EPCs: ', self.data_buff)
-            print('new EPCs: ', rsl_data)
+            # print('old EPCs: ', self.data_buff)
+            # print('new EPCs: ', rsl_data)
             if rsl_data is not None:
                 diff_epcs = list(set(epc[0] for epc in rsl_data) ^ set(epc[0] for epc in self.data_buff))
-                print(diff_epcs)
+                # print(diff_epcs)
                 if diff_epcs:
                     is_increase = True if len(rsl_data) > len(self.data_buff) else False
                     diff = [epc_ant for epc_ant in rsl_data if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]
@@ -442,8 +446,9 @@ class RfidR2000(threading.Thread):
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, False)
-        if data[0:5] == bytes.fromhex(('A0 04' + self.addr_num + '74 10')):
-            return True
+        if data is not None and data != TIMEOUT:
+            if data[0:5] == bytes.fromhex(('A0 04' + self.addr_num + '74 10')):
+                return True
         else:
             return False
 
@@ -472,7 +477,7 @@ class RfidR2000(threading.Thread):
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, True)
         # print('cmd back:', data)
-        if data != b'':
+        if data != b'' and data != TIMEOUT:
             if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
                 print('ErrorCode: ', hex(data[4]))
                 return []
@@ -593,17 +598,17 @@ class RfidR2000(threading.Thread):
 #             print('Fail to inventory')
 
 
-class Lcd(threading.Thread):
+class Indicator(threading.Thread):
     """
         1.frame: Head(0x7E) + Addr + Cmd + Len + Data + Check + End(0x68)
     """
-    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, storeroom_id, uuid):
+    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, storeroom_id, uuid, addr_nums):
         threading.Thread.__init__(self)
         self.addr = addr
         self.storeroom_id = storeroom_id
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
-        self.alladdrs = ('03', '04')
+        self.addr_nums = addr_nums
         self.isrunning = True
         self.queuetask = queuetask
         self.queuersl = queuersl
@@ -629,7 +634,7 @@ class Lcd(threading.Thread):
                     if localtime.tm_sec != cursec:
                         cursec = localtime.tm_sec
                         num = num + 1 if num < 1000 else 0
-                        for i in self.alladdrs:
+                        for i in self.addr_nums:
                             rsl = self.showNum(num, i)
                             activate = True if num % 2 == 0 else False
                             self.onLed(activate=activate, pos='up', addr=i)
@@ -765,53 +770,65 @@ class EntranceGuard(threading.Thread):
         self.lock = threading.RLock()
         self.current_data = None
         self.lib = EntranceGuard.lib
-        self.handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
-                                       b',port=' + bytes(str(self.port), encoding='utf8') +
-                                       b',timeout=2000,passwd=')
+        self.handle = None
 
     def run(self):
-        cursec = 0
-        while self.isrunning:
-            try:
-                if not self.queuetask.empty():
-                    task, args = self.queuetask.get()
-                    rsl = methodcaller(task, *args)(self)
-                    if rsl is not None:
-                        pkg = TransferPackage(code=200, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port),
-                                              msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
-                        self.queuersl.put(pkg)
-                else:
-                    localtime = time.localtime(time.time())
-                    if localtime.tm_sec != cursec:
-                        cursec = localtime.tm_sec
-                        rsl = self.getNewEvent()
-                        if rsl:
-                            if self.current_data is not None:
-                                if rsl != self.current_data:
-                                    data = {'user': rsl[0], 'raw': rsl}
-                                    pkg = TransferPackage(code=206, eq_type=3, data=data, source=(self.ip, self.port),
-                                                          msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
-                                    self.queue_push_data.put(pkg)
-                                    print('gate--getNewEvent: ', rsl)
-                                    with self.lock:
-                                        self.current_data = copy.deepcopy(rsl)
-                            else:
-                                with self.lock:
-                                    self.current_data = copy.deepcopy(rsl)
-                        elif rsl is not None:
-                            # 非注册用户
-                            pass
-                        else:
-                            # 读取错误
-                            with self.lock:
-                                self.isrunning = False
+        """
+        每隔10s刷新一次数据
+        :return:
+        """
+        if self._conn():
+            cursec = 0
+            while self.isrunning:
+                try:
+                    if not self.queuetask.empty():
+                        task, args = self.queuetask.get()
+                        rsl = methodcaller(task, *args)(self)
+                        if rsl is not None:
+                            pkg = TransferPackage(code=SUCCESS, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port),
+                                                  msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                            self.queuersl.put(pkg)
                     else:
-                        pass
-            except Exception as e:
-                print('except from EntranceGuard--', e)
-                mylogger.error(e)
-                break
-        self.lib.Disconnect(self.handle)
+                        localtime = time.localtime(time.time())
+                        if localtime.tm_sec != cursec:
+                            cursec = localtime.tm_sec
+                            rsl = self.getNewEvent()
+                            if rsl is not None:
+                                if len(rsl) > 0:
+                                    if self.current_data is not None:
+                                        if rsl != self.current_data:
+                                            data = {'user': rsl[0], 'raw': rsl}
+                                            pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=3, data=data, source=(self.ip, self.port),
+                                                                  msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                                            self.queue_push_data.put(pkg)
+                                            print('gate--getNewEvent: ', rsl)
+                                            with self.lock:
+                                                self.current_data = copy.deepcopy(rsl)
+                                    else:
+                                        with self.lock:
+                                            self.current_data = copy.deepcopy(rsl)
+                                else:
+                                    # 非注册用户
+                                    pass
+                            else:
+                                # 读取错误
+                                with self.lock:
+                                    self.isrunning = False
+                        else:
+                            pass
+                except Exception as e:
+                    print('except from EntranceGuard--', e)
+                    mylogger.error(e)
+                    break
+            mylogger.warning('Entrance_zk (%s, %d) try to offline' % (self.ip, self.port))
+            self.lib.Disconnect(self.handle)
+
+    def _conn(self):
+        handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
+                                  b',port=' + bytes(str(self.port), encoding='utf8') +
+                                  b',timeout=2000,passwd=')
+        self.handle = handle
+        return True if handle > 0 else False
 
     # @staticmethod
     # def conn(ip: str, port: int):
@@ -854,6 +871,7 @@ class EntranceGuard(threading.Thread):
                     resp = 'Auth: ' + str(last_record, encoding='gb18030')
                     return [user, resp]
                 else:
+                    # 非注册用户
                     mylogger.warning('(%s, %d)--GetDeviceData() get no registerd user' % (self.ip, self.port))
                     return []
             else:
@@ -946,11 +964,11 @@ class HKVision(threading.Thread):
 
     def run(self):
         try:
-            print('thread name--', threading.current_thread().name)
+            # print('thread name--', threading.current_thread().name)
             if self._login():
-                print('success')
                 self._set_exception_cb()
                 self._get_alarm()
+                print('Hkvision success')
                 while self.isrunning:
                     time.sleep(10)
                 self._close_alarm()
@@ -958,14 +976,13 @@ class HKVision(threading.Thread):
             else:
                 print('SDK init failed')
         except Exception as e:
-            print(e)
             mylogger.error('Hkvision %s got exception' % self.ip)
         finally:
             self._del_self()
 
     def _del_self(self):
-        print('del obj')
-        print('thread name--', threading.current_thread().name)
+        # print('del obj')
+        # print('thread name--', threading.current_thread().name)
         if self.ip in HKVision.ip_obj_dic.keys():
             del HKVision.ip_obj_dic[self.ip]
             HKVision.obj_counter -= 1
@@ -986,7 +1003,7 @@ class HKVision(threading.Thread):
             #     return False
         userId = HKVision.adapter.common_start(ip=self.ip, port=self.port, user=self.username, password=self.password)
         if userId < 0:
-            print('Failed to login')
+            # print('Failed to login')
             return False
         self.user_id = userId
         HKVision.ip_obj_dic[self.ip]['user_id'] = self.user_id
@@ -994,10 +1011,10 @@ class HKVision(threading.Thread):
 
     def _get_alarm(self):
         data = HKVision.adapter.setup_alarm_chan_v31(self.message_call_back, self.user_id)
-        print("设置回调函数结果", data)
+        # print("设置回调函数结果", data)
         # 布防
         alarm_result = self.adapter.setup_alarm_chan_v41(self.user_id)
-        print("设置人脸v41布防结果", alarm_result)
+        # print("设置人脸v41布防结果", alarm_result)
         self.alarm_handle = alarm_result
 
     def _close_alarm(self):
@@ -1005,7 +1022,7 @@ class HKVision(threading.Thread):
 
     def _set_exception_cb(self):
         rsl = HKVision.adapter.set_exceptioln_call_back(None, None, self.exception_call_back, self.user_id)
-        print('set_exception_cb', rsl)
+        # print('set_exception_cb', rsl)
 
     @staticmethod
     @CFUNCTYPE(h_BOOL, h_LONG, POINTER(alarm.NET_DVR_ALARMER), POINTER(h_CHAR), h_DWORD, h_VOID_P)
@@ -1014,29 +1031,30 @@ class HKVision(threading.Thread):
                           pAlarmInfo,
                           dwBufLen,
                           pUser):
-        print("lCommand:{},pAlarmer:{},pAlarmInfo:{},dwBufLen:{}".format(lCommand, pAlarmer, pAlarmInfo, dwBufLen))
+        # print("lCommand:{},pAlarmer:{},pAlarmInfo:{},dwBufLen:{}".format(lCommand, pAlarmer, pAlarmInfo, dwBufLen))
         if lCommand == 0x5002:
             # 门禁主机报警信息
-            print('Command=', lCommand)
+            # print('Command=', lCommand)
             alarmer = alarm.NET_DVR_ALARMER()
             memmove(pointer(alarmer), pAlarmer, sizeof(alarmer))
             ip = bytearray(alarmer.sDeviceIP).decode(encoding='utf-8')
-            print('IP--', ip)
+            # print('IP--', ip)
             alarm_info = alarm.NET_DVR_ACS_ALARM_INFO()
             memmove(pointer(alarm_info), pAlarmInfo, sizeof(alarm_info))
             major_code = alarm_info.dwMajor
             minor_code = alarm_info.dwMinor
             if major_code == 5 and minor_code == 38:
-                print(hex(alarm_info.dwMajor))
-                print(hex(alarm_info.dwMinor))
+                # print(hex(alarm_info.dwMajor))
+                # print(hex(alarm_info.dwMinor))
                 cardno = bytearray(alarm_info.struAcsEventInfo.byCardNo).decode(encoding='utf-8')
                 user_code = alarm_info.struAcsEventInfo.dwEmployeeNo
-                print('user--%s(CARD--%s) was in' % (user_code, cardno))
-                print(alarm_info.byAcsEventInfoExtend)
-                print(alarm_info.byAcsEventInfoExtendV20)
+                # print('user--%s(CARD--%s) was in' % (user_code, cardno))
+                # print(alarm_info.byAcsEventInfoExtend)
+                # print(alarm_info.byAcsEventInfoExtendV20)
                 HKVision.ip_obj_dic[ip]['obj'].set_auth_info(user_code, cardno)
-                if user_code == 1 or user_code == '1':
-                    HKVision.ip_obj_dic[ip]['obj'].stop()
+                # # 退出该IP的海康威视对象
+                # if user_code == 1 or user_code == '1':
+                #     HKVision.ip_obj_dic[ip]['obj'].stop()
         return True
 
     @staticmethod
@@ -1045,7 +1063,7 @@ class HKVision(threading.Thread):
                             lUserID,
                             lHandle,
                             pUser):
-        print(hex(dwType), lUserID, lHandle, pUser)
+        # print(hex(dwType), lUserID, lHandle, pUser)
         if hex(dwType) == '0x8000':
             # 网络断开异常
             for k, v in HKVision.ip_obj_dic.items():
@@ -1054,13 +1072,13 @@ class HKVision(threading.Thread):
 
     def set_auth_info(self, user_code, cardno):
         print('(userCode, cardNo)--(%s, %s) was in!' % (user_code, cardno))
-        data = {'user': user_code, 'cardno': cardno}
-        pkg = TransferPackage(code=206, eq_type=3, data=data, source=(self.ip, self.port),
-                              msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+        data = {'user': str(user_code), 'cardno': str(cardno)}
+        pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=3, data=data, source=(self.ip, self.port),
+                              msg_type=3, storeroom_id=self.storeroom_id)
         self.queue_push_data.put(pkg)
 
     def stop(self):
-        print('offline')
+        # print('offline')
         with self.lock:
             self.isrunning = False
 
@@ -1078,7 +1096,7 @@ class RfidR2000FH(threading.Thread):
     1、RFID R2000跳频版
     2、frame struct: Head(0x5A) + MSG_type + Addr + Len + Data + Check(CRC16)
     """
-    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data, storeroom_id, uuid):
+    def __init__(self, addr, tcp_socket, queuetask, queuersl, event, queue_push_data, storeroom_id, uuid, addr_nums):
         threading.Thread.__init__(self)
         self.tcp_socket = tcp_socket
         self.BUFFSIZE = 1024
@@ -1095,8 +1113,10 @@ class RfidR2000FH(threading.Thread):
         self.lock = threading.RLock()
         self.q_cmd = Queue(50)
         self.current_epcs = list()
-        self.data_buff = list()  # [(epc, ant), ]
+        self.data_buff = list()  # [(epc, ant, addr_num), ]
         self.timeout_counter = 0
+        self.is_rs485 = True
+        self.addr_nums = addr_nums
 
     def run(self):
         """
@@ -1136,11 +1156,11 @@ class RfidR2000FH(threading.Thread):
     def _check_data_update(self):
         try:
             with self.lock:
-                print('R2000FH old EPCs: ', self.data_buff)
-                print('R2000FH new EPCs: ', self.current_epcs)
+                # print('R2000FH old EPCs: ', self.data_buff)
+                # print('R2000FH new EPCs: ', self.current_epcs)
                 if self.current_epcs is not None:
                     diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
-                    print('R2000FH diff_epcs--', diff_epcs)
+                    # print('R2000FH diff_epcs--', diff_epcs)
                     if diff_epcs:
                         is_increase = True if len(self.current_epcs) > len(self.data_buff) else False
                         diff = [epc_ant for epc_ant in self.current_epcs if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]
@@ -1184,23 +1204,26 @@ class RfidR2000FH(threading.Thread):
         len_all_data = len(data)
         start = 0
         end = 0
+        mask = '32' if self.is_rs485 else '12'
+        hold_bit = 1 if self.is_rs485 else 0
         while end < len_all_data:
             head = data[start:start + 5]
-            if head == bytes.fromhex('5A 00 01 12 00'):
-                len_data = int.from_bytes(data[(start + 5):(start + 7)], byteorder='big', signed=False)
-                len_epc = int.from_bytes(data[(start + 7):(start + 9)], byteorder='big', signed=False)
-                epc = data[(start + 9):(start + 9 + len_epc)]
-                ant = data[(start + 9 + len_epc + 2):(start + 9 + len_epc + 2 + 1)]
-                print('(EPC, ant)--(%s, %s)' % (epc, ant))
+            if head == bytes.fromhex('5A 00 01 %s 00' % mask):
+                addr_num = data[(start + 5): (start + 6)] if self.is_rs485 else b'\x00'
+                len_data = int.from_bytes(data[(start + 5 + hold_bit):(start + 7 + hold_bit)], byteorder='big', signed=False)
+                len_epc = int.from_bytes(data[(start + hold_bit + 7):(start + hold_bit + 9)], byteorder='big', signed=False)
+                epc = data[(start + hold_bit + 9):(start + hold_bit + 9 + len_epc)]
+                ant = data[(start + 9 + len_epc + 2 + hold_bit):(start + 9 + len_epc + 2 + 1 + hold_bit)]
+                # print('(EPC, ant, addr_num)--(%s, %s, %s)' % (epc, ant, addr_num))
                 with self.lock:
                     if epc not in [epc_ant[0] for epc_ant in self.current_epcs]:
-                        self.current_epcs.append((epc, ant))
+                        self.current_epcs.append((epc, ant, addr_num))
                 # if (epc, ant) not in self.current_epcs.copy():
                 #     self.current_epcs.append((epc, ant))
-                start += (5 + 2 + len_data + 2)
+                start += (5 + 2 + len_data + 2 + hold_bit)
                 end = start
-            elif head == bytes.fromhex('5A 00 01 12 02'):
-                start += (5 + 5)
+            elif head == bytes.fromhex('5A 00 01 %s 02' % mask):
+                start += (5 + 5 + hold_bit)
                 end = start
             else:
                 break
@@ -1209,14 +1232,39 @@ class RfidR2000FH(threading.Thread):
         print(self.data_buff)
         return self.data_buff
 
+    def _crc16(self, cmd_f: str):
+        crc16 = crcmod.mkCrcFun(0x11021, rev=False, initCrc=0x0000, xorOut=0x0000)  # CRC16-CCITT
+        # crc16 = crcmod.mkCrcFun(0x18005, rev=True, initCrc=0xFFFF, xorOut=0x0000) #CRC16-Modbus
+        data = cmd_f.replace(" ", "")
+        readcrcout = hex(crc16(unhexlify(data))).upper()
+        str_list = list(readcrcout)
+        if len(str_list) == 5:
+            str_list.insert(2, '0')  # 位数不足补0
+        crc_data = "".join(str_list)
+        return crc_data
+
     def _inventory_once(self):
-        cmd = bytes.fromhex('5A 00 01 02 10 00 05 00 00 00 FF 00 D4 68')
+        if self.is_rs485:
+            cmd = bytes()
+            for addr in self.addr_nums:
+                cmd_temp = '5A 00 01 22 10 ' + addr + ' 00 05 00 00 00 FF 00'
+                crc16 = self._crc16(cmd_temp[2:])
+                cmd += bytes.fromhex(cmd_temp + crc16[-4:])
+        else:
+            cmd = bytes.fromhex('5A 00 01 02 10 00 05 00 00 00 FF 00 D4 68')
         self.q_cmd.put(cmd)
         thd_auto_inventory = threading.Timer(interval=5, function=self._inventory_once)
         thd_auto_inventory.start()
 
     def _inventory(self):
-        cmd = bytes.fromhex('5A 00 01 02 10 00 05 00 00 00 FF 01 C4 49')
+        if self.is_rs485:
+            cmd = bytes()
+            for addr in self.addr_nums:
+                cmd_temp = '5A 00 01 22 10 ' + addr + ' 00 05 00 00 00 FF 01'
+                crc16 = self._crc16(cmd_temp[2:])
+                cmd += bytes.fromhex(cmd_temp + crc16[-4:])
+        else:
+            cmd = bytes.fromhex('5A 00 01 02 10 00 05 00 00 00 FF 01 C4 49')
         self.q_cmd.put(cmd)
         time.sleep(1)
         self._stop()
@@ -1224,5 +1272,12 @@ class RfidR2000FH(threading.Thread):
         thd_auto_inventory.start()
 
     def _stop(self):
-        cmd = bytes.fromhex('5A 00 01 02 FF 00 00 88 5A')
+        if self.is_rs485:
+            cmd = bytes()
+            for addr in self.addr_nums:
+                cmd_temp = '5A 00 01 22 FF ' + addr + ' 00 00'
+                crc16 = self._crc16(cmd_temp[2:])
+                cmd += bytes.fromhex(cmd_temp + crc16[-4:])
+        else:
+            cmd = bytes.fromhex('5A 00 01 02 FF 00 00 88 5A')
         self.q_cmd.put(cmd)

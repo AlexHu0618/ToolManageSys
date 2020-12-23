@@ -49,7 +49,7 @@ class BaseAdapter:
 
     # python 调用 sdk 指定方法
     def call_cpp(self, func_name, *args):
-        print(func_name)
+        # print(func_name)
         for so_lib in self.so_list:
             try:
                 lib = cdll.LoadLibrary(so_lib)
@@ -95,7 +95,7 @@ class BaseAdapter:
     # 释放sdk
     def sdk_clean(self):
         result = self.call_cpp("NET_DVR_Cleanup")
-        mylogger.info("释放资源", result)
+        mylogger.info("释放资源, result=%d" % result)
         print("释放资源", result)
 
     # 设备登录

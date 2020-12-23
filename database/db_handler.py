@@ -25,12 +25,13 @@ def get_all_equipments():
 
 def get_all_entrances(storeroom, clients_servers):
     type_name = {1: 'entrance_zk', 2: 'entrance_hk'}
-    entrance = storeroom.entrance
-    if entrance is not None:
-        if entrance.is_server is True:
-            clients_servers['servers'][(entrance.ip, entrance.port)] = (type_name[entrance.type], entrance.id)
-        else:
-            clients_servers['clients'][(entrance.ip, entrance.port)] = (type_name[entrance.type], entrance.id)
+    entrances = storeroom.entrance
+    if entrances is not None:
+        for entrance in entrances:
+            if entrance.is_server is True:
+                clients_servers['servers'][(entrance.ip, entrance.port)] = (type_name[entrance.type], entrance.id)
+            else:
+                clients_servers['clients'][(entrance.ip, entrance.port)] = (type_name[entrance.type], entrance.id)
 
 
 def get_all_code_scanners(storeroom, clients_servers):

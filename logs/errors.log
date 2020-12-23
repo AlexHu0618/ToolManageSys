@@ -20860,3 +20860,1907 @@ pymysql.err.InterfaceError: (0, '')
 [Object2.py:70][object of type 'int' has no len()]
 [ERROR][2020-12-22 18:15:31,188][Thread-656:140587407755008][task_id:root]
 [Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:15:41,197][Thread-656:140587407755008][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:15:51,223][Thread-656:140587407755008][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:16:01,180][Thread-716:140588267226880][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:16:11,212][Thread-716:140588267226880][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:16:21,191][Thread-716:140588267226880][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:26:01,166][Thread-10:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:26:11,198][Thread-10:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:26:21,207][Thread-10:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:26:31,182][Thread-10:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:26:41,174][Thread-10:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:26:51,160][Thread-63:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:27:01,172][Thread-63:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:27:11,185][Thread-63:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:27:21,172][Thread-63:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:27:31,167][Thread-63:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:27:41,169][Thread-121:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:27:51,192][Thread-121:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:28:01,170][Thread-121:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:28:11,156][Thread-121:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:28:21,169][Thread-121:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:28:31,161][Thread-180:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:28:41,170][Thread-180:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:28:51,165][Thread-180:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:29:01,173][Thread-180:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:29:11,170][Thread-180:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:29:21,210][Thread-239:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:29:31,163][Thread-239:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:29:41,201][Thread-239:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:29:51,153][Thread-239:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:30:01,194][Thread-239:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:30:11,167][Thread-298:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:30:21,163][Thread-298:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:30:31,159][Thread-298:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:30:41,177][Thread-298:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:30:51,188][Thread-298:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:31:01,167][Thread-356:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:31:11,165][Thread-356:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:31:21,157][Thread-356:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:31:31,164][Thread-356:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:31:41,165][Thread-356:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:31:51,166][Thread-415:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:32:01,165][Thread-415:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:32:11,151][Thread-415:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:32:21,158][Thread-415:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:32:31,162][Thread-415:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:32:41,176][Thread-475:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:32:51,154][Thread-475:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:33:01,186][Thread-475:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:33:11,175][Thread-475:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:33:21,181][Thread-475:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:33:31,175][Thread-534:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:33:41,167][Thread-534:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:33:51,196][Thread-534:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:34:01,196][Thread-534:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:34:11,192][Thread-534:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:34:21,163][Thread-594:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:34:31,271][Thread-594:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:34:41,190][Thread-594:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:34:51,171][Thread-594:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:35:01,169][Thread-594:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:35:11,180][Thread-653:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:35:21,189][Thread-653:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:35:31,173][Thread-653:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:35:41,160][Thread-653:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:35:51,178][Thread-653:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:36:01,188][Thread-711:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:36:11,171][Thread-711:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:36:21,170][Thread-711:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:36:31,154][Thread-711:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:36:41,172][Thread-711:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:36:51,196][Thread-771:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:37:01,162][Thread-771:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:37:11,161][Thread-771:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:37:21,158][Thread-771:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:37:31,191][Thread-771:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:37:41,160][Thread-829:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:37:51,161][Thread-829:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:38:01,183][Thread-829:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:38:11,183][Thread-829:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:38:21,173][Thread-829:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:38:31,173][Thread-889:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:38:41,176][Thread-889:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:38:51,183][Thread-889:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:39:01,175][Thread-889:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:39:11,168][Thread-889:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:39:21,168][Thread-947:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:39:31,174][Thread-947:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:39:41,155][Thread-947:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:39:51,152][Thread-947:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:40:01,170][Thread-947:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:40:11,157][Thread-1006:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:40:21,197][Thread-1006:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:40:31,160][Thread-1006:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:40:41,204][Thread-1006:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:40:51,155][Thread-1006:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:41:01,175][Thread-1067:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:41:11,175][Thread-1067:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:41:21,176][Thread-1067:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:41:31,182][Thread-1067:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:41:41,165][Thread-1067:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:41:51,178][Thread-1125:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:42:01,167][Thread-1125:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:42:11,154][Thread-1125:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:42:21,232][Thread-1125:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:42:31,154][Thread-1125:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:42:41,161][Thread-1184:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:42:51,159][Thread-1184:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:43:01,180][Thread-1184:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:43:11,171][Thread-1184:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:43:21,157][Thread-1184:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:43:31,171][Thread-1243:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:43:41,186][Thread-1243:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:43:51,186][Thread-1243:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:44:01,154][Thread-1243:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:44:11,153][Thread-1243:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:44:21,159][Thread-1303:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:44:31,197][Thread-1303:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:44:41,179][Thread-1303:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:44:51,170][Thread-1303:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:45:01,191][Thread-1303:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:45:11,160][Thread-1362:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:45:21,194][Thread-1362:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:45:31,165][Thread-1362:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:45:41,165][Thread-1362:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:45:51,153][Thread-1362:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:46:01,157][Thread-1421:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:46:11,164][Thread-1421:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:46:21,176][Thread-1421:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:46:31,172][Thread-1421:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:46:41,152][Thread-1421:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:46:51,162][Thread-1480:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:47:01,181][Thread-1480:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:47:11,165][Thread-1480:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:47:21,255][Thread-1480:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:47:31,179][Thread-1480:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:47:41,152][Thread-1540:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:47:51,183][Thread-1540:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:48:01,179][Thread-1540:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:48:11,168][Thread-1540:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:48:21,173][Thread-1540:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:48:31,194][Thread-1598:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:48:41,160][Thread-1598:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:48:51,158][Thread-1598:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:49:01,158][Thread-1598:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:49:11,152][Thread-1598:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:49:21,173][Thread-1657:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:49:31,154][Thread-1657:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:49:41,172][Thread-1657:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:49:51,213][Thread-1657:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:50:01,166][Thread-1657:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:50:11,161][Thread-1715:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:50:21,192][Thread-1715:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:50:31,176][Thread-1715:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:50:41,158][Thread-1715:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:50:51,164][Thread-1715:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:51:01,160][Thread-1774:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:51:11,156][Thread-1774:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:51:21,165][Thread-1774:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:51:31,167][Thread-1774:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:51:41,188][Thread-1774:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:51:51,151][Thread-1833:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:52:01,192][Thread-1833:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:52:11,164][Thread-1833:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:52:21,198][Thread-1833:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:52:31,155][Thread-1833:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:52:41,156][Thread-1893:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:52:51,179][Thread-1893:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:53:01,167][Thread-1893:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:53:11,152][Thread-1893:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:53:21,183][Thread-1893:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:53:31,156][Thread-1952:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:53:41,170][Thread-1952:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:53:51,196][Thread-1952:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:54:01,179][Thread-1952:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:54:11,155][Thread-1952:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:54:21,202][Thread-2012:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:54:31,209][Thread-2012:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:54:41,158][Thread-2012:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:54:51,187][Thread-2012:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:55:01,160][Thread-2012:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:55:11,177][Thread-2071:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:55:21,211][Thread-2071:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:55:31,170][Thread-2071:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:55:41,178][Thread-2071:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:55:51,156][Thread-2071:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:56:01,172][Thread-2129:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:56:11,206][Thread-2129:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:56:21,163][Thread-2129:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:56:31,179][Thread-2129:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:56:41,164][Thread-2129:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:56:51,152][Thread-2188:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:57:01,164][Thread-2188:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:57:11,178][Thread-2188:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:57:21,172][Thread-2188:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:57:31,170][Thread-2188:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:57:41,193][Thread-2247:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:57:51,208][Thread-2247:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:58:01,159][Thread-2247:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:58:11,162][Thread-2247:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:58:21,161][Thread-2247:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:58:31,183][Thread-2306:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:58:41,164][Thread-2306:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:58:51,155][Thread-2306:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:59:01,216][Thread-2306:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:59:11,162][Thread-2306:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:59:21,201][Thread-2365:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:59:31,158][Thread-2365:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:59:41,166][Thread-2365:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 18:59:51,178][Thread-2365:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:00:01,227][Thread-2365:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:00:11,178][Thread-2426:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:00:21,176][Thread-2426:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:00:31,173][Thread-2426:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:00:41,164][Thread-2426:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:00:51,182][Thread-2426:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:01:01,167][Thread-2484:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:01:11,178][Thread-2484:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:01:21,164][Thread-2484:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:01:31,210][Thread-2484:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:01:41,205][Thread-2484:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:01:51,171][Thread-2541:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:02:01,190][Thread-2541:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:02:11,173][Thread-2541:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:02:21,180][Thread-2541:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:02:31,197][Thread-2541:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:02:41,157][Thread-2600:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:02:51,166][Thread-2600:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:03:01,157][Thread-2600:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:03:11,181][Thread-2600:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:03:21,178][Thread-2600:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:03:31,191][Thread-2659:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:03:41,194][Thread-2659:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:03:51,165][Thread-2659:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:04:01,156][Thread-2659:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:04:11,175][Thread-2659:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:04:21,164][Thread-2718:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:04:31,162][Thread-2718:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:04:41,187][Thread-2718:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:04:51,163][Thread-2718:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:05:01,200][Thread-2718:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:05:11,202][Thread-2778:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:05:21,170][Thread-2778:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:05:31,154][Thread-2778:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:05:41,168][Thread-2778:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:05:51,189][Thread-2778:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:06:01,172][Thread-2837:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:06:11,168][Thread-2837:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:06:21,181][Thread-2837:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:06:31,172][Thread-2837:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:06:41,173][Thread-2837:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:06:51,173][Thread-2897:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:07:01,165][Thread-2897:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:07:11,155][Thread-2897:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:07:21,202][Thread-2897:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:07:31,159][Thread-2897:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:07:41,183][Thread-2956:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:07:51,155][Thread-2956:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:08:01,162][Thread-2956:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:08:11,164][Thread-2956:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:08:21,186][Thread-2956:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:08:31,183][Thread-3014:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:08:41,157][Thread-3014:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:08:51,168][Thread-3014:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:09:01,161][Thread-3014:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:09:11,168][Thread-3014:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:09:21,152][Thread-3073:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:09:31,183][Thread-3073:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:09:41,157][Thread-3073:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:09:51,187][Thread-3073:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:10:01,152][Thread-3073:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:10:11,181][Thread-3133:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:10:21,155][Thread-3133:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:10:31,168][Thread-3133:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:10:41,151][Thread-3133:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:10:51,162][Thread-3133:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:11:01,181][Thread-3192:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:11:11,160][Thread-3192:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:11:21,165][Thread-3192:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:11:31,156][Thread-3192:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:11:41,157][Thread-3192:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:11:51,165][Thread-3251:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:12:01,164][Thread-3251:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:12:11,153][Thread-3251:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:12:21,171][Thread-3251:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:12:31,198][Thread-3251:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:12:41,172][Thread-3311:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:12:51,180][Thread-3311:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:13:01,168][Thread-3311:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:13:11,163][Thread-3311:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:13:21,173][Thread-3311:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:13:31,166][Thread-3370:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:13:41,157][Thread-3370:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:13:51,169][Thread-3370:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:14:01,179][Thread-3370:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:14:11,233][Thread-3370:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:14:21,167][Thread-3429:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:14:31,165][Thread-3429:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:14:41,204][Thread-3429:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:14:51,175][Thread-3429:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:15:01,155][Thread-3429:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:15:11,179][Thread-3487:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:15:21,180][Thread-3487:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:15:31,169][Thread-3487:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:15:41,154][Thread-3487:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:15:51,170][Thread-3487:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:16:01,173][Thread-3547:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:16:11,175][Thread-3547:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:16:21,153][Thread-3547:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:16:31,187][Thread-3547:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:16:41,155][Thread-3547:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:16:51,170][Thread-3606:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:17:01,179][Thread-3606:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:17:11,173][Thread-3606:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:17:21,160][Thread-3606:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:17:31,158][Thread-3606:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:17:41,237][Thread-3666:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:17:51,170][Thread-3666:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:18:01,155][Thread-3666:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:18:11,157][Thread-3666:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:18:21,190][Thread-3666:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:18:31,190][Thread-3725:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:18:41,185][Thread-3725:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:18:51,186][Thread-3725:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:19:01,161][Thread-3725:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:19:11,152][Thread-3725:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:19:21,167][Thread-3783:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:19:31,166][Thread-3783:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:19:41,152][Thread-3783:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:19:51,165][Thread-3783:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:20:01,168][Thread-3783:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:20:11,154][Thread-3842:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:20:21,154][Thread-3842:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:20:31,152][Thread-3842:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:20:41,223][Thread-3842:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:20:51,219][Thread-3842:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:21:01,159][Thread-3901:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:21:11,164][Thread-3901:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:21:21,195][Thread-3901:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:21:31,162][Thread-3901:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:21:41,194][Thread-3901:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:21:51,155][Thread-3960:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:22:01,183][Thread-3960:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:22:11,184][Thread-3960:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:22:21,228][Thread-3960:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:22:31,152][Thread-3960:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:22:41,193][Thread-4019:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:22:51,165][Thread-4019:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:23:01,176][Thread-4019:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:23:11,186][Thread-4019:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:23:21,169][Thread-4019:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:23:31,188][Thread-4080:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:23:41,201][Thread-4080:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:23:51,178][Thread-4080:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:24:01,185][Thread-4080:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:24:11,164][Thread-4080:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:24:21,172][Thread-4138:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:24:31,177][Thread-4138:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:24:41,189][Thread-4138:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:24:51,188][Thread-4138:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:25:01,152][Thread-4138:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:25:11,175][Thread-4197:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:25:21,189][Thread-4197:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:25:31,174][Thread-4197:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:25:41,189][Thread-4197:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:25:51,204][Thread-4197:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:26:01,250][Thread-4256:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:26:11,175][Thread-4256:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:26:21,180][Thread-4256:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:26:31,176][Thread-4256:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:26:41,214][Thread-4256:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:26:51,191][Thread-4315:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:27:01,181][Thread-4315:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:27:11,194][Thread-4315:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:27:21,188][Thread-4315:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:27:31,188][Thread-4315:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:27:41,267][Thread-4374:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:27:51,224][Thread-4374:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:28:01,152][Thread-4374:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:28:11,160][Thread-4374:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:28:21,172][Thread-4374:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:28:31,153][Thread-4433:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:28:41,155][Thread-4433:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:28:51,153][Thread-4433:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:29:01,151][Thread-4433:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:29:11,193][Thread-4433:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:29:21,158][Thread-4492:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:29:31,153][Thread-4492:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:29:41,157][Thread-4492:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:29:51,160][Thread-4492:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:30:01,179][Thread-4492:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:30:11,164][Thread-4551:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:30:21,191][Thread-4551:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:30:31,178][Thread-4551:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:30:41,218][Thread-4551:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:30:51,179][Thread-4551:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:31:01,164][Thread-4610:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:31:11,154][Thread-4610:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:31:21,228][Thread-4610:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:31:31,191][Thread-4610:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:31:41,187][Thread-4610:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:31:51,157][Thread-4669:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:32:01,184][Thread-4669:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:32:11,172][Thread-4669:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:32:21,163][Thread-4669:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:32:31,154][Thread-4669:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:32:41,160][Thread-4730:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:32:51,189][Thread-4730:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:33:01,201][Thread-4730:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:33:11,178][Thread-4730:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:33:21,157][Thread-4730:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:33:31,171][Thread-4788:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:33:41,175][Thread-4788:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:33:51,151][Thread-4788:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:34:01,168][Thread-4788:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:34:11,162][Thread-4788:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:34:21,159][Thread-4847:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:34:31,174][Thread-4847:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:34:41,167][Thread-4847:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:34:51,196][Thread-4847:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:35:01,167][Thread-4847:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:35:11,179][Thread-4907:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:35:21,182][Thread-4907:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:35:31,155][Thread-4907:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:35:41,171][Thread-4907:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:35:51,160][Thread-4907:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:36:01,179][Thread-4966:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:36:11,181][Thread-4966:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:36:21,152][Thread-4966:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:36:31,175][Thread-4966:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:36:41,154][Thread-4966:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:36:51,154][Thread-5025:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:37:01,152][Thread-5025:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:37:11,159][Thread-5025:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:37:21,162][Thread-5025:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:37:31,182][Thread-5025:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:37:41,153][Thread-5084:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:37:51,156][Thread-5084:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:38:01,169][Thread-5084:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:38:11,177][Thread-5084:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:38:21,189][Thread-5084:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:38:31,183][Thread-5143:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:38:41,174][Thread-5143:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:38:51,177][Thread-5143:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:39:01,188][Thread-5143:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:39:11,197][Thread-5143:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:39:21,160][Thread-5203:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:39:31,169][Thread-5203:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:39:41,191][Thread-5203:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:39:51,180][Thread-5203:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:40:01,153][Thread-5203:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:40:11,178][Thread-5262:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:40:21,182][Thread-5262:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:40:31,184][Thread-5262:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:40:41,174][Thread-5262:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:40:51,174][Thread-5262:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:41:01,175][Thread-5320:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:41:11,167][Thread-5320:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:41:21,153][Thread-5320:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:41:31,171][Thread-5320:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:41:41,159][Thread-5320:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:41:51,178][Thread-5379:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:42:01,186][Thread-5379:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:42:11,153][Thread-5379:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:42:21,157][Thread-5379:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:42:31,182][Thread-5379:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:42:41,177][Thread-5438:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:42:51,174][Thread-5438:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:43:01,176][Thread-5438:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:43:11,168][Thread-5438:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:43:21,153][Thread-5438:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:43:31,171][Thread-5497:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:43:41,172][Thread-5497:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:43:51,161][Thread-5497:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:44:01,168][Thread-5497:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:44:11,172][Thread-5497:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:44:21,169][Thread-5557:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:44:31,159][Thread-5557:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:44:41,176][Thread-5557:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:44:51,183][Thread-5557:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:45:01,182][Thread-5557:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:45:11,197][Thread-5616:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:45:21,192][Thread-5616:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:45:31,152][Thread-5616:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:45:41,196][Thread-5616:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:45:51,167][Thread-5616:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:46:01,203][Thread-5675:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:46:11,169][Thread-5675:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:46:21,151][Thread-5675:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:46:31,152][Thread-5675:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:46:41,172][Thread-5675:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:46:51,154][Thread-5734:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:47:01,191][Thread-5734:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:47:11,162][Thread-5734:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:47:21,167][Thread-5734:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:47:31,159][Thread-5734:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:47:41,173][Thread-5794:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:47:51,152][Thread-5794:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:48:01,164][Thread-5794:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:48:11,173][Thread-5794:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:48:21,159][Thread-5794:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:48:31,160][Thread-5854:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:48:41,154][Thread-5854:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:48:51,159][Thread-5854:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:49:01,151][Thread-5854:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:49:11,156][Thread-5854:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:49:21,158][Thread-5913:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:49:31,172][Thread-5913:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:49:41,190][Thread-5913:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:49:51,156][Thread-5913:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:50:01,171][Thread-5913:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:50:11,171][Thread-5971:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:50:21,172][Thread-5971:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:50:31,184][Thread-5971:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:50:41,164][Thread-5971:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:50:51,154][Thread-5971:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:51:01,184][Thread-6032:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:51:11,233][Thread-6032:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:51:21,182][Thread-6032:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:51:31,170][Thread-6032:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:51:41,163][Thread-6032:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:51:51,191][Thread-6089:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:52:01,172][Thread-6089:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:52:11,183][Thread-6089:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:52:21,227][Thread-6089:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:52:31,181][Thread-6089:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:52:41,178][Thread-6149:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:52:51,217][Thread-6149:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:53:01,170][Thread-6149:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:53:11,194][Thread-6149:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:53:21,220][Thread-6149:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:53:31,162][Thread-6208:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:53:41,151][Thread-6208:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:53:51,171][Thread-6208:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:54:01,170][Thread-6208:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:54:11,159][Thread-6208:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:54:21,166][Thread-6268:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:54:31,155][Thread-6268:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:54:41,161][Thread-6268:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:54:51,155][Thread-6268:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:55:01,170][Thread-6268:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:55:11,159][Thread-6327:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:55:21,169][Thread-6327:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:55:31,178][Thread-6327:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:55:41,210][Thread-6327:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:55:51,158][Thread-6327:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:56:01,198][Thread-6386:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:56:11,163][Thread-6386:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:56:21,220][Thread-6386:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:56:31,154][Thread-6386:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:56:41,223][Thread-6386:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:56:51,202][Thread-6444:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:57:01,156][Thread-6444:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:57:11,153][Thread-6444:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:57:21,213][Thread-6444:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:57:31,167][Thread-6444:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:57:41,178][Thread-6503:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:57:51,179][Thread-6503:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:58:01,153][Thread-6503:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:58:11,183][Thread-6503:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:58:21,161][Thread-6503:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:58:31,155][Thread-6562:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:58:41,200][Thread-6562:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:58:51,179][Thread-6562:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:59:01,168][Thread-6562:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:59:11,163][Thread-6562:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:59:21,155][Thread-6621:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:59:31,155][Thread-6621:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:59:41,186][Thread-6621:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 19:59:51,153][Thread-6621:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:00:01,175][Thread-6621:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:00:11,197][Thread-6680:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:00:21,155][Thread-6680:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:00:31,165][Thread-6680:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:00:41,180][Thread-6680:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:00:51,194][Thread-6680:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:01:01,158][Thread-6740:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:01:11,163][Thread-6740:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:01:21,153][Thread-6740:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:01:31,269][Thread-6740:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:01:41,152][Thread-6740:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:01:51,167][Thread-6799:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:02:01,158][Thread-6799:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:02:11,155][Thread-6799:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:02:21,170][Thread-6799:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:02:31,168][Thread-6799:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:02:41,172][Thread-6858:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:02:51,164][Thread-6858:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:03:01,153][Thread-6858:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:03:11,155][Thread-6858:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:03:21,164][Thread-6858:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:03:31,151][Thread-6918:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:03:41,174][Thread-6918:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:03:51,157][Thread-6918:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:04:01,160][Thread-6918:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:04:11,155][Thread-6918:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:04:21,168][Thread-6976:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:04:31,161][Thread-6976:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:04:41,159][Thread-6976:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:04:51,154][Thread-6976:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:05:01,170][Thread-6976:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:05:11,173][Thread-7034:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:05:21,159][Thread-7034:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:05:31,188][Thread-7034:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:05:41,197][Thread-7034:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:05:51,177][Thread-7034:140125111576320][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:06:01,153][Thread-7093:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:06:11,168][Thread-7093:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:06:21,162][Thread-7093:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:06:31,160][Thread-7093:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:06:41,171][Thread-7093:140125610489600][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:06:51,156][Thread-7152:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:07:01,196][Thread-7152:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:07:11,151][Thread-7152:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:07:21,169][Thread-7152:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:07:31,171][Thread-7152:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:07:41,181][Thread-7212:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:07:51,175][Thread-7212:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:08:01,193][Thread-7212:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:08:11,177][Thread-7212:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:08:21,240][Thread-7212:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:08:31,168][Thread-7270:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:08:41,179][Thread-7270:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:08:51,159][Thread-7270:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:09:01,158][Thread-7270:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:09:11,216][Thread-7270:140125103183616][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:09:21,168][Thread-7329:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:09:31,194][Thread-7329:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:09:41,162][Thread-7329:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:09:51,196][Thread-7329:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:10:01,172][Thread-7329:140125640054528][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:10:11,159][Thread-7388:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:10:21,185][Thread-7388:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:10:29,335][Thread-5:140126217488128][task_id:root]
+[task_controler.py:509][get no user by code 1]
+[ERROR][2020-12-22 20:10:31,186][Thread-7388:140125602096896][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:10:41,185][Thread-10:139667278120704][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:11:01,179][Thread-10:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:11:11,161][Thread-10:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:11:21,154][Thread-10:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:11:31,203][Thread-10:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:11:41,201][Thread-10:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:11:51,161][Thread-67:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:12:01,171][Thread-67:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:12:11,206][Thread-67:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:12:21,171][Thread-67:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:12:31,158][Thread-67:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:12:41,187][Thread-126:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:12:51,189][Thread-126:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:13:01,167][Thread-126:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:13:11,222][Thread-126:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:13:21,215][Thread-126:140222671079168][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:13:31,164][Thread-186:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:13:41,178][Thread-186:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:13:51,156][Thread-186:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:14:01,425][Thread-186:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:14:02,313][Thread-2:140223209744128][task_id:root]
+[Object2.py:867][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2020-12-22 20:14:11,165][Thread-186:140222696257280][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:14:18,920][Thread-249:140223209744128][task_id:root]
+[Object2.py:867][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 20:14:41,985][Thread-276:140222696257280][task_id:root]
+[Object2.py:867][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 20:14:53,166][Thread-1:140223429756672][task_id:root]
+[Object2.py:965][Hkvision 192.168.0.102 got exception]
+[ERROR][2020-12-22 20:18:21,152][Thread-302:140223209744128][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:18:31,153][Thread-302:140223209744128][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:18:41,152][Thread-302:140223209744128][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:18:51,161][Thread-302:140223209744128][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 20:19:01,155][Thread-302:140223209744128][task_id:root]
+[Object2.py:70][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:03:41,151][Thread-7:139663268374272][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:03:51,166][Thread-7:139663268374272][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:04:01,172][Thread-7:139663268374272][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:04:11,162][Thread-7:139663268374272][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:04:21,170][Thread-7:139663268374272][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:04:31,171][Thread-54:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:04:41,172][Thread-54:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:04:51,152][Thread-54:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:04:52,178][Thread-2:139663790257920][task_id:root]
+[Object2.py:875][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2020-12-22 21:04:59,960][Thread-88:139663790257920][task_id:root]
+[Object2.py:875][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 21:05:01,161][Thread-54:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:05:11,161][Thread-54:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:05:21,167][Thread-105:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:05:23,173][Thread-113:139663276766976][task_id:root]
+[Object2.py:875][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 21:05:31,162][Thread-105:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:05:41,172][Thread-105:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:05:46,409][Thread-137:139663276766976][task_id:root]
+[Object2.py:875][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 21:05:51,152][Thread-105:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:06:01,152][Thread-105:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:06:09,719][Thread-161:139663276766976][task_id:root]
+[Object2.py:875][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 21:06:11,152][Thread-157:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:06:21,159][Thread-157:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:06:31,157][Thread-157:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:06:33,075][Thread-185:139663259981568][task_id:root]
+[Object2.py:875][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 21:06:41,151][Thread-157:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:06:51,151][Thread-157:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:07:24,163][Thread-4:139663768733440][task_id:sqlalchemy.pool.impl.QueuePool]
+[base.py:706][Exception during reset or similar]
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2638, in _flush
+    flush_context.execute()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 995, in _emit_update_statements
+    statement, multiparams
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1205, 'Lock wait timeout exceeded; try restarting transaction')
+[SQL: UPDATE entrance SET status=%(status)s WHERE entrance.id = %(entrance_id)s]
+[parameters: {'status': 1, 'entrance_id': '3d3211fb-4b98-4b8d-9abd-0caa5f3fc2f3'}]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 749, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 660, in _read_packet
+    % (packet_number, self._next_seq_id))
+pymysql.err.InternalError: Packet sequence number wrong - got 51 expected 16
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/database/models2.py", line 69, in update
+    dbSession.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1042, in commit
+    self.transaction.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 504, in commit
+    self._prepare_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2536, in flush
+    self._flush(objects)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 82, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 574, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 534, in rollback
+    t[1].rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1751, in rollback
+    self._do_rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1789, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 751, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 749, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 660, in _read_packet
+    % (packet_number, self._next_seq_id))
+sqlalchemy.exc.InternalError: (pymysql.err.InternalError) Packet sequence number wrong - got 51 expected 16
+(Background on this error at: http://sqlalche.me/e/13/2j85)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 697, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 893, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 431, in rollback
+    self._execute_command(COMMAND.COM_QUERY, "ROLLBACK")
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 742, in _execute_command
+    raise err.InterfaceError(0, '')
+pymysql.err.InterfaceError: (0, '')
+[ERROR][2020-12-22 21:07:31,174][Thread-193:139663790257920][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:07:41,151][Thread-193:139663790257920][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:07:47,363][Thread-211:139663259981568][task_id:root]
+[Object2.py:875][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 21:07:51,152][Thread-193:139663790257920][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:08:01,152][Thread-193:139663790257920][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:08:11,152][Thread-193:139663790257920][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:08:38,407][Thread-4:139663768733440][task_id:sqlalchemy.pool.impl.QueuePool]
+[base.py:706][Exception during reset or similar]
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2638, in _flush
+    flush_context.execute()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 995, in _emit_update_statements
+    statement, multiparams
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1205, 'Lock wait timeout exceeded; try restarting transaction')
+[SQL: UPDATE entrance SET status=%(status)s WHERE entrance.id = %(entrance_id)s]
+[parameters: {'status': 1, 'entrance_id': '3d3211fb-4b98-4b8d-9abd-0caa5f3fc2f3'}]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 749, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 660, in _read_packet
+    % (packet_number, self._next_seq_id))
+pymysql.err.InternalError: Packet sequence number wrong - got 1 expected 17
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/database/models2.py", line 69, in update
+    dbSession.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1042, in commit
+    self.transaction.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 504, in commit
+    self._prepare_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2536, in flush
+    self._flush(objects)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 82, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 574, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 534, in rollback
+    t[1].rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1751, in rollback
+    self._do_rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1789, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 751, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 749, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 660, in _read_packet
+    % (packet_number, self._next_seq_id))
+sqlalchemy.exc.InternalError: (pymysql.err.InternalError) Packet sequence number wrong - got 1 expected 17
+(Background on this error at: http://sqlalche.me/e/13/2j85)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 697, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 893, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 431, in rollback
+    self._execute_command(COMMAND.COM_QUERY, "ROLLBACK")
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 742, in _execute_command
+    raise err.InterfaceError(0, '')
+pymysql.err.InterfaceError: (0, '')
+[ERROR][2020-12-22 21:08:51,152][Thread-218:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:09:01,160][Thread-218:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:09:01,589][Thread-236:139663251588864][task_id:root]
+[Object2.py:875][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 21:09:11,158][Thread-218:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:09:21,151][Thread-218:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:09:31,152][Thread-218:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:10:01,155][Thread-242:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:10:11,151][Thread-242:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:10:15,811][Thread-261:139663790257920][task_id:root]
+[Object2.py:875][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -6]
+[ERROR][2020-12-22 21:10:21,152][Thread-242:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:10:31,152][Thread-242:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:10:41,151][Thread-242:139663259981568][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:11:06,854][Thread-4:139663768733440][task_id:sqlalchemy.pool.impl.QueuePool]
+[base.py:706][Exception during reset or similar]
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2638, in _flush
+    flush_context.execute()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 995, in _emit_update_statements
+    statement, multiparams
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1205, 'Lock wait timeout exceeded; try restarting transaction')
+[SQL: UPDATE entrance SET status=%(status)s WHERE entrance.id = %(entrance_id)s]
+[parameters: {'status': 1, 'entrance_id': '3d3211fb-4b98-4b8d-9abd-0caa5f3fc2f3'}]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 749, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 660, in _read_packet
+    % (packet_number, self._next_seq_id))
+pymysql.err.InternalError: Packet sequence number wrong - got 102 expected 3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/database/models2.py", line 69, in update
+    dbSession.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1042, in commit
+    self.transaction.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 504, in commit
+    self._prepare_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2536, in flush
+    self._flush(objects)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 82, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 574, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 534, in rollback
+    t[1].rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1751, in rollback
+    self._do_rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1789, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 751, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 749, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 660, in _read_packet
+    % (packet_number, self._next_seq_id))
+sqlalchemy.exc.InternalError: (pymysql.err.InternalError) Packet sequence number wrong - got 102 expected 3
+(Background on this error at: http://sqlalche.me/e/13/2j85)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 697, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 893, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 431, in rollback
+    self._execute_command(COMMAND.COM_QUERY, "ROLLBACK")
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 742, in _execute_command
+    raise err.InterfaceError(0, '')
+pymysql.err.InterfaceError: (0, '')
+[ERROR][2020-12-22 21:11:11,197][Thread-268:139663251588864][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:11:21,155][Thread-7:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:11:31,159][Thread-7:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:11:41,166][Thread-7:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:11:51,166][Thread-7:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:12:01,153][Thread-7:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:12:11,151][Thread-56:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:12:21,152][Thread-56:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:12:31,164][Thread-56:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:12:41,152][Thread-56:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:12:51,160][Thread-56:140651555436288][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:14:01,155][Thread-7:139926637094656][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]
+[ERROR][2020-12-22 21:14:11,164][Thread-7:139926637094656][task_id:root]
+[Object2.py:71][object of type 'int' has no len()]

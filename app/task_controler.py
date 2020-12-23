@@ -143,16 +143,16 @@ class TaskControler(Process):
         """
         try:
             print('analyze pkg: ', package)
-            if self.sock:
-                data_send = bytes('{}'.format(package), encoding='utf-8')
-                self.sock.send(data_send)
+            # if self.sock:
+            #     data_send = bytes('{}'.format(package), encoding='utf-8')
+            #     self.sock.send(data_send)
             storeroom_id = package['storeroom_id']
             if package['msg_type'] == 3 and package['equipment_type'] in (3, 5):
                 # 门禁的数据更新pkg处理
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
                 else:
-                    print('\033[1;33m', package['data']['user'] + 'enter to storeroom--' + storeroom_id + ' by entrance--' + package['source'], '\033[0m')
+                    print('\033[1;33m', package['data']['user'] + 'enter to storeroom--' + storeroom_id + ' by entrance--' + str(package['source']), '\033[0m')
                     addr = package['source']
                     user_code = package['data']['user']
                     queue_storeroom = Queue(50)
@@ -178,10 +178,9 @@ class TaskControler(Process):
                         data_send = bytes('{}'.format(package), encoding='utf-8')
                         self.sock.send(data_send)
             else:
-                pass
-                # if self.sock:
-                #     data_send = bytes('{}'.format(package), encoding='utf-8')
-                #     self.sock.send(data_send)
+                if self.sock:
+                    data_send = bytes('{}'.format(package), encoding='utf-8')
+                    self.sock.send(data_send)
         except Exception as e:
             mylogger.error(e)
 
@@ -356,7 +355,7 @@ class StoreroomManager(threading.Thread):
                 self.gravity_goods.clear()
             return True
         except Exception as e:
-            mylogger.error('Func _save_data2db ' + e)
+            mylogger.error(e)
             return False
 
     def _save_gravity_data(self, history: list):
@@ -505,7 +504,7 @@ class StoreroomManager(threading.Thread):
             self.user_id = user.uuid
             data = {'user_id': self.user_id}
             pkg_to_web = TransferPackage(code=404, eq_type=3, msg_type=2, storeroom_id=self.storeroom_id, data=data)
-            self.q_send.put(pkg_to_web.to_dict())
+            self.q_send.put(pkg_to_web)
         else:
             mylogger.error('get no user by code %s' % self.user_code)
 

@@ -1,6 +1,6 @@
 import socket
-from app.Object2 import GravityShelf, RfidR2000, Lcd, EntranceGuard, RfidR2000FH, HKVision
-# from app.object_test import GravityShelf, RfidR2000, Lcd, EntranceGuard
+from app.Object2 import GravityShelf, RfidR2000, Indicator, EntranceGuard, RfidR2000FH, HKVision
+# from app.object_test import GravityShelf, RfidR2000, Indicator, EntranceGuard
 from queue import Queue
 from app.myLogger import mylogger
 import threading
@@ -95,7 +95,7 @@ class GatewayServer(Process):
         with self.lock:
             for k, v in self.terminal_active.copy().items():
                 if not v['thread'].isAlive():
-                    pkg = TransferPackage(source=k, msg_type=2, code=204)
+                    pkg = TransferPackage(source=k, msg_type=2, code=EQUIPMENT_OFFLINE)
                     self.queue_rsl.put(pkg)
                     print('\033[1;33m', k, 'is offline', '\033[0m')
                     if v['is_server']:
@@ -175,7 +175,7 @@ class GatewayServer(Process):
     #                 if terminal_type == 'G':
     #                     thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
     #                 elif terminal_type == 'L':
-    #                     thread = Lcd(addr, s, queue_task, queue_rsl, subevent)
+    #                     thread = Indicator(addr, s, queue_task, queue_rsl, subevent)
     #                 elif terminal_type == 'R':
     #                     thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
     #                 else:
@@ -222,13 +222,19 @@ class GatewayServer(Process):
                 else:
                     s.connect(addr)
                     if terminal_type == 'gravity':
-                        thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
+                        gravity = Collector.by_addr(addr[0], addr[1])
+                        if gravity:
+                            addr_nums = gravity.node_addrs.replace(' ', '').split(',')
+                        thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
                     elif terminal_type == 'led':
-                        thread = Lcd(addr, s, queue_task, queue_rsl, subevent, storeroom_id, uuid)
+                        thread = Indicator(addr, s, queue_task, queue_rsl, subevent, storeroom_id, uuid)
                     elif terminal_type == 'rfid2000':
                         thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                     elif terminal_type == 'rfid2000fh':
-                        thread = RfidR2000FH(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
+                        r2000fh = Collector.by_addr(addr[0], addr[1])
+                        if r2000fh:
+                            addr_nums = r2000fh.node_addrs.replace(' ', '').split(',')
+                        thread = RfidR2000FH(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
                     else:
                         pass
                 if thread:
@@ -273,13 +279,22 @@ class GatewayServer(Process):
                 storeroom_id = self.clients[addr][1] if addr in self.clients.keys() else None
                 uuid = self.clients[addr][2] if addr in self.clients.keys() else None
                 if client_type == 'gravity':
-                    thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
+                    gravity = Collector.by_addr(addr[0], addr[1])
+                    if gravity:
+                        addr_nums = gravity.node_addrs.replace(' ', '').split(',')
+                    thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
                 elif client_type == 'led':
-                    thread = Lcd(addr, client_sock, queue_task, queue_rsl, subevent, storeroom_id, uuid)
+                    indicator = Indicator.by_addr(addr[0], addr[1])
+                    if indicator:
+                        addr_nums = indicator.node_addrs.replace(' ', '').split(',')
+                    thread = Indicator(addr, client_sock, queue_task, queue_rsl, subevent, storeroom_id, uuid, addr_nums)
                 elif client_type == 'rfid2000':
                     thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                 elif client_type == 'rfid2000fh':
-                    thread = RfidR2000FH(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
+                    r2000fh = Collector.by_addr(addr[0], addr[1])
+                    if r2000fh:
+                        addr_nums = r2000fh.node_addrs.replace(' ', '').split(',')
+                        thread = RfidR2000FH(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
                 else:
                     pass
                 if thread:
@@ -356,7 +371,7 @@ class GatewayServer(Process):
                         transfer_package.code = SUCCESS
                         transfer_package.msg_type = 4
                     else:
-                        transfer_package.code = ERR_RESP
+                        transfer_package.code = ERR_EQUIPMENT_RESP
                         transfer_package.msg_type = 4
                     self.queue_rsl.put(transfer_package)
                 else:
