@@ -1,5 +1,5 @@
 import socket
-from app.Object2 import GravityShelf, RfidR2000, Indicator, EntranceGuard, RfidR2000FH, HKVision
+from app.Object2 import GravityShelf, RfidR2000, Indicator, EntranceGuard, RfidR2000FH, HKVision, ChannelMachineR2000FH
 # from app.object_test import GravityShelf, RfidR2000, Indicator, EntranceGuard
 from queue import Queue
 from app.myLogger import mylogger
@@ -134,76 +134,6 @@ class GatewayServer(Process):
                     self._connect_server(addr=k, ttype=v[0], storeroom_id=v[1], uuid=v[2])
             time.sleep(20)
 
-    # def _connect_server(self, addr: tuple, ttype: str):
-    #     """
-    #     1、如果连接成功，则发送pkg给task管理器，并加入server激活字典；
-    #     :param addr:
-    #     :param ttype:
-    #     :return:
-    #     """
-    #     failed_count = 0
-    #     terminal_type = ttype
-    #     queue_task = Queue(50)
-    #     queue_rsl = Queue(50)
-    #     subevent = threading.Event()
-    #     thread = None
-    #     while True:
-    #         if terminal_type == 'guard':
-    #             pass
-    #             # print('guard')
-    #             # break
-    #             # thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push)
-    #             # if thread:
-    #             #     thread.daemon = True
-    #             #     thread.start()
-    #             #     self.lock.acquire()
-    #             #     self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
-    #             #                                   'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
-    #             #     self.server_active[addr] = terminal_type
-    #             #     self.lock.release()
-    #             #     print('服务端(%s)已成功连接。。' % str(addr))
-    #             #     mylogger.info('服务端(%s)已成功连接。。' % str(addr))
-    #             # else:
-    #             #     print('fail to connect to server %s' % str(addr))
-    #             #     mylogger.warning('fail to connect to server %s' % str(addr))
-    #             # break
-    #         else:
-    #             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    #             s.settimeout(0.1)
-    #             try:
-    #                 s.connect(addr)
-    #                 if terminal_type == 'G':
-    #                     thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
-    #                 elif terminal_type == 'L':
-    #                     thread = Indicator(addr, s, queue_task, queue_rsl, subevent)
-    #                 elif terminal_type == 'R':
-    #                     thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push)
-    #                 else:
-    #                     pass
-    #                 if thread:
-    #                     thread.daemon = True
-    #                     thread.start()
-    #                     self.lock.acquire()
-    #                     self.terminal_active[addr] = {'thread': thread, 'type': terminal_type, 'queuetask': queue_task,
-    #                                                   'queuersl': queue_rsl, 'status': True, 'subevent': subevent, 'data': {}}
-    #                     self.server_active[addr] = terminal_type
-    #                     self.lock.release()
-    #                     print('服务端(%s)已成功连接。。' % str(addr))
-    #                     mylogger.info('服务端(%s)已成功连接。。' % str(addr))
-    #                 else:
-    #                     s.shutdown(flag=2)
-    #                     s.close()
-    #                 break
-    #             except socket.error:
-    #                 failed_count += 1
-    #                 # print("fail to connect to server %d times" % failed_count)
-    #                 if failed_count == 10:
-    #                     s.shutdown(flag=2)
-    #                     s.close()
-    #                     print('fail to connect to server %s' % str(addr))
-    #                     mylogger.warning('fail to connect to server %s' % str(addr))
-    #                     break
-
     def _connect_server(self, addr: tuple, ttype: str, storeroom_id: str, uuid: str):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(0.1)
@@ -232,9 +162,16 @@ class GatewayServer(Process):
                         thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                     elif terminal_type == 'rfid2000fh':
                         r2000fh = Collector.by_addr(addr[0], addr[1])
+                        addr_nums = ['01']
                         if r2000fh:
                             addr_nums = r2000fh.node_addrs.replace(' ', '').split(',')
                         thread = RfidR2000FH(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
+                    elif terminal_type == 'channel_machine':
+                        r2000fh = Collector.by_addr(addr[0], addr[1])
+                        addr_nums = ['01']
+                        if r2000fh:
+                            addr_nums = r2000fh.node_addrs.replace(' ', '').split(',')
+                        thread = ChannelMachineR2000FH(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
                     else:
                         pass
                 if thread:
@@ -292,9 +229,17 @@ class GatewayServer(Process):
                     thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                 elif client_type == 'rfid2000fh':
                     r2000fh = Collector.by_addr(addr[0], addr[1])
+                    addr_nums = ['01']
                     if r2000fh:
                         addr_nums = r2000fh.node_addrs.replace(' ', '').split(',')
-                        thread = RfidR2000FH(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
+                    thread = RfidR2000FH(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
+                elif client_type == 'channel_machine':
+                    r2000fh = Collector.by_addr(addr[0], addr[1])
+                    addr_nums = ['01']
+                    if r2000fh:
+                        addr_nums = r2000fh.node_addrs.replace(' ', '').split(',')
+                    thread = ChannelMachineR2000FH(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push,
+                                                   storeroom_id, uuid, addr_nums)
                 else:
                     pass
                 if thread:

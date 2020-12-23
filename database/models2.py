@@ -260,6 +260,7 @@ class Storeroom(Base, MyBase):
     shelfs = relationship('Shelf', back_populates='storeroom')
     entrance = relationship('Entrance', back_populates='storeroom')
     channel_machines = relationship('ChannelMachine', back_populates='storeroom')
+    inquiry_machines = relationship('InquiryMachine', back_populates='storeroom')
     code_scanners = relationship('CodeScanner', back_populates='storeroom')
 
 
@@ -348,7 +349,7 @@ class Grid(Base, MyBase):
     name = Column(String(100), nullable=False)
     code = Column(String(100), nullable=False)
     collector_id = Column(String(50))
-    sensor_addr = Column(String(10), default=None)  # '0xFF',RFID读写器地址号或重力传感器地址号
+    sensor_addr = Column(String(10), default='01')  # '0xFF',RFID读写器地址号或重力传感器地址号
     row_num = Column(Integer, nullable=False)  # location
     col_num = Column(Integer, nullable=False)
     type = Column(Integer, default=1)  # 0-工具；1-仪器；2-耗材
@@ -378,8 +379,9 @@ class Grid(Base, MyBase):
         return dbSession.query(cls).filter_by(collector_id=eq_id, sensor_addr=sensor_addr).first()
 
     @classmethod
-    def by_eqid_antenna(cls, eq_id, antenna_num):
-        return dbSession.query(cls).filter(and_(cls.collector_id == eq_id, cls.antenna_num.contains(antenna_num))).first()
+    def by_eqid_antenna(cls, eq_id, antenna_num, addr_num):
+        return dbSession.query(cls).filter(and_(cls.collector_id == eq_id, cls.sensor_addr == addr_num,
+                                                cls.antenna_num.contains(antenna_num))).first()
 
 
 class Collector(Base, MyBase):
@@ -487,3 +489,16 @@ class History_inbound_outbound(Base, MyBase):
     @classmethod
     def by_epcs_join_goods_tab(cls, epcs):
         return dbSession.query(cls).join(Goods, cls.epc == Goods.epc).filter(Goods.epc.in_(epcs)).all()
+
+
+class InquiryMachine(Base, MyBase):
+    __tablename__ = 'inquiry_machine'
+    id = Column(String(50), primary_key=True, unique=True, nullable=False, default=lambda: str(uuid4()))
+    ip = Column(String(100))
+    port = Column(Integer)
+    name = Column(String(100))
+    code = Column(String(100))
+    direction = Column(Integer, default=0)  # 0-进入；1-出去
+    storeroom_id = Column(String(50), ForeignKey('storeroom.id'))
+
+    storeroom = relationship('Storeroom', back_populates='inquiry_machines')
