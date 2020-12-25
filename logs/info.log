@@ -1,62 +1,227 @@
-2020-12-24 01:46:29,497 - root - INFO - main.py:58 - START SERVER
-2020-12-24 01:46:29,704 - root - INFO - gateway_server.py:257 - 服务端(('192.168.0.102', 8000))已成功连接。。online
-2020-12-24 01:46:29,803 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:46:29,803 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
-2020-12-24 01:46:29,803 - root - INFO - base_adapter.py:74 - SDK初始化成功
-2020-12-24 01:46:29,804 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:46:29,805 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
-2020-12-24 01:46:29,806 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:46:29,806 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
-2020-12-24 01:46:32,720 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:46:32,720 - root - INFO - base_adapter.py:59 - 执行成功,返回值：-1
-2020-12-24 01:46:32,721 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:46:32,721 - root - INFO - base_adapter.py:59 - 执行成功,返回值：7
-2020-12-24 01:46:32,721 - root - ERROR - base_adapter.py:219 - NET_DVR_Login_V40 用户登录失败: the error code is 7
-2020-12-24 01:46:32,724 - root - INFO - gateway_server.py:257 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-24 01:46:32,735 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:46:32,740 - root - ERROR - Object2.py:890 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -6
-2020-12-24 01:46:32,746 - root - INFO - base_adapter.py:59 - 执行成功,返回值：7
-2020-12-24 01:46:32,746 - root - ERROR - base_adapter.py:219 - common_start 失败: the error code is7
-2020-12-24 01:46:32,747 - root - WARNING - Object2.py:832 - Entrance_zk (192.168.0.201, 4370) try to offline
-2020-12-24 01:46:32,806 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:46:32,806 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
-2020-12-24 01:46:32,806 - root - INFO - base_adapter.py:98 - 释放资源, result=1
-2020-12-24 01:46:32,881 - root - WARNING - gateway_server.py:265 - fail to connect to server ('192.168.0.118', 23)
-2020-12-24 01:46:32,983 - root - WARNING - gateway_server.py:265 - fail to connect to server ('192.168.0.117', 26)
-2020-12-24 01:46:33,084 - root - WARNING - gateway_server.py:265 - fail to connect to server ('192.168.0.117', 23)
-2020-12-24 01:46:33,187 - root - WARNING - gateway_server.py:265 - fail to connect to server ('192.168.0.117', 23)
-2020-12-24 01:46:33,290 - root - WARNING - gateway_server.py:265 - fail to connect to server ('192.168.0.118', 23)
-2020-12-24 01:46:33,396 - root - WARNING - gateway_server.py:265 - fail to connect to server ('192.168.0.117', 26)
-2020-12-24 01:46:34,088 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.102, 8000) is offline
-2020-12-24 01:46:34,089 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.201, 4370) is offline
-2020-12-24 01:51:16,006 - root - INFO - main.py:53 - START SERVER
-2020-12-24 01:51:16,115 - root - INFO - gateway_server.py:187 - 服务端(('192.168.0.102', 8000))已成功连接。。online
-2020-12-24 01:51:16,187 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:51:16,187 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
-2020-12-24 01:51:16,188 - root - INFO - base_adapter.py:74 - SDK初始化成功
-2020-12-24 01:51:16,192 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:51:16,192 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
-2020-12-24 01:51:16,196 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:51:16,196 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
-2020-12-24 01:51:19,123 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:51:19,124 - root - INFO - base_adapter.py:59 - 执行成功,返回值：-1
-2020-12-24 01:51:19,125 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:51:19,125 - root - INFO - base_adapter.py:59 - 执行成功,返回值：7
-2020-12-24 01:51:19,125 - root - ERROR - base_adapter.py:219 - NET_DVR_Login_V40 用户登录失败: the error code is 7
-2020-12-24 01:51:19,127 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:51:19,127 - root - INFO - base_adapter.py:59 - 执行成功,返回值：7
-2020-12-24 01:51:19,127 - root - ERROR - base_adapter.py:219 - common_start 失败: the error code is7
-2020-12-24 01:51:19,131 - root - INFO - gateway_server.py:187 - 服务端(('192.168.0.201', 4370))已成功连接。。online
-2020-12-24 01:51:19,137 - root - ERROR - Object2.py:890 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -6
-2020-12-24 01:51:19,149 - root - WARNING - Object2.py:832 - Entrance_zk (192.168.0.201, 4370) try to offline
-2020-12-24 01:51:19,190 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
-2020-12-24 01:51:19,190 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
-2020-12-24 01:51:19,190 - root - INFO - base_adapter.py:98 - 释放资源, result=1
-2020-12-24 01:51:19,267 - root - WARNING - gateway_server.py:195 - fail to connect to server ('192.168.0.118', 23)
-2020-12-24 01:51:19,368 - root - WARNING - gateway_server.py:195 - fail to connect to server ('192.168.0.117', 26)
-2020-12-24 01:51:19,470 - root - WARNING - gateway_server.py:195 - fail to connect to server ('192.168.0.117', 23)
-2020-12-24 01:51:19,572 - root - WARNING - gateway_server.py:195 - fail to connect to server ('192.168.0.117', 26)
-2020-12-24 01:51:19,677 - root - WARNING - gateway_server.py:195 - fail to connect to server ('192.168.0.117', 23)
-2020-12-24 01:51:19,781 - root - WARNING - gateway_server.py:195 - fail to connect to server ('192.168.0.118', 23)
-2020-12-24 01:51:20,473 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.102, 8000) is offline
-2020-12-24 01:51:20,474 - root - WARNING - gateway_server.py:106 - equipment (192.168.0.201, 4370) is offline
+2020-12-25 14:48:57,821 - root - INFO - main.py:53 - START SERVER
+2020-12-25 14:48:58,017 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.102', 8000))已成功连接。。online
+2020-12-25 14:48:58,133 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:48:58,133 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:48:58,134 - root - INFO - base_adapter.py:74 - SDK初始化成功
+2020-12-25 14:48:58,138 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:48:58,138 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:48:58,142 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:48:58,142 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:48:58,223 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:48:58,224 - root - INFO - base_adapter.py:59 - 执行成功,返回值：0
+2020-12-25 14:48:58,225 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:48:58,226 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:48:58,227 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:48:58,227 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:48:58,242 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:48:58,242 - root - INFO - base_adapter.py:59 - 执行成功,返回值：0
+2020-12-25 14:48:58,667 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-25 14:48:58,814 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:48:58,834 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-25 14:48:58,857 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:48:59,001 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:48:59,012 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:48:59,745 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-25 14:48:59,831 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-25 14:49:19,199 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:49:19,469 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:49:28,238 - root - ERROR - Object2.py:902 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:49:28,253 - root - WARNING - Object2.py:837 - Entrance_zk (192.168.0.201, 4370) try to offline
+2020-12-25 14:49:29,012 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.201, 4370) is offline
+2020-12-25 14:49:42,727 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-25 14:49:42,745 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:49:42,745 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:49:43,508 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.201, 4370) is offline
+2020-12-25 14:50:03,335 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-25 14:52:51,387 - root - INFO - main.py:53 - START SERVER
+2020-12-25 14:52:51,482 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.102', 8000))已成功连接。。online
+2020-12-25 14:52:51,504 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:52:51,504 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:52:51,504 - root - INFO - base_adapter.py:74 - SDK初始化成功
+2020-12-25 14:52:51,510 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:52:51,510 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:52:51,511 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:52:51,511 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:52:51,644 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:52:51,644 - root - INFO - base_adapter.py:59 - 执行成功,返回值：0
+2020-12-25 14:52:51,645 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:52:51,645 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:52:51,646 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:52:51,646 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:52:51,655 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:52:51,655 - root - INFO - base_adapter.py:59 - 执行成功,返回值：0
+2020-12-25 14:52:52,071 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-25 14:52:52,187 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:52:52,194 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-25 14:52:52,212 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:52:52,322 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:52:52,397 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:52:52,571 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-25 14:52:52,648 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-25 14:53:05,197 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:53:11,353 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:53:12,517 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:53:12,532 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:53:17,528 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:53:23,378 - root - WARNING - Object2.py:489 - ('192.168.0.117', 26) ErrorCode: 0x38
+2020-12-25 14:53:32,575 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:53:32,576 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:53:35,163 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:53:41,320 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:53:47,461 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:53:51,428 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.97, 26) is offline
+2020-12-25 14:53:52,597 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:53:52,599 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:53:53,613 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:53:59,750 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:54:05,921 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:54:12,085 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:54:18,237 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:54:24,413 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:54:30,557 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:54:45,155 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:54:51,341 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:54:51,826 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:54:51,826 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:54:51,851 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:54:51,851 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:54:51,851 - root - ERROR - Object2.py:1006 - Hkvision 192.168.0.102 got exception
+2020-12-25 14:54:52,239 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:54:52,245 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:54:52,250 - root - INFO - base_adapter.py:98 - 释放资源, result=1
+2020-12-25 14:54:57,496 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:55:45,154 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:55:51,331 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:55:57,500 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:56:03,661 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:57:53,624 - root - INFO - main.py:53 - START SERVER
+2020-12-25 14:57:53,717 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.102', 8000))已成功连接。。online
+2020-12-25 14:57:53,737 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:57:53,737 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:57:53,737 - root - INFO - base_adapter.py:74 - SDK初始化成功
+2020-12-25 14:57:53,739 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:57:53,739 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:57:53,739 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:57:53,740 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:57:53,817 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:57:53,818 - root - INFO - base_adapter.py:59 - 执行成功,返回值：0
+2020-12-25 14:57:53,819 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:57:53,819 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:57:53,820 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:57:53,820 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 14:57:53,828 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 14:57:53,828 - root - INFO - base_adapter.py:59 - 执行成功,返回值：0
+2020-12-25 14:57:54,312 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-25 14:57:54,424 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:57:54,429 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-25 14:57:54,442 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:57:54,564 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:57:54,629 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-25 14:57:54,630 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:57:54,747 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-25 14:58:14,795 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:58:14,954 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:58:35,156 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:58:35,323 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:58:42,169 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:58:48,374 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:58:54,541 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:58:55,479 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:58:55,534 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:59:00,695 - root - ERROR - Object2.py:903 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 14:59:01,843 - root - WARNING - task_controler.py:576 - get no user by code 222222222
+2020-12-25 14:59:15,711 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:59:15,863 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 14:59:36,014 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 14:59:36,115 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:01:31,435 - root - ERROR - Object2.py:71 - 'int' object has no attribute 'hex'
+2020-12-25 15:03:22,714 - root - WARNING - Object2.py:489 - ('192.168.0.117', 26) ErrorCode: 0x38
+2020-12-25 15:08:52,682 - root - WARNING - Object2.py:489 - ('192.168.0.117', 26) ErrorCode: 0x38
+2020-12-25 15:09:01,727 - root - ERROR - Object2.py:71 - 'int' object has no attribute 'hex'
+2020-12-25 15:15:51,725 - root - ERROR - Object2.py:71 - 'int' object has no attribute 'hex'
+2020-12-25 15:15:52,683 - root - WARNING - Object2.py:489 - ('192.168.0.117', 26) ErrorCode: 0x38
+2020-12-25 15:24:11,234 - root - ERROR - Object2.py:71 - 'int' object has no attribute 'hex'
+2020-12-25 15:24:33,663 - root - INFO - main.py:53 - START SERVER
+2020-12-25 15:24:33,830 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.102', 8000))已成功连接。。online
+2020-12-25 15:24:33,918 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 15:24:33,918 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 15:24:33,918 - root - INFO - base_adapter.py:74 - SDK初始化成功
+2020-12-25 15:24:33,923 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 15:24:33,923 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 15:24:33,925 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 15:24:33,925 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 15:24:34,060 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 15:24:34,060 - root - INFO - base_adapter.py:59 - 执行成功,返回值：0
+2020-12-25 15:24:34,062 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 15:24:34,062 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 15:24:34,063 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 15:24:34,063 - root - INFO - base_adapter.py:59 - 执行成功,返回值：1
+2020-12-25 15:24:34,073 - root - INFO - base_adapter.py:58 - 调用的库：/home/alex/PycharmProjects/ToolManageSys/util/hkws/../libs/hkvision_lib/libhcnetsdk.so
+2020-12-25 15:24:34,074 - root - INFO - base_adapter.py:59 - 执行成功,返回值：0
+2020-12-25 15:24:34,421 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2020-12-25 15:24:34,532 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:24:34,535 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-25 15:24:34,548 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:24:34,565 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:24:34,686 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:24:35,045 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-25 15:24:35,096 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-25 15:24:53,162 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:24:53,162 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:24:54,711 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:24:54,771 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:24:59,445 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:24:59,510 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:25:05,820 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:25:05,833 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:25:12,233 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:25:12,256 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:25:14,832 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:25:14,834 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:25:18,484 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:25:18,492 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:25:24,783 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:25:24,786 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:25:30,967 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:25:30,968 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:25:34,903 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:25:34,924 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:25:37,141 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:25:37,144 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:25:41,239 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.117, 26) is offline
+2020-12-25 15:25:41,331 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.97, 26) is offline
+2020-12-25 15:25:44,396 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 23))已成功连接。。online
+2020-12-25 15:25:44,980 - root - INFO - gateway_server.py:253 - 客户端(('192.168.0.97', 26))已成功连接。。online
+2020-12-25 15:25:55,118 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:25:55,267 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:25:55,369 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.117', 26))已成功连接。。online
+2020-12-25 15:26:16,000 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:26:16,191 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:26:36,696 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:26:36,823 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:26:47,158 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:26:47,240 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:26:53,509 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:26:53,509 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:26:57,004 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:26:57,217 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:26:59,784 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:26:59,784 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:27:06,111 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:27:06,112 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:27:12,510 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:27:12,563 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:27:17,358 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:27:17,498 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:27:18,866 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:27:18,883 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:27:25,153 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:27:25,154 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:27:31,410 - root - ERROR - Object2.py:918 - (192.168.0.201, 4370)--GetDeviceDataCount() get error code -2
+2020-12-25 15:27:31,446 - root - ERROR - Object2.py:838 - Entrance_zk--(192.168.0.201, 4370) was offline
+2020-12-25 15:27:37,717 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:27:37,965 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:27:58,375 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:27:58,579 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2020-12-25 15:28:18,915 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2020-12-25 15:28:19,182 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)

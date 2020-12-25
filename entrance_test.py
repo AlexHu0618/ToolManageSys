@@ -1,4 +1,5 @@
 from ctypes import *
+import time
 
 
 # buff = create_string_buffer("b".encode('utf-8'), 1024)
@@ -7,14 +8,15 @@ from ctypes import *
 ###############################################
 # get auth event
 def get_auth_event():
-    rsl1 = comm.GetDeviceDataCount(handle, bytes('transaction'.encode('utf-8')))
-    print(rsl1)
-    size = rsl1 * 2000
-    buff2 = create_string_buffer("q".encode('utf-8'), size)
-    filter1 = b'Index=' + bytes(str(rsl1), encoding='utf8')
-    rsl = comm.GetDeviceData(handle, byref(buff2), size, bytes('transaction'.encode('utf-8')), b'*', filter1, b'')
-    print(rsl)
-    print(str(buff2.value, encoding='gb18030'))
+    if handle != 0:
+        rsl1 = comm.GetDeviceDataCount(handle, bytes('transaction'.encode('utf-8')))
+        print(rsl1)
+        size = rsl1 * 2000
+        buff2 = create_string_buffer("q".encode('utf-8'), size)
+        filter1 = b'Index=' + bytes(str(rsl1), encoding='utf8')
+        rsl = comm.GetDeviceData(handle, byref(buff2), size, bytes('transaction'.encode('utf-8')), b'*', filter1, b'')
+        print(rsl)
+        print(str(buff2.value, encoding='gb18030'))
 ##########################################
 # # get userauthorize
 def get_userauthorize():
@@ -131,18 +133,28 @@ def delete_user():
 #
 #
 if __name__ == '__main__':
+
     comm = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
 
     handle = comm.Connect(b'protocol=TCP,ipaddress=192.168.0.201,port=4370,timeout=2000,passwd=')
-    get_auth_event()
-    get_user()
-    get_userauthorize()
-    get_fingerprint()
+    print(handle)
 
-    set_user()
+    # comm1 = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
+    # handle1 = comm1.Connect(b'protocol=TCP,ipaddress=192.168.0.202,port=4370,timeout=2000,passwd=')
+    # print(handle1)
+    get_auth_event()
+    time.sleep(10)
+    get_auth_event()
+    # get_user()
+    # get_userauthorize()
+    # get_fingerprint()
+    #
+    # set_user()
     # set_userauthorize()
     # set_fingerprint()
 
     # delete_user()
+    if handle != 0:
+        comm.Disconnect(handle)
 
-    comm.Disconnect(handle)
+    # comm1.Disconnect(handle1)

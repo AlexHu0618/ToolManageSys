@@ -1,6 +1,6 @@
 import socket
-from app.Object2 import GravityShelf, RfidR2000, Indicator, EntranceGuard, RfidR2000FH, HKVision, ChannelMachineR2000FH
-# from app.object_test import GravityShelf, RfidR2000, Indicator, EntranceGuard
+from app.Object2 import GravityShelf, RfidR2000, Indicator, EntranceZK, RfidR2000FH, HKVision, ChannelMachineR2000FH
+# from app.object_test import GravityShelf, RfidR2000, Indicator, EntranceZK
 from queue import Queue
 from app.myLogger import mylogger
 import threading
@@ -97,7 +97,6 @@ class GatewayServer(Process):
                 if not v['thread'].isAlive():
                     pkg = TransferPackage(source=k, msg_type=2, code=EQUIPMENT_OFFLINE)
                     self.queue_rsl.put(pkg)
-                    print('\033[1;33m', k, 'is offline', '\033[0m')
                     if v['is_server']:
                         del self.server_active[k]
                     else:
@@ -146,7 +145,7 @@ class GatewayServer(Process):
         while True:
             try:
                 if terminal_type == 'entrance_zk':
-                    thread = EntranceGuard(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id, uuid)
+                    thread = EntranceZK(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id, uuid)
                 elif terminal_type == 'entrance_hk':
                     thread = HKVision(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id, uuid)
                 else:
@@ -395,7 +394,17 @@ class GatewayServer(Process):
                         indicator.update('last_offline_time', cur_dt)
                 else:
                     mylogger.warning('Not found object(%s,%d) from DB-indicator while updating' % addr)
+            elif eq_type == 'channel_machine':
+                cm = ChannelMachine.by_addr(ip=addr[0], port=addr[1])
+                if cm is not None:
+                    cm.update('status', int(is_online))
+                    if not is_online:
+                        cur_dt = str(datetime.datetime.now())
+                        cm.update('last_offline_time', cur_dt)
+                else:
+                    mylogger.warning('Not found object(%s,%d) from DB-indicator while updating' % addr)
             else:
                 pass
+            print('\033[1;33m', str(addr), 'is online' if is_online else 'is offline', '\033[0m')
         except Exception as e:
             print('_modify_db_eq_status', e)

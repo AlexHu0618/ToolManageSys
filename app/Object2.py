@@ -12,11 +12,14 @@ from queue import Queue
 import os
 from binascii import *
 from crcmod import *
+import datetime
 
 from util.hkws import base_adapter
 from util.hkws.model import alarm
 from util.hkws.model.base import *
 from threading import RLock
+
+from database.models2 import Entrance
 
 
 class GravityShelf(threading.Thread):
@@ -486,7 +489,7 @@ class RfidR2000(threading.Thread):
         # print('cmd back:', data)
         if data != b'' and data != TIMEOUT:
             if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
-                print('ErrorCode: ', hex(data[4]))
+                mylogger.warning('%s ErrorCode: %s' % (str(self.addr), hex(data[4])))
                 return []
             elif data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '93'):
                 return None
@@ -760,9 +763,13 @@ class Indicator(threading.Thread):
             return ERR_EQUIPMENT_RESP
 
 
-class EntranceGuard(threading.Thread):
+class EntranceZK(threading.Thread):
+    """
+    中控门禁网络断开后会自动重连，重连后返回最后一个刷门禁的事件
+    """
     path_cur = os.path.abspath(os.path.dirname(__file__))
     lib = cdll.LoadLibrary(path_cur + "/../util/libs/zk_lib/libplcommpro.so")
+    counter = 0
 
     def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data, storeroom_id, uuid):
         threading.Thread.__init__(self)
@@ -776,61 +783,82 @@ class EntranceGuard(threading.Thread):
         self.queue_push_data = queue_push_data
         self.lock = threading.RLock()
         self.current_data = None
-        self.lib = EntranceGuard.lib
+        self.is_online = False
+        self.lib = EntranceZK.lib
         self.handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
                                   b',port=' + bytes(str(self.port), encoding='utf8') +
                                   b',timeout=2000,passwd=')
+        EntranceZK.counter += 1
 
     def run(self):
         """
         每隔10s刷新一次数据
         :return:
         """
-        # if self._conn():
-        cursec = 0
-        while self.isrunning:
-            try:
-                if not self.queuetask.empty():
-                    task, args = self.queuetask.get()
-                    rsl = methodcaller(task, *args)(self)
-                    if rsl is not None:
-                        pkg = TransferPackage(code=SUCCESS, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port),
-                                              msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
-                        self.queuersl.put(pkg)
-                else:
-                    localtime = time.localtime(time.time())
-                    if localtime.tm_sec != cursec:
-                        cursec = localtime.tm_sec
-                        rsl = self.getNewEvent()
+        if self.handle > 0:
+            self.is_online = True
+            cursec = 0
+            while self.isrunning:
+                try:
+                    if not self.queuetask.empty():
+                        task, args = self.queuetask.get()
+                        rsl = methodcaller(task, *args)(self)
                         if rsl is not None:
-                            if len(rsl) > 0:
-                                if self.current_data is not None:
-                                    if rsl != self.current_data:
-                                        data = {'user': rsl[0], 'raw': rsl}
-                                        pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=3, data=data, source=(self.ip, self.port),
-                                                              msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
-                                        self.queue_push_data.put(pkg)
-                                        print('gate--getNewEvent: ', rsl)
+                            pkg = TransferPackage(code=SUCCESS, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port),
+                                                  msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                            self.queuersl.put(pkg)
+                    else:
+                        localtime = time.localtime(time.time())
+                        if localtime.tm_sec != cursec:
+                            cursec = localtime.tm_sec
+                            rsl = self.getNewEvent()
+                            if rsl is not None:
+                                if len(rsl) > 0:
+                                    if self.current_data is not None:
+                                        if rsl != self.current_data:
+                                            data = {'user': rsl[0], 'raw': rsl}
+                                            pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=3, data=data, source=(self.ip, self.port),
+                                                                  msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                                            self.queue_push_data.put(pkg)
+                                            print('gate--getNewEvent: ', rsl)
+                                            with self.lock:
+                                                self.current_data = copy.deepcopy(rsl)
+                                    else:
                                         with self.lock:
                                             self.current_data = copy.deepcopy(rsl)
                                 else:
-                                    with self.lock:
-                                        self.current_data = copy.deepcopy(rsl)
+                                    # 非注册用户
+                                    pass
+                                # 若为离线状态，则更新为在线
+                                if not self.is_online:
+                                    self._update_status_db(is_online=True)
+                                    self.is_online = True
                             else:
-                                # 非注册用户
-                                pass
+                                # 读取错误,所有错误码均作为离线处理
+                                mylogger.error('Entrance_zk--(%s, %d) was offline' % (self.ip, self.port))
+                                self._update_status_db(is_online=False)
+                                self.is_online = False
                         else:
-                            # 读取错误
-                            with self.lock:
-                                self.isrunning = False
-                    else:
-                        pass
-            except Exception as e:
-                print('except from EntranceGuard--', e)
-                mylogger.error(e)
-                break
-        mylogger.warning('Entrance_zk (%s, %d) try to offline' % (self.ip, self.port))
-        self.lib.Disconnect(self.handle)
+                            pass
+                except Exception as e:
+                    print('except from EntranceZK--', e)
+                    mylogger.error(e)
+                    break
+            mylogger.warning('Entrance_zk (%s, %d) try to offline' % (self.ip, self.port))
+            self.lib.Disconnect(self.handle)
+        elif self.handle < 0:
+            self.lib.Disconnect(self.handle)
+        else:
+            mylogger.error('Fail to init Entreance_zk connect (%s, %d)' % (self.ip, self.port))
+
+    def _update_status_db(self, is_online: bool):
+        entrance = Entrance.by_addr(self.ip, self.port)
+        if entrance is not None:
+            entrance.update('status', int(is_online))
+            cur_dt = str(datetime.datetime.now())
+            entrance.update('last_offline_time', cur_dt)
+        else:
+            mylogger.warning('Not found object(%s,%d) from DB-entrance while updating' % (self.ip, self.port))
 
     # def _conn(self):
     #     handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
@@ -841,7 +869,7 @@ class EntranceGuard(threading.Thread):
 
     # @staticmethod
     # def conn(ip: str, port: int):
-    #     handle = EntranceGuard.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(ip, encoding='utf8') +
+    #     handle = EntranceZK.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(ip, encoding='utf8') +
     #                                    b',port=' + bytes(str(port), encoding='utf8') +
     #                                    b',timeout=2000,passwd=')
     #     if handle == 0:
@@ -852,7 +880,7 @@ class EntranceGuard(threading.Thread):
     #
     # @staticmethod
     # def disconn(handle):
-    #     EntranceGuard.lib.Disconnect(handle)
+    #     EntranceZK.lib.Disconnect(handle)
 
     def getDeviceParam(self):
         buff = create_string_buffer("b".encode('utf-8'), 1024)
@@ -890,7 +918,7 @@ class EntranceGuard(threading.Thread):
             mylogger.error('(%s, %d)--GetDeviceDataCount() get error code %d' % (self.ip, self.port, count))
             return None
 
-    def add_new_user(self, user_code, fingerprint_template, username=''):
+    def add_new_user(self, user_code, fingerprint_template, username='', card_num=''):
         """
         1、设置user表；
         2、设置templatev10表；
@@ -898,11 +926,12 @@ class EntranceGuard(threading.Thread):
         :param user_code:
         :param username:
         :param fingerprint_template:
+        :param card_num:
         :return:
         """
         # set user
         p_table = create_string_buffer(b'user')
-        data = 'Pin=%s\tName=%s\tDisable=0' % (user_code, username)
+        data = 'Pin=%s\tCardNo=%s\tName=%s\tDisable=0' % (user_code, card_num, username)
         str_buf = create_string_buffer(bytes(data, encoding='utf-8'))
         rsl_user = self.lib.SetDeviceData(self.handle, p_table, str_buf, b'')
 
@@ -945,7 +974,8 @@ class EntranceGuard(threading.Thread):
         return rsl_all
 
     def __del__(self):
-        self.lib.Disconnect(self.handle)
+        EntranceZK.counter -= 1
+        print('EntranceZK.counter==========', EntranceZK.counter)
 
 
 class HKVision(threading.Thread):
