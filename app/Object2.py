@@ -787,7 +787,7 @@ class EntranceZK(threading.Thread):
         self.lib = EntranceZK.lib
         self.handle = self.lib.Connect(b'protocol=TCP,ipaddress=' + bytes(self.ip, encoding='utf8') +
                                   b',port=' + bytes(str(self.port), encoding='utf8') +
-                                  b',timeout=2000,passwd=')
+                                  b',timeout=1000,passwd=')
         EntranceZK.counter += 1
 
     def run(self):
@@ -795,6 +795,7 @@ class EntranceZK(threading.Thread):
         每隔10s刷新一次数据
         :return:
         """
+        print('handle========', self.handle)
         if self.handle > 0:
             self.is_online = True
             cursec = 0
@@ -831,13 +832,17 @@ class EntranceZK(threading.Thread):
                                     pass
                                 # 若为离线状态，则更新为在线
                                 if not self.is_online:
-                                    self._update_status_db(is_online=True)
+                                    print('Entrance_zk--(%s, %d) was online' % (self.ip, self.port))
+                                    mylogger.info('Entrance_zk--(%s, %d) was online' % (self.ip, self.port))
                                     self.is_online = True
+                                    self._update_status_db(is_online=True)
                             else:
                                 # 读取错误,所有错误码均作为离线处理
-                                mylogger.error('Entrance_zk--(%s, %d) was offline' % (self.ip, self.port))
-                                self._update_status_db(is_online=False)
-                                self.is_online = False
+                                if self.is_online:
+                                    print('Entrance_zk--(%s, %d) was offline' % (self.ip, self.port))
+                                    mylogger.error('Entrance_zk--(%s, %d) was offline' % (self.ip, self.port))
+                                    self.is_online = False
+                                    self._update_status_db(is_online=False)
                         else:
                             pass
                 except Exception as e:
@@ -849,7 +854,7 @@ class EntranceZK(threading.Thread):
         elif self.handle < 0:
             self.lib.Disconnect(self.handle)
         else:
-            mylogger.error('Fail to init Entreance_zk connect (%s, %d)' % (self.ip, self.port))
+            mylogger.warning('Fail to init Entreance_zk connect (%s, %d)' % (self.ip, self.port))
 
     def _update_status_db(self, is_online: bool):
         entrance = Entrance.by_addr(self.ip, self.port)
@@ -1042,10 +1047,12 @@ class HKVision(threading.Thread):
             #     return False
         userId = HKVision.adapter.common_start(ip=self.ip, port=self.port, user=self.username, password=self.password)
         if userId < 0:
-            # print('Failed to login')
+            mylogger.warning('Fail to init Entreance_hk connect (%s, %d)' % (self.ip, self.port))
             return False
         self.user_id = userId
         HKVision.ip_obj_dic[self.ip]['user_id'] = self.user_id
+        print('Entrance_hk--(%s, %d) was online' % (self.ip, self.port))
+        mylogger.info('Entrance_hk--(%s, %d) was online' % (self.ip, self.port))
         return True
 
     def _get_alarm(self):
@@ -1117,9 +1124,10 @@ class HKVision(threading.Thread):
         self.queue_push_data.put(pkg)
 
     def stop(self):
-        # print('offline')
         with self.lock:
             self.isrunning = False
+        print('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))
+        mylogger.warning('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))
 
 
 class CodeScanner(threading.Thread):

@@ -365,7 +365,7 @@ class GatewayServer(Process):
         :return:
         """
         try:
-            if eq_type == 'entrance_zk':
+            if eq_type == 'entrance_zk' or eq_type == 'entrance_hk':
                 entrance = Entrance.by_addr(ip=addr[0], port=addr[1])
                 if entrance is not None:
                     entrance.update('status', int(is_online))
