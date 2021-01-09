@@ -1583,7 +1583,6 @@ class HKVision(threading.Thread):
         """
         self._init()
         try:
-            print('thread name--', threading.current_thread().name)
             if self._login():
                 self._set_exception_cb()
                 self._get_alarm()
@@ -1592,7 +1591,14 @@ class HKVision(threading.Thread):
                 thd.start()
 
                 while self.isrunning:
-                    pass
+                    time.sleep(2)
+                    if not self.queuetask.empty():
+                        task, args = self.queuetask.get()
+                        rsl = methodcaller(task, *args)(self)
+                        if rsl is not None:
+                            pkg = TransferPackage(code=SUCCESS, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port),
+                                                  msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                            self.queuersl.put(pkg)
                 self._close_alarm()
                 HKVision.adapter.logout(self.user_id)
             else:
@@ -1624,6 +1630,7 @@ class HKVision(threading.Thread):
             # entrance.save()
         else:
             print('Fail to init all users in entrance(%s, %d)' % (self.ip, self.port))
+            mylogger.warning('Fail to init all users in entrance(%s, %d)' % (self.ip, self.port))
 
     def save_new_user_to_db(self, user_code, card_num, finger_print=None, face_img=None, pw=None, usertype=3):
         """
@@ -1665,7 +1672,6 @@ class HKVision(threading.Thread):
         byname = bytes(user.login_name, encoding='utf-8')
         bycardpw = bytes(user.entrance_password, encoding='utf-8') if user.entrance_password else None
         role = user.roles
-        print(role)
         self._set_card_info(bycardno=bycardno, code=int(user.code), byname=byname, bypw=bycardpw, usertype=role[0])
         fingerprint = bytearray(user.fingerprint)
         self._set_fingerprint_info(bycardno=bycardno, fp_data=fingerprint)
@@ -1696,7 +1702,8 @@ class HKVision(threading.Thread):
                     self.all_user.remove(user)
             print('success to del user from web')
         else:
-            print('fail to del user from web')
+            print('Fail to del user from web')
+            mylogger.warning('Fail to del user_card--%s in entrance--(%s, %d) from web' % (card_num, self.ip, self.port))
 
     # def del_user_from_terminal(self):
     #     """
@@ -1706,13 +1713,12 @@ class HKVision(threading.Thread):
     #     pass
 
     def _del_self(self):
-        print('del obj')
-        print('thread name--', threading.current_thread().name)
         if self.ip in HKVision.ip_obj_dic.keys():
             del HKVision.ip_obj_dic[self.ip]
             HKVision.obj_counter -= 1
         if HKVision.obj_counter == 0 and HKVision.adapter is not None:
             HKVision.adapter.sdk_clean()
+        mylogger.info('HK entrance object--(%s, %d) was deleted' % (self.ip, self.port))
 
     def _login(self):
         """
@@ -1729,18 +1735,28 @@ class HKVision(threading.Thread):
         userId = HKVision.adapter.common_start(ip=self.ip, port=self.port, user=self.username, password=self.password)
         if userId < 0:
             print('Failed to login')
+            mylogger.warning('Fail to login HK entrance--(%s, %d)' % (self.ip, self.port))
             return False
         self.user_id = userId
         HKVision.ip_obj_dic[self.ip]['user_id'] = self.user_id
         return True
 
     def _get_alarm(self):
-        data = HKVision.adapter.setup_alarm_chan_v31(self.message_call_back, self.user_id)
-        print("设置回调函数结果", data)
+        rsl = HKVision.adapter.setup_alarm_chan_v31(self.message_call_back, self.user_id)
+        print("设置回调函数结果", rsl)
+        if not rsl:
+            err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
+            print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed to setup alarm callback function, error_code--%d' % (self.ip, self.port, err_code))
         # 布防
         alarm_result = self.adapter.setup_alarm_chan_v41(self.user_id)
         print("设置人脸v41布防结果", alarm_result)
-        self.alarm_handle = alarm_result
+        if alarm_result == -1:
+            err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
+            print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed to setup alarm, error_code--%d' % (self.ip, self.port, err_code))
+        else:
+            self.alarm_handle = alarm_result
 
     def _close_alarm(self):
         HKVision.adapter.close_alarm(self.alarm_handle)
@@ -1765,6 +1781,7 @@ class HKVision(threading.Thread):
             print('fail to get all card info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to get all card info, error_code--%d' % (self.ip, self.port, err_code))
         else:
             card_record = NET_DVR_CARD_RECORD()
             while True:
@@ -1772,11 +1789,11 @@ class HKVision(threading.Thread):
                 if rsl_getnext == -1:
                     err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
                     print('err_code', err_code)
+                    mylogger.warning('HK entrance--(%s, %d) was failed to get next card info, error_code--%d' % (self.ip, self.port, err_code))
                     break
                 elif rsl_getnext == 1000:
                     card_num = bytearray(card_record.byCardNo).decode(encoding='utf-8').strip(b'\x00'.decode())
                     self.all_user_temp.append((bytes(card_num, encoding='utf-8'), card_record.dwEmployeeNo))
-                    print('工号，用户类型--', card_record.dwEmployeeNo, card_num, card_record.byUserType)
                     # print('users--', card_record.dwEmployeeNo, card_num, card_record.byUserType, card_record.byCardType, card_record.byLeaderCard)
                 elif rsl_getnext == 1001:
                     continue
@@ -1789,7 +1806,9 @@ class HKVision(threading.Thread):
             rsl_stop = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', handle)
             print('stop remote ' + 'success' if rsl_stop else 'failed')
             # print('all_user--', self.all_user)
-            return flag
+        if flag is not True:
+            mylogger.warning('HK entrance--(%s, %d) was failed to get all card info' % (self.ip, self.port))
+        return flag
 
     def _del_card_info(self, bycardno: bytes):
         """
@@ -1797,6 +1816,7 @@ class HKVision(threading.Thread):
         :param bycardno:
         :return:
         """
+        flag = False
         card_num = bytearray(bycardno).decode(encoding='utf-8').strip(b'\x00'.decode())
         card_cfg = NET_DVR_CARD_COND()
         card_cfg.dwSize = sizeof(card_cfg)
@@ -1807,9 +1827,9 @@ class HKVision(threading.Thread):
         print('del card rsl(StartRemoteConfig)---', rsl)
         if rsl == -1:
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
-            print(err_code)
+            print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to delete card(%s) info, error_code--%d' % (self.ip, self.port, card_num, err_code))
         else:
-            print('start success')
             self.remote_handle = rsl
             send_cfg = NET_DVR_CARD_SEND_DATA()
             send_cfg.dwSize = sizeof(send_cfg)
@@ -1818,19 +1838,32 @@ class HKVision(threading.Thread):
             status = NET_DVR_CARD_STATUS()
             outbuff_ref = byref(status)
             outdata_len = h_DWORD()
-            rsl_send = HKVision.adapter.call_cpp('NET_DVR_SendWithRecvRemoteConfig', rsl, inbuff_ref, sizeof(send_cfg),
-                                                  outbuff_ref, sizeof(status), byref(outdata_len))
-            self.stop_remote()
-            print(status.byStatus, status.dwErrorCode)
-            print('rsl_send', rsl_send)
-            if rsl_send == -1:
-                err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
-                print(err_code)
-            elif rsl_send == 1000 and status.byStatus == 1:
-                print('success to del card--%s' % card_num)
-                return True
-            print('fail to del card--%s' % card_num)
-            return False
+            while True:
+                rsl_send = HKVision.adapter.call_cpp('NET_DVR_SendWithRecvRemoteConfig', rsl, inbuff_ref, sizeof(send_cfg),
+                                                      outbuff_ref, sizeof(status), byref(outdata_len))
+                self.stop_remote()
+                # print(status.byStatus, status.dwErrorCode)
+                if rsl_send == -1:
+                    err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
+                    print('err_code', err_code)
+                    mylogger.warning('HK entrance--(%s, %d) was failed for SendWithRecvRemoteConfig to delete card(%s) info, error_code--%d' % (self.ip, self.port, card_num, err_code))
+                elif rsl_send == 1000 and status.byStatus == 1:
+                    print('success to del card--%s' % card_num)
+                    flag = True
+                    break
+                elif rsl_send == 1001:
+                    continue
+                elif rsl_send == 1002:
+                    print('success to get all')
+                    flag = True
+                    break
+                else:
+                    break
+            rsl_stop = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', handle)
+            print('stop remote ' + 'success' if rsl_stop else 'failed')
+        if flag is not True:
+            mylogger.warning('HK entrance--(%s, %d) was failed to delete card(%s) info' % (self.ip, self.port, card_num))
+        return flag
 
     def _get_card_info(self, bycardno: bytes):
         """
@@ -1850,6 +1883,7 @@ class HKVision(threading.Thread):
             print('fail to get single card info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to get card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
         else:
             card_send = NET_DVR_CARD_SEND_DATA()
             card_send.dwSize = sizeof(card_send)
@@ -1864,13 +1898,14 @@ class HKVision(threading.Thread):
                 if rsl_recv == -1:
                     err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
                     print('err_code', err_code)
+                    mylogger.warning('HK entrance--(%s, %d) was failed for SendWithRecvRemoteConfig to get card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
                     break
                 elif rsl_recv == 1000:
                     card_num = bytearray(card_record.byCardNo).decode(encoding='utf-8').strip(b'\x00'.decode())
                     self.str_entrance_pw = bytearray(card_record.byCardPassword).decode(encoding='utf-8').strip(b'\x00'.decode())
-                    print(card_record.byUserType)
+                    # print(card_record.byUserType)
                     self.usertype = 2 if card_record.byUserType == 1 else 3  # 0-common; 1-admin
-                    print('users--', card_record.dwEmployeeNo, card_num, self.str_entrance_pw, self.usertype)
+                    # print('users--', card_record.dwEmployeeNo, card_num, self.str_entrance_pw, self.usertype)
                 elif rsl_recv == 1001:
                     continue
                 elif rsl_recv == 1002:
@@ -1881,10 +1916,12 @@ class HKVision(threading.Thread):
                     break
             rsl_stop = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', handle)
             print('stop remote ' + 'success' if rsl_stop else 'failed')
-            # print('all_user--', self.all_user)
-            return flag
+        if flag is not True:
+            mylogger.warning('HK entrance--(%s, %d) was failed to get card(%s) info' % (self.ip, self.port, bycardno))
+        return flag
 
     def _set_card_info(self, bycardno: bytes, code: int, byname: bytes, bypw: bytes, usertype: int):
+        flag = False
         card_cfg = NET_DVR_CARD_COND()
         card_cfg.dwSize = sizeof(card_cfg)
         card_cfg.dwCardNum = int('0x00000001', 16)
@@ -1895,6 +1932,7 @@ class HKVision(threading.Thread):
             print('fail to set card info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to set card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
         else:
             card_record = NET_DVR_CARD_RECORD()
             card_record.dwSize = sizeof(card_record)
@@ -1903,24 +1941,37 @@ class HKVision(threading.Thread):
                 memmove(card_record.byCardPassword, bypw, len(bypw))
             card_record.dwEmployeeNo = code
             card_record.byCardType = 1
-            card_record.byUserType = 4  # 0 if usertype == 3 else 1
+            card_record.byUserType = 0 if usertype == 3 else 1
             if byname is not None:
                 memmove(card_record.byName, byname, len(byname))
             status = NET_DVR_CARD_STATUS()
             outdata_len = h_DWORD()
-            rsl_send = HKVision.adapter.call_cpp('NET_DVR_SendWithRecvRemoteConfig', handle, byref(card_record),
-                                                  sizeof(card_record), byref(status), sizeof(status), byref(outdata_len))
-            self.stop_remote()
-            print(status.byStatus, status.dwErrorCode)
-            if rsl_send == -1:
-                print('fail to send card info')
-                err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
-                print('err_code', err_code)
-            elif rsl_send == 1000 and status.byStatus == 1:
-                print('success to set card--%s' % bycardno)
-                return True
-            print('fail to set card--%s' % bycardno)
-            return False
+            while True:
+                rsl_send = HKVision.adapter.call_cpp('NET_DVR_SendWithRecvRemoteConfig', handle, byref(card_record),
+                                                      sizeof(card_record), byref(status), sizeof(status), byref(outdata_len))
+                # print(status.byStatus, status.dwErrorCode)
+                if rsl_send == -1:
+                    print('fail to send card info')
+                    err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
+                    print('err_code', err_code)
+                    mylogger.warning('HK entrance--(%s, %d) was failed for SendWithRecvRemoteConfig to set card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
+                    break
+                elif rsl_send == 1000 and status.byStatus == 1:
+                    print('success to set card--%s' % bycardno)
+                    flag = True
+                elif rsl_send == 1001:
+                    continue
+                elif rsl_send == 1002:
+                    print('success to get fp')
+                    flag = True
+                    break
+                else:
+                    break
+            rsl_stop = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', handle)
+            print('stop remote ' + 'success' if rsl_stop else 'failed')
+        if flag is not True:
+            mylogger.warning('HK entrance--(%s, %d) was failed to set card(%s) info' % (self.ip, self.port, bycardno))
+        return flag
 
     def _get_fingerprint_info(self, bycardno: bytes):
         flag = False
@@ -1936,8 +1987,8 @@ class HKVision(threading.Thread):
             print('fail to get fingerprint info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to get fingerprint of card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
         else:
-            print('success remote')
             fp_record = NET_DVR_FINGERPRINT_RECORD()
             while True:
                 rsl_getnext = HKVision.adapter.call_cpp('NET_DVR_GetNextRemoteConfig', handle, byref(fp_record),
@@ -1945,17 +1996,13 @@ class HKVision(threading.Thread):
                 if rsl_getnext == -1:
                     err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
                     print('err_code', err_code)
+                    mylogger.warning('HK entrance--(%s, %d) was failed for GetNextRemoteConfig to get fingerprint of card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
                     break
                 elif rsl_getnext == 1000:
                     card_num = bytearray(fp_record.byCardNo).decode(encoding='utf-8').strip(b'\x00'.decode())
-                    # print(type(fp_record.byFingerData))
-                    # print(fp_record.byFingerData)
                     finger_data = bytearray(fp_record.byFingerData)
                     self.fp_temp.clear()
                     self.fp_temp.extend(finger_data)
-                    # if card_num in self.all_user.keys():
-                    #     self.all_user[card_num]['fingerprint'] = finger_data
-                    # print('fp data--', finger_data)
                 elif rsl_getnext == 1001:
                     continue
                 elif rsl_getnext == 1002:
@@ -1966,10 +2013,12 @@ class HKVision(threading.Thread):
                     break
             rsl_stop = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', handle)
             print('stop remote ' + 'success' if rsl_stop else 'failed')
-            # print('all_user--', self.all_user)
-            return flag
+        if flag is not True:
+            mylogger.warning('HK entrance--(%s, %d) was failed to get fingerprint of card(%s) info' % (self.ip, self.port, bycardno))
+        return flag
 
     def _set_fingerprint_info(self, bycardno: bytes, fp_data: bytearray):
+        flag = False
         fp_cfg = NET_DVR_FINGERPRINT_COND()
         fp_cfg.dwSize = sizeof(fp_cfg)
         fp_cfg.dwFingerprintNum = int('0x00000001', 16)
@@ -1982,8 +2031,8 @@ class HKVision(threading.Thread):
             print('fail to set fingerprint info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to set fingerprint of card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
         else:
-            print('success remote')
             for i in range(100, 200):
                 fp_data[i] = 11
             finger_data = bytes(fp_data)
@@ -1996,9 +2045,9 @@ class HKVision(threading.Thread):
             fp_record.byFingerType = 0
             memmove(fp_record.byFingerData, finger_data, 512)
 
-            finger_d = bytearray(fp_record.byFingerData)
-            print('fp data--', finger_d)
-            print(fp_record.dwFingerPrintLen)
+            # finger_d = bytearray(fp_record.byFingerData)
+            # print('fp data--', finger_d)
+            # print(fp_record.dwFingerPrintLen)
 
             status = NET_DVR_FINGERPRINT_STATUS()
             outdata_len = h_DWORD()
@@ -2006,31 +2055,37 @@ class HKVision(threading.Thread):
                 rsl_send = HKVision.adapter.call_cpp('NET_DVR_SendWithRecvRemoteConfig', handle, byref(fp_record),
                                                       sizeof(fp_record), byref(status), sizeof(status), byref(outdata_len))
                 card_num = bytearray(status.byCardNo).decode(encoding='utf-8').strip(b'\x00'.decode())
-                print(card_num)
-                print(status.byRecvStatus, status.byCardReaderRecvStatus)
-                print(status.dwCardReaderNo)
-                print('rsl_send', rsl_send)
+                # print(card_num)
+                # print(status.byRecvStatus, status.byCardReaderRecvStatus)
+                # print(status.dwCardReaderNo)
+                # print('rsl_send', rsl_send)
                 if rsl_send == -1:
                     print('fail to send fingerprint info')
                     err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
                     print('err_code', err_code)
+                    mylogger.warning('HK entrance--(%s, %d) was failed for SendWithRecvRemoteConfig to set fingerprint of card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
                     break
                 elif rsl_send == 1000 and (status.byRecvStatus == 0 and status.byCardReaderRecvStatus == 1):
                     print('success to set fingerprint to card--%s' % bycardno)
+                    flat = True
                     break
                 elif rsl_send == 1001:
                     continue
                 elif rsl_send == 1002:
                     print('success to get fp')
+                    flat = True
                     break
                 else:
                     print('fail to set fingerprint to card--%s' % bycardno)
                     break
             rsl_stop = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', handle)
             print('stop remote ' + 'success' if rsl_stop else 'failed')
-            # print('all_user--', self.all_user)
+        if flag is not True:
+            mylogger.warning('HK entrance--(%s, %d) was failed to set fingerprint of card(%s) info' % (self.ip, self.port, bycardno))
+        return flag
 
     def _get_face_info(self, bycardno):
+        flag = False
         face_cfg = NET_DVR_FACE_COND()
         face_cfg.dwSize = sizeof(face_cfg)
         face_cfg.dwFaceNum = int('0xffffffff', 16)
@@ -2042,8 +2097,8 @@ class HKVision(threading.Thread):
             print('fail to get face info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to get face of card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
         else:
-            print('success remote')
             face_record = NET_DVR_FACE_RECORD()
             while True:
                 rsl_getnext = HKVision.adapter.call_cpp('NET_DVR_GetNextRemoteConfig', handle, byref(face_record),
@@ -2051,6 +2106,7 @@ class HKVision(threading.Thread):
                 if rsl_getnext == -1:
                     err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
                     print('err_code', err_code)
+                    mylogger.warning('HK entrance--(%s, %d) was failed for GetNextRemoteConfig to get face of card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
                     break
                 elif rsl_getnext == 1000:
                     card_num = bytearray(face_record.byCardNo).decode(encoding='utf-8').strip(b'\x00'.decode())
@@ -2062,22 +2118,23 @@ class HKVision(threading.Thread):
                         # print(bytearray(face_data))
                         self.face_temp.clear()
                         self.face_temp.extend(face_data)
-                    # if card_num in self.all_user.keys():
-                    #     self.all_user[card_num]['face_img'] = bytearray(face_data)
-                    # print('face data--', bytearray(face_data)[:20])
+                        flag = True
                 elif rsl_getnext == 1001:
                     continue
                 elif rsl_getnext == 1002:
                     print('success to get face')
+                    flag = True
                     break
                 else:
                     break
             rsl_stop = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', handle)
             print('stop remote ' + 'success' if rsl_stop else 'failed')
-            print('all_user--', self.all_user)
+        if flag is not True:
+            mylogger.warning('HK entrance--(%s, %d) was failed to get face of card(%s) info' % (self.ip, self.port, bycardno))
+        return flag
 
     def _set_face_info(self, bycardno: bytes, face: bytearray):
-        print(len(face))
+        flag = False
         face_cfg = NET_DVR_FACE_COND()
         face_cfg.dwSize = sizeof(face_cfg)
         face_cfg.dwFaceNum = int('0x00000001', 16)
@@ -2089,6 +2146,7 @@ class HKVision(threading.Thread):
             print('fail to set fingerprint info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
+            mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to set face of card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
         else:
             print('success remote')
             face_data = bytes(face)
@@ -2110,13 +2168,11 @@ class HKVision(threading.Thread):
                                                       sizeof(face_record), byref(status), sizeof(status),
                                                       byref(outdata_len))
                 card_num = bytearray(status.byCardNo).decode(encoding='utf-8').strip(b'\x00'.decode())
-                print(card_num)
-                print(status.byRecvStatus, status.dwReaderNo)
-                print('rsl_send', rsl_send)
                 if rsl_send == -1:
                     print('fail to send face info')
                     err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
                     print('err_code', err_code)
+                    mylogger.warning('HK entrance--(%s, %d) was failed for SendWithRecvRemoteConfig to set face of card(%s) info, error_code--%d' % (self.ip, self.port, bycardno, err_code))
                     break
                 elif rsl_send == 1000 and status.byRecvStatus == 1:
                     print('success to set face to card--%s' % bycardno)
@@ -2131,7 +2187,9 @@ class HKVision(threading.Thread):
                     break
             rsl_stop = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', handle)
             print('stop remote ' + 'success' if rsl_stop else 'failed')
-            print('all_user--', self.all_user)
+        if flag is not True:
+            mylogger.warning('HK entrance--(%s, %d) was failed to set face of card(%s) info' % (self.ip, self.port, bycardno))
+        return flag
 
     def check_users_from_terminal(self):
         """
@@ -2144,11 +2202,10 @@ class HKVision(threading.Thread):
         :return:
         """
         if self._get_all_card_info():
-            print(self.all_user)
-            print(self.all_user_temp)
+            # print(self.all_user)
+            # print(self.all_user_temp)
             user_increased = list(set(self.all_user_temp).difference(set(self.all_user)))  # someone not in self.all_user
             user_reduced = list(set(self.all_user).difference(set(self.all_user_temp)))
-            print('user_reduced', user_reduced)
             if user_increased:
                 for user in user_increased:
                     self._get_card_info(user[0])
@@ -2159,6 +2216,7 @@ class HKVision(threading.Thread):
                                              pw=self.str_entrance_pw, usertype=self.usertype)
                     self.all_user.append(user)
                     print('add new user to DB--', user)
+                    mylogger.info('HK entrance--(%s, %d) add new user(code:%s)' % (self.ip, self.port, str(user[1])))
             if user_reduced:
                 for user in user_reduced:
                     user_db = User.by_code(code=str(user[1]))
@@ -2168,6 +2226,7 @@ class HKVision(threading.Thread):
                         entrance.save()
                         self.all_user.remove(user)
                     print('del user--(%s, %d) in entrance--(%s, %d)' % (user[0], user[1], self.ip, self.port))
+                    mylogger.info('HK entrance--(%s, %d) reduce user(code:%d)' % (self.ip, self.port, user[1]))
         else:
             pass
         thd = threading.Timer(interval=self.interval, function=self.check_users_from_terminal)
@@ -2189,7 +2248,7 @@ class HKVision(threading.Thread):
         print("lCommand:{},pAlarmer:{},pAlarmInfo:{},dwBufLen:{}".format(lCommand, pAlarmer, pAlarmInfo, dwBufLen))
         if lCommand == 0x5002:
             # 门禁主机报警信息
-            print('Command=', lCommand)
+            # print('Command=', lCommand)
             alarmer = alarm.NET_DVR_ALARMER()
             memmove(pointer(alarmer), pAlarmer, sizeof(alarmer))
             ip = bytearray(alarmer.sDeviceIP).decode(encoding='utf-8')
@@ -2199,16 +2258,16 @@ class HKVision(threading.Thread):
             major_code = alarm_info.dwMajor
             minor_code = alarm_info.dwMinor
             if major_code == 5 and minor_code == 38:
-                print(hex(alarm_info.dwMajor))
-                print(hex(alarm_info.dwMinor))
+                # print(hex(alarm_info.dwMajor))
+                # print(hex(alarm_info.dwMinor))
                 cardno = bytearray(alarm_info.struAcsEventInfo.byCardNo).decode(encoding='utf-8')
                 user_code = alarm_info.struAcsEventInfo.dwEmployeeNo
-                print('user--%s(CARD--%s) was in' % (user_code, cardno))
-                print(alarm_info.byAcsEventInfoExtend)
-                print(alarm_info.byAcsEventInfoExtendV20)
+                # print('user--%s(CARD--%s) was in' % (user_code, cardno))
+                # print(alarm_info.byAcsEventInfoExtend)
+                # print(alarm_info.byAcsEventInfoExtendV20)
                 HKVision.ip_obj_dic[ip]['obj'].set_auth_info(user_code, cardno)
-                if user_code == 1 or user_code == '1':
-                    HKVision.ip_obj_dic[ip]['obj'].stop()
+                # if user_code == 1 or user_code == '1':
+                #     HKVision.ip_obj_dic[ip]['obj'].stop()
         return True
 
     @staticmethod
@@ -2217,8 +2276,8 @@ class HKVision(threading.Thread):
                             lUserID,
                             lHandle,
                             pUser):
-        print(time.localtime())
-        print(hex(dwType), lUserID, lHandle, pUser)
+        # print(time.localtime())
+        # print(hex(dwType), lUserID, lHandle, pUser)
         if hex(dwType) == '0x8000':
             # 网络断开异常
             for k, v in HKVision.ip_obj_dic.items():
@@ -2227,9 +2286,13 @@ class HKVision(threading.Thread):
 
     def set_auth_info(self, user_code, cardno):
         print('(userCode, cardNo)--(%s, %s) was in!' % (user_code, cardno))
+        data = {'user': str(user_code), 'card_id': str(cardno)}
+        pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=5, data=data, source=(self.ip, self.port),
+                              msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+        self.queue_push_data.put(pkg)
 
     def stop(self):
-        print('offline')
-        print(time.localtime())
         with self.lock:
             self.isrunning = False
+        print('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))
+        mylogger.warning('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))

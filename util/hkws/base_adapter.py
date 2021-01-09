@@ -220,7 +220,7 @@ class BaseAdapter:
 
     # 设置接收异常、重连等消息的窗口句柄或回调函数
     def set_exceptioln_call_back(self, nMessage, preserved2, cbFunc, user_id):
-        result = self.call_cpp("NET_DVR_SetExceptionCallBack_V30", nMessage, preserved2, cbFunc, user_id)
+        result = self.call_cpp("set_exceptioln_call_back", nMessage, preserved2, cbFunc, user_id)
         if not result:
             self.print_error("NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is ")
         return result
