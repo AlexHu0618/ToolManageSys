@@ -82,3 +82,9 @@ log:
     handlers:
     - info_file_handler
     - error_file_handler
+
+
+# for configuration
+configuration:
+  gravity_precision: 10  # g
+  hkvision_user_update_interval: 10  # seconds

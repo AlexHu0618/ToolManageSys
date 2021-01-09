@@ -189,6 +189,7 @@ class NET_DVR_SDKSTATE(Structure):
         (" dwRes", h_DWORD*10),  # 保留，置为0
     ]
 
+
 # SDK功能信息结构体
 class NET_DVR_SDKABL(Structure):
     _fields_ = [
@@ -206,6 +207,7 @@ class NET_DVR_SDKABL(Structure):
         (" dwRes", h_DWORD*10),  # 保留，置为0
     ]
 
+
 # 时间参数结构体
 class NET_DVR_TIME(Structure):
     _fields_ = [
@@ -216,6 +218,20 @@ class NET_DVR_TIME(Structure):
         ("dwMinute", h_DWORD),  # 分
         ("dwSecond", h_DWORD)  # 秒
     ]
+
+
+# 时间参数结构体
+class NET_DVR_TIME_EX(Structure):
+    _fields_ = [
+        ("wYear", h_WORD),  # 年
+        ("byMonth", h_BYTE),  # 月
+        ("byDay", h_BYTE),  # 日
+        ("byHour", h_BYTE),  # 时
+        ("byMinute", h_BYTE),  # 分
+        ("bySecond", h_BYTE),  # 秒
+        ("byRes", h_BYTE)  # 保留
+    ]
+
 
 # 门禁主机报警事件信息结构体
 class NET_DVR_ACS_EVENT_COND(Structure):
@@ -241,12 +257,14 @@ class NET_DVR_ACS_EVENT_COND(Structure):
         ("byRes", h_BYTE * 140)  # 保留，置为0
     ]
 
+
 # IP地址结构体
 class NET_DVR_IPADDR(Structure):
     _fields_ = [
         ("sIpV4", h_BYTE * 16),  # 设备IPv4地址
         ("sIpV6", h_BYTE * 128),  # 设备IPv6地址
     ]
+
 
 # 门禁主机报警事件细节结构体
 class NET_DVR_ACS_EVENT_DETAIL(Structure):
@@ -289,6 +307,7 @@ class NET_DVR_ACS_EVENT_DETAIL(Structure):
         ("byRes", h_BYTE * 64)  # 保留，置为0
     ]
 
+
 # 门禁主机报警事件配置结构体
 class NET_DVR_ACS_EVENT_CFG(Structure):
     _fields_ = [
@@ -306,12 +325,33 @@ class NET_DVR_ACS_EVENT_CFG(Structure):
         ("byRes", h_BYTE * 61)  # 保留，置为0
     ]
 
-# 按卡号删除人脸参数条件结构体
-class NET_DVR_FACE_PARAM_BYCARD(Structure):
+
+# 透传接口输入参数结构体
+class NET_DVR_XML_CONFIG_INPUT(Structure):
     _fields_ = [
-        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),
-        ("byEnableCardReader", h_BYTE)
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("lpRequestUrl", h_VOID_P),  # 请求信令，字符串格式
+        ("dwRequestUrlLen", h_DWORD),  # 请求信令长度，字符串长度
+        ("lpInBuffer", h_VOID_P),  # 输入参数缓冲区，XML格式
+        ("dwInBufferSize", h_DWORD),  # 输入参数缓冲区大小
+        ("dwRecvTimeOut", h_DWORD),  # 接收超时时间，单位：ms，填0则使用默认超时5s
+        ("byForceEncrpt", h_BYTE),  # 是否强制加密（启用之后透传的XML报文将加密传输，AES128加密算法）：0- 否，1- 是
+        ("byRes", h_BYTE * 31)
     ]
+
+
+# 透传接口输出参数结构体
+class NET_DVR_XML_CONFIG_OUTPUT(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("lpOutBuffer", h_VOID_P),  # 输出参数缓冲区，XML格式，请求信令为“GET”类型时应用层需要事先分配足够大的内存
+        ("dwOutBufferSize", h_DWORD),  # 输出参数缓冲区大小(内存大小)
+        ("dwReturnedXMLSize", h_DWORD),  # 实际输出的XML内容大小
+        ("lpStatusBuffer", h_VOID_P),  # 返回的状态参数(XML格式：ResponseStatus)，获取命令成功时不会赋值，如果不需要，可以置NULL
+        ("dwStatusSize", h_DWORD),  # 状态缓冲区大小(内存大小)
+        ("byRes", h_BYTE * 32)  # 保留，置为0
+    ]
+
 
 # 卡参数配置条件结构体
 class NET_DVR_CARD_CFG_COND(Structure):
@@ -324,4 +364,314 @@ class NET_DVR_CARD_CFG_COND(Structure):
         ("byRes2", h_BYTE * 2),
         ("dwLockID", h_DWORD),
         ("byRes3", h_BYTE * 20)
+    ]
+
+
+# 有效期参数结构体
+class NET_DVR_VALID_PERIOD_CFG(Structure):
+    _fields_ = [
+        ("byEnable", h_BYTE),  # 是否启用该有效期：0- 不启用，1- 启用
+        ("byBeginTimeFlag", h_BYTE),  # 是否限制起始时间的标志，0-不限制，1-限制
+        ("byEnableTimeFlag", h_BYTE),  # 是否限制终止时间的标志，0-不限制，1-限制
+        ("byTimeDurationNo", h_BYTE),  # 有效期索引,从0开始（时间段通过SDK设置给锁，后续在制卡时，只需要传递有效期索引即可，以减少数据量
+        ("struBeginTime", NET_DVR_TIME_EX),  # 有效期起始时间
+        ("struEndTime", NET_DVR_TIME_EX),  # 有效期结束时间
+        ("byTimeType", h_BYTE),  # 时间类型：0-设备本地时间（默认），1-UTC时间（对于struBeginTime，struEndTime字段有效）
+        ("byRes2", h_BYTE * 31)  # 保留，置为0
+    ]
+
+
+# 卡参数配置结构体
+class NET_DVR_CARD_CFG_V50(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("dwModifyParamType", h_DWORD),  # 需要修改的卡参数（设置卡参数时有效），按位表示，每位代表一种参数，值：0- 不修改，1- 需要修改
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 卡号，特殊卡号定义
+        ("byCardValid", h_BYTE),  # 卡是否有效：0- 无效，1- 有效（用于删除卡，设置时置为0进行删除，获取时此字段始终为1）
+        ("byCardType", h_BYTE),  # 卡类型：1- 普通卡（默认），2- 残疾人卡，3- 黑名单卡，4- 巡更卡，5- 胁迫卡，6- 超级卡，7- 来宾卡，8- 解除卡，9- 员工卡，10- 应急卡，11- 应急管理卡（用于授权临时卡权限，本身不能开门），默认普通卡
+        ("byLeaderCard", h_BYTE),  # 是否为首卡：1- 是，0- 否
+        ("byUserType", h_BYTE),  # 用户类型：0 – 普通用户1- 管理员用户
+        ("byDoorRight", h_BYTE * MAX_DOOR_NUM_256),  # 门权限（梯控的楼层权限、锁权限），按字节表示，1-为有权限，0-为无权限，从低位到高位依次表示对门（或者梯控楼层、锁）1-N是否有权限
+        ("struValid", NET_DVR_VALID_PERIOD_CFG),  # 有效期参数（有效时间跨度为1970年1月1日0点0分0秒~2037年12月31日23点59分59秒）
+        ("byBelongGroup", h_BYTE * MAX_GROUP_NUM_128),  # 所属群组，按字节表示，1-属于，0-不属于，从低位到高位表示是否从属群组1~N
+        ("byCardPassword", h_BYTE * CARD_PASSWORD_LEN),  # 卡密码
+        ("wCardRightPlan", h_WORD * MAX_DOOR_NUM_256 * MAX_CARD_RIGHT_PLAN_NUM),  # 卡权限计划，取值为计划模板编号，同个门（锁）不同计划模板采用权限或的方式处理
+        ("dwMaxSwipeTime", h_DWORD),  # 最大刷卡次数，0为无次数限制
+        ("dwSwipeTime", h_DWORD),  # 已刷卡次数
+        ("wRoomNumber", h_WORD),  # 房间号
+        ("wFloorNumber", h_BYTE),  # 层号
+        ("dwEmployeeNo", h_DWORD),  # 工号（用户ID），1~99999999，不能以0开头且不能重复
+        ("byName", h_BYTE * NAME_LEN),  # 姓名
+        ("wDepartmentNo", h_WORD),  # 部门编号
+        ("wSchedulePlanNo", h_WORD),  # 排班计划编号
+        ("bySchedulePlanType", h_BYTE),  # 排班计划类型：0- 无意义，1- 个人，2- 部门
+        ("byRes2", h_BYTE * 3),  # 保留，置为0
+        ("dwLockID", h_DWORD),  # 锁ID
+        ("byLockCode", h_BYTE * MAX_LOCK_CODE_LEN),  # 锁代码
+        ("byRoomCode", h_BYTE * MAX_DOOR_CODE_LEN),  # 房间代码
+        ("dwCardRight", h_DWORD),  # 卡权限 按位表示，0-无权限，1-有权限;第0位表示：弱电报警;第1位表示：开门提示音;第2位表示：限制客卡;第3位表示：通道;第4位表示：反锁开门;第5位表示：巡更功能
+        ("dwPlanTemplate", h_DWORD),  # 计划模板(每天)各时间段是否启用，按位表示，0--不启用，1-启用
+        ("dwCardUserId", h_DWORD),  # 持卡人ID
+        ("byCardModelType", h_BYTE),  # 0-空，1- MIFARE S50，2- MIFARE S70，3- FM1208 CPU卡，4- FM1216 CPU卡，5-国密CPU卡，6-身份证，7- NFC
+        ("byRes2", h_BYTE * 83)  # 保留，置为0
+    ]
+
+
+class NET_DVR_CARD_COND(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),
+        ("dwCardNum", h_DWORD),
+        ("byRes", h_BYTE * 64),
+    ]
+
+
+# 删除卡
+class NET_DVR_CARD_SEND_DATA(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 卡号
+        ("byRes", h_BYTE * 16)  # 保留
+    ]
+
+
+class NET_DVR_CARD_STATUS(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 卡号，特殊卡号定义
+        ("dwErrorCode", h_DWORD),
+        ("byStatus", h_BYTE),
+        ("byRes", h_BYTE * 23)
+    ]
+
+
+class NET_DVR_CARD_RECORD(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 卡号，特殊卡号定义
+        ("byCardType", h_BYTE),  # 卡类型：1- 普通卡（默认），2- 残疾人卡，3- 黑名单卡，4- 巡更卡，5- 胁迫卡，6- 超级卡，7- 来宾卡，8- 解除卡，9- 员工卡，10- 应急卡，11- 应急管理卡（用于授权临时卡权限，本身不能开门），默认普通卡
+        ("byLeaderCard", h_BYTE),  # 是否为首卡：1- 是，0- 否
+        ("byUserType", h_BYTE),  # 用户类型：0 – 普通用户;1- 管理员用户
+        ("byRes", h_BYTE),
+        ("byDoorRight", h_BYTE * MAX_DOOR_NUM_256),  # 门权限（梯控的楼层权限、锁权限），按字节表示，1-为有权限，0-为无权限，从低位到高位依次表示对门（或者梯控楼层、锁）1-N是否有权限
+        ("struValid", NET_DVR_VALID_PERIOD_CFG),  # 有效期参数（有效时间跨度为1970年1月1日0点0分0秒~2037年12月31日23点59分59秒）
+        ("byBelongGroup", h_BYTE * MAX_GROUP_NUM_128),  # 所属群组，按字节表示，1-属于，0-不属于，从低位到高位表示是否从属群组1~N
+        ("byCardPassword", h_BYTE * CARD_PASSWORD_LEN),  # 卡密码
+        ("wCardRightPlan", h_WORD * MAX_DOOR_NUM_256),  # 卡权限计划，取值为计划模板编号，同个门（锁）不同计划模板采用权限或的方式处理
+        ("dwMaxSwipeTime", h_DWORD),  # 最大刷卡次数，0为无次数限制
+        ("dwSwipeTime", h_DWORD),  # 已刷卡次数
+        ("dwEmployeeNo", h_DWORD),  # 工号（用户ID），1~99999999，不能以0开头且不能重复
+        ("byName", h_BYTE * NAME_LEN),  # 姓名
+        ("byRes", h_BYTE * 260)  # 保留，置为0
+    ]
+
+
+# ##
+class NET_DVR_FINGERPRINT_COND(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("dwFingerprintNum", h_DWORD),  # 设置或获指纹数量，获取时置为0xffffffff表示获取所有指纹信息
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 指纹关联的卡号
+        ("dwEnableReaderNo", h_DWORD),  # 指纹读卡器编号（指纹获取时有效）
+        ("byFingerPrintID", h_BYTE),  # 指纹编号，有效值范围为1~10，获取时置为0xff表示该卡所有指纹
+        ("byRes", h_BYTE * 131)  # 保留
+    ]
+
+
+#  ##
+class NET_DVR_FINGERPRINT_RECORD(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 指纹关联的卡号
+        ("dwFingerPrintLen", h_DWORD),  # 指纹数据长度
+        ("dwEnableReaderNo", h_DWORD),  # 需要下发指纹的读卡器编号
+        ("byFingerPrintID", h_BYTE),  # 指纹编号，有效值范围为1~10
+        ("byFingerType", h_BYTE),  # 指纹类型：0- 普通指纹，1- 胁迫指纹
+        ("byRes1", h_BYTE * 30),  # 保留，置为0
+        ("byFingerData", h_BYTE * MAX_FINGER_PRINT_LEN),  # 指纹数据内容
+        ("byRes", h_BYTE * 96)  # 保留，置为0
+    ]
+
+
+#  ##
+class NET_DVR_FINGERPRINT_STATUS(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 指纹关联的卡号
+        ("byCardReaderRecvStatus", h_BYTE),  # 指纹读卡器状态，按字节表示，0-失败，1-成功，2-该指纹模组不在线，3-重试或指纹质量差，4-内存已满，5-已存在该指纹，6-已存在该指纹 ID，7-非法指纹ID，8-该指纹模组无需配置
+        ("byFingerPrintID", h_BYTE),  # 手指编号，有效值范围为 1-10
+        ("byFingerType", h_BYTE),  # 指纹类型 0-普通指纹，1-胁迫指纹
+        ("byRecvStatus", h_BYTE),  # 主机错误状态：0-成功，1-手指编号错误，2-指纹类型错误，3-卡号错误（卡号规格不符合设备要求），4-指纹未关联工号或卡号（工号或卡号字段为空），5-工号不存在，6-指纹数据长度为 0，7-读卡器编号错误，8-工号错误
+        ("byErrorMsg", h_BYTE * ERROR_MSG_LEN),  # 下发错误信息，当 byCardReaderRecvStatus 为 5 时，表示已存在指纹对应的卡号
+        ("dwCardReaderNo", h_DWORD),  # 当 byCardReaderRecvStatus 为 5 时，表示已存在指纹对应的指纹读卡器编号，可用于下发错误返回。0 时表示无错误信息
+        ("byRes", h_BYTE * 20)
+    ]
+
+
+# 指纹参数配置条件结构体
+class NET_DVR_FINGER_PRINT_INFO_COND(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 指纹关联的卡号
+        ("byEnableCardReader", h_BYTE * MAX_CARD_READER_NUM_512),  # 指纹的读卡器是否有效，数组下标表示读卡器序号，数组值：0- 无效，1- 有效
+        ("dwFingerPrintNum", h_DWORD),  # 设置或获指纹数量，获取时置为0xffffffff表示获取所有指纹信息
+        ("byFingerPrintID", h_BYTE),  # 指纹编号，有效值范围为1~10，获取时置为0xff表示该卡所有指纹
+        ("byCallbackMode", h_BYTE),  # 设备回调方式：0- 已向所有读卡器下发完成，1- 在时间段内只下发了部分也返回
+        ("byRes1", h_BYTE * 26)  # 保留
+    ]
+
+
+# 指纹参数配置结构体
+class NET_DVR_FINGER_PRINT_CFG(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 指纹关联的卡号
+        ("dwFingerPrintLen", h_DWORD),  # 指纹数据长度
+        ("byEnableCardReader", h_BYTE * MAX_CARD_READER_NUM_512),  # 需要下发指纹的读卡器，数组下标表示读卡器序号，数组值：0- 不下发，1- 下发
+        ("byFingerPrintID", h_BYTE),  # 指纹编号，有效值范围为1~10
+        ("byFingerType", h_BYTE),  # 指纹类型：0- 普通指纹，1- 胁迫指纹
+        ("byRes1", h_BYTE * 30),  # 保留，置为0
+        ("byFingerData", h_BYTE * MAX_FINGER_PRINT_LEN),  # 指纹数据内容
+        ("byRes", h_BYTE * 64)  # 保留，置为0
+    ]
+
+
+# 按卡号方式删除指纹的处理方式结构体
+class NET_DVR_FINGER_PRINT_BYCARD(Structure):
+    _fields_ = [
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 指纹关联的卡号
+        ("byEnableCardReader", h_BYTE * MAX_CARD_READER_NUM_512),  # 指纹的读卡器是否有效，数组下标表示读卡器序号，数组值：0- 无效，1- 有效
+        ("byFingerPrintID", h_BYTE * MAX_FINGER_PRINT_NUM),  # 需要控制的指纹，数组下标表示指纹编号，数组值：0- 不删除，1- 删除
+        ("byRes1", h_BYTE * 34)  # 保留
+    ]
+
+
+# 按读卡器方式删除指纹的处理方式结构体
+class NET_DVR_FINGER_PRINT_BYREADER(Structure):
+    _fields_ = [
+        ("dwCardReaderNo", h_DWORD),  # 读卡器编号
+        ("byClearAllCard", h_BYTE),  # 是否删除所有卡的指纹信息：0- 按卡号删除指纹信息，1- 删除所有卡的指纹信息
+        ("byRes1", h_BYTE * 3),  # 保留，置为0
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 指纹关联的卡号，byClearAllCard为0时有效
+        ("byRes", h_BYTE * 100)  # 保留，置为0
+    ]
+
+
+# 指纹删除处理方式联合体
+class NET_DVR_DEL_FINGER_PRINT_MODE(Union):
+    _fields_ = [
+        ("uLen", h_BYTE * 588),  # 联合体大小，588字节
+        ("struByCard", NET_DVR_FINGER_PRINT_BYCARD),  # 按卡号方式删除的处理方式
+        ("struByReader", NET_DVR_FINGER_PRINT_BYREADER)  # 按读卡器删除时的处理方式
+    ]
+
+
+# 指纹删除控制参数结构体
+class NET_DVR_FINGER_PRINT_INFO_CTRL(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byMode", h_BYTE),  # 删除方式：0- 按卡号方式删除，1- 按读卡器删除
+        ("byRes1", h_BYTE * 3),  # 保留，置为0
+        ("struProcessMode", NET_DVR_DEL_FINGER_PRINT_MODE),  # 处理方式
+        ("byRes", h_BYTE * 64)  # 保留，置为0
+    ]
+
+
+# face
+class  NET_DVR_FACE_COND(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 人脸关联的卡号
+        ("dwFaceNum", h_DWORD),  # 设置或获取人脸数量，获取时置为0xffffffff表示获取所有人脸信息
+        ("dwEnableReaderNo", h_DWORD),  # 人脸读卡器编号
+        ("byRes", h_BYTE * 124)
+    ]
+
+
+# face record
+class NET_DVR_FACE_RECORD(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 人脸关联的卡号
+        ("dwFaceLen", h_DWORD),  # 人脸数据长度
+        ("pFaceBuffer", POINTER(h_BYTE)),  # 人脸数据缓冲区指针
+        ("byRes", h_BYTE * 128)  # 保留，置为0
+    ]
+
+
+# face status
+class NET_DVR_FACE_STATUS(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 人脸关联的卡号
+        ("byErrorMsg", h_BYTE * ERROR_MSG_LEN),  # 下发错误信息，当 byCardReaderRecvStatus 为 4 时，表示已存在人脸对应的卡号
+        ("dwReaderNo", h_DWORD),  # 人脸读卡器编号，可用于下发错误返回
+        ("byRecvStatus", h_BYTE),  # 人脸读卡器状态，按字节表示，0-失败，1-成功，2-重试或人脸质量差，3-内存已满(人脸数据满)，4-已存在该人脸，5-非法人脸 ID，6-算法建模失败，7-未下发卡权限，8-未定义（保留），9-人眼间距小距小，10-图片数据长度小于 1KB，11-图片格式不符（png/jpg/bmp），12-图片像素数量超过上限，13-图片像素数量低于下限，14-图片信息校验失败，15-图片解码失败，16-人脸检测失败，17-人脸评分失败
+        ("byRes", h_BYTE * 131)
+    ]
+
+
+# 人脸参数配置条件结构体
+class NET_DVR_FACE_PARAM_COND(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 人脸关联的卡号
+        ("byEnableCardReader", h_BYTE * MAX_CARD_READER_NUM_512),  # 人脸的读卡器是否有效，按数组表示，每位数组表示一个读卡器，数组取值：0-无效，1-有效
+        ("dwFaceNum", h_DWORD),  # 设置或获取人脸数量，获取时置为0xffffffff表示获取所有人脸信息
+        ("byFaceID", h_BYTE),  # 人脸ID编号，有效取值范围：1~2，0xff表示该卡所有人脸
+        ("byRes", h_BYTE * 127)  # 保留，置为0
+    ]
+
+
+# 人脸参数配置结构体
+class NET_DVR_FACE_PARAM_CFG(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 人脸关联的卡号
+        ("dwFaceLen", h_DWORD),  # 人脸数据长度
+        ("pFaceBuffer", POINTER(h_CHAR)),  # 人脸数据缓冲区指针，dwFaceLen不为0时存放人脸数据（DES加密处理，设备端返回的即加密后的数据）
+        ("byEnableCardReader", h_BYTE * MAX_CARD_READER_NUM_512),  # 需要下发人脸的读卡器，按数组表示，每位数组表示一个读卡器，数组取值：0-不下发该读卡器，1-下发到该读卡器
+        ("byFaceID", h_BYTE),  # 人脸ID编号，有效取值范围：1~2
+        ("byFaceDataType", h_BYTE),  # 人脸数据类型：0- 模板（默认），1- 图片
+        ("byRes", h_BYTE * 126)  # 保留，置为0
+    ]
+
+
+# 按卡号删除人脸参数条件结构体
+class NET_DVR_FACE_PARAM_BYCARD(Structure):
+    _fields_ = [
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 人脸关联的卡号
+        ("byEnableCardReader", h_BYTE * MAX_CARD_READER_NUM_512),  # 人脸读卡器是否有效，数组下标表示读卡器序号，数组值：0- 无效，1- 有效
+        ("byFaceID", h_BYTE * MAX_FACE_NUM),  # 需要删除的人脸ID编号，按数组下标，每位数组表示一个人脸ID，取值：0-不删除，1-删除该人脸
+        ("byRes1", h_BYTE * 42)  # 保留
+    ]
+
+
+# 按读卡器删除人脸参数条件结构体
+class NET_DVR_FACE_PARAM_BYREADER(Structure):
+    _fields_ = [
+        ("dwCardReaderNo", h_DWORD),  # 读卡器编号
+        ("byClearAllCard", h_BYTE),  # 是否删除所有卡的人脸信息：0- 按卡号删除人脸信息，1- 删除所有卡的人脸信息
+        ("byRes1", h_BYTE * 3),  # 保留，置为0
+        ("byCardNo", h_BYTE * ACS_CARD_NO_LEN),  # 人脸关联的卡号，byClearAllCard为0时有效
+        ("byRes", h_BYTE * 548)  # 保留，置为0
+    ]
+
+
+# 人脸参数删除条件参数联合体
+class NET_DVR_DEL_FACE_PARAM_MODE(Union):
+    _fields_ = [
+        ("uLen", h_BYTE * 588),  # 联合体大小，588字节
+        ("struByCard", NET_DVR_FACE_PARAM_BYCARD),  # 按卡号方式删除的处理方式
+        ("struByReader", NET_DVR_FACE_PARAM_BYREADER)  # 按读卡器删除时的处理方式
+    ]
+
+
+# 人脸参数删除条件结构体
+class NET_DVR_FACE_PARAM_CTRL(Structure):
+    _fields_ = [
+        ("dwSize", h_DWORD),  # 结构体大小
+        ("byMode", h_BYTE),  # 删除方式：0- 按卡号方式删除，1- 按读卡器删除
+        ("byRes1", h_BYTE * 3),  # 保留，置为0
+        ("struProcessMode", NET_DVR_DEL_FACE_PARAM_MODE),  # 处理方式
+        ("byRes", h_BYTE * 64)  # 保留，置为0
     ]

@@ -140,37 +140,37 @@ class User(Base, MyBase):
         else:
             return False
 
-    @property
-    def avatar(self):
-        return self.avatar if self.avatar else "default_avatar.jpeg"
-
-    @avatar.setter
-    def avatar(self, image_data):
-        class ValidationError(Exception):
-            def __init__(self, message):
-                super(ValidationError, self).__init__(message)
-        if 64 < len(image_data) < 1024 * 1024:
-            import imghdr
-            import os
-            ext = imghdr.what("", h=image_data)
-            print(ext)
-            print(self.uuid)
-            if ext in ['png', 'jpeg', 'gif', 'bmp'] and not self.is_xss_image(image_data):
-                if self.avatar and os.path.exists("static/images/useravatars/" + self.avatar):
-                    os.unlink("static/images/useravatars/" + self.avatar)
-                file_path = str("static/images/useravatars/" + self.uuid + '.' + ext)
-
-                with open(file_path, 'wb') as f:
-                    f.write(image_data)
-
-                self.avatar = self.uuid + '.' + ext
-            else:
-                raise ValidationError("not in ['png', 'jpeg', 'gif', 'bmp']")
-        else:
-            raise ValidationError("64 < len(image_data) < 1024 * 1024 bytes")
-
-    def is_xss_image(self, data):
-        return all([char in printable for char in data[:16]])
+    # @property
+    # def avatar(self):
+    #     return self.avatar if self.avatar else "default_avatar.jpeg"
+    #
+    # @avatar.setter
+    # def avatar(self, image_data):
+    #     class ValidationError(Exception):
+    #         def __init__(self, message):
+    #             super(ValidationError, self).__init__(message)
+    #     if 64 < len(image_data) < 1024 * 1024:
+    #         import imghdr
+    #         import os
+    #         ext = imghdr.what("", h=image_data)
+    #         print(ext)
+    #         print(self.uuid)
+    #         if ext in ['png', 'jpeg', 'gif', 'bmp'] and not self.is_xss_image(image_data):
+    #             if self.avatar and os.path.exists("static/images/useravatars/" + self.avatar):
+    #                 os.unlink("static/images/useravatars/" + self.avatar)
+    #             file_path = str("static/images/useravatars/" + self.uuid + '.' + ext)
+    #
+    #             with open(file_path, 'wb') as f:
+    #                 f.write(image_data)
+    #
+    #             self.avatar = self.uuid + '.' + ext
+    #         else:
+    #             raise ValidationError("not in ['png', 'jpeg', 'gif', 'bmp']")
+    #     else:
+    #         raise ValidationError("64 < len(image_data) < 1024 * 1024 bytes")
+    #
+    # def is_xss_image(self, data):
+    #     return all([char in printable for char in data[:16]])
 
     @classmethod
     def all(cls):
@@ -183,6 +183,10 @@ class User(Base, MyBase):
     @classmethod
     def by_name(cls, name):
         return dbSession.query(cls).filter_by(login_name=name).first()
+
+    @classmethod
+    def by_card_id(cls, card_id):
+        return dbSession.query(cls).filter_by(card_id=card_id).first()
 
     @property
     def locked(self):
@@ -213,6 +217,10 @@ class Role(Base, MyBase):
     @classmethod
     def by_uuid(cls, uuid):
         return dbSession.query(cls).filter_by(uuid=uuid).first()
+
+    @classmethod
+    def by_level(cls, level):
+        return dbSession.query(cls).filter_by(level=level).first()
 
     @classmethod
     def all(cls):

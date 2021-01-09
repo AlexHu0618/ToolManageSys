@@ -141,7 +141,7 @@ class BaseAdapter:
     # 设备登出
     def logout(self, userId=0):
         result = self.call_cpp("NET_DVR_Logout", userId)
-        mylogger.info("登出" + result)
+        mylogger.info("登出, result=%d" % result)
 
     # 设置报警回调函数
     def setup_alarm_chan_v31(self, cbFunc, user_id):

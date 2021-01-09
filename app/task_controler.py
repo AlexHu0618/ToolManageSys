@@ -8,6 +8,7 @@ from app.myLogger import mylogger
 from database.models2 import Entrance, User, Grid, History_inbound_outbound, Goods, ChannelMachine
 import sys
 import datetime
+from settings.config import config_parser as conpar
 
 
 class TaskControler(Process):
@@ -231,6 +232,7 @@ class StoreroomManager(threading.Thread):
         3、数据无变化相隔interval秒后自动结束当前用户借还流程；
         :return:
         """
+        self.gravity_precision = conpar.read_yaml_file('configuration')['gravity_precision']
         self._get_manage_mode()
         self._set_current_user(entrance_id=self.entrance_id, entrance_addr=self.addr)
         over_timer = threading.Timer(interval=self.interval, function=self._check_timeout_to_close, args=[self.interval, ])
@@ -292,7 +294,7 @@ class StoreroomManager(threading.Thread):
             grid = self._get_gravity_grid(eq_id=eq_id, sensor_addr=sensor_addr)
             if grid.id in self.gravity_goods.keys():
                 self.gravity_goods[grid.id][1] += pkg['data']['value']
-                if abs(self.gravity_goods[grid.id][1]) < 5:
+                if abs(self.gravity_goods[grid.id][1]) < self.gravity_precision:
                     del self.gravity_goods[grid.id]
             else:
                 self.gravity_goods[grid.id] = [grid.type, pkg['data']['value']]
