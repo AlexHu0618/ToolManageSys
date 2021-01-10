@@ -2079,13 +2079,12 @@ class HKVision(threading.Thread):
                     break
                 elif rsl_send == 1000 and (status.byRecvStatus == 0 and status.byCardReaderRecvStatus == 1):
                     print('success to set fingerprint to card--%s' % bycardno)
-                    flat = True
-                    break
+                    flag = True
                 elif rsl_send == 1001:
                     continue
                 elif rsl_send == 1002:
                     print('success to get fp')
-                    flat = True
+                    flag = True
                     break
                 else:
                     print('fail to set fingerprint to card--%s' % bycardno)
@@ -2188,11 +2187,12 @@ class HKVision(threading.Thread):
                     break
                 elif rsl_send == 1000 and status.byRecvStatus == 1:
                     print('success to set face to card--%s' % bycardno)
-                    break
+                    flag = True
                 elif rsl_send == 1001:
                     continue
                 elif rsl_send == 1002:
-                    print('success to get fp')
+                    print('success to set face')
+                    flag = True
                     break
                 else:
                     print('fail to set face to card--%s' % bycardno)
