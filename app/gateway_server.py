@@ -307,7 +307,6 @@ class GatewayServer(Process):
                 if transfer_package.msg_type == 0:
                     thd = threading.Thread(target=self._operate_equipment, args=(transfer_package,))
                     thd.setDaemon(True)
-                    print('start new thread')
                     thd.start()
                 # cmd for gateway server
                 elif transfer_package.msg_type == 1:

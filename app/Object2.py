@@ -1597,7 +1597,6 @@ class HKVision(threading.Thread):
                 while self.isrunning:
                     time.sleep(2)
                     if not self.queuetask.empty():
-                        print('get task')
                         task, args = self.queuetask.get()
                         rsl = methodcaller(task, *args)(self)
                         if rsl is not None:
@@ -1677,17 +1676,22 @@ class HKVision(threading.Thread):
         byname = bytes(user.login_name, encoding='utf-8')
         bycardpw = bytes(user.entrance_password, encoding='utf-8') if user.entrance_password else None
         role = user.roles
-        self._set_card_info(bycardno=bycardno, code=int(user.code), byname=byname, bypw=bycardpw, usertype=role[0])
+        rsl_card = self._set_card_info(bycardno=bycardno, code=int(user.code), byname=byname, bypw=bycardpw, usertype=role[0])
         fingerprint = bytearray(user.fingerprint)
-        self._set_fingerprint_info(bycardno=bycardno, fp_data=fingerprint)
+        rsl_fp = self._set_fingerprint_info(bycardno=bycardno, fp_data=fingerprint)
         face_data = bytearray(user.avatar)
-        self._set_face_info(bycardno=bycardno, face=face_data)
+        rsl_face = self._set_face_info(bycardno=bycardno, face=face_data)
         entrance = Entrance.by_addr(self.ip, self.port)
         entrance.users.append(user)
         entrance.save()
         with self.lock:
             self.all_user.append((bycardno, int(user.code)))
-        mylogger.warning('HK entrance--(%s, %d) was success to build new user--%s' % (self.ip, self.port, bycardno))
+        if rsl_card and (rsl_fp and rsl_face):
+            mylogger.info('HK entrance--(%s, %d) was success to build new user--%s' % (self.ip, self.port, bycardno))
+            return True
+        else:
+            mylogger.warning('HK entrance--(%s, %d) was failed to build new user--%s' % (self.ip, self.port, bycardno))
+            return False
 
     def del_user_from_web(self, card_num: str):
         """
@@ -1710,9 +1714,11 @@ class HKVision(threading.Thread):
                         self.all_user.remove(user)
             print('success to del user from web')
             mylogger.info('HK entrance--(%s, %d) was success to delete user--%s' % (self.ip, self.port, card_num))
+            return True
         else:
             print('Fail to del user from web')
             mylogger.warning('HK entrance--(%s, %d) was failed to delete user--%s' % (self.ip, self.port, card_num))
+            return False
 
     # def del_user_from_terminal(self):
     #     """
