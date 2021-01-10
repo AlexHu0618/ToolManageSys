@@ -145,9 +145,9 @@ class GatewayServer(Process):
         while True:
             try:
                 if terminal_type == 'entrance_zk':
-                    thread = EntranceZK(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id, uuid)
+                    thread = EntranceZK(addr, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                 elif terminal_type == 'entrance_hk':
-                    thread = HKVision(addr, queue_task, queue_rsl, self.queue_equipment_push, storeroom_id, uuid)
+                    thread = HKVision(addr, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                 else:
                     s.connect(addr)
                     if terminal_type == 'gravity':
@@ -259,7 +259,7 @@ class GatewayServer(Process):
         finally:
             server_sock.close()
 
-    def add_new(self, ip: str, port: int, type_new: str, isserver: bool, storeroom_id: str, uuid: str):
+    def add_new_equipment(self, ip: str, port: int, type_new: str, isserver: bool, storeroom_id: str, uuid: str):
         """
         1、加入设备服务器列表或设备客户端列表；
         2、尝试连接设备；
@@ -305,8 +305,9 @@ class GatewayServer(Process):
                 print('\033[1;33m CMD: ', task, ' ', args, '\033[0m')
                 # cmd for the equipment running async
                 if transfer_package.msg_type == 0:
-                    thd = threading.Thread(target=self._get_data_from_equipment, args=(transfer_package,))
+                    thd = threading.Thread(target=self._operate_equipment, args=(transfer_package,))
                     thd.setDaemon(True)
+                    print('start new thread')
                     thd.start()
                 # cmd for gateway server
                 elif transfer_package.msg_type == 1:
@@ -323,10 +324,10 @@ class GatewayServer(Process):
             else:
                 pass
         except Exception as e:
-            print(e)
+            print('excetp', e)
             mylogger.error(e)
 
-    def _get_data_from_equipment(self, transfer_package):
+    def _operate_equipment(self, transfer_package):
         """
         异步访问硬件
         :param transfer_package:
@@ -351,6 +352,7 @@ class GatewayServer(Process):
             else:
                 print(target, ' qr is empty!')
         except Exception as e:
+            print('except------', e)
             mylogger.error(e)
 
     def stop(self):

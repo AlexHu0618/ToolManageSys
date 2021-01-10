@@ -69,13 +69,24 @@ class TaskControler(Process):
         server_sock.close()
 
     def _analyze_web_pkg(self, package: dict):
-        if package['msg_type'] == 2 and package['code'] == CLOSE_PROCESS_FROM_WEB:
-            mylogger.info('get pkg(close process) from webserver')
-            self._analyze_pkg(package=package)
-        else:
+        """
+        1、gateway_server与设备的控制指令，不经过处理直接放入队列下发；
+        2、其他指令进行包分析处理；
+        :param package:
+        :return:
+        """
+        if package['msg_type'] == 0 or package['msg_type'] == 1:
+            mylogger.info('get pkg from webserver')
             self.puttask(package)
+        else:
+            self._analyze_pkg(package=package)
 
-    def puttask(self, data):
+    def puttask(self, json_data):
+        """
+        1、发送gataway_server和设备相关的pkg到gataway_server；
+        :param data: 
+        :return: 
+        """
         # package to transferpackage and put into task queue
         # cmds = data.split(b'\r\n')
         # if len(cmds) > 2:
@@ -93,18 +104,51 @@ class TaskControler(Process):
         #     tp.uuid = str(cmds[2], encoding='utf8')
         # self.q_task.put(tp)
         try:
+            all_type = {1: 'entrance_zk', 2: 'entrance_hk', 3: 'code_scan', 4: 'gravity', 5: 'rfid2000',
+                        6: 'rfid2000fh', 7: 'channel_machine', 8: 'led'}
             # pkg = eval(str(data, encoding='utf-8'))
             pkg = TransferPackage()
-            pkg.uuid = data['uuid'] if 'uuid' in data.keys() else None
-            pkg.target = data['target'] if 'target' in data.keys() else None
-            pkg.source = data['source'] if 'source' in data.keys() else None
-            pkg.code = data['code'] if 'code' in data.keys() else None
-            pkg.msg_type = data['msg_type'] if 'msg_type' in data.keys() else None
-            pkg.data = data['data'] if 'data' in data.keys() else None
+            pkg.uuid = json_data['uuid'] if 'uuid' in json_data.keys() else None
+            pkg.target = json_data['target'] if 'target' in json_data.keys() else None
+            pkg.source = json_data['source'] if 'source' in json_data.keys() else None
+            pkg.code = json_data['code'] if 'code' in json_data.keys() else None
+            pkg.msg_type = json_data['msg_type'] if 'msg_type' in json_data.keys() else None
+            pkg.storeroom_id = json_data['storeroom_id'] if 'storeroom_id' in json_data.keys() else None
+            if pkg.code == ENTRANCE_ADD_USER:
+                eq_id = json_data['equipment_id'] if 'equipment_id' in json_data.keys() else None
+                user_id = json_data['data']['user_id']
+                user = User.by_uuid(user_id)
+                entrance = Entrance.by_id(eq_id)
+                func = 'add_new_user'
+                args = (user.code, user.fingerprint, user.login_name, user.card_id)
+                if entrance.type == 2:  # 1-ZK; 2-HK;
+                    func = 'build_new_user_to_terminal'
+                    args = (user_id, )
+                pkg.data = {'func': func, 'args': args}
+            elif pkg.code == ENTRANCE_REDUCE_USER:
+                eq_id = json_data['equipment_id'] if 'equipment_id' in json_data.keys() else None
+                user_id = json_data['data']['user_id']
+                user = User.by_uuid(user_id)
+                entrance = Entrance.by_id(eq_id)
+                func = 'delete_user'
+                args = (user.card_id, )
+                if entrance.type == 2:  # 1-ZK; 2-HK;
+                    func = 'del_user_from_web'
+                    args = (user.card_id,)
+                pkg.data = {'func': func, 'args': args}
+            elif pkg.code == GATEWAY_ADD_NEW_EQUIPMENT:
+                raw_data = json_data['data']
+                func = 'add_new_equipment'
+                eq_type_value = int(raw_data['type'])
+                args = (raw_data['ip'], raw_data['port'], all_type[eq_type_value], raw_data['is_server'],
+                        pkg.storeroom_id, pkg.uuid)
+                pkg.data = {'func': func, 'args': args}
+            else:
+                pkg.data = json_data['data'] if 'data' in json_data.keys() else None
             self.q_task.put(pkg)
         except Exception as e:
             print(e)
-            mylogger.warning(e)
+            mylogger.warning(e)       
 
     def _get_push_data(self):
         """

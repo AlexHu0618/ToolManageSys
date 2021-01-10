@@ -55,8 +55,8 @@ class BaseAdapter:
                 lib = cdll.LoadLibrary(so_lib)
                 try:
                     value = eval("lib.%s" % func_name)(*args)
-                    mylogger.info("调用的库：" + so_lib)
-                    mylogger.info("执行成功,返回值：" + str(value))
+                    # mylogger.info("调用的库：" + so_lib)
+                    # mylogger.info("执行成功,返回值：" + str(value))
                     return value
                 except:
                     continue

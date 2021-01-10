@@ -12,6 +12,13 @@ BTN_CONFIRM_FROM_WEB = 402
 BTN_CHECK_FROM_WEB = 403
 USER_ENTRANCE_SUCCESS = 404
 
+# option code
+ENTRANCE_ADD_USER = 2100
+ENTRANCE_REDUCE_USER = 2101
+GATEWAY_ADD_NEW_EQUIPMENT = 5100
+GATEWAY_REDUCE_EQUIPMENT = 5101
+
+
 
 class TransferPackage(object):
     def __init__(self, target=None, code=None, eq_type=None, data=dict(), source=None, msg_type=None, storeroom_id=None, eq_id=None):

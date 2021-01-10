@@ -87,19 +87,19 @@ class GravityShelf(threading.Thread):
 
     def _check_data_update(self, data_buff):
         rsl = self.readAllInfo()
-        allg = {}
+        all_weight = {}
         if rsl is not None and len(rsl) >= len(data_buff):
             for i in rsl:
-                g = self.readWeight(i)
-                if i not in data_buff.keys() or g != data_buff[i] and (abs(g - data_buff[i]) > self.precision):
-                    print('g - data_buff[i] ', g, data_buff[i])
-                    data = {'addr_num': i, 'value': g - data_buff[i], 'is_increased': True if g - data_buff[i] > 0 else False}
+                curr_weight = self.readWeight(i)
+                if i not in data_buff.keys() or curr_weight != data_buff[i] and (abs(curr_weight - data_buff[i]) > self.precision):
+                    print('(curr_weight - data_buff[i])--%d - %d = %d' % (curr_weight, data_buff[i], (curr_weight - data_buff[i])))
+                    data = {'addr_num': i, 'value': curr_weight - data_buff[i], 'is_increased': True if curr_weight - data_buff[i] > 0 else False, 'total': curr_weight}
                     pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=1, data=data, source=self.addr, msg_type=3,
                                           storeroom_id=self.storeroom_id, eq_id=self.uuid)
                     self.queue_push_data.put(pkg)
-                    data_buff[i] = g
+                    data_buff[i] = curr_weight
                     # print('Gravity data update--', data)
-                allg[i] = g
+                all_weight[i] = curr_weight
             # print(time.asctime(), 'G--getAllInfo: ', allg)
 
     def readWeight(self, addr='01'):
@@ -775,7 +775,7 @@ class EntranceZK(threading.Thread):
     lib = cdll.LoadLibrary(path_cur + "/../util/libs/zk_lib/libplcommpro.so")
     counter = 0
 
-    def __init__(self, addr: tuple, queuetask, queuersl, queue_push_data, storeroom_id, uuid):
+    def __init__(self, addr: tuple, queuetask, queuersl, event, queue_push_data, storeroom_id, uuid):
         threading.Thread.__init__(self)
         self.ip = addr[0]
         self.port = addr[1]
@@ -784,6 +784,7 @@ class EntranceZK(threading.Thread):
         self.isrunning = True
         self.queuetask = queuetask
         self.queuersl = queuersl
+        self.event = event
         self.queue_push_data = queue_push_data
         self.lock = threading.RLock()
         self.current_data = None
@@ -812,6 +813,7 @@ class EntranceZK(threading.Thread):
                             pkg = TransferPackage(code=SUCCESS, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port),
                                                   msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
                             self.queuersl.put(pkg)
+                            self.event.set()
                     else:
                         localtime = time.localtime(time.time())
                         if localtime.tm_sec != cursec:
@@ -1544,7 +1546,7 @@ class HKVision(threading.Thread):
     adapter = None
     obj_counter = 0
 
-    def __init__(self, addr, queuetask, queuersl, queue_push_data, storeroom_id, uuid):
+    def __init__(self, addr, queuetask, queuersl, event, queue_push_data, storeroom_id, uuid):
         threading.Thread.__init__(self)
         self.ip = addr[0]
         self.port = addr[1]
@@ -1554,6 +1556,7 @@ class HKVision(threading.Thread):
         self.uuid = uuid
         self.queuetask = queuetask
         self.queuersl = queuersl
+        self.event = event
         self.queue_push_data = queue_push_data
         self.user_id = None
         self.isrunning = True
@@ -1571,6 +1574,7 @@ class HKVision(threading.Thread):
         self.usertype = 3
         self.fp_temp = bytearray()
         self.face_temp = bytearray()
+        self.lock = RLock()
         
     def run(self):
         """
@@ -1593,19 +1597,20 @@ class HKVision(threading.Thread):
                 while self.isrunning:
                     time.sleep(2)
                     if not self.queuetask.empty():
+                        print('get task')
                         task, args = self.queuetask.get()
                         rsl = methodcaller(task, *args)(self)
                         if rsl is not None:
                             pkg = TransferPackage(code=SUCCESS, eq_type=3, data={'rsl': rsl}, source=(self.ip, self.port),
                                                   msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
                             self.queuersl.put(pkg)
+                            self.event.set()
                 self._close_alarm()
                 HKVision.adapter.logout(self.user_id)
             else:
                 print('SDK init failed')
                 time.sleep(10)
         except KeyboardInterrupt:
-            self.stop_remote()
             with self.lock:
                 self.isrunning = False
         except Exception as e:
@@ -1680,7 +1685,9 @@ class HKVision(threading.Thread):
         entrance = Entrance.by_addr(self.ip, self.port)
         entrance.users.append(user)
         entrance.save()
-        self.all_user.append((bycardno, int(user.code)))
+        with self.lock:
+            self.all_user.append((bycardno, int(user.code)))
+        mylogger.warning('HK entrance--(%s, %d) was success to build new user--%s' % (self.ip, self.port, bycardno))
 
     def del_user_from_web(self, card_num: str):
         """
@@ -1697,13 +1704,15 @@ class HKVision(threading.Thread):
                 entrance = Entrance.by_addr(self.ip, self.port)
                 entrance.users.remove(user_db)
                 entrance.save()
-            for user in self.all_user:
-                if user[0] == bycardno:
-                    self.all_user.remove(user)
+            with self.lock:
+                for user in self.all_user.copy():
+                    if user[0] == bycardno:
+                        self.all_user.remove(user)
             print('success to del user from web')
+            mylogger.info('HK entrance--(%s, %d) was success to delete user--%s' % (self.ip, self.port, card_num))
         else:
             print('Fail to del user from web')
-            mylogger.warning('Fail to del user_card--%s in entrance--(%s, %d) from web' % (card_num, self.ip, self.port))
+            mylogger.warning('HK entrance--(%s, %d) was failed to delete user--%s' % (self.ip, self.port, card_num))
 
     # def del_user_from_terminal(self):
     #     """
@@ -1823,14 +1832,13 @@ class HKVision(threading.Thread):
         card_cfg.dwCardNum = int('0x00000001', 16)
         inbuff_ref = byref(card_cfg)
         user_data = create_string_buffer(bytes(self.ip, encoding='utf-8'))
-        rsl = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, 2562, inbuff_ref, sizeof(card_cfg))
-        print('del card rsl(StartRemoteConfig)---', rsl)
-        if rsl == -1:
+        handle = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, 2562, inbuff_ref,
+                                           sizeof(card_cfg))
+        if handle == -1:
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
             mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to delete card(%s) info, error_code--%d' % (self.ip, self.port, card_num, err_code))
         else:
-            self.remote_handle = rsl
             send_cfg = NET_DVR_CARD_SEND_DATA()
             send_cfg.dwSize = sizeof(send_cfg)
             memmove(send_cfg.byCardNo, bycardno, len(bycardno))
@@ -1839,9 +1847,8 @@ class HKVision(threading.Thread):
             outbuff_ref = byref(status)
             outdata_len = h_DWORD()
             while True:
-                rsl_send = HKVision.adapter.call_cpp('NET_DVR_SendWithRecvRemoteConfig', rsl, inbuff_ref, sizeof(send_cfg),
+                rsl_send = HKVision.adapter.call_cpp('NET_DVR_SendWithRecvRemoteConfig', handle, inbuff_ref, sizeof(send_cfg),
                                                       outbuff_ref, sizeof(status), byref(outdata_len))
-                self.stop_remote()
                 # print(status.byStatus, status.dwErrorCode)
                 if rsl_send == -1:
                     err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
@@ -1850,11 +1857,10 @@ class HKVision(threading.Thread):
                 elif rsl_send == 1000 and status.byStatus == 1:
                     print('success to del card--%s' % card_num)
                     flag = True
-                    break
                 elif rsl_send == 1001:
                     continue
                 elif rsl_send == 1002:
-                    print('success to get all')
+                    print('success to delete card')
                     flag = True
                     break
                 else:
@@ -2204,8 +2210,9 @@ class HKVision(threading.Thread):
         if self._get_all_card_info():
             # print(self.all_user)
             # print(self.all_user_temp)
-            user_increased = list(set(self.all_user_temp).difference(set(self.all_user)))  # someone not in self.all_user
-            user_reduced = list(set(self.all_user).difference(set(self.all_user_temp)))
+            with self.lock:
+                user_increased = list(set(self.all_user_temp).difference(set(self.all_user)))  # someone not in self.all_user
+                user_reduced = list(set(self.all_user).difference(set(self.all_user_temp)))
             if user_increased:
                 for user in user_increased:
                     self._get_card_info(user[0])
@@ -2214,7 +2221,8 @@ class HKVision(threading.Thread):
                     self.save_new_user_to_db(user_code=str(user[1]), card_num=str(user[0], encoding='utf-8'),
                                              finger_print=self.fp_temp, face_img=self.face_temp,
                                              pw=self.str_entrance_pw, usertype=self.usertype)
-                    self.all_user.append(user)
+                    with self.lock:
+                        self.all_user.append(user)
                     print('add new user to DB--', user)
                     mylogger.info('HK entrance--(%s, %d) add new user(code:%s)' % (self.ip, self.port, str(user[1])))
             if user_reduced:
@@ -2224,7 +2232,8 @@ class HKVision(threading.Thread):
                         entrance = Entrance.by_addr(self.ip, self.port)
                         entrance.users.remove(user_db)
                         entrance.save()
-                        self.all_user.remove(user)
+                        with self.lock:
+                            self.all_user.remove(user)
                     print('del user--(%s, %d) in entrance--(%s, %d)' % (user[0], user[1], self.ip, self.port))
                     mylogger.info('HK entrance--(%s, %d) reduce user(code:%d)' % (self.ip, self.port, user[1]))
         else:
@@ -2233,10 +2242,10 @@ class HKVision(threading.Thread):
         thd.daemon = True
         thd.start()
 
-    def stop_remote(self):
-        rsl = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', self.remote_handle)
-        print('stop remote ' + 'success' if rsl else 'failed')
-        print('all_user--', self.all_user)
+    # def stop_remote(self):
+    #     rsl = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', self.remote_handle)
+    #     print('stop remote ' + 'success' if rsl else 'failed')
+    #     print('all_user--', self.all_user)
 
     @staticmethod
     @CFUNCTYPE(h_BOOL, h_LONG, POINTER(alarm.NET_DVR_ALARMER), POINTER(h_CHAR), h_DWORD, h_VOID_P)
