@@ -45136,3 +45136,7 @@ pymysql.err.InterfaceError: (0, '')
 [base_adapter.py:67][没有找到接口！]
 [ERROR][2021-01-11 05:37:11,670][Thread-1:140486334478080][task_id:root]
 [base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-11 22:13:42,928][Thread-1:140605797881600][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-11 22:13:42,929][Thread-1:140605797881600][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]

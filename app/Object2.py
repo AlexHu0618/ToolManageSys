@@ -929,7 +929,7 @@ class EntranceZK(threading.Thread):
             mylogger.error('(%s, %d)--GetDeviceDataCount() get error code %d' % (self.ip, self.port, count))
             return None
 
-    def add_new_user(self, user_code, fingerprint_template, username='', card_num=''):
+    def add_new_user(self, user_code, fingerprint_template: bytes, username='', card_num=''):
         """
         1、设置user表；
         2、设置templatev10表；
@@ -950,7 +950,7 @@ class EntranceZK(threading.Thread):
         finger_id = 3  # 0~9, default=3
         # with open(fpath_template, "r") as f:  # 打开文件
         #     template = f.read()  # 读取文件
-        template = fingerprint_template
+        template = str(fingerprint_template, encoding='utf-8')
         data = 'Pin=%s\tFingerID=%d\tTemplate=%s\tValid=1' % (user_code, finger_id, template)
         p_table = create_string_buffer(b'templatev10')
         str_buf = create_string_buffer(bytes(data, encoding='utf-8'))
@@ -1177,7 +1177,7 @@ class ChannelMachineR2000FH(threading.Thread):
         """
         self.tcp_socket.settimeout(1)
         thd_send = threading.Thread(target=self._send_recv)
-        thd_auto_inventory = threading.Timer(interval=5, function=self._inventory_once)
+        # thd_auto_inventory = threading.Timer(interval=5, function=self._inventory_once)
         thd_send.daemon = True
         thd_send.start()
         # thd_auto_inventory.start()
@@ -1204,6 +1204,12 @@ class ChannelMachineR2000FH(threading.Thread):
                 self.tcp_socket.shutdown(2)
                 self.tcp_socket.close()
         print('thread R2000FH is closed.....')
+
+    def start(self):
+        self._inventory()
+
+    def stop(self):
+        self._stop()
 
     def _check_data_update(self):
         try:
@@ -1677,7 +1683,7 @@ class HKVision(threading.Thread):
         bycardpw = bytes(user.entrance_password, encoding='utf-8') if user.entrance_password else None
         role = user.roles
         rsl_card = self._set_card_info(bycardno=bycardno, code=int(user.code), byname=byname, bypw=bycardpw, usertype=role[0])
-        fingerprint = bytearray(user.fingerprint)
+        fingerprint = bytearray(user.fingerprint)  # bytes--bytearray
         rsl_fp = self._set_fingerprint_info(bycardno=bycardno, fp_data=fingerprint)
         face_data = bytearray(user.avatar)
         rsl_face = self._set_face_info(bycardno=bycardno, face=face_data)

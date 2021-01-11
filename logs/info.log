@@ -3196,3 +3196,50 @@
 2021-01-11 05:37:38,565 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
 2021-01-11 05:37:38,599 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.201, 4370) is offline
 2021-01-11 05:37:38,704 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 26)
+2021-01-11 22:13:28,667 - root - INFO - main.py:53 - START SERVER
+2021-01-11 22:13:28,792 - root - INFO - gateway_server.py:186 - 服务端(('192.168.8.102', 8000))已成功连接。。online
+2021-01-11 22:13:31,845 - root - WARNING - Object2.py:863 - Fail to init Entreance_zk connect (192.168.0.201, 4370)
+2021-01-11 22:13:31,846 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2021-01-11 22:13:31,956 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2021-01-11 22:13:32,058 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 26)
+2021-01-11 22:13:32,159 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2021-01-11 22:13:32,268 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 26)
+2021-01-11 22:13:32,376 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2021-01-11 22:13:32,479 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2021-01-11 22:13:33,162 - root - WARNING - gateway_server.py:105 - equipment (192.168.8.102, 8000) is offline
+2021-01-11 22:13:33,186 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.201, 4370) is offline
+2021-01-11 22:13:42,264 - root - INFO - main.py:53 - START SERVER
+2021-01-11 22:13:42,479 - root - INFO - gateway_server.py:186 - 服务端(('192.168.8.102', 8000))已成功连接。。online
+2021-01-11 22:13:42,717 - root - INFO - base_adapter.py:74 - SDK初始化成功
+2021-01-11 22:13:42,928 - root - ERROR - base_adapter.py:67 - 没有找到接口！
+2021-01-11 22:13:42,929 - root - ERROR - base_adapter.py:219 - NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0
+2021-01-11 22:13:45,571 - root - WARNING - Object2.py:863 - Fail to init Entreance_zk connect (192.168.0.201, 4370)
+2021-01-11 22:13:45,571 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2021-01-11 22:13:45,750 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2021-01-11 22:13:45,852 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 26)
+2021-01-11 22:13:45,959 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2021-01-11 22:13:46,071 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2021-01-11 22:13:46,174 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2021-01-11 22:13:46,288 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 26)
+2021-01-11 22:13:46,998 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.201, 4370) is offline
+2021-01-11 22:13:53,140 - root - INFO - Object2.py:2245 - HK entrance--(192.168.8.102, 8000) reduce user(code:2)
+2021-01-11 22:14:06,421 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2021-01-11 22:14:06,535 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2021-01-11 22:14:09,545 - root - WARNING - Object2.py:863 - Fail to init Entreance_zk connect (192.168.0.201, 4370)
+2021-01-11 22:14:09,545 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2021-01-11 22:14:09,616 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.201, 4370) is offline
+2021-01-11 22:14:09,661 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 26)
+2021-01-11 22:14:29,802 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2021-01-11 22:14:29,914 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2021-01-11 22:14:32,953 - root - WARNING - Object2.py:863 - Fail to init Entreance_zk connect (192.168.0.201, 4370)
+2021-01-11 22:14:32,953 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2021-01-11 22:14:33,075 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 26)
+2021-01-11 22:14:33,942 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.201, 4370) is offline
+2021-01-11 22:14:37,343 - root - INFO - task_controler.py:79 - get pkg from webserver
+2021-01-11 22:14:39,601 - root - INFO - Object2.py:1691 - HK entrance--(192.168.8.102, 8000) was success to build new user--b'111'
+2021-01-11 22:14:53,200 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.118', 23)
+2021-01-11 22:14:53,302 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 23)
+2021-01-11 22:14:56,335 - root - WARNING - Object2.py:863 - Fail to init Entreance_zk connect (192.168.0.201, 4370)
+2021-01-11 22:14:56,335 - root - INFO - gateway_server.py:186 - 服务端(('192.168.0.201', 4370))已成功连接。。online
+2021-01-11 22:14:56,369 - root - WARNING - gateway_server.py:105 - equipment (192.168.0.201, 4370) is offline
+2021-01-11 22:14:56,477 - root - WARNING - gateway_server.py:194 - fail to connect to server ('192.168.0.117', 26)

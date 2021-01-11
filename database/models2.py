@@ -303,7 +303,7 @@ class ChannelMachine(Base, MyBase):
     name = Column(String(100))
     code = Column(String(100))
     is_server = Column(Boolean, default=False)
-    direction = Column(Integer, default=0)  # 0-进入；1-出去
+    direction = Column(Integer, default=0)  # 0-进入；1-出去;2-in&out
     status = Column(Integer, default=1)  # 0-离线；1-在线；
     last_offline_time = Column(DateTime, default=datetime.now)
     storeroom_id = Column(String(50), ForeignKey('storeroom.id'))

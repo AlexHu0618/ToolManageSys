@@ -88,3 +88,4 @@ log:
 configuration:
   gravity_precision: 10  # g
   hkvision_user_update_interval: 10  # seconds
+  storeroom_close_delay_time: 60  # seconds

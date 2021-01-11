@@ -181,22 +181,40 @@ class Rfid2000FH(threading.Thread):
         self.q_cmd.put(cmd)
 
 
+class test:
+
+    def add(self):
+        print('add')
+        return 1
+
+    def test(self):
+        from operator import methodcaller
+        task, args = ('add', ())
+        rsl = methodcaller(task, *args)(self)
+        print(rsl)
+
+
 if __name__ == '__main__':
-    server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    addr = ('', 8809)
-    server_sock.bind(addr)
-    # 监听请求
-    server_sock.listen()
-    # 建立长连接
-    try:
-        print('--等待客户端连接本服务器8809！--')
-        while True:
-            client_sock, client_addr = server_sock.accept()
-            print('connected in CLIENT--', client_addr)
-            if client_addr == ('192.168.0.97', 23):
-                thr = Rfid2000FH(client_sock)
-                if thr is not None:
-                    thr.daemon = True
-                    thr.start()
-    finally:
-        server_sock.close()
+
+    test = test()
+    test.test()
+
+    # server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # addr = ('', 8809)
+    # server_sock.bind(addr)
+    # # 监听请求
+    # server_sock.listen()
+    # # 建立长连接
+    # try:
+    #     print('--等待客户端连接本服务器8809！--')
+    #     while True:
+    #         client_sock, client_addr = server_sock.accept()
+    #         print('connected in CLIENT--', client_addr)
+    #         if client_addr == ('192.168.0.97', 23):
+    #             thr = Rfid2000FH(client_sock)
+    #             if thr is not None:
+    #                 thr.daemon = True
+    #                 thr.start()
+    # finally:
+    #     server_sock.close()
+

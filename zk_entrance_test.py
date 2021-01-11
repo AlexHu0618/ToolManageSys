@@ -1,5 +1,6 @@
 from ctypes import *
 import time
+from database.models2 import User
 
 
 # buff = create_string_buffer("b".encode('utf-8'), 1024)
@@ -109,29 +110,6 @@ def delete_user():
     print('success' if rsl_all else 'false')
 
 
-
-# import socket
-# import sys
-#
-#
-# def main():
-#     server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#     addr = ('192.168.8.221', 9999)
-#     server_sock.bind(addr)
-#     try:
-#         server_sock.listen(1)
-#     except Exception as e:
-#         print(e)
-#         print("fail to listen on port %s" % e)
-#         sys.exit(1)
-#     while True:
-#         print('here')
-#         client_sock, addr = server_sock.accept()
-#         print(addr)
-#         break
-#     client_sock.close()
-#
-#
 if __name__ == '__main__':
 
     comm = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")

@@ -202,7 +202,8 @@ class TaskControler(Process):
                     eq_id = package['equipment_id']
                     user_code = package['data']['user']
                     queue_storeroom = Queue(50)
-                    thread_store_mag = StoreroomManager(entrance_addr=addr, entrance_id=eq_id, user_code=user_code, queue_storeroom=queue_storeroom, q_send=self.q_rsl)
+                    thread_store_mag = StoreroomManager(entrance_addr=addr, entrance_id=eq_id, user_code=user_code,
+                                                        queue_storeroom=queue_storeroom, q_send=self.q_rsl, q_task=self.q_task)
                     thread_store_mag.daemon = True
                     thread_store_mag.start()
                     self.storeroom_thread[storeroom_id] = {'thread': thread_store_mag, 'queue': queue_storeroom}
@@ -248,7 +249,7 @@ class StoreroomManager(threading.Thread):
         则缓存更新用户借出信息。发送更新信息到web，扫码枪同理。若为web确定信息pkg，则保存当前用户借还信息并结束线程。
     6、定时到则结束线程。
     """
-    def __init__(self, entrance_addr, entrance_id, user_code, queue_storeroom, q_send):
+    def __init__(self, entrance_addr, entrance_id, user_code, queue_storeroom, q_send, q_task):
         threading.Thread.__init__(self)
         self.addr = entrance_addr
         self.user_code = user_code
@@ -256,6 +257,7 @@ class StoreroomManager(threading.Thread):
         self.user_id = None
         self.card_id = None
         self.q_send = q_send
+        self.q_task = q_task
         self.manage_mode = 1  # default=1
         self.storeroom_id = None
         self.isrunning = True
@@ -268,6 +270,7 @@ class StoreroomManager(threading.Thread):
         self.gravity_precision = 10
         self.goods_inbound = list()
         self.goods_outbound = list()
+        self.channel_machines = None
 
     def run(self):
         """
@@ -277,6 +280,7 @@ class StoreroomManager(threading.Thread):
         :return:
         """
         self.gravity_precision = conpar.read_yaml_file('configuration')['gravity_precision']
+        self.interval = conpar.read_yaml_file('configuration')['storeroom_close_delay_time']
         self._get_manage_mode()
         self._set_current_user(entrance_id=self.entrance_id, entrance_addr=self.addr)
         over_timer = threading.Timer(interval=self.interval, function=self._check_timeout_to_close, args=[self.interval, ])
@@ -381,6 +385,7 @@ class StoreroomManager(threading.Thread):
                 print('current user was change to ', self.user_code)
             else:
                 pass
+            self._start_channel_machine()
         elif pkg['equipment_type'] == 4:
             # 先判断出库or入库
             eq_id = pkg['equipment_id']
@@ -415,6 +420,32 @@ class StoreroomManager(threading.Thread):
         else:
             pass
 
+    def _start_channel_machine(self):
+        if self.channel_machines is not None:
+            for k, v in self.channel_machines.items:
+                pkg = TransferPackage()
+                pkg.target = v
+                pkg.msg_type = 0
+                pkg.storeroom_id = self.storeroom_id
+                data = {'func': 'start', 'args': ()}
+                pkg.data = data
+                self.q_task.put(pkg)
+        else:
+            mylogger.warning('storeroom--(%s, %d) has no channel machine to start')
+
+    def _stop_channel_machine(self):
+        if self.channel_machines is not None:
+            for k, v in self.channel_machines.items:
+                pkg = TransferPackage()
+                pkg.target = v
+                pkg.msg_type = 0
+                pkg.storeroom_id = self.storeroom_id
+                data = {'func': 'stop', 'args': ()}
+                pkg.data = data
+                self.q_task.put(pkg)
+        else:
+            mylogger.warning('storeroom--(%s, %d) has no channel machine to stop')
+
     def _handle_web_btn_info_pkg(self, pkg):
         if pkg['code'] == BTN_CONFIRM_FROM_WEB:
             # 点击确定按钮,保存并返回结果至web
@@ -424,6 +455,7 @@ class StoreroomManager(threading.Thread):
             else:
                 pkg['code'] = TASK_HANDLE_ERR
             if not pkg['data']['is_dir_in']:
+                self._stop_channel_machine()
                 with self.lock:
                     self.isrunning = False
             pkg['msg_type'] = 4
@@ -599,10 +631,18 @@ class StoreroomManager(threading.Thread):
         :return:
         """
         entrance = Entrance.by_addr(self.addr[0], self.addr[1])
-        # print(entrance.id)
         storeroom = entrance.storeroom
         self.storeroom_id = storeroom.id
         self.manage_mode = storeroom.manage_mode
+        channels = storeroom.channel_machines
+        if channels:
+            for cm in channels:
+                if cm.direction == 1:
+                    self.channel_machines['in'] = (cm.ip, cm.port)
+                elif cm.direction == 0:
+                    self.channel_machines['out'] = (cm.ip, cm.port)
+                else:
+                    self.channel_machines['in_out'] = (cm.ip, cm.port)
         print(storeroom.shelfs)
 
     def _set_current_user(self, entrance_id, entrance_addr):
@@ -641,6 +681,8 @@ class StoreroomManager(threading.Thread):
         :return:
         """
         self._save_data2db()
+        if self.channel_machines is not None:
+            self._stop_channel_machine()
         with self.lock:
             self.isrunning = False
 
