@@ -1,3 +1,6 @@
+"""
+如果是第一次运行，需要先运行文件sys_conf.py进行系统环境配置, 再运行本文件；
+"""
 from db.myDB import MyDB
 from app.myLogger import mylogger
 from app.gateway_server import GatewayServer

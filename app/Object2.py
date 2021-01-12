@@ -70,6 +70,7 @@ class GravityShelf(threading.Thread):
                     localtime = time.localtime(time.time())
                     if localtime.tm_sec % 10 == 0:
                         self._check_data_update(data_buff=data_buff)
+                        time.sleep(1)
                     else:
                         pass
             except Exception as e:
@@ -100,7 +101,7 @@ class GravityShelf(threading.Thread):
                     data_buff[i] = curr_weight
                     # print('Gravity data update--', data)
                 all_weight[i] = curr_weight
-            # print(time.asctime(), 'G--getAllInfo: ', allg)
+            print(time.asctime(), 'G--getAllInfo: ', all_weight)
 
     def readWeight(self, addr='01'):
         cmd_f = bytes.fromhex(addr + '05 02 05')
@@ -1418,7 +1419,7 @@ class RfidR2000FH(threading.Thread):
         try:
             with self.lock:
                 # print('R2000FH old EPCs: ', self.data_buff)
-                # print('R2000FH new EPCs: ', self.current_epcs)
+                print('R2000FH new EPCs: ', self.current_epcs)
                 if self.current_epcs is not None:
                     diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
                     # print('R2000FH diff_epcs--', diff_epcs)

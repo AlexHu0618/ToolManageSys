@@ -437,7 +437,7 @@ class StoreroomManager(threading.Thread):
 
     def _start_channel_machine(self):
         if len(self.channel_machines) > 0:
-            for k, v in self.channel_machines.items:
+            for k, v in self.channel_machines.items():
                 pkg = TransferPackage()
                 pkg.target = v
                 pkg.msg_type = 0
@@ -450,7 +450,7 @@ class StoreroomManager(threading.Thread):
 
     def _stop_channel_machine(self):
         if len(self.channel_machines) > 0:
-            for k, v in self.channel_machines.items:
+            for k, v in self.channel_machines.items():
                 pkg = TransferPackage()
                 pkg.target = v
                 pkg.msg_type = 0
