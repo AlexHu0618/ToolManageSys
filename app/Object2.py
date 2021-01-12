@@ -1819,13 +1819,12 @@ class HKVision(threading.Thread):
                 elif rsl_getnext == 1001:
                     continue
                 elif rsl_getnext == 1002:
-                    print('success to get all')
                     flag = True
                     break
                 else:
                     break
             rsl_stop = HKVision.adapter.call_cpp('NET_DVR_StopRemoteConfig', handle)
-            print('stop remote ' + 'success' if rsl_stop else 'failed')
+            # print('stop remote ' + 'success' if rsl_stop else 'failed')
             # print('all_user--', self.all_user)
         if flag is not True:
             mylogger.warning('HK entrance--(%s, %d) was failed to get all card info' % (self.ip, self.port))

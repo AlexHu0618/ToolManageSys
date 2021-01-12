@@ -9,6 +9,7 @@ from database.models2 import Entrance, User, Grid, History_inbound_outbound, Goo
 import sys
 import datetime
 from settings.config import config_parser as conpar
+import json
 
 
 class TaskControler(Process):
@@ -60,6 +61,8 @@ class TaskControler(Process):
                         data = client_sock.recv(length)
                         print(time.asctime(), 'recv: ', data)
                         data_dict = eval(str(data, encoding='utf-8'))
+                        print('\033[1;34m', 'web pkg--', data_dict, '\033[0m')
+                        mylogger.info('web pkg--%s' % str(data, encoding='utf-8'))
                         self._analyze_web_pkg(data_dict)
             except (OSError, BrokenPipeError):
                 continue
@@ -222,11 +225,23 @@ class TaskControler(Process):
                     package['msg_type'] = 4
                     package['data'] = {'msg': 'the thread of storeroom is not alive'}
                     if self.sock:
-                        data_send = bytes('{}'.format(package), encoding='utf-8')
+                        # data_send = bytes('{}'.format(package), encoding='utf-8')
+                        print(type(package))
+                        data_send = json.dumps(package).encode()
+                        length = len(data_send)
+                        # 定制包头 i为4个字节，所以接收方为四个字节，这个大小并不是输入的大小，而是封装固定的大小
+                        data_length = struct.pack('i', length)  # 使用struct，直接将int转为二进制型数据传输，对方使用struct解包
+                        self.sock.send(data_length)
                         self.sock.send(data_send)
             else:
                 if self.sock:
-                    data_send = bytes('{}'.format(package), encoding='utf-8')
+                    # data_send = bytes('{}'.format(package), encoding='utf-8')
+                    print(type(package))
+                    data_send = json.dumps(package).encode()
+                    length = len(data_send)
+                    # 定制包头 i为4个字节，所以接收方为四个字节，这个大小并不是输入的大小，而是封装固定的大小
+                    data_length = struct.pack('i', length)  # 使用struct，直接将int转为二进制型数据传输，对方使用struct解包
+                    self.sock.send(data_length)
                     self.sock.send(data_send)
         except Exception as e:
             mylogger.error(e)
@@ -270,7 +285,7 @@ class StoreroomManager(threading.Thread):
         self.gravity_precision = 10
         self.goods_inbound = list()
         self.goods_outbound = list()
-        self.channel_machines = None
+        self.channel_machines = dict()
 
     def run(self):
         """
@@ -421,7 +436,7 @@ class StoreroomManager(threading.Thread):
             pass
 
     def _start_channel_machine(self):
-        if self.channel_machines is not None:
+        if len(self.channel_machines) > 0:
             for k, v in self.channel_machines.items:
                 pkg = TransferPackage()
                 pkg.target = v
@@ -434,7 +449,7 @@ class StoreroomManager(threading.Thread):
             mylogger.warning('storeroom--(%s, %d) has no channel machine to start')
 
     def _stop_channel_machine(self):
-        if self.channel_machines is not None:
+        if len(self.channel_machines) > 0:
             for k, v in self.channel_machines.items:
                 pkg = TransferPackage()
                 pkg.target = v
@@ -681,7 +696,7 @@ class StoreroomManager(threading.Thread):
         :return:
         """
         self._save_data2db()
-        if self.channel_machines is not None:
+        if self.channel_machines:
             self._stop_channel_machine()
         with self.lock:
             self.isrunning = False

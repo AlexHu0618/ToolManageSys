@@ -4,6 +4,7 @@ from app.gateway_server import GatewayServer
 from multiprocessing import Queue, RLock
 from app.task_controler import TaskControler
 from database.db_handler import get_all_equipments, get_epcs
+import time
 
 
 def main():
@@ -30,19 +31,20 @@ def main():
         while True:
             pass
     except KeyboardInterrupt:
-        # mydb.close()
-        # myserver.stop()
-        # mycontroler.stop()
-        # print('stop')
-        print('keyboard interrupt')
-    except Exception as e:
-        print(e)
-        mylogger.error(e)
-    finally:
         mydb.close()
         myserver.stop()
         mycontroler.stop()
         print('stop')
+        time.sleep(5)
+        print('keyboard interrupt')
+    except Exception as e:
+        print(e)
+        mylogger.error(e)
+    # finally:
+    #     mydb.close()
+    #     myserver.stop()
+    #     mycontroler.stop()
+    #     print('stop')
 
 
 def test():

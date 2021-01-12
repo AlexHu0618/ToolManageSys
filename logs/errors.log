@@ -45140,3 +45140,613 @@ pymysql.err.InterfaceError: (0, '')
 [base_adapter.py:67][没有找到接口！]
 [ERROR][2021-01-11 22:13:42,929][Thread-1:140605797881600][task_id:root]
 [base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 11:45:40,258][Thread-1:139889127286528][task_id:root]
+[base_adapter.py:219][NET_DVR_Login_V40 用户登录失败: the error code is 7]
+[ERROR][2021-01-12 11:45:40,271][Thread-1:139889127286528][task_id:root]
+[base_adapter.py:219][common_start 失败: the error code is7]
+[ERROR][2021-01-12 11:46:01,434][Thread-35:139888678655744][task_id:root]
+[base_adapter.py:219][NET_DVR_Login_V40 用户登录失败: the error code is 7]
+[ERROR][2021-01-12 11:46:01,458][Thread-35:139888678655744][task_id:root]
+[base_adapter.py:219][common_start 失败: the error code is7]
+[ERROR][2021-01-12 11:46:22,105][Thread-63:139889127286528][task_id:root]
+[base_adapter.py:219][NET_DVR_Login_V40 用户登录失败: the error code is 7]
+[ERROR][2021-01-12 11:46:22,107][Thread-63:139889127286528][task_id:root]
+[base_adapter.py:219][common_start 失败: the error code is7]
+[ERROR][2021-01-12 11:46:42,127][Thread-90:139889127286528][task_id:root]
+[base_adapter.py:219][NET_DVR_Login_V40 用户登录失败: the error code is 7]
+[ERROR][2021-01-12 11:46:42,129][Thread-90:139889127286528][task_id:root]
+[base_adapter.py:219][common_start 失败: the error code is7]
+[ERROR][2021-01-12 11:47:02,597][Thread-116:139888995559168][task_id:root]
+[base_adapter.py:219][NET_DVR_Login_V40 用户登录失败: the error code is 7]
+[ERROR][2021-01-12 11:47:02,605][Thread-116:139888995559168][task_id:root]
+[base_adapter.py:219][common_start 失败: the error code is7]
+[ERROR][2021-01-12 11:47:23,016][Thread-137:139888961939200][task_id:root]
+[base_adapter.py:219][NET_DVR_Login_V40 用户登录失败: the error code is 7]
+[ERROR][2021-01-12 11:47:23,026][Thread-137:139888961939200][task_id:root]
+[base_adapter.py:219][common_start 失败: the error code is7]
+[ERROR][2021-01-12 11:47:43,273][Thread-158:139888645084928][task_id:root]
+[base_adapter.py:219][NET_DVR_Login_V40 用户登录失败: the error code is 7]
+[ERROR][2021-01-12 11:47:43,295][Thread-158:139888645084928][task_id:root]
+[base_adapter.py:219][common_start 失败: the error code is7]
+[ERROR][2021-01-12 11:48:03,806][Thread-179:139888670263040][task_id:root]
+[base_adapter.py:219][NET_DVR_Login_V40 用户登录失败: the error code is 7]
+[ERROR][2021-01-12 11:48:03,825][Thread-179:139888670263040][task_id:root]
+[base_adapter.py:219][common_start 失败: the error code is7]
+[ERROR][2021-01-12 11:48:24,323][Thread-200:139888645084928][task_id:root]
+[base_adapter.py:219][NET_DVR_Login_V40 用户登录失败: the error code is 7]
+[ERROR][2021-01-12 11:48:24,342][Thread-200:139888645084928][task_id:root]
+[base_adapter.py:219][common_start 失败: the error code is7]
+[ERROR][2021-01-12 11:51:39,587][Thread-1:140109088941824][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 11:51:39,592][Thread-1:140109088941824][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 11:51:52,054][Thread-11:140108007208704][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 11:53:41,790][Thread-11:140108007208704][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 11:55:39,046][Thread-1:140186191820544][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 11:55:39,048][Thread-1:140186191820544][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 11:59:53,926][Thread-1:140310862403328][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 11:59:53,929][Thread-1:140310862403328][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 12:13:12,036][Thread-11:140310036289280][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 12:21:32,088][Thread-11:140310036289280][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 12:23:06,552][Thread-1:140458653386496][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 12:23:06,556][Thread-1:140458653386496][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 14:07:33,777][Thread-1:140262366250752][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 14:07:33,795][Thread-1:140262366250752][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 14:09:51,251][Thread-11:140261334177536][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 14:10:21,201][Thread-11:140261334177536][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 14:12:21,192][Thread-11:140261334177536][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 14:14:31,856][Thread-11:140261334177536][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 14:16:17,824][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:17,828][Thread-2:140262045087488][task_id:root]
+[Object2.py:849][Entrance_zk--(192.168.0.201, 4370) was offline]
+[ERROR][2021-01-12 14:16:21,097][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:24,248][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:27,440][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:30,587][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:33,727][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:36,844][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:39,980][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:43,112][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:46,262][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:49,410][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:52,542][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:55,674][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:16:58,798][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:01,923][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:05,056][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:08,179][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:11,321][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:14,446][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:17,571][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:20,702][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:23,827][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:26,959][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:30,097][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:33,248][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:36,380][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:39,500][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:42,627][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:45,751][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:48,874][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:51,996][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:55,116][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:17:58,238][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:01,359][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:04,480][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:07,597][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:10,714][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:13,831][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:16,954][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:20,074][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:23,190][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:26,311][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:29,431][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:32,560][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:35,680][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:38,807][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:41,946][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:45,082][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:48,205][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:51,325][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:54,452][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:18:57,582][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:00,702][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:03,824][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:06,953][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:10,088][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:13,208][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:16,336][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:19,461][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:22,588][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:25,709][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:28,921][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:32,086][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:35,255][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:38,450][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:41,603][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:44,777][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:47,933][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:51,067][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:54,213][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:19:57,342][Thread-2:140262045087488][task_id:root]
+[Object2.py:929][(192.168.0.201, 4370)--GetDeviceDataCount() get error code -2]
+[ERROR][2021-01-12 14:20:51,168][Thread-698:140261334177536][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 14:37:11,403][Thread-698:140261334177536][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 14:42:01,969][Thread-698:140261334177536][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 14:50:23,195][Thread-1:140277316089600][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 14:50:23,198][Thread-1:140277316089600][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 15:00:12,009][Thread-10:139684919359232][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 15:01:06,070][Thread-4:139685178013440][task_id:sqlalchemy.pool.impl.QueuePool]
+[base.py:706][Exception during reset or similar]
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1205, 'Lock wait timeout exceeded; try restarting transaction')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2638, in _flush
+    flush_context.execute()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 995, in _emit_update_statements
+    statement, multiparams
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (1205, 'Lock wait timeout exceeded; try restarting transaction')
+[SQL: UPDATE entrance SET status=%(status)s WHERE entrance.id = %(entrance_id)s]
+[parameters: {'status': 1, 'entrance_id': '3d3211fb-4b98-4b8d-9abd-0caa5f3cc2f3'}]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/database/models2.py", line 69, in update
+    dbSession.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1042, in commit
+    self.transaction.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 504, in commit
+    self._prepare_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2536, in flush
+    self._flush(objects)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 82, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 574, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 534, in rollback
+    t[1].rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1751, in rollback
+    self._do_rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1789, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 751, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1514, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 749, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 646, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 680, in _read_bytes
+    self._sock.settimeout(self._read_timeout)
+AttributeError: 'NoneType' object has no attribute 'settimeout'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 697, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 893, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 431, in rollback
+    self._execute_command(COMMAND.COM_QUERY, "ROLLBACK")
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 742, in _execute_command
+    raise err.InterfaceError(0, '')
+pymysql.err.InterfaceError: (0, '')
+[ERROR][2021-01-12 15:03:51,991][MainThread:140666361206592][task_id:sqlalchemy.pool.impl.QueuePool]
+[base.py:706][Exception during reset or similar]
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2638, in _flush
+    flush_context.execute()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
+    update,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 995, in _emit_update_statements
+    statement, multiparams
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1130, in _execute_clauseelement
+    distilled_params,
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1317, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1514, in _handle_dbapi_exception
+    util.raise_(exc_info[1], with_traceback=exc_info[2])
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 163, in execute
+    result = self._query(query)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1076, in read
+    self._read_result_packet(first_packet)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1145, in _read_result_packet
+    self._get_descriptions()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1246, in _get_descriptions
+    assert eof_packet.is_eof_packet(), 'Protocol error, expecting EOF'
+AssertionError: Protocol error, expecting EOF
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 749, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 660, in _read_packet
+    % (packet_number, self._next_seq_id))
+pymysql.err.InternalError: Packet sequence number wrong - got 15 expected 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/database/models2.py", line 69, in update
+    dbSession.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1042, in commit
+    self.transaction.commit()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 504, in commit
+    self._prepare_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2536, in flush
+    self._flush(objects)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 82, in __exit__
+    compat.raise_(value, with_traceback=traceback)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2678, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 574, in rollback
+    util.raise_(rollback_err[1], with_traceback=rollback_err[2])
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 534, in rollback
+    t[1].rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1751, in rollback
+    self._do_rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1789, in _do_rollback
+    self.connection._rollback_impl()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 751, in _rollback_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1511, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 749, in _rollback_impl
+    self.engine.dialect.do_rollback(self.connection)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 396, in _read_ok_packet
+    pkt = self._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 660, in _read_packet
+    % (packet_number, self._next_seq_id))
+sqlalchemy.exc.InternalError: (pymysql.err.InternalError) Packet sequence number wrong - got 15 expected 1
+(Background on this error at: http://sqlalche.me/e/13/2j85)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 697, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 893, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 431, in rollback
+    self._execute_command(COMMAND.COM_QUERY, "ROLLBACK")
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 742, in _execute_command
+    raise err.InterfaceError(0, '')
+pymysql.err.InterfaceError: (0, '')
+[ERROR][2021-01-12 15:09:22,696][Thread-33:140180593821440][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 15:09:22,865][Thread-33:140180593821440][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 15:14:14,678][Thread-33:140691720107776][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 15:14:14,727][Thread-33:140691720107776][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 15:23:02,002][Thread-10:140692210628352][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 15:26:11,971][Thread-10:140692210628352][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 15:26:41,470][Thread-10:140692210628352][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 15:40:51,220][Thread-10:140692210628352][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 15:41:31,461][Thread-10:140692210628352][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 15:46:27,012][Thread-1:140538903291648][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 15:46:27,015][Thread-1:140538903291648][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 15:47:54,154][MainThread:140222775879488][task_id:sqlalchemy.pool.impl.QueuePool]
+[base.py:706][Exception during reset or similar]
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 697, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/pool/base.py", line 893, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/base.py", line 2496, in do_rollback
+    dbapi_connection.rollback()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 432, in rollback
+    self._read_ok_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 398, in _read_ok_packet
+    raise err.OperationalError(2014, "Command Out of Sync")
+pymysql.err.OperationalError: (2014, 'Command Out of Sync')
+[ERROR][2021-01-12 15:48:00,262][Thread-10:140222377465600][task_id:root]
+[Object2.py:77]['08']
+[ERROR][2021-01-12 15:48:00,519][Thread-10:140222377465600][task_id:root]
+[Object2.py:77]['08']
+[ERROR][2021-01-12 15:48:00,787][Thread-10:140222377465600][task_id:root]
+[Object2.py:77]['08']
+[ERROR][2021-01-12 15:48:01,051][Thread-10:140222377465600][task_id:root]
+[Object2.py:77]['08']
+[ERROR][2021-01-12 16:01:58,467][Thread-34:139842482579200][task_id:sqlalchemy.pool.impl.QueuePool]
+[base.py:1372][Error closing cursor]
+Traceback (most recent call last):
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1368, in _safe_close_cursor
+    cursor.close()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 55, in close
+    while self.nextset():
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 100, in nextset
+    return self._nextset(False)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/cursors.py", line 95, in _nextset
+    conn.next_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 509, in next_result
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 724, in _read_query_result
+    result.read()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alex/PycharmProjects/ToolManageSys/venv/lib/python3.6/site-packages/pymysql/connections.py", line 660, in _read_packet
+    % (packet_number, self._next_seq_id))
+pymysql.err.InternalError: Packet sequence number wrong - got 80 expected 2
+[ERROR][2021-01-12 16:02:19,926][Thread-58:139841912170240][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 16:02:19,971][Thread-58:139841912170240][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 16:06:11,538][Thread-10:139842474186496][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 16:08:02,095][Thread-10:139842474186496][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 16:15:25,039][Thread-1:140324414150400][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 16:15:25,041][Thread-1:140324414150400][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 16:19:21,811][Thread-158:140298973857536][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 16:19:21,817][Thread-158:140298973857536][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 16:19:41,211][Thread-10:140298990642944][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 16:25:19,987][Thread-2:140299401688832][task_id:root]
+[task_controler.py:247][[Errno 32] Broken pipe]
+[ERROR][2021-01-12 16:39:50,309][Thread-58:140350328923904][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 16:39:50,310][Thread-58:140350328923904][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 16:52:28,861][Thread-1:140186274780928][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 16:52:28,910][Thread-1:140186274780928][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 16:54:01,943][Thread-11:140185115293440][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 17:00:21,472][Thread-11:140185115293440][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 17:15:01,249][Thread-11:140185115293440][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 17:15:51,747][Thread-11:140185115293440][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 17:18:32,051][Thread-11:140185115293440][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 17:34:21,204][Thread-11:140185115293440][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 17:35:11,453][Thread-11:140185115293440][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 17:40:01,770][Thread-11:140185115293440][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 17:44:01,221][Thread-11:140185115293440][task_id:root]
+[Object2.py:77]['int' object has no attribute 'hex']
+[ERROR][2021-01-12 17:59:29,698][Thread-1:140053801416448][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 17:59:29,700][Thread-1:140053801416448][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
+[ERROR][2021-01-12 17:59:46,761][Thread-1:139719606941440][task_id:root]
+[base_adapter.py:67][没有找到接口！]
+[ERROR][2021-01-12 17:59:46,762][Thread-1:139719606941440][task_id:root]
+[base_adapter.py:219][NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is 0]
