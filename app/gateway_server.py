@@ -110,8 +110,10 @@ class GatewayServer(Process):
         查询是否有设备推送信息
         :return:
         """
+        print('size of push queue--', self.queue_equipment_push.qsize())
         if not self.queue_equipment_push.empty():
             pkg = self.queue_equipment_push.get()
+            print('got push data--', pkg)
             self.queue_rsl.put(pkg)
         else:
             # print('no equipment push data update')

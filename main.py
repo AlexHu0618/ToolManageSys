@@ -31,15 +31,16 @@ def main():
         mycontroler = TaskControler(queue_task=q_task, queue_rsl=q_rsl)
         myserver.start()
         mycontroler.start()
-        while True:
-            pass
+        mycontroler.join()
+        # while True:
+        #     pass
     except KeyboardInterrupt:
-        mydb.close()
-        myserver.stop()
+        # mydb.close()
+        # myserver.stop()
         mycontroler.stop()
-        print('stop')
-        time.sleep(5)
-        print('keyboard interrupt')
+        while mycontroler.is_alive():
+            time.sleep(1)
+            print('thread is still alive')
     except Exception as e:
         print(e)
         mylogger.error(e)

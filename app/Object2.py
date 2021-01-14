@@ -1379,6 +1379,7 @@ class RfidR2000FH(threading.Thread):
         self.timeout_counter = 0
         self.is_rs485 = True
         self.addr_nums = addr_nums
+        self.all_epc = list()
 
     def run(self):
         """
@@ -1419,7 +1420,7 @@ class RfidR2000FH(threading.Thread):
         try:
             with self.lock:
                 # print('R2000FH old EPCs: ', self.data_buff)
-                print('R2000FH new EPCs: ', self.current_epcs)
+                # print('R2000FH new EPCs: ', self.current_epcs)
                 if self.current_epcs is not None:
                     diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
                     # print('R2000FH diff_epcs--', diff_epcs)
@@ -1430,9 +1431,12 @@ class RfidR2000FH(threading.Thread):
                         pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=2, data=data, source=self.addr, msg_type=3,
                                               storeroom_id=self.storeroom_id, eq_id=self.uuid)
                         self.queue_push_data.put(pkg)
+                        self.all_epc.clear()
+                        self.all_epc.extend([epc[0] for epc in self.current_epcs])
                     self.data_buff.clear()
                     self.data_buff = [epc_ant for epc_ant in self.current_epcs]
                     self.current_epcs.clear()
+            print('R2000FH all_epc--', self.all_epc)
         except Exception as e:
             print('R2000FH exception: ', e)
 
@@ -2311,6 +2315,7 @@ class HKVision(threading.Thread):
         pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=5, data=data, source=(self.ip, self.port),
                               msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
         self.queue_push_data.put(pkg)
+        print('put to queue')
 
     def stop(self):
         with self.lock:

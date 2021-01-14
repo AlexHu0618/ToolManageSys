@@ -22,23 +22,32 @@ class TaskControler(Process):
         self.storeroom_thread = dict()  # {'storeroom_id': {'thread': thread, 'queue': queue}, }
         self.lock_storeroom_user = threading.RLock()
         self.web_pkg_counter = 0
+        self.server_sock = None
 
     def run(self):
-        thread_conn = threading.Thread(target=self._monitorconn)
-        thread_send = threading.Thread(target=self._get_push_data)
-        thread_conn.daemon = True
-        thread_send.daemon = True
-        thread_conn.start()
-        thread_send.start()
-        print('start task')
-        while self.isrunning:
-            pass
+        try:
+            thread_conn = threading.Thread(target=self._monitorconn)
+            thread_send = threading.Thread(target=self._get_push_data)
+            thread_conn.daemon = True
+            thread_send.daemon = True
+            thread_conn.start()
+            thread_send.start()
+            print('start task')
+            thread_conn.join()
+        except KeyboardInterrupt:
+            # while self.sock is not None:
+            #     print(self.server_sock)
+            #     self.server_sock.shutdown(socket.SHUT_RDWR)
+            #     self.server_sock.close()
+            #     time.sleep(2)
+                print('self.sock', self.sock)
 
     def _monitorconn(self):
         server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         addr = ('', 9999)
         server_sock.bind(addr)
         server_sock.listen(1)
+        self.server_sock = server_sock
         while self.isrunning:
             try:
                 while True:
@@ -60,16 +69,21 @@ class TaskControler(Process):
                         length = struct.unpack('i', length_data)[0]
                         data = client_sock.recv(length)
                         print(time.asctime(), 'recv: ', data)
-                        data_dict = eval(str(data, encoding='utf-8'))
-                        print('\033[1;34m', 'web pkg--', data_dict, '\033[0m')
-                        mylogger.info('web pkg--%s' % str(data, encoding='utf-8'))
+                        # 接收的data为bytes类型的json数据，其中的None会自动换成null，需要注意，此刻如果使用eval（）转换会报错“null not defined”
+                        # data_dict = eval(str(data, encoding='utf-8'))
+                        data_dict = json.loads(data.decode().strip())
+                        print('\033[1;34m', 'recv from web pkg--', data_dict, '\033[0m')
+                        mylogger.info('recv web pkg--%s' % str(data, encoding='utf-8'))
                         self._analyze_web_pkg(data_dict)
             except (OSError, BrokenPipeError):
                 continue
             except KeyboardInterrupt:
+                print('monitor keyboard')
                 break
+        self.sock.send(b'exit')
         server_sock.shutdown()
         server_sock.close()
+        print('\033[1;34m', 'tcp server shutdown', '\033[0m')
 
     def _analyze_web_pkg(self, package: dict):
         """
@@ -166,6 +180,7 @@ class TaskControler(Process):
                 if not self.q_rsl.empty():
                     transfer_package = self.q_rsl.get()
                     data_dict = transfer_package.to_dict()
+                    print('get push data--', data_dict)
                     self._analyze_pkg(package=data_dict)
                     # data_send = bytes('{}'.format(data_dict), encoding='utf-8')
                     # print('File: "' + __file__ + '", Line ' + str(sys._getframe().f_lineno) + ' , in ' + sys._getframe().f_code.co_name)
@@ -196,6 +211,7 @@ class TaskControler(Process):
             #     self.sock.send(data_send)
             storeroom_id = package['storeroom_id']
             if package['msg_type'] == 3 and package['equipment_type'] in (3, 5):
+                print('111')
                 # 门禁的数据更新pkg处理
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
@@ -211,10 +227,12 @@ class TaskControler(Process):
                     thread_store_mag.start()
                     self.storeroom_thread[storeroom_id] = {'thread': thread_store_mag, 'queue': queue_storeroom}
             elif package['msg_type'] == 3:
+                print('222')
                 # 其他设备的数据更新pkg处理
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
             elif package['msg_type'] == 2 and package['code'] == 301:
+                print('333')
                 # web确定按钮pkg
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
@@ -233,7 +251,12 @@ class TaskControler(Process):
                         data_length = struct.pack('i', length)  # 使用struct，直接将int转为二进制型数据传输，对方使用struct解包
                         self.sock.send(data_length)
                         self.sock.send(data_send)
+            elif package['msg_type'] == 4 and package['source'] is None:
+                print('444')
+                # web response
+                print('web response--', package)
             else:
+                print('555')
                 if self.sock:
                     # data_send = bytes('{}'.format(package), encoding='utf-8')
                     print(type(package))
@@ -243,6 +266,8 @@ class TaskControler(Process):
                     data_length = struct.pack('i', length)  # 使用struct，直接将int转为二进制型数据传输，对方使用struct解包
                     self.sock.send(data_length)
                     self.sock.send(data_send)
+                    print('\033[1;34m', 'send to web pkg--', data_send, '\033[0m')
+                    mylogger.info('send web pkg--%s' % str(data_send, encoding='utf-8'))
         except Exception as e:
             mylogger.error(e)
 
@@ -673,6 +698,8 @@ class StoreroomManager(threading.Thread):
             pkg_to_web = TransferPackage(code=USER_ENTRANCE_SUCCESS, eq_type=3, msg_type=2, storeroom_id=self.storeroom_id, data=data,
                                          eq_id=entrance_id)
             self.q_send.put(pkg_to_web)
+            print('put to q_send for sending to web--', pkg_to_web)
+            print('size of q_send', self.q_send.qsize())
         else:
             mylogger.warning('get no user by code %s' % self.user_code)
             user = User(login_name=self.user_code, code=self.user_code, card_id=self.card_id,
@@ -696,8 +723,8 @@ class StoreroomManager(threading.Thread):
         :return:
         """
         self._save_data2db()
-        if self.channel_machines:
-            self._stop_channel_machine()
+        # if self.channel_machines:
+        #     self._stop_channel_machine()
         with self.lock:
             self.isrunning = False
 
