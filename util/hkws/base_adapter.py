@@ -49,7 +49,7 @@ class BaseAdapter:
 
     # python 调用 sdk 指定方法
     def call_cpp(self, func_name, *args):
-        print('call func--', func_name)
+        # print('call func--', func_name)
         for so_lib in self.so_list:
             try:
                 lib = cdll.LoadLibrary(so_lib)
