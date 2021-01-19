@@ -70,9 +70,10 @@ class GatewayServer(Process):
                     self._handle_cmd()
                 else:
                     break
+            mylogger.error('gateway_server was stop')
         except Exception as e:
-            print('gateway_server: ', e)
-            mylogger.error(e)
+            print('gateway_server was stop: ', e)
+            mylogger.error('gateway_server was stop by exception:' + e)
 
     def time_thread(self):
         """

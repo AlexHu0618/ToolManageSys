@@ -1599,8 +1599,8 @@ class HKVision(threading.Thread):
         self._init()
         try:
             if self._login():
-                self._set_exception_cb()
                 self._get_alarm()
+                self._set_exception_cb()
                 thd = threading.Timer(interval=self.interval, function=self.check_users_from_terminal)
                 thd.daemon = True
                 thd.start()

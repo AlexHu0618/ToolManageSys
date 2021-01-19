@@ -1,6 +1,7 @@
 from ctypes import *
 import time
 from database.models2 import User
+import os
 
 
 # buff = create_string_buffer("b".encode('utf-8'), 1024)
@@ -112,7 +113,9 @@ def delete_user():
 
 if __name__ == '__main__':
 
-    comm = cdll.LoadLibrary("/home/alex/C++/libs/libplcommpro.so")
+    path_cur = os.path.abspath(os.path.dirname(__file__))
+    print(path_cur + "/util/libs/zk_lib/libplcommpro.so")
+    comm = cdll.LoadLibrary(path_cur + "/util/libs/zk_lib/libplcommpro.so")
 
     handle = comm.Connect(b'protocol=TCP,ipaddress=192.168.0.201,port=4370,timeout=2000,passwd=')
     print(handle)

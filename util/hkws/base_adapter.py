@@ -11,7 +11,7 @@ class BaseAdapter:
     so_list = []
     # 动态sdk文件路径
     path_cur = os.path.abspath(os.path.dirname(__file__))
-    lib_path = path_cur + "/../libs/hkvision_lib/"
+    lib_path = os.path.dirname(path_cur) + "/libs/hkvision_lib/"
 
     # 常规启动，初始化SDK
     def add_init_sdk(self):
@@ -49,7 +49,7 @@ class BaseAdapter:
 
     # python 调用 sdk 指定方法
     def call_cpp(self, func_name, *args):
-        # print(func_name)
+        print('call func--', func_name)
         for so_lib in self.so_list:
             try:
                 lib = cdll.LoadLibrary(so_lib)
@@ -58,9 +58,11 @@ class BaseAdapter:
                     # mylogger.info("调用的库：" + so_lib)
                     # mylogger.info("执行成功,返回值：" + str(value))
                     return value
-                except:
+                except Exception as e:
+                    # print('value except', e)
                     continue
-            except:
+            except Exception as e:
+                # print('loadlibrary except', e)
                 continue
             # logging.info("库文件载入失败：" + so_lib )
 
@@ -220,7 +222,7 @@ class BaseAdapter:
 
     # 设置接收异常、重连等消息的窗口句柄或回调函数
     def set_exceptioln_call_back(self, nMessage, preserved2, cbFunc, user_id):
-        result = self.call_cpp("set_exceptioln_call_back", nMessage, preserved2, cbFunc, user_id)
+        result = self.call_cpp("NET_DVR_SetExceptionCallBack_V30", nMessage, preserved2, cbFunc, user_id)
         if not result:
             self.print_error("NET_DVR_SetDVRMessageCallBack_V31 初始化SDK失败: the error code is ")
         return result
