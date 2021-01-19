@@ -1671,8 +1671,11 @@ class HKVision(threading.Thread):
                 print('update face')
                 user.update('avatar', face_img)
         entrance = Entrance.by_addr(self.ip, self.port)
-        entrance.users.append(user)
-        entrance.save()
+        if entrance:
+            entrance.users.append(user)
+            entrance.save()
+        else:
+            mylogger.warning('Fail to relate entrance(%s, %d)--user(card:%s)' % (self.ip, self.port, user.card_id))
 
     def build_new_user_to_terminal(self, uuid: str):
         """
@@ -1802,7 +1805,7 @@ class HKVision(threading.Thread):
         card_cfg.dwSize = sizeof(card_cfg)
         card_cfg.dwCardNum = int('0xffffffff', 16)
         handle = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, NET_DVR_GET_CARD, byref(card_cfg),
-                                         sizeof(card_cfg))
+                                         sizeof(card_cfg), None, None)
         if handle == -1:
             print('fail to get all card info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
@@ -1849,7 +1852,7 @@ class HKVision(threading.Thread):
         inbuff_ref = byref(card_cfg)
         user_data = create_string_buffer(bytes(self.ip, encoding='utf-8'))
         handle = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, 2562, inbuff_ref,
-                                           sizeof(card_cfg))
+                                           sizeof(card_cfg), None, None)
         if handle == -1:
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
@@ -1900,7 +1903,7 @@ class HKVision(threading.Thread):
         card_cfg.dwSize = sizeof(card_cfg)
         card_cfg.dwCardNum = int('0x00000001', 16)
         handle = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, NET_DVR_GET_CARD,
-                                            byref(card_cfg), sizeof(card_cfg))
+                                            byref(card_cfg), sizeof(card_cfg), None, None)
         if handle == -1:
             print('fail to get single card info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
@@ -1949,7 +1952,7 @@ class HKVision(threading.Thread):
         card_cfg.dwCardNum = int('0x00000001', 16)
         inbuff_ref = byref(card_cfg)
         handle = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, NET_DVR_SET_CARD, inbuff_ref,
-                                            sizeof(card_cfg))
+                                            sizeof(card_cfg), None, None)
         if handle == -1:
             print('fail to set card info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
@@ -2004,7 +2007,7 @@ class HKVision(threading.Thread):
         fp_cfg.dwEnableReaderNo = 1
         fp_cfg.byFingerPrintID = 0xff
         handle = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, NET_DVR_GET_FINGERPRINT,
-                                            byref(fp_cfg), sizeof(fp_cfg))
+                                            byref(fp_cfg), sizeof(fp_cfg), None, None)
         if handle == -1:
             print('fail to get fingerprint info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
@@ -2048,7 +2051,7 @@ class HKVision(threading.Thread):
         fp_cfg.dwEnableReaderNo = 1
         fp_cfg.byFingerPrintID = 1
         handle = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, NET_DVR_SET_FINGERPRINT,
-                                            byref(fp_cfg), sizeof(fp_cfg))
+                                            byref(fp_cfg), sizeof(fp_cfg), None, None)
         if handle == -1:
             print('fail to set fingerprint info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
@@ -2113,7 +2116,7 @@ class HKVision(threading.Thread):
         memmove(face_cfg.byCardNo, bycardno, len(bycardno))
         face_cfg.dwEnableReaderNo = 1
         handle = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, NET_DVR_GET_FACE,
-                                            byref(face_cfg), sizeof(face_cfg))
+                                            byref(face_cfg), sizeof(face_cfg), None, None)
         if handle == -1:
             print('fail to get face info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
@@ -2162,7 +2165,7 @@ class HKVision(threading.Thread):
         # memmove(face_cfg.byCardNo, bycardno, len(bycardno))
         face_cfg.dwEnableReaderNo = 1
         handle = HKVision.adapter.call_cpp('NET_DVR_StartRemoteConfig', self.user_id, NET_DVR_SET_FACE,
-                                            byref(face_cfg), sizeof(face_cfg))
+                                            byref(face_cfg), sizeof(face_cfg), None, None)
         if handle == -1:
             print('fail to set fingerprint info')
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
