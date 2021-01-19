@@ -1664,10 +1664,10 @@ class HKVision(threading.Thread):
         else:
             if user.entrance_password is None and pw is not None:
                 user.update('entrance_password', pw)
-            if len(user.fingerprint) == 0 and len(finger_print) > 0:
+            if user.fingerprint is None and len(finger_print) > 0:
                 print('update finger')
                 user.update('fingerprint', finger_print)
-            if len(user.avatar) == 0 and len(face_img) > 0:
+            if user.avatar is None and len(face_img) > 0:
                 print('update face')
                 user.update('avatar', face_img)
         entrance = Entrance.by_addr(self.ip, self.port)
