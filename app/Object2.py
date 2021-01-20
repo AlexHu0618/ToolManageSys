@@ -1600,7 +1600,7 @@ class HKVision(threading.Thread):
         try:
             if self._login():
                 self._get_alarm()
-                self._set_exception_cb()
+                # self._set_exception_cb()
                 thd = threading.Timer(interval=self.interval, function=self.check_users_from_terminal)
                 thd.daemon = True
                 thd.start()
@@ -1811,6 +1811,9 @@ class HKVision(threading.Thread):
             err_code = HKVision.adapter.call_cpp('NET_DVR_GetLastError')
             print('err_code', err_code)
             mylogger.warning('HK entrance--(%s, %d) was failed for StartRemoteConfig to get all card info, error_code--%d' % (self.ip, self.port, err_code))
+            if err_code == 7:
+                mylogger.warning('HK entrance--(%s, %d) network was broken' % (self.ip, self.port))
+                self.isrunning = False
         else:
             card_record = NET_DVR_CARD_RECORD()
             while True:

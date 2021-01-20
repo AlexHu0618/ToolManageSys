@@ -1,3 +1,17 @@
 2021-01-20 01:05:24,826 - root - INFO - base_adapter.py:78 - SDK初始化成功
 2021-01-20 01:36:59,941 - root - INFO - base_adapter.py:76 - SDK初始化成功
 2021-01-20 01:38:12,264 - root - INFO - base_adapter.py:76 - SDK初始化成功
+2021-01-20 15:25:34,988 - root - INFO - base_adapter.py:76 - SDK初始化成功
+2021-01-20 15:25:40,001 - root - ERROR - base_adapter.py:221 - NET_DVR_Login_V40 用户登录失败: the error code is 7
+2021-01-20 15:25:40,007 - root - ERROR - base_adapter.py:221 - common_start 失败: the error code is7
+2021-01-20 15:25:50,511 - root - INFO - base_adapter.py:100 - 释放资源, result=1
+2021-01-20 15:29:45,804 - root - INFO - base_adapter.py:76 - SDK初始化成功
+2021-01-20 15:29:46,028 - root - ERROR - base_adapter.py:221 - NET_DVR_SetupAlarmChan_V41 报警布防: the error code is 109
+2021-01-20 15:48:37,988 - root - INFO - base_adapter.py:76 - SDK初始化成功
+2021-01-20 15:48:38,157 - root - ERROR - base_adapter.py:221 - NET_DVR_SetupAlarmChan_V41 报警布防: the error code is 109
+2021-01-20 15:49:35,435 - root - INFO - base_adapter.py:76 - SDK初始化成功
+2021-01-20 15:49:35,544 - root - ERROR - base_adapter.py:221 - NET_DVR_SetupAlarmChan_V41 报警布防: the error code is 109
+2021-01-20 15:51:34,415 - root - INFO - base_adapter.py:76 - SDK初始化成功
+2021-01-20 15:51:34,596 - root - ERROR - base_adapter.py:221 - NET_DVR_SetupAlarmChan_V41 报警布防: the error code is 109
+2021-01-20 15:52:18,660 - root - INFO - base_adapter.py:76 - SDK初始化成功
+2021-01-20 15:52:18,807 - root - ERROR - base_adapter.py:221 - NET_DVR_SetupAlarmChan_V41 报警布防: the error code is 109

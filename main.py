@@ -1,5 +1,7 @@
 """
-如果是第一次运行，需要先运行文件sys_conf.py进行系统环境配置, 再运行本文件；
+1、如果是第一次运行，需要先运行文件sys_conf.py进行系统环境配置；
+2、若1无效，则手动把ZK与HK的链接库路径加入"LD_LIBRARY_PATH";
+3、设置成功，方能运行本程序。
 """
 from db.myDB import MyDB
 from app.myLogger import mylogger

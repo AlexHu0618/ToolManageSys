@@ -1,31 +1,14 @@
 # MySQL
 mysql:
-  host: 'localhost'
-  password: '123456'
-  user: 'sa'
-#  host: '192.168.1.155'
-#  password: '!QAZ2wsx3edc'
-#  user: 'root'
+#  host: 'localhost'
+#  password: '123456'
+#  user: 'sa'
+  host: '192.168.1.155'
+  password: '!QAZ2wsx3edc'
+  user: 'root'
   port: 3306
   database: 'tool_manage_sys'
   charset: 'utf8mb4'
-
-# for InfluxDB
-influxdb:
-  host: 'localhost'
-  port: 8086
-  username: 'sa'
-  password: '123456'
-  database: 'iiot_sys'
-  use_udp: True
-  udp_port: 4444
-
-
-# for RabbitMQ
-rabbitmq:
-  host: 'localhost'
-  username: 'Alex'
-  pwd: 'Alex11235813'
 
 
 # for Redis
