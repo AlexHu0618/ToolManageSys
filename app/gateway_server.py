@@ -9,6 +9,7 @@ from app.globalvar import *
 import time
 from database.models2 import Entrance, Collector, Indicator, CodeScanner, ChannelMachine
 import datetime
+from settings.config import config_parser as conpar
 
 
 class GatewayServer(Process):
@@ -31,6 +32,7 @@ class GatewayServer(Process):
         self.queue_task = queue_task
         self.queue_rsl = queue_rsl
         self.queue_equipment_push = Queue(100)
+        self.check_interval = 1
 
     def run(self):
         """
@@ -49,16 +51,20 @@ class GatewayServer(Process):
                     self._connect_server(addr=k, ttype=v[0], storeroom_id=v[1], uuid=v[2])
             else:
                 mylogger.info('There is None registered server for connecting!')
+
             # monitor and reconn servers
             thread_reconn_server = threading.Thread(target=self._reconnect_offline_server)
             thread_reconn_server.daemon = True
             thread_reconn_server.start()
+
             # listen all access clients
             thread_monitor_client = threading.Thread(target=self._monitor_access)
             thread_monitor_client.daemon = True
             thread_monitor_client.start()
+
             # monitor status subthread on time
-            t = threading.Timer(interval=1, function=self.time_thread)
+            self.check_interval = conpar.read_yaml_file('configuration')['gateway_server_check_interval']
+            t = threading.Timer(interval=self.check_interval, function=self._thread_ontime)
             t.daemon = True
             t.start()
             # wait for cmd
@@ -74,7 +80,7 @@ class GatewayServer(Process):
             print('gateway_server was stop: ', e)
             mylogger.error('gateway_server was stop by exception:' + e)
 
-    def time_thread(self):
+    def _thread_ontime(self):
         """
         定时循环执行线程
         1、检查设备状态；
@@ -83,7 +89,7 @@ class GatewayServer(Process):
         """
         self.check_equipments_status()
         self.check_push_from_equipments()
-        t = threading.Timer(interval=1, function=self.time_thread)
+        t = threading.Timer(interval=self.check_interval, function=self._thread_ontime)
         t.daemon = True
         t.start()
 
