@@ -10,7 +10,6 @@ from multiprocessing import Queue, RLock
 from app.task_controler import TaskControler
 from database.db_handler import get_all_equipments, get_epcs
 import time
-import os
 
 
 def main():
@@ -35,11 +34,9 @@ def main():
         myserver.start()
         mycontroler.start()
         mycontroler.join()
-        # while True:
-        #     pass
     except KeyboardInterrupt:
-        # mydb.close()
-        # myserver.stop()
+        mydb.close()
+        myserver.stop()
         mycontroler.stop()
         while mycontroler.is_alive():
             time.sleep(1)
@@ -53,24 +50,24 @@ def main():
     #     mycontroler.stop()
     #     print('stop')
 
-
-def set_lib_path():
-    """
-    自动设置ZK与HK的链接库查找路径到全局变量LD_LIBRARY_PATH
-    :return:
-    """
-    path_cur = os.path.abspath(os.path.dirname(__file__))
-    # for ZK
-    zk_lib_path = path_cur + '/util/libs/zk_lib'
-    zk_cmd = 'export LD_LIBRARY_PATH=' + zk_lib_path + ':$LD_LIBRARY_PATH'
-    os.system(zk_cmd)
-    # for HK
-    hk_lib_path1 = path_cur + '/util/libs/hkvision_lib/'
-    hk_lib_path2 = path_cur + '/util/libs/hkvision_lib/HCNetSDKCom/'
-    hk_cmd1 = 'export LD_LIBRARY_PATH=' + hk_lib_path1 + ':$LD_LIBRARY_PATH'
-    hk_cmd2 = 'export LD_LIBRARY_PATH=' + hk_lib_path2 + ':$LD_LIBRARY_PATH'
-    os.system(hk_cmd1)
-    os.system(hk_cmd2)
+# ### 此法不通，设置后不在当前进程生效。
+# def set_lib_path():
+#     """
+#     自动设置ZK与HK的链接库查找路径到全局变量LD_LIBRARY_PATH
+#     :return:
+#     """
+#     path_cur = os.path.abspath(os.path.dirname(__file__))
+#     # for ZK
+#     zk_lib_path = path_cur + '/util/libs/zk_lib'
+#     zk_cmd = 'export LD_LIBRARY_PATH=' + zk_lib_path + ':$LD_LIBRARY_PATH'
+#     os.system(zk_cmd)
+#     # for HK
+#     hk_lib_path1 = path_cur + '/util/libs/hkvision_lib/'
+#     hk_lib_path2 = path_cur + '/util/libs/hkvision_lib/HCNetSDKCom/'
+#     hk_cmd1 = 'export LD_LIBRARY_PATH=' + hk_lib_path1 + ':$LD_LIBRARY_PATH'
+#     hk_cmd2 = 'export LD_LIBRARY_PATH=' + hk_lib_path2 + ':$LD_LIBRARY_PATH'
+#     os.system(hk_cmd1)
+#     os.system(hk_cmd2)
 
 
 # def test():
@@ -79,6 +76,4 @@ def set_lib_path():
 
 if __name__ == '__main__':
     mylogger.info('START SERVER')
-    set_lib_path()
     main()
-    # test()

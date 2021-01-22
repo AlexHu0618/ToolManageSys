@@ -1551,7 +1551,7 @@ class RfidR2000FH(threading.Thread):
         
 class HKVision(threading.Thread):
     """
-    使用非回调函数的版本 
+    使用非回调函数的版本,终端以卡为中心进行管理（卡号唯一）
     """
     ip_obj_dic = {}  # {ip: {'obj': obj, 'user_id': user_id}}
     adapter = None
@@ -2237,12 +2237,13 @@ class HKVision(threading.Thread):
                 user_reduced = list(set(self.all_user).difference(set(self.all_user_temp)))
             if user_increased:
                 for user in user_increased:
-                    self._get_card_info(user[0])
-                    self._get_fingerprint_info(user[0])
-                    self._get_face_info(user[0])
+                    rsl_card = self._get_card_info(user[0])
+                    rsl_fp = self._get_fingerprint_info(user[0])
+                    rsl_face = self._get_face_info(user[0])
                     self.save_new_user_to_db(user_code=str(user[1]), card_num=str(user[0], encoding='utf-8'),
-                                             finger_print=self.fp_temp, face_img=self.face_temp,
-                                             pw=self.str_entrance_pw, usertype=self.usertype)
+                                             finger_print=self.fp_temp if rsl_fp else None,
+                                             face_img=self.face_temp if rsl_face else None,
+                                             pw=self.str_entrance_pw if rsl_card else None, usertype=self.usertype)
                     with self.lock:
                         self.all_user.append(user)
                     print('add new user to DB--', user)

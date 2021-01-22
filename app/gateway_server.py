@@ -209,7 +209,7 @@ class GatewayServer(Process):
             while self.isrunning:
                 client_sock, addr = server_sock.accept()
 
-                # 每循环一次就会产生一个线程
+                # 每一个新client连接就会产生一个线程
                 queue_task = Queue(50)
                 queue_rsl = Queue(50)
                 subevent = threading.Event()
@@ -218,25 +218,25 @@ class GatewayServer(Process):
                 storeroom_id = self.clients[addr][1] if addr in self.clients.keys() else None
                 uuid = self.clients[addr][2] if addr in self.clients.keys() else None
                 if client_type == 'gravity':
-                    gravity = Collector.by_addr(addr[0], addr[1])
+                    gravity = Collector.by_addr(ip=addr[0], port=addr[1])
                     if gravity:
                         addr_nums = gravity.node_addrs.replace(' ', '').split(',')
                     thread = GravityShelf(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
                 elif client_type == 'led':
-                    indicator = Indicator.by_addr(addr[0], addr[1])
+                    indicator = Indicator.by_addr(ip=addr[0], port=addr[1])
                     if indicator:
                         addr_nums = indicator.node_addrs.replace(' ', '').split(',')
                     thread = Indicator(addr, client_sock, queue_task, queue_rsl, subevent, storeroom_id, uuid, addr_nums)
                 elif client_type == 'rfid2000':
                     thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                 elif client_type == 'rfid2000fh':
-                    r2000fh = Collector.by_addr(addr[0], addr[1])
+                    r2000fh = Collector.by_addr(ip=addr[0], port=addr[1])
                     addr_nums = ['01']
                     if r2000fh:
                         addr_nums = r2000fh.node_addrs.replace(' ', '').split(',')
                     thread = RfidR2000FH(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
                 elif client_type == 'channel_machine':
-                    r2000fh = Collector.by_addr(addr[0], addr[1])
+                    r2000fh = Collector.by_addr(ip=addr[0], port=addr[1])
                     addr_nums = ['01']
                     if r2000fh:
                         addr_nums = r2000fh.node_addrs.replace(' ', '').split(',')
