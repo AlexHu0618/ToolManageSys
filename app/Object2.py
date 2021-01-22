@@ -18,6 +18,7 @@ from util.hkws import base_adapter
 from util.hkws.model import alarm
 from util.hkws.model.base import *
 from threading import RLock
+from threading import Timer
 
 from database.models2 import Entrance, User, Role
 from settings.config import config_parser as conpar
@@ -45,17 +46,25 @@ class GravityShelf(threading.Thread):
         self.queue_push_data = queue_push_data
         self.addr = addr
         self.storeroom_id = storeroom_id
-        self.frequency = 1  # secends
+        self.update_interval = 1  # secends
         self.uuid = uuid
         self.timeout_count = 0
         self.addr_nums = addr_nums
         self.precision = 10  # g
 
     def run(self):
+        """
+        1、一个子线程处理收到的package；
+        2、另一个子线程定时查询重力变化；
+        :return:
+        """
         self.precision = conpar.read_yaml_file('configuration')['gravity_precision']
+        self.update_interval = conpar.read_yaml_file('configuration')['gravity_update_interval']
         data_buff = {}
         self._initial_data(data_buff)
-        cursec = 0
+        thread_ontime = Timer(interval=self.update_interval, function=self._check_data_update, args=[data_buff])
+        thread_ontime.daemon = True
+        thread_ontime.start()
         while self.isrunning:
             try:
                 if not self.queuetask.empty():
@@ -67,12 +76,7 @@ class GravityShelf(threading.Thread):
                         self.queuersl.put(pkg)
                         self.event.set()
                 else:
-                    localtime = time.localtime(time.time())
-                    if localtime.tm_sec % 10 == 0:
-                        self._check_data_update(data_buff=data_buff)
-                        time.sleep(1)
-                    else:
-                        pass
+                    time.sleep(1)
             except Exception as e:
                 print(e)
                 mylogger.error(e)
@@ -87,30 +91,47 @@ class GravityShelf(threading.Thread):
             print('GravityShelf--', self.uuid, ' initial: ', data_buff)
 
     def _check_data_update(self, data_buff):
-        rsl = self.readAllInfo()
-        all_weight = {}
-        if rsl is not None and len(rsl) >= len(data_buff):
-            for i in rsl:
-                curr_weight = self.readWeight(i)
-                if i not in data_buff.keys() or curr_weight != data_buff[i] and (abs(curr_weight - data_buff[i]) > self.precision):
-                    print('(curr_weight - data_buff[i])--%d - %d = %d' % (curr_weight, data_buff[i], (curr_weight - data_buff[i])))
-                    data = {'addr_num': i, 'value': curr_weight - data_buff[i], 'is_increased': True if curr_weight - data_buff[i] > 0 else False, 'total': curr_weight}
-                    pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=1, data=data, source=self.addr, msg_type=3,
-                                          storeroom_id=self.storeroom_id, eq_id=self.uuid)
-                    self.queue_push_data.put(pkg)
-                    data_buff[i] = curr_weight
-                    # print('Gravity data update--', data)
-                all_weight[i] = curr_weight
-            print(time.asctime(), 'G--getAllInfo: ', all_weight)
+        """
+        由于硬件的数据查询返回逐个耗费时间，所以要准确定时必须减去运行时间；
+        :param data_buff:
+        :return:
+        """
+        try:
+            start = time.time()
+            rsl = self.readAllInfo()
+            all_weight = {}
+            if rsl is not None and len(rsl) >= len(data_buff):
+                for i in rsl:
+                    curr_weight = self.readWeight(i)
+                    if i not in data_buff.keys() or curr_weight != data_buff[i] and (abs(curr_weight - data_buff[i]) > self.precision):
+                        print('(curr_weight - data_buff[i])--%d - %d = %d' % (curr_weight, data_buff[i], (curr_weight - data_buff[i])))
+                        data = {'addr_num': i, 'value': curr_weight - data_buff[i], 'is_increased': True if curr_weight - data_buff[i] > 0 else False, 'total': curr_weight}
+                        pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=1, data=data, source=self.addr, msg_type=3,
+                                              storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                        self.queue_push_data.put(pkg)
+                        data_buff[i] = curr_weight
+                        # print('Gravity data update--', data)
+                    all_weight[i] = curr_weight
+                print(time.asctime(), 'G--getAllInfo: ', all_weight)
+            end = time.time()
+            start_end = end - start
+            interval = round((self.update_interval - start_end), 2)
+
+            thread_ontime = Timer(interval=interval, function=self._check_data_update, args=[data_buff])
+            thread_ontime.daemon = True
+            thread_ontime.start()
+        except Exception as e:
+            print(e)
+            mylogger.error(e)
 
     def readWeight(self, addr='01'):
         cmd_f = bytes.fromhex(addr + '05 02 05')
         lcr = sum(cmd_f) % 256
         cmd = cmd_f + lcr.to_bytes(length=1, byteorder='big', signed=False)
         data = self.getData(cmd)
-        code = data.hex()[9]
         if data is not None:
             if data[:3] == bytes.fromhex(addr + '0602'):
+                code = data.hex()[9]
                 interval = self.intervals[code] if code in self.intervals.keys() else 1
                 scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
                 value = int(scale * interval * 1000)
@@ -164,7 +185,6 @@ class GravityShelf(threading.Thread):
     def readAllInfo(self):
         cmd = b'\x00\x05\x02\x05\x0C'
         datas = self.getData(cmd, True)
-        # print('info back:', datas)
         all_id = ()
         if datas is not None and datas != TIMEOUT:
             newdatas = []
