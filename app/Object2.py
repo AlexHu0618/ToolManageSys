@@ -1189,6 +1189,7 @@ class ChannelMachineR2000FH(threading.Thread):
         self.timeout_counter = 0
         self.is_rs485 = True
         self.addr_nums = addr_nums
+        self.update_interval = 10  # seconds
 
     def run(self):
         """
@@ -1204,6 +1205,11 @@ class ChannelMachineR2000FH(threading.Thread):
         thd_send.start()
         # thd_auto_inventory.start()
         self._inventory()
+        second_interval = conpar.read_yaml_file('configuration')['cm_r2000fh_update_interval']
+        self.update_interval = second_interval if second_interval > 5 else 5
+        thread_ontime = Timer(interval=self.update_interval, function=self._check_data_update)
+        thread_ontime.daemon = True
+        thread_ontime.start()
         while self.isrunning:
             try:
                 if not self.queuetask.empty():
@@ -1215,17 +1221,11 @@ class ChannelMachineR2000FH(threading.Thread):
                         self.queuersl.put(pkg)
                         self.event.set()
                 else:
-                    localtime = time.localtime(time.time())
-                    if localtime.tm_sec % 10 == 0:
-                        # self._check_data_update()
-                        time.sleep(1)
-                        # print('R--inventory: ', rsl)
-                    else:
-                        pass
+                    time.sleep(1)
             except KeyboardInterrupt:
                 self.tcp_socket.shutdown(2)
                 self.tcp_socket.close()
-        print('thread R2000FH is closed.....')
+        print('thread CM_R2000FH is closed.....')
 
     def start(self):
         self._inventory()
@@ -1235,26 +1235,35 @@ class ChannelMachineR2000FH(threading.Thread):
 
     def _check_data_update(self):
         try:
+            start = time.time()
             with self.lock:
-                print('R2000FH old EPCs: ', self.data_buff)
-                print('R2000FH new EPCs: ', self.current_epcs)
+                print('CM_R2000FH old EPCs: ', self.data_buff)
+                print('CM_R2000FH new EPCs: ', self.current_epcs)
                 if self.current_epcs is not None:
                     diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
-                    print('R2000FH diff_epcs--', diff_epcs)
+                    print('CM_R2000FH diff_epcs--', diff_epcs)
                     if diff_epcs:
                         is_increase = True if len(self.current_epcs) > len(self.data_buff) else False
                         diff = [epc_ant for epc_ant in self.current_epcs if
                                 epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if
                                                                               epc_ant[0] in diff_epcs]
                         data = {'epcs': diff, 'is_increase': is_increase}
-                        pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=4, data=data, source=self.addr, msg_type=3,
-                                              storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                        pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=4, data=data, source=self.addr, 
+                                              msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
                         self.queue_push_data.put(pkg)
                     self.data_buff.clear()
                     self.data_buff = [epc_ant for epc_ant in self.current_epcs]
                     self.current_epcs.clear()
+            end = time.time()
+            start_end = end - start
+            interval = round((self.update_interval - start_end), 2)
+    
+            thread_ontime = Timer(interval=interval, function=self._check_data_update)
+            thread_ontime.daemon = True
+            thread_ontime.start()    
         except Exception as e:
-            print('R2000FH exception: ', e)
+            print('CM_R2000RH(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
+            mylogger.error('CM_R2000RH(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
 
     def _send_recv(self):
         while self.isrunning:
@@ -1270,7 +1279,7 @@ class ChannelMachineR2000FH(threading.Thread):
                 except socket.timeout:
                     self.timeout_counter += 1
                     if self.timeout_counter > 20:
-                        print('R2000FH--%s times out' % str(self.addr))
+                        print('CM_R2000FH--%s times out' % str(self.addr))
                         with self.lock:
                             self.isrunning = False
                     continue
@@ -1416,7 +1425,7 @@ class RfidR2000FH(threading.Thread):
         thd_send.daemon = True
         thd_send.start()
         thd_auto_inventory.start()
-        second_interval = conpar.read_yaml_file('configuration')['r2000rh_update_interval']
+        second_interval = conpar.read_yaml_file('configuration')['r2000fh_update_interval']
         self.update_interval = second_interval if second_interval > 5 else 5
         thread_ontime = Timer(interval=self.update_interval, function=self._check_data_update)
         thread_ontime.daemon = True
@@ -1436,17 +1445,17 @@ class RfidR2000FH(threading.Thread):
             except KeyboardInterrupt:
                 self.tcp_socket.shutdown(2)
                 self.tcp_socket.close()
-        print('thread R2000FH is closed.....')
+        print('thread CM_R2000FH is closed.....')
 
     def _check_data_update(self):
         try:
             start = time.time()
             with self.lock:
-                # print('R2000FH old EPCs: ', self.data_buff)
-                # print('R2000FH new EPCs: ', self.current_epcs)
+                # print('CM_R2000FH old EPCs: ', self.data_buff)
+                # print('CM_R2000FH new EPCs: ', self.current_epcs)
                 if self.current_epcs is not None:
                     diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
-                    # print('R2000FH diff_epcs--', diff_epcs)
+                    # print('CM_R2000FH diff_epcs--', diff_epcs)
                     if diff_epcs:
                         is_increase = True if len(self.current_epcs) > len(self.data_buff) else False
                         diff = [epc_ant for epc_ant in self.current_epcs if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]
@@ -1459,7 +1468,7 @@ class RfidR2000FH(threading.Thread):
                     self.data_buff.clear()
                     self.data_buff = [epc_ant for epc_ant in self.current_epcs]
                     self.current_epcs.clear()
-            print('R2000FH all_epc--', self.all_epc)
+            print('CM_R2000FH all_epc--', self.all_epc)
             end = time.time()
             start_end = end - start
             interval = round((self.update_interval - start_end), 2)
@@ -1484,7 +1493,7 @@ class RfidR2000FH(threading.Thread):
                 except socket.timeout:
                     self.timeout_counter += 1
                     if self.timeout_counter > 20:
-                        print('R2000FH--%s times out' % str(self.addr))
+                        print('CM_R2000FH--%s times out' % str(self.addr))
                         with self.lock:
                             self.isrunning = False
                     continue

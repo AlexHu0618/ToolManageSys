@@ -1,6 +1,5 @@
 import socket
 from app.Object2 import GravityShelf, RfidR2000, Indicator, EntranceZK, RfidR2000FH, HKVision, ChannelMachineR2000FH
-# from app.object_test import GravityShelf, RfidR2000, Indicator, EntranceZK
 from queue import Queue
 from app.myLogger import mylogger
 import threading

@@ -70,8 +70,10 @@ log:
 
 # for configuration
 configuration:
+  gateway_server_check_interval: 1  # seconds
   gravity_precision: 10  # g
   gravity_update_interval: 10  # seconds, it must greater than 5s
-  r2000rh_update_interval: 5   # seconds, it must greater than 5s
+  r2000fh_update_interval: 5   # seconds, it must greater than 5s
+  cm_r2000fh_update_interval: 5  # seconds, it must greater than 5s
   hkvision_user_update_interval: 10  # seconds
   storeroom_close_delay_time: 60  # seconds
