@@ -46,7 +46,7 @@ class GravityShelf(threading.Thread):
         self.queue_push_data = queue_push_data
         self.addr = addr
         self.storeroom_id = storeroom_id
-        self.update_interval = 1  # secends
+        self.update_interval = 10  # secends
         self.uuid = uuid
         self.timeout_count = 0
         self.addr_nums = addr_nums
@@ -59,7 +59,8 @@ class GravityShelf(threading.Thread):
         :return:
         """
         self.precision = conpar.read_yaml_file('configuration')['gravity_precision']
-        self.update_interval = conpar.read_yaml_file('configuration')['gravity_update_interval']
+        second_interval = conpar.read_yaml_file('configuration')['gravity_update_interval']
+        self.update_interval = second_interval if second_interval > 5 else 5
         data_buff = {}
         self._initial_data(data_buff)
         thread_ontime = Timer(interval=self.update_interval, function=self._check_data_update, args=[data_buff])
@@ -92,7 +93,7 @@ class GravityShelf(threading.Thread):
 
     def _check_data_update(self, data_buff):
         """
-        由于硬件的数据查询返回逐个耗费时间，所以要准确定时必须减去运行时间；
+        由于硬件的数据查询返回逐个耗费时间，所以要准确定时必须减去运行时间,10个硬件耗时大概3-4s；
         :param data_buff:
         :return:
         """
@@ -121,8 +122,8 @@ class GravityShelf(threading.Thread):
             thread_ontime.daemon = True
             thread_ontime.start()
         except Exception as e:
-            print(e)
-            mylogger.error(e)
+            print('Gravity(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
+            mylogger.error('Gravity(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
 
     def readWeight(self, addr='01'):
         cmd_f = bytes.fromhex(addr + '05 02 05')
@@ -1400,6 +1401,7 @@ class RfidR2000FH(threading.Thread):
         self.is_rs485 = True
         self.addr_nums = addr_nums
         self.all_epc = list()
+        self.update_interval = 10  # seconds
 
     def run(self):
         """
@@ -1414,23 +1416,23 @@ class RfidR2000FH(threading.Thread):
         thd_send.daemon = True
         thd_send.start()
         thd_auto_inventory.start()
+        second_interval = conpar.read_yaml_file('configuration')['r2000rh_update_interval']
+        self.update_interval = second_interval if second_interval > 5 else 5
+        thread_ontime = Timer(interval=self.update_interval, function=self._check_data_update)
+        thread_ontime.daemon = True
+        thread_ontime.start()
         while self.isrunning:
             try:
                 if not self.queuetask.empty():
                     task, args = self.queuetask.get()
                     rsl = methodcaller(task, *args)(self)
                     if rsl is not None:
-                        pkg = TransferPackage(code=SUCCESS, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=4, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+                        pkg = TransferPackage(code=SUCCESS, eq_type=2, data={'rsl': rsl}, source=self.addr, msg_type=4,
+                                              storeroom_id=self.storeroom_id, eq_id=self.uuid)
                         self.queuersl.put(pkg)
                         self.event.set()
                 else:
-                    localtime = time.localtime(time.time())
-                    if localtime.tm_sec % 10 == 0:
-                        self._check_data_update()
-                        time.sleep(1)
-                        # print('R--inventory: ', rsl)
-                    else:
-                        pass
+                    time.sleep(1)
             except KeyboardInterrupt:
                 self.tcp_socket.shutdown(2)
                 self.tcp_socket.close()
@@ -1438,6 +1440,7 @@ class RfidR2000FH(threading.Thread):
 
     def _check_data_update(self):
         try:
+            start = time.time()
             with self.lock:
                 # print('R2000FH old EPCs: ', self.data_buff)
                 # print('R2000FH new EPCs: ', self.current_epcs)
@@ -1457,8 +1460,16 @@ class RfidR2000FH(threading.Thread):
                     self.data_buff = [epc_ant for epc_ant in self.current_epcs]
                     self.current_epcs.clear()
             print('R2000FH all_epc--', self.all_epc)
+            end = time.time()
+            start_end = end - start
+            interval = round((self.update_interval - start_end), 2)
+
+            thread_ontime = Timer(interval=interval, function=self._check_data_update)
+            thread_ontime.daemon = True
+            thread_ontime.start()
         except Exception as e:
-            print('R2000FH exception: ', e)
+            print('R2000RH(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
+            mylogger.error('R2000RH(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
 
     def _send_recv(self):
         while self.isrunning:

@@ -71,6 +71,7 @@ log:
 # for configuration
 configuration:
   gravity_precision: 10  # g
-  gravity_update_interval: 10  # seconds
+  gravity_update_interval: 10  # seconds, it must greater than 5s
+  r2000rh_update_interval: 5   # seconds, it must greater than 5s
   hkvision_user_update_interval: 10  # seconds
   storeroom_close_delay_time: 60  # seconds
