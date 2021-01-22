@@ -228,7 +228,9 @@ class TaskControler(Process):
                     self.storeroom_thread[storeroom_id] = {'thread': thread_store_mag, 'queue': queue_storeroom}
             elif package['msg_type'] == 3:
                 print('222')
-                # 其他设备的数据更新pkg处理
+                # 其他设备的数据更新pkg处理. 判断是否为重力，并更新DB的实时总重量；若有人在库，则放入库房处理程序；
+                if package['equipment_type'] == 1:
+                    self._update_db_data(package=package)
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
             elif package['msg_type'] == 2 and package['code'] == 301:
@@ -273,6 +275,15 @@ class TaskControler(Process):
 
     def stop(self):
         self.isrunning = False
+
+    def _update_db_data(self, package):
+        eq_id = package['equipment_id']
+        sensor_addr = package['data']['addr_num']
+        total_weight = package['data']['total']
+        grid = Grid.by_eqid_sensor(eq_id=eq_id, sensor_addr=sensor_addr)
+        if grid:
+            grid.total = total_weight
+            grid.save()
 
 
 class StoreroomManager(threading.Thread):
@@ -357,7 +368,7 @@ class StoreroomManager(threading.Thread):
     def _handle_mode_one(self, pkg):
         """
         1、新门禁用户事件；
-        2、重力货架事件；
+        2、重力货架事件，获取增减的重量，并更新DB中的实时总重量；
         3、RFID货架事件；
         4、web事件;
         :param pkg:
@@ -379,6 +390,7 @@ class StoreroomManager(threading.Thread):
             # 1.modify grid; 2.modify history;
             eq_id = pkg['equipment_id']
             sensor_addr = pkg['data']['addr_num']
+            total_weight = pkg['data']['total']
             grid = self._get_gravity_grid(eq_id=eq_id, sensor_addr=sensor_addr)
             if grid.id in self.gravity_goods.keys():
                 self.gravity_goods[grid.id][1] += pkg['data']['value']
