@@ -19,9 +19,9 @@ GATEWAY_ADD_NEW_EQUIPMENT = 5100
 GATEWAY_REDUCE_EQUIPMENT = 5101
 
 
-
 class TransferPackage(object):
-    def __init__(self, target=None, code=None, eq_type=None, data=dict(), source=None, msg_type=None, storeroom_id=None, eq_id=None):
+    def __init__(self, target=None, code=None, eq_type=None, data=dict(), source=None, msg_type=None, storeroom_id=None,
+                 eq_id=None):
         self.uuid = None
         self.target = target
         self.code = code  # 状态码

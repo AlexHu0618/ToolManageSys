@@ -551,92 +551,9 @@ class RfidR2000(threading.Thread):
         # print('cmd back:', data)
 
 
-# class RfidJH2880(object):
-#     """
-#         (未经过测试)
-#         1.frame: Head(0xBB) + Type + Cmd + Len + Data + Check + End(0x7E)
-#     """
-#     def __init__(self, tcp_socket, addr='00'):
-#         self.tcp_socket = tcp_socket
-#         self.BUFFSIZE = 1024
-#         self.addr = addr
-#
-#     def check(self, cmd_f):
-#         cmd = bytes.fromhex(cmd_f)
-#         check = sum(cmd) % 256
-#         check_hex = hex(check)[-2:]
-#         return check_hex
-#
-#     def getData(self, cmd):
-#         self.tcp_socket.send(cmd)
-#         data = self.tcp_socket.recv(self.BUFFSIZE)
-#         return data
-#
-#     def setOutputPower(self, value):
-#         temp = hex((value * 100) % 65536)[2:]
-#         power = temp if len(temp) > 3 else '0' + temp
-#         cmd_f = 'BB 00 B6 00 02' + power
-#         check = self.check(cmd_f)
-#         cmd = cmd_f + check + '7E'
-#         data = self.getData(cmd)
-#         print('cmd back:', data)
-#         if data.hex() == 'BB 01 B6 00 01 00 B8 7E':
-#             return True
-#         else:
-#             return False
-#
-#     def getOutputPower(self):
-#         cmd = 'BB 00 B7 00 00 B7 7E'
-#         data = self.getData(cmd)
-#         print('cmd back:', data)
-#         if data[0:4].hex() == 'BB 01 B7 00 02':
-#             power = int.from_bytes(data[5:6], byteorder='big', signed=False)
-#             return power/100
-#         else:
-#             return None
-#
-#     def setWorkAntenna(self, ant_id='00'):
-#         cmd_f = 'BB 00 0F 00 01' + ant_id
-#         check = self.check(cmd_f)
-#         cmd = cmd_f + check + '7E'
-#         data = self.getData(cmd)
-#         print('cmd back:', data)
-#         if data[0:4].hex() == 'BB 01 0F 00 01':
-#             return True
-#         else:
-#             return False
-#
-#     def inventory(self, ant_id='00', time='00 0A'):
-#         """
-#         1. multi-inventory for specified antenna
-#         """
-#         rsl = self.setWorkAntenna(ant_id)
-#         if rsl:
-#             cmd_f = 'BB 00 27 00 03 22' + time
-#             check = self.check(cmd_f)
-#             cmd = cmd_f + check + '7E'
-#             self.tcp_socket.send(cmd)
-#             while True:
-#                 data = self.tcp_socket.recv(self.BUFFSIZE)
-#                 if data.hex() == 'BB 01 FF 00 01 15 16 7E':
-#                     break
-#                 else:
-#                     if data[:2].hex() == 'BB 02 22':
-#                         pl = int.from_bytes(data[3:4], byteorder='big', signed=False)
-#                         rssi = data[5].hex()
-#                         pc = data[6:7].hex()
-#                         epc = data[8:(8 + pl - 5)]
-#                         print('rssi pc epc', rssi, pc, epc)
-#                         continue
-#                     else:
-#                         pass
-#         else:
-#             print('Fail to inventory')
-
-
 class Indicator(threading.Thread):
     """
-        1.frame: Head(0x7E) + Addr + Cmd + Len + Data + Check + End(0x68)
+        1.frame: Head(0x7E) + Addr + Cmd + Len + Data + Check
     """
     def __init__(self, addr, tcp_socket, queuetask, queuersl, event, storeroom_id, uuid, addr_nums):
         threading.Thread.__init__(self)
@@ -653,8 +570,7 @@ class Indicator(threading.Thread):
         self.uuid = uuid
 
     def run(self):
-        num = 0
-        cursec = 0
+        self._init()
         while self.isrunning:
             try:
                 if not self.queuetask.empty():
@@ -666,25 +582,20 @@ class Indicator(threading.Thread):
                         self.queuersl.put(pkg)
                         self.event.set()
                 else:
-                    localtime = time.localtime(time.time())
-                    if localtime.tm_sec != cursec:
-                        cursec = localtime.tm_sec
-                        num = num + 1 if num < 1000 else 0
-                        for i in self.addr_nums:
-                            rsl = self.showNum(num, i)
-                            activate = True if num % 2 == 0 else False
-                            self.onLed(activate=activate, pos='up', addr=i)
-                            self.onLed(activate=not activate, pos='down', addr=i)
-                            # if rsl:
-                            #     print('L(%s)--showNum: %i' % (i, num))
-                    else:
-                        pass
+                    time.sleep(1)
             except Exception as e:
                 print(e)
                 mylogger.error(e)
         print('网络断开啦，子线程%s要关闭了！' % threading.current_thread().name)
 
-    def check(self, cmd_f):
+    def _init(self):
+        """
+        1.从DB获取每个模块要显示的内容，背光开，LED闪烁5S；
+        :return:
+        """
+        pass
+
+    def _checksum(self, cmd_f):
         if isinstance(cmd_f, bytes):
             cmd = cmd_f
         else:
@@ -695,10 +606,11 @@ class Indicator(threading.Thread):
 
     def getData(self, cmd):
         self.tcp_socket.settimeout(1)
+        print(cmd)
         try:
             self.tcp_socket.send(cmd)
             data = self.tcp_socket.recv(self.BUFFSIZE)
-            # print('LCD BACK DATA: ', data)
+            print('LCD BACK DATA: ', data)
         except socket.timeout:
             # print('L--Warning', '等待TCP消息回应超时')
             return None
@@ -718,73 +630,110 @@ class Indicator(threading.Thread):
             else:
                 return data
 
-    def checkBtn(self, addr='01'):
-        cmd_f = '7E' + addr + '00 00'
-        check = self.check(cmd_f)
-        cmd = cmd_f + check + '68'
-        data = self.getData(bytes.fromhex(cmd))
-        if data[0:4] == bytes.fromhex('7E' + addr + '00 01'):
-            return SUCCESS if data[4] == 1 else ERR_EQUIPMENT_RESP
-        else:
-            return ERR_EQUIPMENT_RESP
-
-    def onLed(self, activate=True, pos='up', addr='01'):
-        cmd_acti = '01' if activate else '00'
-        cmd_pos = '01' if pos == 'up' else '02'
-        cmd_f = '7E' + addr + '01 02' + cmd_pos + cmd_acti
-        check = self.check(cmd_f)
-        cmd = cmd_f + check + '68'
+    def onLCD(self, addr='01', rgb=(1, 1, 1), mode=3):
+        """
+        :param addr:
+        :param rgb:
+        :param mode: 1-1s; 2-0.5s; 3-always
+        :return:
+        """
+        mode_bit_list = [0b00000, 0b01000, 0b10000, 0b11000]
+        mode_bit = mode_bit_list[mode]
+        r = 0b1 if rgb[0] else 0
+        g = 0b10 if rgb[1] else 0
+        b = 0b100 if rgb[2] else 0
+        rgb_mode = mode_bit + r + g + b
+        cmd_f = '7E' + addr + '02 03 01 01' + hex(rgb_mode).replace('0x', '').zfill(2)
+        check = self._checksum(cmd_f)
+        cmd = cmd_f + check
         data = self.getData(bytes.fromhex(cmd))
         if data is not None:
-            if data[0:4] == bytes.fromhex('7E' + addr + '01 01'):
-                return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
+            if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+                return SUCCESS
             else:
                 return ERR_EQUIPMENT_RESP
         else:
             return TIMEOUT
 
-    def showNum(self, num: int, addr='01'):
-        number = num if num < 1000 else 999
-        cmd_num = str(number).zfill(4)
-        cmd_f = '7E' + addr + '02 02' + cmd_num
-        check = self.check(cmd_f)
-        cmd = cmd_f + check + '68'
+    def offLCD(self, addr='01'):
+        cmd_f = '7E' + addr + '02 03 01 01 00'
+        check = self._checksum(cmd_f)
+        cmd = cmd_f + check
         data = self.getData(bytes.fromhex(cmd))
         if data is not None:
-            if data[0:4] == bytes.fromhex('7E' + addr + '02 01'):
-                return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
+            if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+                return SUCCESS
             else:
                 return ERR_EQUIPMENT_RESP
         else:
             return TIMEOUT
 
-    def onBacklight(self, activate=True, addr='01'):
-        cmd_data = '01' if activate else '00'
-        cmd_f = '7E' + addr + '04 01' + cmd_data
-        check = self.check(cmd_f)
-        cmd = cmd_f + check + '68'
+    def onBacklight(self, addr='01', is_auto=False):
+        cmd_auto = '02' if is_auto else '01'
+        cmd_f = '7E' + addr + '02 03 02 01' + cmd_auto
+        check = self._checksum(cmd_f)
+        cmd = cmd_f + check
         data = self.getData(bytes.fromhex(cmd))
-        if data[0:4] == bytes.fromhex('7E' + addr + '04 01'):
-            return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
+        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+            return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
 
-    def showText(self, contents=[], addr='01'):
+    def offBacklight(self, addr='01'):
+        cmd_f = '7E' + addr + '02 03 02 01 00'
+        check = self._checksum(cmd_f)
+        cmd = cmd_f + check
+        data = self.getData(bytes.fromhex(cmd))
+        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+            return SUCCESS
+        else:
+            return ERR_EQUIPMENT_RESP
+
+    def onBuzzer(self, addr='01', mode=1):
+        mode_byte = ['00', '01', '10', '11']
+        cmd_f = '7E' + addr + '02 03 03 01' + mode_byte[mode]
+        check = self._checksum(cmd_f)
+        cmd = cmd_f + check
+        data = self.getData(bytes.fromhex(cmd))
+        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+            return SUCCESS
+        else:
+            return ERR_EQUIPMENT_RESP
+
+    def offBuzzer(self, addr='01'):
+        cmd_f = '7E' + addr + '02 03 03 01 00'
+        check = self._checksum(cmd_f)
+        cmd = cmd_f + check
+        data = self.getData(bytes.fromhex(cmd))
+        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+            return SUCCESS
+        else:
+            return ERR_EQUIPMENT_RESP
+
+    def showText(self, addr='01', contents=[]):
         content = [bytes(cont, 'gb2312') if cont else b'' for cont in contents]
-        cmd_l1 = b'\x01' + (len(content[0]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[0] + b'\x00'
-        cmd_l2 = b'\x02' + (len(content[1]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[1] + b'\x00'
-        cmd_l3 = b'\x03' + (len(content[2]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[2] + b'\x00'
-        cmd_l4 = b'\x04' + (len(content[3]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[3] + b'\x00'
-        length = len(cmd_l1 + cmd_l2 + cmd_l3 + cmd_l4)
-        cmd_len = hex(length)[-2:] if length > 15 else ('0' + hex(length)[-1:])
-        cmd_f = bytes.fromhex('7E' + addr + '03' + cmd_len) + cmd_l1 + cmd_l2 + cmd_l3 + cmd_l4
-        print(cmd_f)
-        check = self.check(cmd_f)
-        cmd = cmd_f + bytes.fromhex(check + '68')
-        data = self.getData(cmd)
+        cmd_l1 = b'\x04' + (len(content[0]) + 1).to_bytes(length=1, byteorder='big', signed=False) + b'\x01' + content[0]
+        cmd_l2 = b'\x04' + (len(content[1]) + 1).to_bytes(length=1, byteorder='big', signed=False) + b'\x02' + content[1]
+        cmd_l3 = b'\x04' + (len(content[2]) + 1).to_bytes(length=1, byteorder='big', signed=False) + b'\x03' + content[2]
+        cmd_l4 = b'\x04' + (len(content[3]) + 1).to_bytes(length=1, byteorder='big', signed=False) + b'\x04' + content[3]
+        # length = len(cmd_l1 + cmd_l2 + cmd_l3 + cmd_l4)
+        # cmd_len = hex(length).replace('0x', '').zfill(2)
+        # cmd_f = bytes.fromhex('7E' + addr + '02' + cmd_len) + cmd_l1 + cmd_l2 + cmd_l3 + cmd_l4
+        # print(cmd_f)
+        # check = self._checksum(cmd_f)
+        # cmd = cmd_f + bytes.fromhex(check)
+        # data = self.getData(cmd)
+        for cmd_l in [cmd_l1, cmd_l2, cmd_l3, cmd_l4]:
+            length = len(cmd_l)
+            cmd_len = hex(length).replace('0x', '').zfill(2)
+            cmd_f = bytes.fromhex('7E' + addr + '02' + cmd_len) + cmd_l
+            print(cmd_f)
+            check = self._checksum(cmd_f)
+            cmd = cmd_f + bytes.fromhex(check)
+            data = self.getData(cmd)
         print('cmd back:', data)
-        if data[0:4] == bytes.fromhex('7E' + addr + '03 01'):
-            return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
+        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+            return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
 
@@ -1009,153 +958,6 @@ class EntranceZK(threading.Thread):
     def __del__(self):
         EntranceZK.counter -= 1
         print('EntranceZK.counter==========', EntranceZK.counter)
-
-
-# class HKVision(threading.Thread):
-#     ip_obj_dic = {}  # {ip: {'obj': obj, 'user_id': user_id}}
-#     adapter = None
-#     obj_counter = 0
-# 
-#     def __init__(self, addr, queuetask, queuersl, queue_push_data, storeroom_id, uuid):
-#         threading.Thread.__init__(self)
-#         self.ip = addr[0]
-#         self.port = addr[1]
-#         self.username = 'admin'
-#         self.password = 'abcd1234'
-#         self.storeroom_id = storeroom_id
-#         self.uuid = uuid
-#         self.queuetask = queuetask
-#         self.queuersl = queuersl
-#         self.queue_push_data = queue_push_data
-#         self.user_id = None
-#         self.isrunning = True
-#         self.lock = RLock()
-#         HKVision.ip_obj_dic[self.ip] = {'obj': self}
-#         HKVision.obj_counter += 1
-#         self.alarm_handle = None
-# 
-#     def run(self):
-#         try:
-#             # print('thread name--', threading.current_thread().name)
-#             if self._login():
-#                 self._set_exception_cb()
-#                 self._get_alarm()
-#                 print('Hkvision success')
-#                 while self.isrunning:
-#                     time.sleep(10)
-#                 self._close_alarm()
-#                 HKVision.adapter.logout(self.user_id)
-#             else:
-#                 print('SDK init failed')
-#         except Exception as e:
-#             mylogger.error('Hkvision %s got exception' % self.ip)
-#         finally:
-#             self._del_self()
-# 
-#     def _del_self(self):
-#         # print('del obj')
-#         # print('thread name--', threading.current_thread().name)
-#         if self.ip in HKVision.ip_obj_dic.keys():
-#             del HKVision.ip_obj_dic[self.ip]
-#             HKVision.obj_counter -= 1
-#         if HKVision.obj_counter == 0 and HKVision.adapter is not None:
-#             HKVision.adapter.sdk_clean()
-# 
-#     def _login(self):
-#         """
-#         1、如果未初始化SDK适配器，则加载并初始化；
-#         2、用户登录门禁主机；
-#         :return:
-#         """
-#         if HKVision.adapter is None:
-#             HKVision.adapter = base_adapter.BaseAdapter()
-#             # rsl = HKVision.adapter.add_init_sdk()
-#             # if not rsl:
-#             #     print('Fail to initial SDK')
-#             #     return False
-#         userId = HKVision.adapter.common_start(ip=self.ip, port=self.port, user=self.username, password=self.password)
-#         if userId < 0:
-#             mylogger.warning('Fail to init Entreance_hk connect (%s, %d)' % (self.ip, self.port))
-#             return False
-#         self.user_id = userId
-#         HKVision.ip_obj_dic[self.ip]['user_id'] = self.user_id
-#         print('Entrance_hk--(%s, %d) was online' % (self.ip, self.port))
-#         mylogger.info('Entrance_hk--(%s, %d) was online' % (self.ip, self.port))
-#         return True
-# 
-#     def _get_alarm(self):
-#         data = HKVision.adapter.setup_alarm_chan_v31(self.message_call_back, self.user_id)
-#         # print("设置回调函数结果", data)
-#         # 布防
-#         alarm_result = self.adapter.setup_alarm_chan_v41(self.user_id)
-#         # print("设置人脸v41布防结果", alarm_result)
-#         self.alarm_handle = alarm_result
-# 
-#     def _close_alarm(self):
-#         HKVision.adapter.close_alarm(self.alarm_handle)
-# 
-#     def _set_exception_cb(self):
-#         rsl = HKVision.adapter.set_exceptioln_call_back(None, None, self.exception_call_back, self.user_id)
-#         # print('set_exception_cb', rsl)
-# 
-#     @staticmethod
-#     @CFUNCTYPE(h_BOOL, h_LONG, POINTER(alarm.NET_DVR_ALARMER), POINTER(h_CHAR), h_DWORD, h_VOID_P)
-#     def message_call_back(lCommand,
-#                           pAlarmer,
-#                           pAlarmInfo,
-#                           dwBufLen,
-#                           pUser):
-#         # print("lCommand:{},pAlarmer:{},pAlarmInfo:{},dwBufLen:{}".format(lCommand, pAlarmer, pAlarmInfo, dwBufLen))
-#         if lCommand == 0x5002:
-#             # 门禁主机报警信息
-#             # print('Command=', lCommand)
-#             alarmer = alarm.NET_DVR_ALARMER()
-#             memmove(pointer(alarmer), pAlarmer, sizeof(alarmer))
-#             ip = bytearray(alarmer.sDeviceIP).decode(encoding='utf-8')
-#             # print('IP--', ip)
-#             alarm_info = alarm.NET_DVR_ACS_ALARM_INFO()
-#             memmove(pointer(alarm_info), pAlarmInfo, sizeof(alarm_info))
-#             major_code = alarm_info.dwMajor
-#             minor_code = alarm_info.dwMinor
-#             if major_code == 5 and minor_code == 38:
-#                 # print(hex(alarm_info.dwMajor))
-#                 # print(hex(alarm_info.dwMinor))
-#                 cardno = bytearray(alarm_info.struAcsEventInfo.byCardNo).decode(encoding='utf-8')
-#                 user_code = alarm_info.struAcsEventInfo.dwEmployeeNo
-#                 # print('user--%s(CARD--%s) was in' % (user_code, cardno))
-#                 # print(alarm_info.byAcsEventInfoExtend)
-#                 # print(alarm_info.byAcsEventInfoExtendV20)
-#                 HKVision.ip_obj_dic[ip]['obj'].set_auth_info(user_code, cardno)
-#                 # # 退出该IP的海康威视对象
-#                 # if user_code == 1 or user_code == '1':
-#                 #     HKVision.ip_obj_dic[ip]['obj'].stop()
-#         return True
-# 
-#     @staticmethod
-#     @CFUNCTYPE(None, h_DWORD, h_BYTE, h_BYTE, h_VOID_P)
-#     def exception_call_back(dwType,
-#                             lUserID,
-#                             lHandle,
-#                             pUser):
-#         # print(hex(dwType), lUserID, lHandle, pUser)
-#         if hex(dwType) == '0x8000':
-#             # 网络断开异常
-#             for k, v in HKVision.ip_obj_dic.items():
-#                 if v['user_id'] == lUserID:
-#                     v['obj'].stop()
-# 
-#     def set_auth_info(self, user_code, cardno):
-#         print('(userCode, cardNo)--(%s, %s) was in!' % (user_code, cardno))
-#         data = {'user': str(user_code), 'card_id': str(cardno)}
-#         pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=5, data=data, source=(self.ip, self.port),
-#                               msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
-#         self.queue_push_data.put(pkg)
-# 
-#     def stop(self):
-#         with self.lock:
-#             self.isrunning = False
-#         print('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))
-#         mylogger.warning('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))
 
 
 class CodeScanner(threading.Thread):
@@ -2369,3 +2171,388 @@ class HKVision(threading.Thread):
             self.isrunning = False
         print('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))
         mylogger.warning('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))
+
+
+# class Indicator(threading.Thread):
+#     """
+#         1.frame: Head(0x7E) + Addr + Cmd + Len + Data + Check + End(0x68)
+#     """
+#     def __init__(self, addr, tcp_socket, queuetask, queuersl, event, storeroom_id, uuid, addr_nums):
+#         threading.Thread.__init__(self)
+#         self.addr = addr
+#         self.storeroom_id = storeroom_id
+#         self.tcp_socket = tcp_socket
+#         self.BUFFSIZE = 1024
+#         self.addr_nums = addr_nums
+#         self.isrunning = True
+#         self.queuetask = queuetask
+#         self.queuersl = queuersl
+#         self.event = event
+#         self.lock = threading.RLock()
+#         self.uuid = uuid
+#
+#     def run(self):
+#         num = 0
+#         cursec = 0
+#         while self.isrunning:
+#             try:
+#                 if not self.queuetask.empty():
+#                     task, args = self.queuetask.get()
+#                     rsl = methodcaller(task, *args)(self)
+#                     if rsl is not None:
+#                         pkg = TransferPackage(code=SUCCESS, eq_type=1, data={'rsl': rsl}, source=self.addr, msg_type=6,
+#                                               storeroom_id=self.storeroom_id, eq_id=self.uuid)
+#                         self.queuersl.put(pkg)
+#                         self.event.set()
+#                 else:
+#                     localtime = time.localtime(time.time())
+#                     if localtime.tm_sec != cursec:
+#                         cursec = localtime.tm_sec
+#                         num = num + 1 if num < 1000 else 0
+#                         for i in self.addr_nums:
+#                             rsl = self.showNum(num, i)
+#                             activate = True if num % 2 == 0 else False
+#                             self.onLed(activate=activate, pos='up', addr=i)
+#                             self.onLed(activate=not activate, pos='down', addr=i)
+#                             # if rsl:
+#                             #     print('L(%s)--showNum: %i' % (i, num))
+#                     else:
+#                         pass
+#             except Exception as e:
+#                 print(e)
+#                 mylogger.error(e)
+#         print('网络断开啦，子线程%s要关闭了！' % threading.current_thread().name)
+#
+#     def check(self, cmd_f):
+#         if isinstance(cmd_f, bytes):
+#             cmd = cmd_f
+#         else:
+#             cmd = bytes.fromhex(cmd_f)
+#         check = sum(cmd) % 256
+#         check_hex = hex(check)[-2:] if check > 15 else '0' + hex(check)[-1:]
+#         return check_hex
+#
+#     def getData(self, cmd):
+#         self.tcp_socket.settimeout(1)
+#         try:
+#             self.tcp_socket.send(cmd)
+#             data = self.tcp_socket.recv(self.BUFFSIZE)
+#             # print('LCD BACK DATA: ', data)
+#         except socket.timeout:
+#             # print('L--Warning', '等待TCP消息回应超时')
+#             return None
+#         except (OSError, BrokenPipeError):
+#             print('Error', 'TCP连接已断开')
+#             return None
+#         except AttributeError:
+#             print('Error', 'TCP未连接')
+#             return None
+#         except Exception as e:
+#             print('Error', repr(e))
+#             return None
+#         else:
+#             if len(data) == 0:
+#                 print('Error', 'TCP客户端已断开连接')
+#                 return None
+#             else:
+#                 return data
+#
+#     def checkBtn(self, addr='01'):
+#         cmd_f = '7E' + addr + '00 00'
+#         check = self.check(cmd_f)
+#         cmd = cmd_f + check + '68'
+#         data = self.getData(bytes.fromhex(cmd))
+#         if data[0:4] == bytes.fromhex('7E' + addr + '00 01'):
+#             return SUCCESS if data[4] == 1 else ERR_EQUIPMENT_RESP
+#         else:
+#             return ERR_EQUIPMENT_RESP
+#
+#     def onLed(self, activate=True, pos='up', addr='01'):
+#         cmd_acti = '01' if activate else '00'
+#         cmd_pos = '01' if pos == 'up' else '02'
+#         cmd_f = '7E' + addr + '01 02' + cmd_pos + cmd_acti
+#         check = self.check(cmd_f)
+#         cmd = cmd_f + check + '68'
+#         data = self.getData(bytes.fromhex(cmd))
+#         if data is not None:
+#             if data[0:4] == bytes.fromhex('7E' + addr + '01 01'):
+#                 return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
+#             else:
+#                 return ERR_EQUIPMENT_RESP
+#         else:
+#             return TIMEOUT
+#
+#     def showNum(self, num: int, addr='01'):
+#         number = num if num < 1000 else 999
+#         cmd_num = str(number).zfill(4)
+#         cmd_f = '7E' + addr + '02 02' + cmd_num
+#         check = self.check(cmd_f)
+#         cmd = cmd_f + check + '68'
+#         data = self.getData(bytes.fromhex(cmd))
+#         if data is not None:
+#             if data[0:4] == bytes.fromhex('7E' + addr + '02 01'):
+#                 return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
+#             else:
+#                 return ERR_EQUIPMENT_RESP
+#         else:
+#             return TIMEOUT
+#
+#     def onBacklight(self, activate=True, addr='01'):
+#         cmd_data = '01' if activate else '00'
+#         cmd_f = '7E' + addr + '04 01' + cmd_data
+#         check = self.check(cmd_f)
+#         cmd = cmd_f + check + '68'
+#         data = self.getData(bytes.fromhex(cmd))
+#         if data[0:4] == bytes.fromhex('7E' + addr + '04 01'):
+#             return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
+#         else:
+#             return ERR_EQUIPMENT_RESP
+#
+#     def showText(self, contents=[], addr='01'):
+#         content = [bytes(cont, 'gb2312') if cont else b'' for cont in contents]
+#         cmd_l1 = b'\x01' + (len(content[0]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[0] + b'\x00'
+#         cmd_l2 = b'\x02' + (len(content[1]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[1] + b'\x00'
+#         cmd_l3 = b'\x03' + (len(content[2]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[2] + b'\x00'
+#         cmd_l4 = b'\x04' + (len(content[3]) + 1).to_bytes(length=1, byteorder='big', signed=False) + content[3] + b'\x00'
+#         length = len(cmd_l1 + cmd_l2 + cmd_l3 + cmd_l4)
+#         cmd_len = hex(length)[-2:] if length > 15 else ('0' + hex(length)[-1:])
+#         cmd_f = bytes.fromhex('7E' + addr + '03' + cmd_len) + cmd_l1 + cmd_l2 + cmd_l3 + cmd_l4
+#         print(cmd_f)
+#         check = self.check(cmd_f)
+#         cmd = cmd_f + bytes.fromhex(check + '68')
+#         data = self.getData(cmd)
+#         print('cmd back:', data)
+#         if data[0:4] == bytes.fromhex('7E' + addr + '03 01'):
+#             return SUCCESS if data[4] == 0 else ERR_EQUIPMENT_RESP
+#         else:
+#             return ERR_EQUIPMENT_RESP
+
+
+# class RfidJH2880(object):
+#     """
+#         (未经过测试)
+#         1.frame: Head(0xBB) + Type + Cmd + Len + Data + Check + End(0x7E)
+#     """
+#     def __init__(self, tcp_socket, addr='00'):
+#         self.tcp_socket = tcp_socket
+#         self.BUFFSIZE = 1024
+#         self.addr = addr
+#
+#     def check(self, cmd_f):
+#         cmd = bytes.fromhex(cmd_f)
+#         check = sum(cmd) % 256
+#         check_hex = hex(check)[-2:]
+#         return check_hex
+#
+#     def getData(self, cmd):
+#         self.tcp_socket.send(cmd)
+#         data = self.tcp_socket.recv(self.BUFFSIZE)
+#         return data
+#
+#     def setOutputPower(self, value):
+#         temp = hex((value * 100) % 65536)[2:]
+#         power = temp if len(temp) > 3 else '0' + temp
+#         cmd_f = 'BB 00 B6 00 02' + power
+#         check = self.check(cmd_f)
+#         cmd = cmd_f + check + '7E'
+#         data = self.getData(cmd)
+#         print('cmd back:', data)
+#         if data.hex() == 'BB 01 B6 00 01 00 B8 7E':
+#             return True
+#         else:
+#             return False
+#
+#     def getOutputPower(self):
+#         cmd = 'BB 00 B7 00 00 B7 7E'
+#         data = self.getData(cmd)
+#         print('cmd back:', data)
+#         if data[0:4].hex() == 'BB 01 B7 00 02':
+#             power = int.from_bytes(data[5:6], byteorder='big', signed=False)
+#             return power/100
+#         else:
+#             return None
+#
+#     def setWorkAntenna(self, ant_id='00'):
+#         cmd_f = 'BB 00 0F 00 01' + ant_id
+#         check = self.check(cmd_f)
+#         cmd = cmd_f + check + '7E'
+#         data = self.getData(cmd)
+#         print('cmd back:', data)
+#         if data[0:4].hex() == 'BB 01 0F 00 01':
+#             return True
+#         else:
+#             return False
+#
+#     def inventory(self, ant_id='00', time='00 0A'):
+#         """
+#         1. multi-inventory for specified antenna
+#         """
+#         rsl = self.setWorkAntenna(ant_id)
+#         if rsl:
+#             cmd_f = 'BB 00 27 00 03 22' + time
+#             check = self.check(cmd_f)
+#             cmd = cmd_f + check + '7E'
+#             self.tcp_socket.send(cmd)
+#             while True:
+#                 data = self.tcp_socket.recv(self.BUFFSIZE)
+#                 if data.hex() == 'BB 01 FF 00 01 15 16 7E':
+#                     break
+#                 else:
+#                     if data[:2].hex() == 'BB 02 22':
+#                         pl = int.from_bytes(data[3:4], byteorder='big', signed=False)
+#                         rssi = data[5].hex()
+#                         pc = data[6:7].hex()
+#                         epc = data[8:(8 + pl - 5)]
+#                         print('rssi pc epc', rssi, pc, epc)
+#                         continue
+#                     else:
+#                         pass
+#         else:
+#             print('Fail to inventory')
+
+
+# class HKVision(threading.Thread):
+#     ip_obj_dic = {}  # {ip: {'obj': obj, 'user_id': user_id}}
+#     adapter = None
+#     obj_counter = 0
+#
+#     def __init__(self, addr, queuetask, queuersl, queue_push_data, storeroom_id, uuid):
+#         threading.Thread.__init__(self)
+#         self.ip = addr[0]
+#         self.port = addr[1]
+#         self.username = 'admin'
+#         self.password = 'abcd1234'
+#         self.storeroom_id = storeroom_id
+#         self.uuid = uuid
+#         self.queuetask = queuetask
+#         self.queuersl = queuersl
+#         self.queue_push_data = queue_push_data
+#         self.user_id = None
+#         self.isrunning = True
+#         self.lock = RLock()
+#         HKVision.ip_obj_dic[self.ip] = {'obj': self}
+#         HKVision.obj_counter += 1
+#         self.alarm_handle = None
+#
+#     def run(self):
+#         try:
+#             # print('thread name--', threading.current_thread().name)
+#             if self._login():
+#                 self._set_exception_cb()
+#                 self._get_alarm()
+#                 print('Hkvision success')
+#                 while self.isrunning:
+#                     time.sleep(10)
+#                 self._close_alarm()
+#                 HKVision.adapter.logout(self.user_id)
+#             else:
+#                 print('SDK init failed')
+#         except Exception as e:
+#             mylogger.error('Hkvision %s got exception' % self.ip)
+#         finally:
+#             self._del_self()
+#
+#     def _del_self(self):
+#         # print('del obj')
+#         # print('thread name--', threading.current_thread().name)
+#         if self.ip in HKVision.ip_obj_dic.keys():
+#             del HKVision.ip_obj_dic[self.ip]
+#             HKVision.obj_counter -= 1
+#         if HKVision.obj_counter == 0 and HKVision.adapter is not None:
+#             HKVision.adapter.sdk_clean()
+#
+#     def _login(self):
+#         """
+#         1、如果未初始化SDK适配器，则加载并初始化；
+#         2、用户登录门禁主机；
+#         :return:
+#         """
+#         if HKVision.adapter is None:
+#             HKVision.adapter = base_adapter.BaseAdapter()
+#             # rsl = HKVision.adapter.add_init_sdk()
+#             # if not rsl:
+#             #     print('Fail to initial SDK')
+#             #     return False
+#         userId = HKVision.adapter.common_start(ip=self.ip, port=self.port, user=self.username, password=self.password)
+#         if userId < 0:
+#             mylogger.warning('Fail to init Entreance_hk connect (%s, %d)' % (self.ip, self.port))
+#             return False
+#         self.user_id = userId
+#         HKVision.ip_obj_dic[self.ip]['user_id'] = self.user_id
+#         print('Entrance_hk--(%s, %d) was online' % (self.ip, self.port))
+#         mylogger.info('Entrance_hk--(%s, %d) was online' % (self.ip, self.port))
+#         return True
+#
+#     def _get_alarm(self):
+#         data = HKVision.adapter.setup_alarm_chan_v31(self.message_call_back, self.user_id)
+#         # print("设置回调函数结果", data)
+#         # 布防
+#         alarm_result = self.adapter.setup_alarm_chan_v41(self.user_id)
+#         # print("设置人脸v41布防结果", alarm_result)
+#         self.alarm_handle = alarm_result
+#
+#     def _close_alarm(self):
+#         HKVision.adapter.close_alarm(self.alarm_handle)
+#
+#     def _set_exception_cb(self):
+#         rsl = HKVision.adapter.set_exceptioln_call_back(None, None, self.exception_call_back, self.user_id)
+#         # print('set_exception_cb', rsl)
+#
+#     @staticmethod
+#     @CFUNCTYPE(h_BOOL, h_LONG, POINTER(alarm.NET_DVR_ALARMER), POINTER(h_CHAR), h_DWORD, h_VOID_P)
+#     def message_call_back(lCommand,
+#                           pAlarmer,
+#                           pAlarmInfo,
+#                           dwBufLen,
+#                           pUser):
+#         # print("lCommand:{},pAlarmer:{},pAlarmInfo:{},dwBufLen:{}".format(lCommand, pAlarmer, pAlarmInfo, dwBufLen))
+#         if lCommand == 0x5002:
+#             # 门禁主机报警信息
+#             # print('Command=', lCommand)
+#             alarmer = alarm.NET_DVR_ALARMER()
+#             memmove(pointer(alarmer), pAlarmer, sizeof(alarmer))
+#             ip = bytearray(alarmer.sDeviceIP).decode(encoding='utf-8')
+#             # print('IP--', ip)
+#             alarm_info = alarm.NET_DVR_ACS_ALARM_INFO()
+#             memmove(pointer(alarm_info), pAlarmInfo, sizeof(alarm_info))
+#             major_code = alarm_info.dwMajor
+#             minor_code = alarm_info.dwMinor
+#             if major_code == 5 and minor_code == 38:
+#                 # print(hex(alarm_info.dwMajor))
+#                 # print(hex(alarm_info.dwMinor))
+#                 cardno = bytearray(alarm_info.struAcsEventInfo.byCardNo).decode(encoding='utf-8')
+#                 user_code = alarm_info.struAcsEventInfo.dwEmployeeNo
+#                 # print('user--%s(CARD--%s) was in' % (user_code, cardno))
+#                 # print(alarm_info.byAcsEventInfoExtend)
+#                 # print(alarm_info.byAcsEventInfoExtendV20)
+#                 HKVision.ip_obj_dic[ip]['obj'].set_auth_info(user_code, cardno)
+#                 # # 退出该IP的海康威视对象
+#                 # if user_code == 1 or user_code == '1':
+#                 #     HKVision.ip_obj_dic[ip]['obj'].stop()
+#         return True
+#
+#     @staticmethod
+#     @CFUNCTYPE(None, h_DWORD, h_BYTE, h_BYTE, h_VOID_P)
+#     def exception_call_back(dwType,
+#                             lUserID,
+#                             lHandle,
+#                             pUser):
+#         # print(hex(dwType), lUserID, lHandle, pUser)
+#         if hex(dwType) == '0x8000':
+#             # 网络断开异常
+#             for k, v in HKVision.ip_obj_dic.items():
+#                 if v['user_id'] == lUserID:
+#                     v['obj'].stop()
+#
+#     def set_auth_info(self, user_code, cardno):
+#         print('(userCode, cardNo)--(%s, %s) was in!' % (user_code, cardno))
+#         data = {'user': str(user_code), 'card_id': str(cardno)}
+#         pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=5, data=data, source=(self.ip, self.port),
+#                               msg_type=3, storeroom_id=self.storeroom_id, eq_id=self.uuid)
+#         self.queue_push_data.put(pkg)
+#
+#     def stop(self):
+#         with self.lock:
+#             self.isrunning = False
+#         print('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))
+#         mylogger.warning('Entrance_hk--(%s, %d) was offline' % (self.ip, self.port))
