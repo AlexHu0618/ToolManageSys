@@ -246,7 +246,6 @@ class GravityShelf(threading.Thread):
         #     print('failed')
         #     return ERR_EQUIPMENT_RESP
 
-
     def getAllParams(self):
         cmd = b'\x00\x05\x23\x05\x2D'
         datas = self.getData(cmd, True)
@@ -582,7 +581,7 @@ class Indicator(threading.Thread):
                         self.queuersl.put(pkg)
                         self.event.set()
                 else:
-                    time.sleep(1)
+                    time.sleep(0.5)
             except Exception as e:
                 print(e)
                 mylogger.error(e)
@@ -605,27 +604,32 @@ class Indicator(threading.Thread):
         return check_hex
 
     def getData(self, cmd):
-        self.tcp_socket.settimeout(1)
-        print(cmd)
+        self.tcp_socket.settimeout(5)
+        # print(cmd)
         try:
             self.tcp_socket.send(cmd)
             data = self.tcp_socket.recv(self.BUFFSIZE)
-            print('LCD BACK DATA: ', data)
+            # print('LCD BACK DATA: ', data)
         except socket.timeout:
             # print('L--Warning', '等待TCP消息回应超时')
+            self.isrunning = False
             return None
         except (OSError, BrokenPipeError):
             print('Error', 'TCP连接已断开')
+            self.isrunning = False
             return None
         except AttributeError:
             print('Error', 'TCP未连接')
+            self.isrunning = False
             return None
         except Exception as e:
             print('Error', repr(e))
+            self.isrunning = False
             return None
         else:
             if len(data) == 0:
                 print('Error', 'TCP客户端已断开连接')
+                self.isrunning = False
                 return None
             else:
                 return data
@@ -727,15 +731,18 @@ class Indicator(threading.Thread):
             length = len(cmd_l)
             cmd_len = hex(length).replace('0x', '').zfill(2)
             cmd_f = bytes.fromhex('7E' + addr + '02' + cmd_len) + cmd_l
-            print(cmd_f)
+            # print(cmd_f)
             check = self._checksum(cmd_f)
             cmd = cmd_f + bytes.fromhex(check)
             data = self.getData(cmd)
-        print('cmd back:', data)
+        # print('cmd back:', data)
         if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
             return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
+
+    def _checkBtn(self):
+        pass
 
 
 class EntranceZK(threading.Thread):

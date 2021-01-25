@@ -724,7 +724,10 @@ class StoreroomManager(threading.Thread):
         grid = Grid.by_eqid_sensor(eq_id=eq_id, sensor_addr=sensor_addr)
         return grid
 
-    def _get_history(self):
+    def _get_list_need_return(self):
+        pass
+
+    def _get_list_need_borrow(self):
         pass
 
     def _exit_manage(self):
@@ -743,6 +746,14 @@ class StoreroomManager(threading.Thread):
     def check_inventory(self):
         """
         盘点
+        :return:
+        """
+        pass
+
+    def _set_lcd(self):
+        """
+        1、待借与待还格子开背光；
+        2、待借led绿色，待还led红色；
         :return:
         """
         pass
