@@ -44,6 +44,7 @@ class TaskControler(Process):
 
     def _monitorconn(self):
         server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         addr = ('', 9999)
         server_sock.bind(addr)
         server_sock.listen(1)
