@@ -5,7 +5,7 @@ import time
 from .globalvar import *
 import struct
 from app.myLogger import mylogger
-from database.models2 import Entrance, User, Grid, History_inbound_outbound, Goods, ChannelMachine
+from database.models2 import Entrance, User, Grid, History_inbound_outbound, Goods, ChannelMachine, Toolkit, Indicator
 import sys
 import datetime
 from settings.config import config_parser as conpar
@@ -322,12 +322,15 @@ class StoreroomManager(threading.Thread):
         self.goods_inbound = list()
         self.goods_outbound = list()
         self.channel_machines = dict()
+        self.lcd_return = None
+        self.lcd_borrow = None
 
     def run(self):
         """
         1、获取该库房的管理模式;
         2、根据模式选择相应的处理方法并循环执行；
         3、数据无变化相隔interval秒后自动结束当前用户借还流程；
+        4、点亮相应的LCD；
         :return:
         """
         self.gravity_precision = conpar.read_yaml_file('configuration')['gravity_precision']
@@ -335,13 +338,14 @@ class StoreroomManager(threading.Thread):
         self._get_manage_mode()
         self._set_current_user(entrance_id=self.entrance_id, entrance_addr=self.addr)
         over_timer = threading.Timer(interval=self.interval, function=self._check_timeout_to_close, args=[self.interval, ])
+        over_timer.daemon = True
         over_timer.start()
+        self._set_lcd_on()
         while self.isrunning:
             if not self.queue_pkg.empty():
                 with self.lock:
                     self.is_close = False
                 pkg = self.queue_pkg.get()
-                # print('store: ', self.storeroom_id, ' got package: ', pkg)
                 if self.manage_mode == 1:
                     self._handle_mode_one(pkg=pkg)
                 elif self.manage_mode == 3:
@@ -363,6 +367,7 @@ class StoreroomManager(threading.Thread):
             with self.lock:
                 self.is_close = True
             over_timer = threading.Timer(interval=self.interval, function=self._check_timeout_to_close, args=[self.interval, ])
+            over_timer.daemon = True
             over_timer.start()
 
     def _handle_mode_one(self, pkg):
@@ -377,12 +382,14 @@ class StoreroomManager(threading.Thread):
         if pkg['equipment_type'] == 3 or pkg['equipment_type'] == 5:
             # 门禁package
             rsl = self._save_data2db()
+            self._set_lcd_off()
             if rsl:
                 self.entrance_id = pkg['equipment_id']
                 self.user_code = pkg['data']['user']
                 self.card_id = pkg['data']['card_id'] if 'card_id' in pkg['data'].keys() else None
                 self._set_current_user(entrance_id=self.entrance_id, entrance_addr=pkg['source'])
                 print('current user was change to ', self.user_code)
+                self._set_lcd_on()
             else:
                 pass
         elif pkg['equipment_type'] == 1:
@@ -725,21 +732,51 @@ class StoreroomManager(threading.Thread):
         return grid
 
     def _get_list_need_return(self):
-        pass
+        """
+        查询待还格子对应的显示模块
+        :return: {(ip, port, add_num), }
+        """
+        history = History_inbound_outbound.by_user_need_return(self.user_id)
+        grids = {h.grid_id for h in history}
+        lcd_modules = Grid.by_id_list(id_list=grids)
+        lcd_addr_list = {(lcd.led_id, lcd.led_addr) for lcd in lcd_modules}
+        lcd_list = list()
+        for lcd in lcd_addr_list:
+            if lcd[0] is not None and lcd[1] is not None:
+                indicator = Indicator.by_id(lcd[0])
+                if indicator:
+                    lcd_list.append((indicator.ip, indicator.port, lcd[1]))
+        return lcd_list
 
     def _get_list_need_borrow(self):
-        pass
+        """
+        查询待借格子对应的显示模块
+        :return: {(ip, port, add_num), }
+        """
+        goods = Toolkit.by_user(self.user_id)
+        grids = {good[1].grid_id for good in goods}
+        lcd_modules = Grid.by_id_list(id_list=grids)
+        lcd_addr_list = {(lcd.led_id, lcd.led_addr) for lcd in lcd_modules}
+        lcd_list = list()
+        for lcd in lcd_addr_list:
+            if lcd[0] is not None and lcd[1] is not None:
+                indicator = Indicator.by_id(lcd[0])
+                if indicator:
+                    lcd_list.append((indicator.ip, indicator.port, lcd[1]))
+        return lcd_list
 
     def _exit_manage(self):
         """
         出库房管理
         1、解除库房&人的绑定；
         2、保存库存与工具包信息到DB。
+        3、关闭相应的LCD；
         :return:
         """
         self._save_data2db()
         # if self.channel_machines:
         #     self._stop_channel_machine()
+        self._set_lcd_off()
         with self.lock:
             self.isrunning = False
 
@@ -750,13 +787,50 @@ class StoreroomManager(threading.Thread):
         """
         pass
 
-    def _set_lcd(self):
+    def _set_lcd_on(self):
         """
         1、待借与待还格子开背光；
         2、待借led绿色，待还led红色；
         :return:
         """
-        pass
+        if self.manage_mode == 1:
+            self.lcd_return = self._get_list_need_return()
+            self.lcd_borrow = self._get_list_need_borrow()
+            if self.lcd_return:
+                for lcd in self.lcd_return:
+                    data1 = {'func': 'onBacklight', 'args': (lcd[2],)}
+                    pkg1 = TransferPackage(target=(lcd[0], lcd[1]), msg_type=0, storeroom_id=self.storeroom_id, data=data1)
+                    self.q_task.put(pkg1)
+                    data2 = {'func': 'onLed', 'args': (lcd[2], (1, 0, 0))}
+                    pkg2 = TransferPackage(target=(lcd[0], lcd[1]), msg_type=0, storeroom_id=self.storeroom_id, data=data2)
+                    self.q_task.put(pkg2)
+            if self.lcd_borrow:
+                for lcd in self.lcd_borrow:
+                    data1 = {'func': 'onBacklight', 'args': (lcd[2],)}
+                    pkg1 = TransferPackage(target=(lcd[0], lcd[1]), msg_type=0, storeroom_id=self.storeroom_id, data=data1)
+                    self.q_task.put(pkg1)
+                    data2 = {'func': 'onLed', 'args': (lcd[2], (0, 1, 0))}
+                    pkg2 = TransferPackage(target=(lcd[0], lcd[1]), msg_type=0, storeroom_id=self.storeroom_id, data=data2)
+                    self.q_task.put(pkg2)
+
+    def _set_lcd_off(self):
+        if self.manage_mode == 1:
+            if self.lcd_return:
+                for lcd in self.lcd_return:
+                    data1 = {'func': 'offBacklight', 'args': (lcd[2],)}
+                    pkg1 = TransferPackage(target=(lcd[0], lcd[1]), msg_type=0, storeroom_id=self.storeroom_id, data=data1)
+                    self.q_task.put(pkg1)
+                    data2 = {'func': 'offLed', 'args': (lcd[2],)}
+                    pkg2 = TransferPackage(target=(lcd[0], lcd[1]), msg_type=0, storeroom_id=self.storeroom_id, data=data2)
+                    self.q_task.put(pkg2)
+            if self.lcd_borrow:
+                for lcd in self.lcd_borrow:
+                    data1 = {'func': 'offBacklight', 'args': (lcd[2],)}
+                    pkg1 = TransferPackage(target=(lcd[0], lcd[1]), msg_type=0, storeroom_id=self.storeroom_id, data=data1)
+                    self.q_task.put(pkg1)
+                    data2 = {'func': 'offLed', 'args': (lcd[2],)}
+                    pkg2 = TransferPackage(target=(lcd[0], lcd[1]), msg_type=0, storeroom_id=self.storeroom_id, data=data2)
+                    self.q_task.put(pkg2)
 
 
 if __name__ == '__main__':

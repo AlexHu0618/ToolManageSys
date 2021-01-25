@@ -1,11 +1,11 @@
 # MySQL
 mysql:
-#  host: 'localhost'
-#  password: '123456'
-#  user: 'sa'
-  host: '192.168.1.155'
-  password: '!QAZ2wsx3edc'
-  user: 'root'
+  host: 'localhost'
+  password: '123456'
+  user: 'sa'
+#  host: '192.168.1.155'
+#  password: '!QAZ2wsx3edc'
+#  user: 'root'
   port: 3306
   database: 'tool_manage_sys'
   charset: 'utf8mb4'

@@ -391,6 +391,10 @@ class Grid(Base, MyBase):
         return dbSession.query(cls).filter(and_(cls.collector_id == eq_id, cls.sensor_addr == addr_num,
                                                 cls.antenna_num.contains(antenna_num))).first()
 
+    @classmethod
+    def by_id_list(cls, id_list):
+        return dbSession.query(cls).filter(cls.id.in_(id_list)).all()
+
 
 class Collector(Base, MyBase):
     __tablename__ = 'collector'
@@ -469,6 +473,10 @@ class Toolkit(Base, MyBase):
     user_id = Column(String(100))
     goods_id = Column(String(100))
     count = Column(Integer)
+
+    @classmethod
+    def by_user(cls, user_id):
+        return dbSession.query(cls, Goods).join(Goods, cls.goods_id == Goods.id).filter(cls.user_id == user_id).all()
 
 
 class History_inbound_outbound(Base, MyBase):
