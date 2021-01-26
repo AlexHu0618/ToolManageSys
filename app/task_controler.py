@@ -181,7 +181,7 @@ class TaskControler(Process):
                 if not self.q_rsl.empty():
                     transfer_package = self.q_rsl.get()
                     data_dict = transfer_package.to_dict()
-                    print('get push data--', data_dict)
+                    # print('get push data--', data_dict)
                     self._analyze_pkg(package=data_dict)
                     # data_send = bytes('{}'.format(data_dict), encoding='utf-8')
                     # print('File: "' + __file__ + '", Line ' + str(sys._getframe().f_lineno) + ' , in ' + sys._getframe().f_code.co_name)

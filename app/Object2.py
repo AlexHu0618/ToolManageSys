@@ -20,7 +20,7 @@ from util.hkws.model.base import *
 from threading import RLock
 from threading import Timer
 
-from database.models2 import Entrance, User, Role
+from database.models2 import Entrance, User, Role, Grid
 from settings.config import config_parser as conpar
 
 
@@ -550,7 +550,7 @@ class RfidR2000(threading.Thread):
         # print('cmd back:', data)
 
 
-class Indicator(threading.Thread):
+class IndicatorLCD(threading.Thread):
     """
         1.frame: Head(0x7E) + Addr + Cmd + Len + Data + Check
     """
@@ -569,7 +569,7 @@ class Indicator(threading.Thread):
         self.uuid = uuid
 
     def run(self):
-        self._init()
+        self._initial_data()
         while self.isrunning:
             try:
                 if not self.queuetask.empty():
@@ -587,12 +587,21 @@ class Indicator(threading.Thread):
                 mylogger.error(e)
         print('网络断开啦，子线程%s要关闭了！' % threading.current_thread().name)
 
-    def _init(self):
+    def _initial_data(self):
         """
         1.从DB获取每个模块要显示的内容，背光开，LED闪烁5S；
         :return:
         """
-        pass
+        rsl = Grid.by_lcd_id(self.uuid)
+        if rsl:
+            all_lcd = [(r.led_addr, r.name, r.code) for r in rsl]
+            for lcd in all_lcd:
+                self.onBacklight(addr=lcd[0], is_auto=True)
+                self.showText(addr=lcd[0], contents=['', lcd[1], lcd[2], ''])
+                self.onLed(addr=lcd[0], rgb=(1, 1, 1), mode=2)
+            time.sleep(5)
+            for lcd in all_lcd:
+                self.offLed(addr=lcd[0])
 
     def _checksum(self, cmd_f):
         if isinstance(cmd_f, bytes):
@@ -634,7 +643,7 @@ class Indicator(threading.Thread):
             else:
                 return data
 
-    def onLCD(self, addr='01', rgb=(1, 1, 1), mode=3):
+    def onLed(self, addr='01', rgb=(1, 1, 1), mode=3):
         """
         :param addr:
         :param rgb:
@@ -659,7 +668,7 @@ class Indicator(threading.Thread):
         else:
             return TIMEOUT
 
-    def offLCD(self, addr='01'):
+    def offLed(self, addr='01'):
         cmd_f = '7E' + addr + '02 03 01 01 00'
         check = self._checksum(cmd_f)
         cmd = cmd_f + check

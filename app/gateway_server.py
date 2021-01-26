@@ -1,5 +1,5 @@
 import socket
-from app.Object2 import GravityShelf, RfidR2000, Indicator, EntranceZK, RfidR2000FH, HKVision, ChannelMachineR2000FH
+from app.Object2 import GravityShelf, RfidR2000, IndicatorLCD, EntranceZK, RfidR2000FH, HKVision, ChannelMachineR2000FH
 from queue import Queue
 from app.myLogger import mylogger
 import threading
@@ -119,7 +119,7 @@ class GatewayServer(Process):
         print('size of push queue--', self.queue_equipment_push.qsize())
         if not self.queue_equipment_push.empty():
             pkg = self.queue_equipment_push.get()
-            print('got push data--', pkg)
+            # print('got push data--', pkg)
             self.queue_rsl.put(pkg)
         else:
             # print('no equipment push data update')
