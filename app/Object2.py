@@ -678,7 +678,7 @@ class Indicator(threading.Thread):
         check = self._checksum(cmd_f)
         cmd = cmd_f + check
         data = self.getData(bytes.fromhex(cmd))
-        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+        if data is not None and data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
             return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
@@ -688,7 +688,7 @@ class Indicator(threading.Thread):
         check = self._checksum(cmd_f)
         cmd = cmd_f + check
         data = self.getData(bytes.fromhex(cmd))
-        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+        if data is not None and data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
             return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
@@ -699,7 +699,7 @@ class Indicator(threading.Thread):
         check = self._checksum(cmd_f)
         cmd = cmd_f + check
         data = self.getData(bytes.fromhex(cmd))
-        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+        if data is not None and data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
             return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
@@ -709,7 +709,7 @@ class Indicator(threading.Thread):
         check = self._checksum(cmd_f)
         cmd = cmd_f + check
         data = self.getData(bytes.fromhex(cmd))
-        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+        if data is not None and data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
             return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
@@ -736,7 +736,7 @@ class Indicator(threading.Thread):
             cmd = cmd_f + bytes.fromhex(check)
             data = self.getData(cmd)
         # print('cmd back:', data)
-        if data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
+        if data is not None and data[0:5] == bytes.fromhex('7E' + addr + '02 01 00'):
             return SUCCESS
         else:
             return ERR_EQUIPMENT_RESP
