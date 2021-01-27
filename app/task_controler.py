@@ -285,6 +285,7 @@ class TaskControler(Process):
         if grid:
             grid.total = total_weight
             grid.save()
+            print('\033[1;34m', 'update Gravity--(%s, %d)' % (sensor_addr, total_weight), '\033[0m')
 
 
 class StoreroomManager(threading.Thread):

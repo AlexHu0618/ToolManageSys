@@ -73,6 +73,7 @@ configuration:
   gateway_server_check_interval: 1  # seconds
   gravity_precision: 10  # g
   gravity_update_interval: 10  # seconds, it must greater than 5s
+  r2000_update_interval: 10  # seconds, it must greater than 5s
   r2000fh_update_interval: 5   # seconds, it must greater than 5s
   cm_r2000fh_update_interval: 5  # seconds, it must greater than 5s
   hkvision_user_update_interval: 10  # seconds

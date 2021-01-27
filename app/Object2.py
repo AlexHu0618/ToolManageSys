@@ -56,6 +56,7 @@ class GravityShelf(threading.Thread):
         """
         1、一个子线程处理收到的package；
         2、另一个子线程定时查询重力变化；
+        3、定时线程查询并刷新当前数据；
         :return:
         """
         self.precision = conpar.read_yaml_file('configuration')['gravity_precision']
@@ -97,8 +98,8 @@ class GravityShelf(threading.Thread):
         :param data_buff:
         :return:
         """
+        start = time.time()
         try:
-            start = time.time()
             rsl = self.readAllInfo()
             all_weight = {}
             if rsl is not None and len(rsl) >= len(data_buff):
@@ -114,16 +115,16 @@ class GravityShelf(threading.Thread):
                         # print('Gravity data update--', data)
                     all_weight[i] = curr_weight
                 print(time.asctime(), 'G--getAllInfo: ', all_weight)
-            end = time.time()
-            start_end = end - start
-            interval = round((self.update_interval - start_end), 2)
-
-            thread_ontime = Timer(interval=interval, function=self._check_data_update, args=[data_buff])
-            thread_ontime.daemon = True
-            thread_ontime.start()
         except Exception as e:
             print('Gravity(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
             mylogger.error('Gravity(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
+        end = time.time()
+        start_end = end - start
+        interval = round((self.update_interval - start_end), 2)
+
+        thread_ontime = Timer(interval=interval, function=self._check_data_update, args=[data_buff])
+        thread_ontime.daemon = True
+        thread_ontime.start()
 
     def readWeight(self, addr='01'):
         cmd_f = bytes.fromhex(addr + '05 02 05')
@@ -291,9 +292,15 @@ class RfidR2000(threading.Thread):
         self.ants = ['00', '01', '02', '03', '04', '05', '06', '07']
         self.data_buff = list()
         self.timeout_count = 0
+        self.update_interval = 10  # secends
 
     def run(self):
+        second_interval = conpar.read_yaml_file('configuration')['r2000_update_interval']
+        self.update_interval = second_interval if second_interval > 5 else 5
         self._initial_data()
+        thread_ontime = Timer(interval=self.update_interval, function=self._check_data_update)
+        thread_ontime.daemon = True
+        thread_ontime.start()
         while self.isrunning:
             self.lock.acquire()
             try:
@@ -305,12 +312,7 @@ class RfidR2000(threading.Thread):
                         self.queuersl.put(pkg)
                         self.event.set()
                 else:
-                    localtime = time.localtime(time.time())
-                    if localtime.tm_sec % 10 == 0:
-                        self._check_data_update()
-                        # print('R--inventory: ', rsl)
-                    else:
-                        pass
+                    time.sleep(1)
             except Exception as e:
                 print(e)
             finally:
@@ -330,6 +332,7 @@ class RfidR2000(threading.Thread):
         print('R2000--', self.uuid, ' current EPCs: ', self.data_buff)
 
     def _check_data_update(self):
+        start = time.time()
         try:
             for ant in self.ants:
                 rsl = self.inventory(ant_id=ant)
@@ -337,6 +340,7 @@ class RfidR2000(threading.Thread):
             # print('old EPCs: ', self.data_buff)
             # print('new EPCs: ', rsl_data)
             if rsl_data is not None:
+                print(time.asctime(), 'R2000--(%s, %d) curr_data: ' % (self.addr[0], self.addr[1]), rsl_data)
                 diff_epcs = list(set(epc[0] for epc in rsl_data) ^ set(epc[0] for epc in self.data_buff))
                 # print(diff_epcs)
                 if diff_epcs:
@@ -348,7 +352,15 @@ class RfidR2000(threading.Thread):
                     self.queue_push_data.put(pkg)
                     self.data_buff = rsl_data
         except Exception as e:
-            print('R2000 exception: ', e)
+            print('R2000--(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
+            mylogger.error('R2000--(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
+        end = time.time()
+        start_end = end - start
+        interval = round((self.update_interval - start_end), 2)
+
+        thread_ontime = Timer(interval=interval, function=self._check_data_update)
+        thread_ontime.daemon = True
+        thread_ontime.start()
 
     def check(self, cmd_f):
         # complement ---- (~sum + 1)
@@ -1052,12 +1064,13 @@ class ChannelMachineR2000FH(threading.Thread):
         self._stop()
 
     def _check_data_update(self):
+        start = time.time()
         try:
-            start = time.time()
             with self.lock:
                 print('CM_R2000FH old EPCs: ', self.data_buff)
                 print('CM_R2000FH new EPCs: ', self.current_epcs)
                 if self.current_epcs is not None:
+                    print(time.asctime(), 'CM_R2000RH(%s, %d) exception:' % (self.addr[0], self.addr[1]), self.current_epcs)
                     diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
                     print('CM_R2000FH diff_epcs--', diff_epcs)
                     if diff_epcs:
@@ -1072,16 +1085,16 @@ class ChannelMachineR2000FH(threading.Thread):
                     self.data_buff.clear()
                     self.data_buff = [epc_ant for epc_ant in self.current_epcs]
                     self.current_epcs.clear()
-            end = time.time()
-            start_end = end - start
-            interval = round((self.update_interval - start_end), 2)
-    
-            thread_ontime = Timer(interval=interval, function=self._check_data_update)
-            thread_ontime.daemon = True
-            thread_ontime.start()    
         except Exception as e:
             print('CM_R2000RH(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
             mylogger.error('CM_R2000RH(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
+        end = time.time()
+        start_end = end - start
+        interval = round((self.update_interval - start_end), 2)
+
+        thread_ontime = Timer(interval=interval, function=self._check_data_update)
+        thread_ontime.daemon = True
+        thread_ontime.start()
 
     def _send_recv(self):
         while self.isrunning:
@@ -1263,17 +1276,18 @@ class RfidR2000FH(threading.Thread):
             except KeyboardInterrupt:
                 self.tcp_socket.shutdown(2)
                 self.tcp_socket.close()
-        print('thread CM_R2000FH is closed.....')
+        print('thread R2000FH is closed.....')
 
     def _check_data_update(self):
+        start = time.time()
         try:
-            start = time.time()
             with self.lock:
-                # print('CM_R2000FH old EPCs: ', self.data_buff)
-                # print('CM_R2000FH new EPCs: ', self.current_epcs)
+                # print('R2000FH old EPCs: ', self.data_buff)
+                # print('R2000FH new EPCs: ', self.current_epcs)
                 if self.current_epcs is not None:
+                    print(time.asctime(), 'R2000RH(%s, %d) curr_data:' % (self.addr[0], self.addr[1]), self.current_epcs)
                     diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
-                    # print('CM_R2000FH diff_epcs--', diff_epcs)
+                    # print('R2000FH diff_epcs--', diff_epcs)
                     if diff_epcs:
                         is_increase = True if len(self.current_epcs) > len(self.data_buff) else False
                         diff = [epc_ant for epc_ant in self.current_epcs if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]
@@ -1286,17 +1300,17 @@ class RfidR2000FH(threading.Thread):
                     self.data_buff.clear()
                     self.data_buff = [epc_ant for epc_ant in self.current_epcs]
                     self.current_epcs.clear()
-            print('CM_R2000FH all_epc--', self.all_epc)
-            end = time.time()
-            start_end = end - start
-            interval = round((self.update_interval - start_end), 2)
-
-            thread_ontime = Timer(interval=interval, function=self._check_data_update)
-            thread_ontime.daemon = True
-            thread_ontime.start()
         except Exception as e:
             print('R2000RH(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
             mylogger.error('R2000RH(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
+            print('R2000FH all_epc--', self.all_epc)
+        end = time.time()
+        start_end = end - start
+        interval = round((self.update_interval - start_end), 2)
+
+        thread_ontime = Timer(interval=interval, function=self._check_data_update)
+        thread_ontime.daemon = True
+        thread_ontime.start()
 
     def _send_recv(self):
         while self.isrunning:
@@ -1311,7 +1325,7 @@ class RfidR2000FH(threading.Thread):
                 except socket.timeout:
                     self.timeout_counter += 1
                     if self.timeout_counter > 20:
-                        print('CM_R2000FH--%s times out' % str(self.addr))
+                        print('R2000FH--%s times out' % str(self.addr))
                         with self.lock:
                             self.isrunning = False
                     continue

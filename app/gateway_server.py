@@ -164,7 +164,7 @@ class GatewayServer(Process):
                             addr_nums = gravity.node_addrs.replace(' ', '').split(',')
                         thread = GravityShelf(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid, addr_nums)
                     elif terminal_type == 'led':
-                        thread = Indicator(addr, s, queue_task, queue_rsl, subevent, storeroom_id, uuid)
+                        thread = IndicatorLCD(addr, s, queue_task, queue_rsl, subevent, storeroom_id, uuid)
                     elif terminal_type == 'rfid2000':
                         thread = RfidR2000(addr, s, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                     elif terminal_type == 'rfid2000fh':
@@ -231,7 +231,7 @@ class GatewayServer(Process):
                     indicator = Indicator.by_addr(ip=addr[0], port=addr[1])
                     if indicator:
                         addr_nums = indicator.node_addrs.replace(' ', '').split(',')
-                    thread = Indicator(addr, client_sock, queue_task, queue_rsl, subevent, storeroom_id, uuid, addr_nums)
+                    thread = IndicatorLCD(addr, client_sock, queue_task, queue_rsl, subevent, storeroom_id, uuid, addr_nums)
                 elif client_type == 'rfid2000':
                     thread = RfidR2000(addr, client_sock, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
                 elif client_type == 'rfid2000fh':
