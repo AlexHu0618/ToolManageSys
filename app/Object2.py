@@ -133,11 +133,12 @@ class GravityShelf(threading.Thread):
         data = self.getData(cmd)
         if data is not None:
             if data[:3] == bytes.fromhex(addr + '0602'):
-                code = data.hex()[9]
+                code = data[4:5].hex()[1]
                 interval = self.intervals[code] if code in self.intervals.keys() else 1
                 scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
-                value = int(scale * interval * 1000)
-                return value
+                isnagetive = True if (data[4] & 0x80) == 0x80 else False
+                value = int(scale * interval * 1000)  # kg conver to g
+                return -value if isnagetive else value
             else:
                 return ERR_EQUIPMENT_RESP
         else:
