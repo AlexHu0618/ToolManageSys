@@ -364,7 +364,7 @@ class Grid(Base, MyBase):
     power = Column(Integer)
     is_have_case = Column(Boolean, default=False)
     weight_case = Column(Integer, default=0)
-    status = Column(Integer, default=0)  # 0-离线；1-正常；2-传感器故障；3-位置错误；
+    status = Column(Integer, default=0)  # 0-离线；1-正常；2-传感器故障；3-位置错误；4-超过最大量程；
     total = Column(Integer, default=0)  # 重力格为总重量；RFID格为物资总个数；
     led_id = Column(String(50))
     led_addr = Column(String(10), default='01')  # '0xFF'

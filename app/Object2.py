@@ -107,7 +107,7 @@ class GravityShelf(threading.Thread):
                     curr_weight = self.readWeight(i)
                     if i not in data_buff.keys() or curr_weight != data_buff[i] and (abs(curr_weight - data_buff[i]) > self.precision):
                         print('(curr_weight - data_buff[i])--%d - %d = %d' % (curr_weight, data_buff[i], (curr_weight - data_buff[i])))
-                        data = {'addr_num': i, 'value': curr_weight - data_buff[i], 'is_increased': True if curr_weight - data_buff[i] > 0 else False, 'total': curr_weight}
+                        data = {'addr_num': i, 'value': abs(curr_weight - data_buff[i]), 'is_increased': True if curr_weight > data_buff[i] else False, 'total': curr_weight}
                         pkg = TransferPackage(code=EQUIPMENT_DATA_UPDATE, eq_type=1, data=data, source=self.addr, msg_type=3,
                                               storeroom_id=self.storeroom_id, eq_id=self.uuid)
                         self.queue_push_data.put(pkg)
@@ -126,13 +126,15 @@ class GravityShelf(threading.Thread):
         thread_ontime.daemon = True
         thread_ontime.start()
 
-    def readWeight(self, addr='01'):
-        cmd_f = bytes.fromhex(addr + '05 02 05')
+    def readWeight(self, addr_num='01'):
+        cmd_f = bytes.fromhex(addr_num + '05 02 05')
         lcr = sum(cmd_f) % 256
         cmd = cmd_f + lcr.to_bytes(length=1, byteorder='big', signed=False)
         data = self.getData(cmd)
         if data is not None:
-            if data[:3] == bytes.fromhex(addr + '0602'):
+            if data[:3] == bytes.fromhex(addr_num + '0602'):
+                status_info = data[3]
+                self.getSensorStatus(addr_num=addr_num, st=status_info)
                 code = data[4:5].hex()[1]
                 interval = self.intervals[code] if code in self.intervals.keys() else 1
                 scale = int.from_bytes(data[5:8], byteorder='big', signed=False)
@@ -268,6 +270,31 @@ class GravityShelf(threading.Thread):
         #     return self.all_id
         # else:
         #     return ERR_EQUIPMENT_RESP
+
+    def getSensorStatus(self, addr_num, st):
+        fault_ad = st & 0x40
+        fault_cell = st & 0x20
+        fault_zero_init = st & 0x10
+        fault_over_weight = st & 0x08
+        if fault_ad or fault_cell or fault_zero_init:
+            fault_name = 'fault_AD' if fault_ad else 'fault_CELL' if fault_cell else 'fault_ZERO_INIT'
+            print('FAULT in Gravity(%s, %d)--(%s): %s' % (self.addr[0], self.addr[1], addr_num, fault_name))
+            mylogger.warning('FAULT in Gravity(%s, %d)--(%s): %s' % (self.addr[0], self.addr[1], addr_num, fault_name))
+            self.updateStatusDB(addr_num=addr_num, status_code=2)
+        if fault_over_weight:
+            fault_name = 'fault_OVER_WEIGHT'
+            print('FAULT in Gravity(%s, %d)--(%s): %s' % (self.addr[0], self.addr[1], addr_num, fault_name))
+            mylogger.warning('FAULT in Gravity(%s, %d)--(%s): %s' % (self.addr[0], self.addr[1], addr_num, fault_name))
+            self.updateStatusDB(addr_num=addr_num, status_code=4)
+
+    def updateStatusDB(self, addr_num, status_code):
+        grid = Grid.by_eqid_sensor(eq_id=self.uuid, sensor_addr=addr_num)
+        if grid:
+            rsl = grid.update('status', status_code)
+            if rsl is None:
+                mylogger.warning('Gravity(%s, %d)--(%s): failed to update status' % (self.addr[0], self.addr[1], addr_num))
+        else:
+            mylogger.warning('Gravity(%s, %d)--(%s): failed to get grid from DB by updating status' % (self.addr[0], self.addr[1], addr_num))
 
 
 class RfidR2000(threading.Thread):
