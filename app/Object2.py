@@ -1057,10 +1057,10 @@ class ChannelMachineR2000FH(threading.Thread):
                 self.tcp_socket.close()
         print('thread CM_R2000FH is closed.....')
 
-    def start(self):
+    def start_running(self):
         self._inventory()
 
-    def stop(self):
+    def stop_running(self):
         self._stop()
 
     def _check_data_update(self):

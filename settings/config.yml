@@ -70,11 +70,11 @@ log:
 
 # for configuration
 configuration:
-  gateway_server_check_interval: 1  # seconds
+  gateway_server_check_interval: 1  # seconds, check for status(on/off) and push data
   gravity_precision: 10  # g
   gravity_update_interval: 10  # seconds, it must greater than 5s
   r2000_update_interval: 10  # seconds, it must greater than 5s
   r2000fh_update_interval: 5   # seconds, it must greater than 5s
   cm_r2000fh_update_interval: 5  # seconds, it must greater than 5s
-  hkvision_user_update_interval: 10  # seconds
-  storeroom_close_delay_time: 60  # seconds
+  hkvision_user_update_interval: 10  # seconds, check for increase new user or reduce user
+  storeroom_close_delay_time: 60  # seconds, no data update then delay to close
