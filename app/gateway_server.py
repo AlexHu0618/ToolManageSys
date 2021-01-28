@@ -7,7 +7,7 @@ from operator import methodcaller
 from multiprocessing import Process
 from app.globalvar import *
 import time
-from database.models2 import Entrance, Collector, Indicator, CodeScanner, ChannelMachine
+from database.models2 import Entrance, Collector, Indicator, CodeScanner, ChannelMachine, Grid
 import datetime
 from settings.config import config_parser as conpar
 
@@ -392,6 +392,10 @@ class GatewayServer(Process):
                     if not is_online:
                         cur_dt = str(datetime.datetime.now())
                         collector.update('last_offline_time', cur_dt)
+                    grids = Grid.by_collector_id(collector_id=collector.id)
+                    if grids:
+                        for grid in grids:
+                            grid.update('status', int(is_online))
                 else:
                     mylogger.warning('Not found object(%s,%d) from DB-collector while updating' % addr)
             elif eq_type == 'led':

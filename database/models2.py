@@ -399,6 +399,10 @@ class Grid(Base, MyBase):
     def by_lcd_id(cls, lcd_id):
         return dbSession.query(cls).filter(cls.led_id == lcd_id).all()
 
+    @classmethod
+    def by_collector_id(cls, collector_id):
+        return dbSession.query(cls).filter(cls.collector_id == collector_id).all()
+
 
 class Collector(Base, MyBase):
     __tablename__ = 'collector'
