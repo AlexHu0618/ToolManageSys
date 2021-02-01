@@ -75,6 +75,7 @@ configuration:
   gravity_update_interval: 10  # seconds, it must greater than 5s
   r2000_update_interval: 10  # seconds, it must greater than 5s
   r2000fh_update_interval: 5   # seconds, it must greater than 5s
+  r2000fh_inventory_once_interval: 5  # seconds, inventory once every * seconds
   cm_r2000fh_update_interval: 5  # seconds, it must greater than 5s
   hkvision_user_update_interval: 10  # seconds, check for increase new user or reduce user
   storeroom_close_delay_time: 60  # seconds, no data update then delay to close

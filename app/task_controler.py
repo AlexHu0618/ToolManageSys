@@ -488,7 +488,7 @@ class StoreroomManager(threading.Thread):
                 pkg.target = v
                 pkg.msg_type = 0
                 pkg.storeroom_id = self.storeroom_id
-                data = {'func': 'start', 'args': ()}
+                data = {'func': 'start_running', 'args': ()}
                 pkg.data = data
                 self.q_task.put(pkg)
         else:
@@ -501,7 +501,7 @@ class StoreroomManager(threading.Thread):
                 pkg.target = v
                 pkg.msg_type = 0
                 pkg.storeroom_id = self.storeroom_id
-                data = {'func': 'stop', 'args': ()}
+                data = {'func': 'stop_running', 'args': ()}
                 pkg.data = data
                 self.q_task.put(pkg)
         else:

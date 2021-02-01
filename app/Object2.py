@@ -170,11 +170,11 @@ class GravityShelf(threading.Thread):
                     print('G--%s 等待TCP消息回应超时' % str(self.addr))
                 return TIMEOUT
         except (OSError, BrokenPipeError):
-            print('Error', 'TCP连接已断开')
+            print('Error--G', 'TCP连接已断开')
             self.isrunning = False
             return None
         except AttributeError:
-            print('Error', 'TCP未连接')
+            print('Error--G', 'TCP未连接')
             self.isrunning = False
             return None
         except Exception as e:
@@ -182,7 +182,7 @@ class GravityShelf(threading.Thread):
             return None
         else:
             if len(data) == 0:
-                print('Error', 'TCP客户端已断开连接')
+                print('Error--G', 'TCP客户端已断开连接')
                 return None
             else:
                 return data if not multiframe else data_total
@@ -439,11 +439,11 @@ class RfidR2000(threading.Thread):
                     print('R--%s 等待TCP消息回应超时' % str(self.addr))
                 return TIMEOUT
         except (OSError, BrokenPipeError):
-            print('Error', 'TCP连接已断开')
+            print('Error--R2000', 'TCP连接已断开')
             self.isrunning = False
             return None
         except AttributeError:
-            print('Error', 'TCP未连接')
+            print('Error--R2000', 'TCP未连接')
             self.isrunning = False
             return None
         except Exception as e:
@@ -451,7 +451,7 @@ class RfidR2000(threading.Thread):
             return None
         else:
             if len(data) == 0:
-                print('Error', 'TCP客户端已断开连接')
+                print('Error--R2000', 'TCP客户端已断开连接')
                 return None
             else:
                 return data if not multiframe else data_total
@@ -531,6 +531,7 @@ class RfidR2000(threading.Thread):
             check = self.check(cmd_f)
             cmd = bytes.fromhex(cmd_f) + check
             data = self.getData(cmd, False)
+            # print('R2000--inventory--data', data)
             if data != TIMEOUT or data is not None:
                 if data[0:5] == bytes.fromhex('A0 0C' + self.addr_num + '80' + ant_id):
                     tag_count = int.from_bytes(data[5:7], byteorder='big', signed=False)
@@ -550,8 +551,7 @@ class RfidR2000(threading.Thread):
         check = self.check(cmd_f)
         cmd = bytes.fromhex(cmd_f) + check
         data = self.getData(cmd, True)
-        # print('cmd back:', data)
-        if data != b'' and data != TIMEOUT:
+        if data is not None and data != TIMEOUT:
             if data[0:4] == bytes.fromhex('A0 04' + self.addr_num + '90'):
                 mylogger.warning('%s ErrorCode: %s' % (str(self.addr), hex(data[4])))
                 return []
@@ -559,14 +559,12 @@ class RfidR2000(threading.Thread):
                 return None
             else:
                 # 截取每条数据
-                frames = []
-                length = int(data[1])
-                tag_count = int.from_bytes(data[4:6], byteorder='big', signed=False)
-                start = 0
-                for i in range(tag_count):
-                    end = start + length + 2
-                    frames.append(data[start:end])
-                    start = end
+                # frames = []
+                # length = int(data[1])
+                # tag_count = int.from_bytes(data[4:6], byteorder='big', signed=False)
+                # start = 0
+                frames = data[1:].split(sep=b'\xa0')
+                frames = [(b'\xa0' + frame) for frame in frames]
                 # 提取EPC
                 epcs = []
                 for f in frames:
@@ -664,11 +662,11 @@ class IndicatorLCD(threading.Thread):
             self.isrunning = False
             return None
         except (OSError, BrokenPipeError):
-            print('Error', 'TCP连接已断开')
+            print('Error--LCD', 'TCP连接已断开')
             self.isrunning = False
             return None
         except AttributeError:
-            print('Error', 'TCP未连接')
+            print('Error--LCD', 'TCP未连接')
             self.isrunning = False
             return None
         except Exception as e:
@@ -677,7 +675,7 @@ class IndicatorLCD(threading.Thread):
             return None
         else:
             if len(data) == 0:
-                print('Error', 'TCP客户端已断开连接')
+                print('Error--LCD', 'TCP客户端已断开连接')
                 self.isrunning = False
                 return None
             else:
@@ -1143,10 +1141,10 @@ class ChannelMachineR2000FH(threading.Thread):
                             self.isrunning = False
                     continue
                 except (OSError, BrokenPipeError):
-                    print('Error', 'TCP连接已断开')
+                    print('Error--CM_R2000FH', 'TCP连接已断开')
                     self.is_running = False
                 except AttributeError:
-                    print('Error', 'TCP未连接')
+                    print('Error--CM_R2000FH', 'TCP未连接')
                     self.is_running = False
                 except Exception as e:
                     print('Error', repr(e))
@@ -1270,6 +1268,7 @@ class RfidR2000FH(threading.Thread):
         self.addr_nums = addr_nums
         self.all_epc = list()
         self.update_interval = 10  # seconds
+        self.inventory_once_interval = 5  # seconds
 
     def run(self):
         """
@@ -1280,9 +1279,12 @@ class RfidR2000FH(threading.Thread):
         """
         self.tcp_socket.settimeout(1)
         thd_send = threading.Thread(target=self._send_recv)
-        thd_auto_inventory = threading.Timer(interval=5, function=self._inventory_once)
         thd_send.daemon = True
         thd_send.start()
+        once_interval = conpar.read_yaml_file('configuration')['r2000fh_inventory_once_interval']
+        self.inventory_once_interval = once_interval if once_interval > 1 else 1
+        thd_auto_inventory = threading.Timer(interval=self.inventory_once_interval, function=self._inventory_once)
+        thd_auto_inventory.daemon = True
         thd_auto_inventory.start()
         second_interval = conpar.read_yaml_file('configuration')['r2000fh_update_interval']
         self.update_interval = second_interval if second_interval > 5 else 5
@@ -1358,13 +1360,15 @@ class RfidR2000FH(threading.Thread):
                             self.isrunning = False
                     continue
                 except (OSError, BrokenPipeError):
-                    print('Error', 'TCP连接已断开')
-                    self.is_running = False
+                    print('Error--R2000FH', 'TCP连接已断开')
+                    with self.lock:
+                        self.is_running = False
                 except AttributeError:
-                    print('Error', 'TCP未连接')
-                    self.is_running = False
+                    print('Error--R2000FH', 'TCP未连接')
+                    with self.lock:
+                        self.is_running = False
                 except Exception as e:
-                    print('Error', repr(e))
+                    print('Error--R2000FH', repr(e))
 
     def _analyze_recv_data(self, data):
         len_all_data = len(data)
@@ -1410,6 +1414,7 @@ class RfidR2000FH(threading.Thread):
         return crc_data
 
     def _inventory_once(self):
+        start = time.time()
         if self.is_rs485:
             cmd = bytes()
             for addr in self.addr_nums:
@@ -1419,7 +1424,12 @@ class RfidR2000FH(threading.Thread):
         else:
             cmd = bytes.fromhex('5A 00 01 02 10 00 05 00 00 00 FF 00 D4 68')
         self.q_cmd.put(cmd)
-        thd_auto_inventory = threading.Timer(interval=5, function=self._inventory_once)
+        end = time.time()
+        start_end = end - start
+        interval = round((self.inventory_once_interval - start_end), 2)
+
+        thd_auto_inventory = threading.Timer(interval=interval, function=self._inventory_once)
+        thd_auto_inventory.daemon = True
         thd_auto_inventory.start()
 
     def _inventory(self):
