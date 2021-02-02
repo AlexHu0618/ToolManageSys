@@ -41,6 +41,7 @@ class TaskControler(Process):
             #     self.server_sock.close()
             #     time.sleep(2)
                 print('self.sock', self.sock)
+        print('\033[1;33m', 'task_controler was stop', '\033[0m')
 
     def _monitorconn(self):
         server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

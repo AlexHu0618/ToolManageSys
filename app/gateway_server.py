@@ -79,6 +79,7 @@ class GatewayServer(Process):
         except Exception as e:
             print('gateway_server was stop: ', e)
             mylogger.error('gateway_server was stop by exception:' + e)
+        print('\033[1;33m', 'gateway_server was stop', '\033[0m')
 
     def _thread_ontime(self):
         """

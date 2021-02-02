@@ -47238,3 +47238,5 @@ pymysql.err.InternalError: Packet sequence number wrong - got 80 expected 2
 [channel_machine_test.py:102][CM_R2000RH(10.0.218.46, 59225) exception: 'ChannelMachineR2000FH' object has no attribute 'data_buff']
 [ERROR][2021-01-28 15:16:51,642][Thread-75:140325543073536][task_id:root]
 [channel_machine_test.py:102][CM_R2000RH(10.0.218.46, 59225) exception: 'ChannelMachineR2000FH' object has no attribute 'data_buff']
+[ERROR][2021-02-02 14:02:33,065][Thread-1:139956662691584][task_id:root]
+[base_adapter.py:221][NET_DVR_SetupAlarmChan_V41 报警布防: the error code is 109]

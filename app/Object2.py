@@ -321,16 +321,16 @@ class RfidR2000(threading.Thread):
         self.data_buff = list()
         self.timeout_count = 0
         self.update_interval = 10  # secends
+        self.thread_ontime = None
 
     def run(self):
         second_interval = conpar.read_yaml_file('configuration')['r2000_update_interval']
         self.update_interval = second_interval if second_interval > 5 else 5
         self._initial_data()
-        thread_ontime = Timer(interval=self.update_interval, function=self._check_data_update)
-        thread_ontime.daemon = True
-        thread_ontime.start()
+        self.thread_ontime = Timer(interval=self.update_interval, function=self._check_data_update)
+        self.thread_ontime.daemon = True
+        self.thread_ontime.start()
         while self.isrunning:
-            self.lock.acquire()
             try:
                 if not self.queuetask.empty():
                     task, args = self.queuetask.get()
@@ -343,10 +343,11 @@ class RfidR2000(threading.Thread):
                     time.sleep(1)
             except Exception as e:
                 print(e)
-            finally:
-                self.lock.release()
-            # time.sleep(10)
-            # print('RFID_R2000 back data, storeroom_id= ', self.storeroom_id)
+                mylogger.warning('Thread--R2000(%s, %d) got exception: %s' % (self.addr[0], self.addr[1], e))
+        self.tcp_socket.shutdown(socket.SHUT_RDWR)
+        self.tcp_socket.close()
+        print('Thread--R2000(%s, %d) is closed' % (self.addr[0], self.addr[1]))
+        mylogger.error('Thread--R2000(%s, %d) is closed' % (self.addr[0], self.addr[1]))
 
     def _initial_data(self):
         self.reset_inv_buf()
@@ -382,13 +383,14 @@ class RfidR2000(threading.Thread):
         except Exception as e:
             print('R2000--(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
             mylogger.error('R2000--(%s, %d) exception: %s' % (self.addr[0], self.addr[1], e))
-        end = time.time()
-        start_end = end - start
-        interval = round((self.update_interval - start_end), 2)
+        if self.isrunning:
+            end = time.time()
+            start_end = end - start
+            interval = round((self.update_interval - start_end), 2)
 
-        thread_ontime = Timer(interval=interval, function=self._check_data_update)
-        thread_ontime.daemon = True
-        thread_ontime.start()
+            self.thread_ontime = Timer(interval=interval, function=self._check_data_update)
+            self.thread_ontime.daemon = True
+            self.thread_ontime.start()
 
     def check(self, cmd_f):
         # complement ---- (~sum + 1)
@@ -436,7 +438,7 @@ class RfidR2000(threading.Thread):
                 self.timeout_count += 1
                 if self.timeout_count > 60:
                     self.isrunning = False
-                    print('R--%s 等待TCP消息回应超时' % str(self.addr))
+                    print('R2000--%s 等待TCP消息回应超时' % str(self.addr))
                 return TIMEOUT
         except (OSError, BrokenPipeError):
             print('Error--R2000', 'TCP连接已断开')
