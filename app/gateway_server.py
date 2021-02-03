@@ -69,9 +69,7 @@ class GatewayServer(Process):
             t.start()
             # wait for cmd
             while True:
-                with self.lock:
-                    status = self.isrunning
-                if status:
+                if self.isrunning:
                     self._handle_cmd()
                 else:
                     break
@@ -299,8 +297,34 @@ class GatewayServer(Process):
                 else:
                     return False
         except Exception as e:
-            print(e)
-            mylogger.error(e)
+            print('gateway server is failed to add_new_equipment():%s' % e)
+            mylogger.error('gateway server is failed to add_new_equipment():%s' % e)
+            return False
+
+    def delete_equipment(self, ip: str, port: int, isserver: bool):
+        """
+        1、加入设备服务器列表或设备客户端列表；
+        2、尝试连接设备；
+        :param ip:
+        :param port:
+        :param type_new:
+        :param isserver:
+        :return:
+        """
+        addr = (ip, port)
+        try:
+            if isserver:
+                self.lock.acquire()
+                del self.servers[addr]
+                self.lock.release()
+            else:
+                self.lock.acquire()
+                del self.clients[addr]
+                self.lock.release()
+            return True
+        except Exception as e:
+            print('gateway server is failed to delete_equipment():%s' % e)
+            mylogger.error('gateway server is failed to delete_equipment():%s' % e)
             return False
 
     def _handle_cmd(self):
@@ -331,6 +355,9 @@ class GatewayServer(Process):
                     pass
             else:
                 pass
+        except KeyboardInterrupt:
+            with self.lock:
+                self.isrunning = False
         except Exception as e:
             print('excetp', e)
             mylogger.error(e)

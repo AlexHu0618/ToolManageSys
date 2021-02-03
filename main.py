@@ -34,6 +34,7 @@ def main():
         myserver.start()
         mycontroler.start()
         mycontroler.join()
+        myserver.join()
     except KeyboardInterrupt:
         mydb.close()
         myserver.stop()

@@ -162,6 +162,11 @@ class TaskControler(Process):
                 args = (raw_data['ip'], raw_data['port'], all_type[eq_type_value], raw_data['is_server'],
                         pkg.storeroom_id, pkg.uuid)
                 pkg.data = {'func': func, 'args': args}
+            elif pkg.code == GATEWAY_REDUCE_EQUIPMENT:
+                raw_data = json_data['data']
+                func = 'delete_equipment'
+                args = (raw_data['ip'], raw_data['port'], raw_data['is_server'])
+                pkg.data = {'func': func, 'args': args}
             else:
                 pkg.data = json_data['data'] if 'data' in json_data.keys() else None
             self.q_task.put(pkg)
