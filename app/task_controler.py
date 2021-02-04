@@ -10,6 +10,8 @@ import sys
 import datetime
 from settings.config import config_parser as conpar
 import json
+from playsound import playsound
+import os
 
 
 class TaskControler(Process):
@@ -240,6 +242,10 @@ class TaskControler(Process):
                     self._update_db_data(package=package)
                 if storeroom_id in self.storeroom_thread.keys() and self.storeroom_thread[storeroom_id]['thread'].isAlive():
                     self.storeroom_thread[storeroom_id]['queue'].put(package)
+                else:
+                    print('someone has not login but did something')
+                    path_cur = os.path.abspath(os.path.dirname(__file__))
+                    playsound(path_cur + '/../util/a_o.mp3')
             elif package['msg_type'] == 2 and package['code'] == 301:
                 print('333')
                 # web确定按钮pkg

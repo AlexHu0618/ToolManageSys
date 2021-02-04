@@ -204,6 +204,7 @@ class GatewayServer(Process):
     def _monitor_access(self):
         # 创建socket对象
         server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         server_sock.bind(self.addr)
         # 监听请求
         server_sock.listen()
@@ -264,6 +265,7 @@ class GatewayServer(Process):
                     mylogger.info('客户端(%s)连接创建线程失败。。' % str(addr))
                     print('客户端(%s)连接创建线程失败。。' % str(addr))
         finally:
+            server_sock.shutdown(socket.SHUT_RDWR)
             server_sock.close()
 
     def add_new_equipment(self, ip: str, port: int, type_new: str, isserver: bool, storeroom_id: str, uuid: str):
