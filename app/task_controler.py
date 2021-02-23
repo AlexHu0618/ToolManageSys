@@ -320,6 +320,7 @@ class StoreroomManager(threading.Thread):
         self.user_code = user_code
         self.entrance_id = entrance_id
         self.user_id = None
+        self.user_role = None
         self.card_id = None
         self.q_send = q_send
         self.q_task = q_task
@@ -568,11 +569,75 @@ class StoreroomManager(threading.Thread):
             mylogger.error(e)
             return False
 
+    # def _save_gravity_data(self, history: list):
+    #     """
+    #     1、若为耗材，则直接保存并设为已还；
+    #     2、若为借出，先判断是否位置错误，符合条件则设置为已还，否则新增借出并设置未还；
+    #     3、若为归还，则查询是否有未还，有再判断是否全部归还或者放置错误；没有则判断为放置错误；
+    #     :param history:
+    #     :return:
+    #     """
+    #     try:
+    #         current_dt = datetime.datetime.now()
+    #         grids_history = [h.grid_id for h in history]
+    #         for k, v in self.gravity_goods.items():
+    #             if v[0] == 2:
+    #                 # 为耗材
+    #                 record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), outbound_datetime=current_dt,
+    #                                                    status=0, monitor_way=1)
+    #                 record.save()
+    #             else:
+    #                 # 工具或仪器
+    #                 if v[1] < 0:
+    #                     # 为借出
+    #                     if k in grids_history:
+    #                         # 存在位置错误的
+    #                         record = history[grids_history.index(k)]
+    #                         diff = record.count - abs(v[1])
+    #                         if record.wrong_place_gid and abs(diff) < self.gravity_precision:
+    #                             record.update('wrong_place_gid', None)
+    #                     else:
+    #                         record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), monitor_way=1,
+    #                                                           outbound_datetime=current_dt, status=1)
+    #                         record.save()
+    #                 else:
+    #                     # 为归还
+    #                     if k in grids_history:
+    #                         # 有未还
+    #                         record = history[grids_history.index(k)]
+    #                         diff = record.count - v[1]
+    #                         if abs(diff) < self.gravity_precision:
+    #                             # 全部归还
+    #                             record.update('status', 0)
+    #                             record.update('inbound_datetime', current_dt)
+    #                             if self.user_id != record.user_id:
+    #                                 record.update('wrong_return_user', self.user_id)
+    #                         elif diff > 5:
+    #                             # 部分归还
+    #                             record.update('count', diff)
+    #                             record.update('inbound_datetime', current_dt)
+    #                             if self.user_id != record.user_id:
+    #                                 record.update('wrong_return_user', self.user_id)
+    #                         else:
+    #                             # 放置错误
+    #                             record.update('wrong_place_gid', k)
+    #                             record.update('inbound_datetime', current_dt)
+    #                     else:
+    #                         # 放置错误
+    #                         record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), monitor_way=1,
+    #                                                           inbound_datetime=current_dt, status=0, wrong_place_gid=k)
+    #                         record.save()
+    #     except Exception as e:
+    #         mylogger.warning(e)
+
     def _save_gravity_data(self, history: list):
         """
-        1、若为耗材，则直接保存并设为已还；
-        2、若为借出，先判断是否位置错误，符合条件则设置为已还，否则新增借出并设置未还；
-        3、若为归还，则查询是否有未还，有再判断是否全部归还或者放置错误；没有则判断为放置错误；
+        1、借出
+            1.1 有错放记录的格子
+            1.2 正常的格子
+        2、归还
+            2.1 已借未还的格子
+            2.2 无借却还的格子
         :param history:
         :return:
         """
@@ -580,52 +645,105 @@ class StoreroomManager(threading.Thread):
             current_dt = datetime.datetime.now()
             grids_history = [h.grid_id for h in history]
             for k, v in self.gravity_goods.items():
-                if v[0] == 2:
-                    # 为耗材
-                    record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), outbound_datetime=current_dt,
-                                                       status=0, monitor_way=1)
-                    record.save()
-                else:
-                    # 工具或仪器
-                    if v[1] < 0:
-                        # 为借出
-                        if k in grids_history:
-                            # 存在位置错误的
-                            record = history[grids_history.index(k)]
-                            diff = record.count - abs(v[1])
-                            if record.wrong_place_gid and abs(diff) < self.gravity_precision:
-                                record.update('wrong_place_gid', None)
+                if v[1] < 0:
+                    # 为借出
+                    records_this_grid = [record for record in history if record.grid_id == k]
+                    is_wrong_place = False
+                    for record in records_this_grid:
+                        if record.status == 3:
+                            is_wrong_place = True
+                    if is_wrong_place:
+                        # 有错放记录的格子
+                        if self.user_role == 1 or self.user_role == 2:
+                            msg = 'the wrong placed grid-%s was take out-%dg by administrator-%s' % (k, v[1], self.user_code)
+                            mylogger.info(msg=msg)
                         else:
-                            record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), monitor_way=1,
-                                                              outbound_datetime=current_dt, status=1)
-                            record.save()
+                            # 普通用户借出
+                            is_returned = False
+                            for g in self.gravity_goods.values():
+                                if g[1] > 0 and abs(g[1] + v[1]) < self.gravity_precision:
+                                    # 归还清单有对应的重量
+                                    is_returned = True
+                                    rsl = History_inbound_outbound.by_user_grid_status3(user_id=self.user_id, grid_id=k)
+                                    if rsl:
+                                        for record in rsl:
+                                            if abs(record.count + v[1]) < self.gravity_precision:
+                                                # 清除该错放记录
+                                                record.update('status', 0)
+                                                record.update('outbound_datetime', current_dt)
+                            if not is_returned:
+                                status = 0 if v[0] == 2 else 1
+                                record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]),
+                                                                  outbound_datetime=current_dt,
+                                                                  status=status, monitor_way=1)
+                                record.save()
                     else:
-                        # 为归还
-                        if k in grids_history:
-                            # 有未还
-                            record = history[grids_history.index(k)]
-                            diff = record.count - v[1]
-                            if abs(diff) < self.gravity_precision:
-                                # 全部归还
-                                record.update('status', 0)
+                        # 没有错放记录的格子
+                        status = 0 if v[0] == 2 else 1
+                        record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]),
+                                                          outbound_datetime=current_dt,
+                                                          status=status, monitor_way=1)
+                        record.save()
+                else:
+                    # 为归还
+                    grid_id_need_return = [h.grid_id for h in history if (h.status == 1 or h.status == 2)]
+                    if k in grid_id_need_return:
+                        # 已借未还
+                        records_this_grid = [record for record in history if record.grid_id == k and (record.status == 1 or record.status == 2)]
+                        remain = v[1]
+                        for record in records_this_grid:
+                            if record.return_mark is not None:
+                                # 尚未还清的记录
+                                return_mark_dict = eval(record.return_mark)
+                                returned_count = sum(return_mark_dict.values())
+                                need_return = record.count - returned_count
+                                diff = remain - need_return
                                 record.update('inbound_datetime', current_dt)
-                                if self.user_id != record.user_id:
-                                    record.update('wrong_return_user', self.user_id)
-                            elif diff > 5:
-                                # 部分归还
-                                record.update('count', diff)
-                                record.update('inbound_datetime', current_dt)
-                                if self.user_id != record.user_id:
-                                    record.update('wrong_return_user', self.user_id)
+                                return_mark_dict[current_dt] = need_return
+                                record.update('return_mark', str(return_mark_dict))
+                                if diff >= -self.gravity_precision:
+                                    # 该条记录全还清
+                                    record.update('status', 0)
+                                    remain -= need_return
+                                else:
+                                    # 该条记录只还部分，并结束该格子的归还
+                                    break
                             else:
-                                # 放置错误
-                                record.update('wrong_place_gid', k)
+                                # 未还过的记录
+                                diff = remain - record.count
                                 record.update('inbound_datetime', current_dt)
-                        else:
-                            # 放置错误
-                            record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]), monitor_way=1,
-                                                              inbound_datetime=current_dt, status=0, wrong_place_gid=k)
+                                return_mark_dict = {current_dt: record.count}
+                                record.update('return_mark', str(return_mark_dict))
+                                if diff >= -self.gravity_precision:
+                                    # 该条记录全还清
+                                    record.update('status', 0)
+                                    remain -= record.count
+                                else:
+                                    # 该条记录只还部分，并结束该格子的归还
+                                    break
+                        print('remain--', remain)
+                        if remain > self.gravity_precision:
+                            # 归还后有超出重量的其他东西，记录为错放格子
+                            record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=remain, monitor_way=1,
+                                                              inbound_datetime=current_dt, status=3, wrong_place_gid=k)
                             record.save()
+                            msg = 'the grid-%s was returned by overweight-%dg by user-%s' % (k, v[1], self.user_code)
+                            mylogger.warning(msg=msg)
+                    else:
+                        # 无借却还
+                        if self.user_role == 1 or self.user_role == 2:
+                            msg = 'the grid-%s was put in-%dg by administrator-%s' % (k, v[1], self.user_code)
+                            mylogger.info(msg=msg)
+                            # 修改该格子物资的新增字段
+                        else:
+                            if grid_id_need_return:
+                                # 只要有未还的记录，放错格子
+                                record = History_inbound_outbound(user_id=self.user_id, grid_id=k, count=abs(v[1]),
+                                                                  monitor_way=1, inbound_datetime=current_dt, status=0,
+                                                                  wrong_place_gid=k)
+                                record.save()
+                                msg = 'the grid-%s was wrong placed weight-%dg by user-%s' % (k, v[1], self.user_code)
+                                mylogger.info(msg=msg)
         except Exception as e:
             mylogger.warning(e)
 
@@ -733,6 +851,11 @@ class StoreroomManager(threading.Thread):
             self.q_send.put(pkg_to_web)
             print('put to q_send for sending to web--', pkg_to_web)
             print('size of q_send', self.q_send.qsize())
+            roles = user.roles
+            if roles:
+                self.user_role = roles[0].level
+            else:
+                self.user_role = 3
         else:
             mylogger.warning('get no user by code %s' % self.user_code)
             user = User(login_name=self.user_code, code=self.user_code, card_id=self.card_id,

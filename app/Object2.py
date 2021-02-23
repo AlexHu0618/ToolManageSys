@@ -51,6 +51,7 @@ class GravityShelf(threading.Thread):
         self.timeout_count = 0
         self.addr_nums = addr_nums
         self.precision = 10  # g
+        self.lock = RLock()
 
     def run(self):
         """
@@ -166,16 +167,19 @@ class GravityShelf(threading.Thread):
             else:
                 self.timeout_count += 1
                 if self.timeout_count > 5:
-                    self.isrunning = False
+                    with self.lock:
+                        self.isrunning = False
                     print('G--%s 等待TCP消息回应超时' % str(self.addr))
                 return TIMEOUT
         except (OSError, BrokenPipeError):
             print('Error--G', 'TCP连接已断开')
-            self.isrunning = False
+            with self.lock:
+                self.isrunning = False
             return None
         except AttributeError:
             print('Error--G', 'TCP未连接')
-            self.isrunning = False
+            with self.lock:
+                self.isrunning = False
             return None
         except Exception as e:
             print('Error', repr(e))
@@ -366,12 +370,12 @@ class RfidR2000(threading.Thread):
             for ant in self.ants:
                 rsl = self.inventory(ant_id=ant)
             rsl_data = self.getAndResetBuf()
-            # print('old EPCs: ', self.data_buff)
-            # print('new EPCs: ', rsl_data)
+            print('R2000 old EPCs: ', self.data_buff)
+            print('R2000 new EPCs: ', rsl_data)
             if rsl_data is not None:
                 print(time.asctime(), 'R2000--(%s, %d) curr_data: ' % (self.addr[0], self.addr[1]), rsl_data)
                 diff_epcs = list(set(epc[0] for epc in rsl_data) ^ set(epc[0] for epc in self.data_buff))
-                # print(diff_epcs)
+                print('R2000 diff EPCs:', diff_epcs)
                 if diff_epcs:
                     is_increase = True if len(rsl_data) > len(self.data_buff) else False
                     diff = [epc_ant for epc_ant in rsl_data if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]
@@ -1314,12 +1318,12 @@ class RfidR2000FH(threading.Thread):
         start = time.time()
         try:
             with self.lock:
-                # print('R2000FH old EPCs: ', self.data_buff)
-                # print('R2000FH new EPCs: ', self.current_epcs)
+                print('R2000FH old EPCs: ', self.data_buff)
+                print('R2000FH new EPCs: ', self.current_epcs)
                 if self.current_epcs is not None:
                     print(time.asctime(), 'R2000RH(%s, %d) curr_data:' % (self.addr[0], self.addr[1]), self.current_epcs)
                     diff_epcs = list(set(epc[0] for epc in self.current_epcs) ^ set(epc[0] for epc in self.data_buff))
-                    # print('R2000FH diff_epcs--', diff_epcs)
+                    print('R2000FH diff_epcs--', diff_epcs)
                     if diff_epcs:
                         is_increase = True if len(self.current_epcs) > len(self.data_buff) else False
                         diff = [epc_ant for epc_ant in self.current_epcs if epc_ant[0] in diff_epcs] if is_increase else [epc_ant for epc_ant in self.data_buff if epc_ant[0] in diff_epcs]

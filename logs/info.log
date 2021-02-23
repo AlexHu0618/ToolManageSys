@@ -1,2 +1,1 @@
-2021-02-02 14:02:32,765 - root - INFO - base_adapter.py:76 - SDK初始化成功
-2021-02-02 14:02:33,065 - root - ERROR - base_adapter.py:221 - NET_DVR_SetupAlarmChan_V41 报警布防: the error code is 109
+2021-02-08 17:21:13,605 - root - INFO - main.py:79 - START SERVER

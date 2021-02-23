@@ -500,11 +500,11 @@ class History_inbound_outbound(Base, MyBase):
     wrong_place_gid = Column(String(100), default=None)
     wrong_return_uid = Column(String(100), default=None)
     monitor_way = Column(Integer, default=2)  # 1-重力；2-RFID
+    return_mark = Column(String(100), default=None)
 
     @classmethod
     def by_user_need_return(cls, user_id):
-        return dbSession.query(cls).filter(and_(cls.user_id == user_id,
-                                                or_(cls.status != 0, cls.wrong_place_gid.isnot(None)))).all()
+        return dbSession.query(cls).filter(and_(cls.user_id == user_id, cls.status.in_([1, 2, 3, 4]))).order_by(cls.outbound_datetime).all()
 
     @classmethod
     def by_epc_need_return(cls, epc):
@@ -513,6 +513,10 @@ class History_inbound_outbound(Base, MyBase):
     @classmethod
     def by_epcs_join_goods_tab(cls, epcs):
         return dbSession.query(cls).join(Goods, cls.epc == Goods.epc).filter(Goods.epc.in_(epcs)).all()
+
+    @classmethod
+    def by_user_grid_status3(cls, user_id, grid_id):
+        return dbSession.query(cls).filter(cls.user_id == user_id, cls.grid_id == grid_id, cls.status == 3).all()
 
 
 class InquiryMachine(Base, MyBase):
