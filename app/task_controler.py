@@ -36,6 +36,8 @@ class TaskControler(Process):
             thread_send.start()
             print('start task')
             thread_conn.join()
+            print('stop task controler')
+            mylogger.error('task controler was stop')
         except KeyboardInterrupt:
             # while self.sock is not None:
             #     print(self.server_sock)
@@ -43,7 +45,11 @@ class TaskControler(Process):
             #     self.server_sock.close()
             #     time.sleep(2)
                 print('self.sock', self.sock)
+        except Exception as e:
+            print('task_controler was stop by exception: ', e)
+            mylogger.error('task_controler was stop by exception:' + e)
         print('\033[1;33m', 'task_controler was stop', '\033[0m')
+        mylogger.error('task_controler was stop')
 
     def _monitorconn(self):
         server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -329,7 +335,7 @@ class StoreroomManager(threading.Thread):
         self.isrunning = True
         self.queue_pkg = queue_storeroom
         self.gravity_goods = dict()  # {'grid_id': (type, value), }
-        self.rfid_goods = dict()  # {'ecp': (eq_id, ant, is_increased), }
+        self.rfid_goods = dict()  # {'epc': (eq_id, ant, is_increased), }
         self.is_close = True
         self.interval = 60
         self.lock = threading.RLock()
@@ -643,7 +649,7 @@ class StoreroomManager(threading.Thread):
         """
         try:
             current_dt = datetime.datetime.now()
-            grids_history = [h.grid_id for h in history]
+            # grids_history = [h.grid_id for h in history]
             for k, v in self.gravity_goods.items():
                 if v[1] < 0:
                     # 为借出

@@ -68,16 +68,19 @@ class GatewayServer(Process):
             t.daemon = True
             t.start()
             # wait for cmd
+            print('gateway server was start')
             while True:
                 if self.isrunning:
                     self._handle_cmd()
                 else:
                     break
-            mylogger.error('gateway_server was stop')
+            print('gateway server was stop')
+            mylogger.error('gateway server was stop')
         except Exception as e:
-            print('gateway_server was stop: ', e)
-            mylogger.error('gateway_server was stop by exception:' + e)
+            print('gateway server was stop by exception: ', e)
+            mylogger.error('gateway server was stop by exception:' + e)
         print('\033[1;33m', 'gateway_server was stop', '\033[0m')
+        mylogger.error('gateway_server was stop')
 
     def _thread_ontime(self):
         """

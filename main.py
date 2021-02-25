@@ -34,7 +34,11 @@ def main():
         myserver.start()
         mycontroler.start()
         mycontroler.join()
+        print('stop myserver in main')
+        mylogger.info('myserver was stop in main')
         myserver.join()
+        print('stop myserver in main')
+        mylogger.info('myserver was stop in main')
     except KeyboardInterrupt:
         mydb.close()
         myserver.stop()
@@ -43,8 +47,8 @@ def main():
             time.sleep(1)
             print('thread is still alive')
     except Exception as e:
-        print(e)
-        mylogger.error(e)
+        print('exception from main', e)
+        mylogger.error('exception from main: %s' % e)
     # finally:
     #     mydb.close()
     #     myserver.stop()
