@@ -10,6 +10,7 @@ from multiprocessing import Queue, RLock
 from app.task_controler import TaskControler
 from database.db_handler import get_all_equipments, get_epcs
 import time
+import os
 
 
 def main():
@@ -81,4 +82,6 @@ def main():
 
 if __name__ == '__main__':
     mylogger.info('START SERVER')
+    print('PID--main:', os.getpid())
+    mylogger.info('PID--main: %d' % os.getpid())
     main()

@@ -10,6 +10,7 @@ import time
 from database.models2 import Entrance, Collector, Indicator, CodeScanner, ChannelMachine, Grid
 import datetime
 from settings.config import config_parser as conpar
+import os
 
 
 class GatewayServer(Process):
@@ -44,6 +45,8 @@ class GatewayServer(Process):
         :return:
         """
         try:
+            print('PID--gateway_server:', os.getpid())
+            mylogger.info('PID--gateway_server: %d' % os.getpid())
             # connect all servers
             if self.servers is not None:
                 print("Start to connect to registered servers!!!!")

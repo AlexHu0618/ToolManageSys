@@ -28,6 +28,8 @@ class TaskControler(Process):
 
     def run(self):
         try:
+            print('PID--task_controler:', os.getpid())
+            mylogger.info('PID--task_controler: %d' % os.getpid())
             thread_conn = threading.Thread(target=self._monitorconn)
             thread_send = threading.Thread(target=self._get_push_data)
             thread_conn.daemon = True
