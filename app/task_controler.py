@@ -568,7 +568,7 @@ class StoreroomManager(threading.Thread):
             history_rfid = [h for h in history_list if h.monitor_way == 2]
             if self.manage_mode == 1:
                 self._save_gravity_data(history=history_gravity)
-            self._save_rfid_data(history=history_rfid)
+            self._save_rfid_data(rfid_history=history_rfid)
             with self.lock:
                 self.rfid_goods.clear()
                 self.gravity_goods.clear()
