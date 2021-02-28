@@ -1,6 +1,8 @@
 import socket
 import threading
 import time
+from multiprocessing import Process
+import os
 
 
 # def start_tcp_client(ip, port):
@@ -45,35 +47,105 @@ import time
 #     start_tcp_client('192.168.8.221', 8809)
 
 
-class test(threading.Thread):
+# class test(threading.Thread):
+#     def __init__(self):
+#         threading.Thread.__init__(self)
+#         self.lock = threading.RLock()
+#         self.isrunning = True
+#         self.counter = 0
+#
+#     def run(self):
+#         thr_ontime = threading.Thread(target=self.show)
+#         thr_ontime.daemon = True
+#         thr_ontime.start()
+#         while self.isrunning:
+#             time.sleep(6)
+#             print('still running')
+#         print('run() is broken')
+#
+#     def show(self):
+#         while self.isrunning:
+#             time.sleep(5)
+#             self.counter += 1
+#             print('5s later')
+#             if self.counter > 5:
+#                 print('counter > 5')
+#                 with self.lock:
+#                     self.isrunning = False
+#         print('show() is broken')
+
+class test1(Process):
     def __init__(self):
-        threading.Thread.__init__(self)
-        self.lock = threading.RLock()
-        self.isrunning = True
-        self.counter = 0
+        super().__init__()
 
     def run(self):
-        thr_ontime = threading.Thread(target=self.show)
-        thr_ontime.daemon = True
-        thr_ontime.start()
-        while self.isrunning:
-            time.sleep(6)
-            print('still running')
-        print('run() is broken')
+        try:
+            print('it is test1--', os.getpid())
+            while True:
+                time.sleep(1)
+                print('test1 is to stop')
+        except Exception as e:
+            print(e)
+        print('\033[1;33m', 'stop test1', '\033[0m')
 
-    def show(self):
-        while self.isrunning:
-            time.sleep(5)
-            self.counter += 1
-            print('5s later')
-            if self.counter > 5:
-                print('counter > 5')
-                with self.lock:
-                    self.isrunning = False
-        print('show() is broken')
+
+class test2(Process):
+    def __init__(self):
+        super().__init__()
+
+    def run(self):
+        try:
+            print('it is test2--', os.getpid())
+            time.sleep(4)
+            print('test2 is to stop')
+        except Exception as e:
+            print(e)
+        print('\033[1;33m', 'stop test2', '\033[0m')
+
+
+def task():
+    print('*********times out*********')
+    if pros['test1'].is_alive():
+        print('is_alive test1')
+    else:
+        print('is_alive not test1')
+    #     test11 = test1()
+    #     test11.daemon = True
+    #     test11.start()
+    #     pros['test1'] = test11
+    if pros['test2'].is_alive():
+        print('is_alive test2')
+    else:
+        print('is_alive not test2')
+        test22 = test2()
+        test22.daemon = True
+        test22.start()
+        pros['test2'] = test22
+    thd_timer1 = threading.Timer(interval=2, function=task)
+    thd_timer1.start()
+
+
+pros = dict()
 
 
 if __name__ == '__main__':
-    thr = test()
-    thr.start()
-    thr.join()
+    try:
+        print('start main--', os.getpid())
+        test13 = test1()
+        test23 = test2()
+        test13.daemon = True
+        test23.daemon = True
+        test13.start()
+        pros['test1'] = test13
+        test23.start()
+        pros['test2'] = test23
+        thd_timer = threading.Timer(interval=2, function=task)
+        thd_timer.start()
+        thd_timer.join()
+        # test1.join()
+        # print('test1 is over')
+        # test2.join()
+        # print('test2 is over')
+    except Exception as e:
+        print('over by exception')
+    print('all is over')

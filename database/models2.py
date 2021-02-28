@@ -508,7 +508,7 @@ class History_inbound_outbound(Base, MyBase):
 
     @classmethod
     def by_epc_need_return(cls, epc):
-        return dbSession.query(cls).filter(cls.epc == epc, cls.status != 0).first()
+        return dbSession.query(cls).filter(cls.epc == epc, cls.status.in_([1, 2])).first()
 
     @classmethod
     def by_epcs_join_goods_tab(cls, epcs):
