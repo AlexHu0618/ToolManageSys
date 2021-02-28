@@ -103,7 +103,7 @@ class test2(Process):
         print('\033[1;33m', 'stop test2', '\033[0m')
 
 
-def task():
+def task(a, b):
     print('*********times out*********')
     if pros['test1'].is_alive():
         print('is_alive test1')
@@ -117,11 +117,12 @@ def task():
         print('is_alive test2')
     else:
         print('is_alive not test2')
+        print(a, b)
         test22 = test2()
         test22.daemon = True
         test22.start()
         pros['test2'] = test22
-    thd_timer1 = threading.Timer(interval=2, function=task)
+    thd_timer1 = threading.Timer(interval=2, function=task, args=([a, b]))
     thd_timer1.start()
 
 
@@ -130,6 +131,8 @@ pros = dict()
 
 if __name__ == '__main__':
     try:
+        a = 1
+        b = 3
         print('start main--', os.getpid())
         test13 = test1()
         test23 = test2()
@@ -139,7 +142,7 @@ if __name__ == '__main__':
         pros['test1'] = test13
         test23.start()
         pros['test2'] = test23
-        thd_timer = threading.Timer(interval=2, function=task)
+        thd_timer = threading.Timer(interval=2, function=task, args=([a, b]))
         thd_timer.start()
         thd_timer.join()
         # test1.join()

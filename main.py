@@ -11,6 +11,40 @@ from app.task_controler import TaskControler
 from database.db_handler import get_all_equipments, get_epcs
 import time
 import os
+import threading
+
+progress = dict()
+
+
+def ontime_progress_monitor(q_task, q_rsl):
+    print('*********times out progress monitor**********')
+    if not progress['gateway_server'].is_alive():
+        print('progress gateway_server is not alive')
+        mylogger.error('progress gateway_server is not alive')
+        rsl = get_all_equipments()
+        servers_registered = dict()  # {addr: (type, storeroom_id, uuid)}
+        clients_registered = dict()
+        for r_id, s_c in rsl.items():
+            temp_servers = {k: (v[0], r_id, v[1]) for k, v in s_c['servers'].items()}
+            servers_registered.update(temp_servers)
+            temp_clients = {k: (v[0], r_id, v[1]) for k, v in s_c['clients'].items()}
+            clients_registered.update(temp_clients)
+        myserver_demo = GatewayServer(port=8809, servers_registered=servers_registered,
+                                      clients_registered=clients_registered, queue_task=q_task, queue_rsl=q_rsl)
+        myserver_demo.daemon = True
+        myserver_demo.start()
+        progress['gateway_server'] = myserver_demo
+        mylogger.info('progress gateway_server is start again')
+    if not progress['task_controler'].is_alive():
+        print('progress task_controler is not alive')
+        mylogger.error('progress task_controler is not alive')
+        mycontroler_demo = TaskControler(queue_task=q_task, queue_rsl=q_rsl)
+        mycontroler_demo.daemon = True
+        mycontroler_demo.start()
+        progress['task_controler'] = mycontroler_demo
+        mylogger.info('progress task_controler is start again')
+    thd_timer1 = threading.Timer(interval=60, function=ontime_progress_monitor, args=([q_task, q_rsl]))
+    thd_timer1.start()
 
 
 def main():
@@ -32,14 +66,15 @@ def main():
         myserver = GatewayServer(port=8809, servers_registered=servers_registered, clients_registered=clients_registered,
                                  queue_task=q_task, queue_rsl=q_rsl)
         mycontroler = TaskControler(queue_task=q_task, queue_rsl=q_rsl)
+        myserver.daemon = True
+        mycontroler.daemon = True
         myserver.start()
+        progress['gateway_server'] = myserver
         mycontroler.start()
-        mycontroler.join()
-        print('stop myserver in main')
-        mylogger.info('myserver was stop in main')
-        myserver.join()
-        print('stop myserver in main')
-        mylogger.info('myserver was stop in main')
+        progress['task_controler'] = mycontroler
+        thd_timer = threading.Timer(interval=60, function=ontime_progress_monitor, args=([q_task, q_rsl]))
+        thd_timer.start()
+        thd_timer.join()
     except KeyboardInterrupt:
         mydb.close()
         myserver.stop()
@@ -50,30 +85,6 @@ def main():
     except Exception as e:
         print('exception from main', e)
         mylogger.error('exception from main: %s' % e)
-    # finally:
-    #     mydb.close()
-    #     myserver.stop()
-    #     mycontroler.stop()
-    #     print('stop')
-
-# ### 此法不通，设置后不在当前进程生效。
-# def set_lib_path():
-#     """
-#     自动设置ZK与HK的链接库查找路径到全局变量LD_LIBRARY_PATH
-#     :return:
-#     """
-#     path_cur = os.path.abspath(os.path.dirname(__file__))
-#     # for ZK
-#     zk_lib_path = path_cur + '/util/libs/zk_lib'
-#     zk_cmd = 'export LD_LIBRARY_PATH=' + zk_lib_path + ':$LD_LIBRARY_PATH'
-#     os.system(zk_cmd)
-#     # for HK
-#     hk_lib_path1 = path_cur + '/util/libs/hkvision_lib/'
-#     hk_lib_path2 = path_cur + '/util/libs/hkvision_lib/HCNetSDKCom/'
-#     hk_cmd1 = 'export LD_LIBRARY_PATH=' + hk_lib_path1 + ':$LD_LIBRARY_PATH'
-#     hk_cmd2 = 'export LD_LIBRARY_PATH=' + hk_lib_path2 + ':$LD_LIBRARY_PATH'
-#     os.system(hk_cmd1)
-#     os.system(hk_cmd2)
 
 
 # def test():
@@ -81,7 +92,9 @@ def main():
 
 
 if __name__ == '__main__':
-    mylogger.info('START SERVER')
+    mylogger.info('START SYSTEM')
     print('PID--main:', os.getpid())
     mylogger.info('PID--main: %d' % os.getpid())
     main()
+    print('SYSTOM IS OVER')
+    mylogger.info('SYSTOM IS OVER')

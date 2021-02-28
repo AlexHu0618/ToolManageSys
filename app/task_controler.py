@@ -116,22 +116,6 @@ class TaskControler(Process):
         :param data: 
         :return: 
         """
-        # package to transferpackage and put into task queue
-        # cmds = data.split(b'\r\n')
-        # if len(cmds) > 2:
-        #     # 属于传感器的指令
-        #     target = eval(cmds[0])
-        #     tp = TransferPackage(target=target)
-        #     tp.data['func'] = str(cmds[1], encoding='utf8')
-        #     tp.data['args'] = eval(cmds[2])
-        #     tp.uuid = str(cmds[3], encoding='utf8')
-        # else:
-        #     # 属于网关服务器的指令
-        #     tp = TransferPackage()
-        #     tp.data['func'] = str(cmds[0], encoding='utf8')
-        #     tp.data['args'] = eval(cmds[1])
-        #     tp.uuid = str(cmds[2], encoding='utf8')
-        # self.q_task.put(tp)
         try:
             all_type = {1: 'entrance_zk', 2: 'entrance_hk', 3: 'code_scan', 4: 'gravity', 5: 'rfid2000',
                         6: 'rfid2000fh', 7: 'channel_machine', 8: 'led'}
