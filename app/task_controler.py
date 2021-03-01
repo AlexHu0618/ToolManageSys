@@ -188,6 +188,8 @@ class TaskControler(Process):
                     # print(data_send)
                     # if self.sock:
                     #     self.sock.send(data_send)
+                else:
+                    time.sleep(1)
             except (OSError, BrokenPipeError):
                 continue
             except Exception as e:
