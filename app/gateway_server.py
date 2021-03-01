@@ -74,7 +74,7 @@ class GatewayServer(Process):
             print('gateway server was start')
             while self.isrunning:
                 self._handle_cmd()
-                time.sleep(5)
+                time.sleep(1)
             print('gateway server was stop')
             mylogger.error('gateway server was stop')
         except Exception as e:
@@ -153,7 +153,7 @@ class GatewayServer(Process):
         queue_rsl = Queue(50)
         subevent = threading.Event()
         thread = None
-        while True:
+        while self.isrunning:
             try:
                 if terminal_type == 'entrance_zk':
                     thread = EntranceZK(addr, queue_task, queue_rsl, subevent, self.queue_equipment_push, storeroom_id, uuid)
@@ -196,14 +196,14 @@ class GatewayServer(Process):
                     print('服务端(%s)已成功连接。。' % str(addr))
                     mylogger.info('服务端(%s)已成功连接。。online' % str(addr))
                     self._modify_db_eq_status(eq_type=terminal_type, addr=addr, is_online=True)
-                    return True
+                break
             except socket.error:
                 failed_count += 1
                 # print("fail to connect to server %d times" % failed_count)
                 if failed_count == 10:
                     print('fail to connect to server %s' % str(addr))
                     mylogger.warning('fail to connect to server %s' % str(addr))
-                    return False
+                    break
 
     def _monitor_access(self):
         # 创建socket对象

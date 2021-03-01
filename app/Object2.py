@@ -882,6 +882,7 @@ class EntranceZK(threading.Thread):
                                     self._update_status_db(is_online=False)
                         else:
                             pass
+                    time.sleep(1)
                 except Exception as e:
                     print('except from EntranceZK--', e)
                     mylogger.error(e)
