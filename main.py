@@ -44,7 +44,6 @@ def ontime_progress_monitor(q_task, q_rsl):
         progress['task_controler'] = mycontroler_demo
         mylogger.info('progress task_controler is start again')
     thd_timer1 = threading.Timer(interval=60, function=ontime_progress_monitor, args=([q_task, q_rsl]))
-    thd_timer1.daemon = True
     thd_timer1.start()
 
 
@@ -52,6 +51,7 @@ def main():
     mydb = MyDB()
     myserver = None
     mycontroler = None
+    thd_timer = None
     # task_controler与gateway_server交互的全局队列
     q_task = Queue(50)
     q_rsl = Queue(50)
@@ -74,13 +74,13 @@ def main():
         mycontroler.start()
         progress['task_controler'] = mycontroler
         thd_timer = threading.Timer(interval=60, function=ontime_progress_monitor, args=([q_task, q_rsl]))
-        thd_timer.daemon = True
         thd_timer.start()
         thd_timer.join()
     except KeyboardInterrupt:
         mydb.close()
         myserver.stop()
         mycontroler.stop()
+        thd_timer.cancel()
         while mycontroler.is_alive() or myserver.is_alive():
             time.sleep(1)
             print('thread--mycontroler/myserver is still alive')

@@ -405,13 +405,16 @@ class StoreroomManager(threading.Thread):
             eq_id = pkg['equipment_id']
             sensor_addr = pkg['data']['addr_num']
             total_weight = pkg['data']['total']
+            is_increased = pkg['data']['is_increased']
+            weight = pkg['data']['value'] if is_increased else (0 - pkg['data']['value'])
             grid = self._get_gravity_grid(eq_id=eq_id, sensor_addr=sensor_addr)
+            print('value=======%d' % pkg['data']['value'])
             if grid.id in self.gravity_goods.keys():
-                self.gravity_goods[grid.id][1] += pkg['data']['value']
+                self.gravity_goods[grid.id][1] += weight
                 if abs(self.gravity_goods[grid.id][1]) < self.gravity_precision:
                     del self.gravity_goods[grid.id]
             else:
-                self.gravity_goods[grid.id] = [grid.type, pkg['data']['value']]
+                self.gravity_goods[grid.id] = [grid.type, weight]
             print('all gravity--', self.gravity_goods)
         elif pkg['equipment_type'] == 2:
             # RFID柜package
@@ -639,6 +642,7 @@ class StoreroomManager(threading.Thread):
             for k, v in self.gravity_goods.items():
                 if v[1] < 0:
                     # 为借出
+                    print('\033[1;33m', 'take out weight %d' % v[1], '\033[0m')
                     records_this_grid = [record for record in history if record.grid_id == k]
                     is_wrong_place = False
                     for record in records_this_grid:
@@ -669,6 +673,7 @@ class StoreroomManager(threading.Thread):
                                                                   outbound_datetime=current_dt,
                                                                   status=status, monitor_way=1)
                                 record.save()
+                                print('create a new record')
                     else:
                         # 没有错放记录的格子
                         status = 0 if v[0] == 2 else 1
@@ -678,6 +683,7 @@ class StoreroomManager(threading.Thread):
                         record.save()
                 else:
                     # 为归还
+                    print('\033[1;33m', 'put in weight %d' % v[1], '\033[0m')
                     grid_id_need_return = [h.grid_id for h in history if (h.status == 1 or h.status == 2)]
                     if k in grid_id_need_return:
                         # 已借未还
@@ -691,7 +697,7 @@ class StoreroomManager(threading.Thread):
                                 need_return = record.count - returned_count
                                 diff = remain - need_return
                                 record.update('inbound_datetime', current_dt)
-                                return_mark_dict[current_dt] = need_return
+                                return_mark_dict[current_dt.strftime("%Y-%m-%d-%H-%M-%S")] = need_return
                                 record.update('return_mark', str(return_mark_dict))
                                 if diff >= -self.gravity_precision:
                                     # 该条记录全还清
@@ -704,7 +710,7 @@ class StoreroomManager(threading.Thread):
                                 # 未还过的记录
                                 diff = remain - record.count
                                 record.update('inbound_datetime', current_dt)
-                                return_mark_dict = {current_dt: record.count}
+                                return_mark_dict = {current_dt.strftime("%Y-%m-%d-%H-%M-%S"): record.count}
                                 record.update('return_mark', str(return_mark_dict))
                                 if diff >= -self.gravity_precision:
                                     # 该条记录全还清
