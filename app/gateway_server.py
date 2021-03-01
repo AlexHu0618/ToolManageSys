@@ -72,11 +72,9 @@ class GatewayServer(Process):
             t.start()
             # wait for cmd
             print('gateway server was start')
-            while True:
-                if self.isrunning:
-                    self._handle_cmd()
-                else:
-                    break
+            while self.isrunning:
+                self._handle_cmd()
+                time.sleep(5)
             print('gateway server was stop')
             mylogger.error('gateway server was stop')
         except Exception as e:

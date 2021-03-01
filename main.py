@@ -44,6 +44,7 @@ def ontime_progress_monitor(q_task, q_rsl):
         progress['task_controler'] = mycontroler_demo
         mylogger.info('progress task_controler is start again')
     thd_timer1 = threading.Timer(interval=60, function=ontime_progress_monitor, args=([q_task, q_rsl]))
+    thd_timer1.daemon = True
     thd_timer1.start()
 
 
@@ -73,15 +74,16 @@ def main():
         mycontroler.start()
         progress['task_controler'] = mycontroler
         thd_timer = threading.Timer(interval=60, function=ontime_progress_monitor, args=([q_task, q_rsl]))
+        thd_timer.daemon = True
         thd_timer.start()
         thd_timer.join()
     except KeyboardInterrupt:
         mydb.close()
         myserver.stop()
         mycontroler.stop()
-        while mycontroler.is_alive():
+        while mycontroler.is_alive() or myserver.is_alive():
             time.sleep(1)
-            print('thread is still alive')
+            print('thread--mycontroler/myserver is still alive')
     except Exception as e:
         print('exception from main', e)
         mylogger.error('exception from main: %s' % e)

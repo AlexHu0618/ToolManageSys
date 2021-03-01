@@ -1,5 +1,7 @@
 from .models2 import Storeroom, Goods, History_inbound_outbound, Grid
 import copy
+import re
+from app.myLogger import mylogger
 
 
 def get_all_equipments():
@@ -28,20 +30,26 @@ def get_all_entrances(storeroom, clients_servers):
     entrances = storeroom.entrance
     if entrances is not None:
         for entrance in entrances:
-            if entrance.is_server is True:
-                clients_servers['servers'][(entrance.ip, entrance.port)] = (type_name[entrance.type], entrance.id)
+            if check_ip(entrance.ip):
+                if entrance.is_server is True:
+                    clients_servers['servers'][(entrance.ip, entrance.port)] = (type_name[entrance.type], entrance.id)
+                else:
+                    clients_servers['clients'][(entrance.ip, entrance.port)] = (type_name[entrance.type], entrance.id)
             else:
-                clients_servers['clients'][(entrance.ip, entrance.port)] = (type_name[entrance.type], entrance.id)
+                mylogger.warning('wrong IP of entrance ip--%s' % entrance.ip)
 
 
 def get_all_code_scanners(storeroom, clients_servers):
     scanners = storeroom.code_scanners
     if scanners is not None:
         for scanner in scanners:
-            if scanner.is_server is True:
-                clients_servers['servers'][(scanner.ip, scanner.port)] = ('code_scan', scanner.id)
+            if check_ip(scanner.ip):
+                if scanner.is_server is True:
+                    clients_servers['servers'][(scanner.ip, scanner.port)] = ('code_scan', scanner.id)
+                else:
+                    clients_servers['clients'][(scanner.ip, scanner.port)] = ('code_scan', scanner.id)
             else:
-                clients_servers['clients'][(scanner.ip, scanner.port)] = ('code_scan', scanner.id)
+                mylogger.warning('wrong IP of code_scanner ip--%s' % scanner.ip)
 
 
 def get_all_collectors(storeroom, clients_servers):
@@ -52,20 +60,26 @@ def get_all_collectors(storeroom, clients_servers):
             collectors = shelf.collectors
             if collectors is not None:
                 for collector in collectors:
-                    if collector.is_server is True:
-                        clients_servers['servers'][(collector.ip, collector.port)] = (type_name[collector.type], collector.id)
+                    if check_ip(collector.ip):
+                        if collector.is_server is True:
+                            clients_servers['servers'][(collector.ip, collector.port)] = (type_name[collector.type], collector.id)
+                        else:
+                            clients_servers['clients'][(collector.ip, collector.port)] = (type_name[collector.type], collector.id)
                     else:
-                        clients_servers['clients'][(collector.ip, collector.port)] = (type_name[collector.type], collector.id)
+                        mylogger.warning('wrong IP of collector ip--%s' % collector.ip)
 
                         
 def get_all_channel_machine(storeroom, clients_servers):
     channels = storeroom.channel_machines
     if channels is not None:
         for channel in channels:
-            if channel.is_server is True:
-                clients_servers['servers'][(channel.ip, channel.port)] = ('channel_machine', channel.id)
+            if check_ip(channel.ip):
+                if channel.is_server is True:
+                    clients_servers['servers'][(channel.ip, channel.port)] = ('channel_machine', channel.id)
+                else:
+                    clients_servers['clients'][(channel.ip, channel.port)] = ('channel_machine', channel.id)
             else:
-                clients_servers['clients'][(channel.ip, channel.port)] = ('channel_machine', channel.id)
+                mylogger.warning('wrong IP of channel_machine ip--%s' % channel.ip)
 
 
 def get_all_led(storeroom, clients_servers):
@@ -75,10 +89,22 @@ def get_all_led(storeroom, clients_servers):
             indicators = shelf.indicators
             if indicators is not None:
                 for indicator in indicators:
-                    if indicator.is_server is True:
-                        clients_servers['servers'][(indicator.ip, indicator.port)] = ('led', indicator.id)
+                    if check_ip(indicator.ip):
+                        if indicator.is_server is True:
+                            clients_servers['servers'][(indicator.ip, indicator.port)] = ('led', indicator.id)
+                        else:
+                            clients_servers['clients'][(indicator.ip, indicator.port)] = ('led', indicator.id)
                     else:
-                        clients_servers['clients'][(indicator.ip, indicator.port)] = ('led', indicator.id)
+                        mylogger.warning('wrong IP of led ip--%s' % indicator.ip)
+
+
+def check_ip(ip: str):
+    compile_ip = re.compile(
+        '^(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|[1-9])\.(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)\.(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)\.(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)$')
+    if compile_ip.match(ip):
+        return True
+    else:
+        return False
 
 
 def get_epcs():
